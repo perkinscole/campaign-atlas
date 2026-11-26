@@ -48,6 +48,7 @@ window.Atlas = (function () {
     pack.side = id => m.sides.find(s => s.id === id) || null;
     pack.sideClass = id => { const i = m.sides.findIndex(s => s.id === id); return i === 0 ? 'side-a' : i === 1 ? 'side-b' : 'side-n'; };
     pack.color = id => (pack.side(id) || {}).color || NEUTRAL;
+    pack.sideLabel = (b, id) => (b.sideLabels && b.sideLabels[id]) || (pack.side(id) || { name: id }).name;
     pack.resultLabel = b => b.resultLabel || (pack.side(b.result) ? pack.side(b.result).name + ' victory' : 'Inconclusive');
     pack.BATTLES.forEach(b => {
       b.d0 = pack.dayOf(b.start); b.d1 = pack.dayOf(b.end);

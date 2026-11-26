@@ -27,7 +27,7 @@ Atlas.load('battles', function (P) {
           <span class="badge ${P.sideClass(b.result)}">${esc(P.resultLabel(b))}</span>
           <h3>${esc(b.name)}</h3>
           <div class="meta">${fmtRange(b.start, b.end)} · ${esc(b.place)}</div>
-          <div class="cas-line"><strong>${esc(b.casualties.heading || 'Casualties')}:</strong> ${M.sides.map(s => `${esc(s.name)} ${num(b.casualties[s.id])}`).join(' · ')}</div>
+          ${b.casualties.hideBars ? '' : `<div class="cas-line"><strong>${esc(b.casualties.heading || 'Casualties')}:</strong> ${M.sides.map(s => `${esc(P.sideLabel(b, s.id))} ${num(b.casualties[s.id])}`).join(' · ')}</div>`}
           ${q ? `<p class="quote">“${esc(short)}” <span style="font-style:normal;color:var(--muted)">— ${esc(q.who)}</span></p>` : ''}
         </div>
       </a>`;

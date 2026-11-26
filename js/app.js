@@ -226,7 +226,7 @@ Atlas.load('atlas', function (P) {
     const idx = byDate.indexOf(b);
     const prev = byDate[idx - 1], next = byDate[idx + 1];
     const maxCas = Math.max(...M.sides.map(s => b.casualties[s.id] || 0), 1);
-    const bar = s => { const n = b.casualties[s.id] || 0; return `<div class="bar ${P.sideClass(s.id)}"><b>${esc(s.name)}</b><i style="width:${Math.max(2, (n / maxCas) * 180)}px"></i><span>${num(n)}</span></div>`; };
+    const bar = s => { const n = b.casualties[s.id] || 0; return `<div class="bar ${P.sideClass(s.id)}"><b>${esc(P.sideLabel(b, s.id))}</b><i style="width:${Math.max(2, (n / maxCas) * 180)}px"></i><span>${num(n)}</span></div>`; };
     const campaign = b.campaign ? campaignById[b.campaign] : null;
     const [hero, ...rest] = b.images;
     const back = state.tourReturn
@@ -242,12 +242,12 @@ Atlas.load('atlas', function (P) {
         <p class="summary">${esc(b.summary)}</p>
         <p class="significance"><strong>Why it matters.</strong> ${esc(b.significance)}</p>
         <dl class="facts">
-          ${M.sides.map(s => `<dt>${esc(s.name)}</dt><dd>${esc(b.commanders[s.id])}<br><small>${esc(b.forces[s.id])}</small></dd>`).join('')}
+          ${M.sides.map(s => `<dt>${esc(P.sideLabel(b, s.id))}</dt><dd>${esc(b.commanders[s.id])}<br><small>${esc(b.forces[s.id])}</small></dd>`).join('')}
           <dt>Theater</dt><dd>${esc(b.theater)}${campaign ? ` · <button class="btn" data-campaign="${campaign.id}" style="padding:1px 7px">${esc(campaign.name)} route</button>` : ''}</dd>
         </dl>
         <div class="cas">
-          <strong>${esc(b.casualties.heading || 'Casualties')}</strong> ${esc(b.casualties.kind || '(killed, wounded, captured, missing)')}
-          ${M.sides.map(bar).join('')}
+          <strong>${esc(b.casualties.heading || 'Casualties')}</strong> ${esc(b.casualties.kind != null ? b.casualties.kind : '(killed, wounded, captured, missing)')}
+          ${b.casualties.hideBars ? '' : M.sides.map(bar).join('')}
           ${b.casualties.note ? `<p class="note">${esc(b.casualties.note)}</p>` : ''}
         </div>
         <h3>From the journals, letters, and reports</h3>

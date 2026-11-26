@@ -22,10 +22,16 @@ window.ATLAS_SITE = {
       cover: 'Thure de Thulstrup - L. Prang and Co. - Battle of Gettysburg - Restoration by Adam Cuerden.jpg',
       grades: '5–12'
     },
+    {
+      id: 'world-war-2-europe', status: 'live',
+      title: 'World War II in Europe and North Africa', years: '1939–1945',
+      blurb: 'From the invasion of Poland to V-E Day: the fall of France, the Eastern Front, North Africa, Italy, D-Day, and the liberation of the camps, told through official records and Nuremberg testimony.',
+      cover: 'Into the Jaws of Death 23-0455M edit.jpg',
+      grades: '6–12'
+    },
     { id: 'war-of-1812', status: 'planned', title: 'The War of 1812', years: '1812–1815' },
     { id: 'mexican-american-war', status: 'planned', title: 'The Mexican-American War', years: '1846–1848' },
     { id: 'world-war-1', status: 'planned', title: 'World War I', years: '1914–1918' },
-    { id: 'world-war-2-europe', status: 'planned', title: 'World War II: Europe and North Africa', years: '1939–1945' },
     { id: 'world-war-2-pacific', status: 'planned', title: 'World War II: The Pacific', years: '1941–1945' },
     { id: 'korean-war', status: 'planned', title: 'The Korean War', years: '1950–1953' },
     { id: 'vietnam-war', status: 'planned', title: 'The Vietnam War', years: '1955–1975' }

@@ -5,8 +5,9 @@ terrain map along their historical routes while battle markers appear as each
 engagement begins. Open any battle to read what soldiers, commanders, and civilians
 wrote at the time, alongside period images.
 
-Live atlases: **The American Revolution** (1775–1781) and **The American Civil War**
-(1861–1865). More are listed as planned in `data/index.js`.
+Live atlases: **The American Revolution** (1775–1781), **The American Civil War**
+(1861–1865), and **World War II in Europe and North Africa** (1939–1945). More are
+listed as planned in `data/index.js`.
 
 **Live site:** https://perkinscole.github.io/campaign-atlas/
 
@@ -82,10 +83,21 @@ Images are referenced by their exact Wikimedia Commons filename via `Atlas.img(.
 Journal entries carry `verified: true`, a `ref` link, and a `refTitle` once their wording
 has been checked against a printed text. Verified entries show a check mark on the map
 that links to that text, and the teacher guide and sources page report how many are
-verified. As of the last pass, 126 of 130 entries are verified. The four that are not
+verified. In the first two atlases, 126 of 130 entries are verified. The four that are not
 are two traditional sayings with no fixed wording ("the whites of their eyes" and "Damn
 the torpedoes"), Nathaniel Lyon's reported last words, and the Elisha Hunt Rhodes diary,
 which is under copyright with no open text.
+
+The World War II atlas was built source-first: every quotation was copied out of the
+linked text, so all 40 are verified. Its sources are government records (Hansard,
+official orders and reports, U.S. government publications including Yank, and Nuremberg
+trial documents), because soldiers' memoirs from that war are mostly still under
+copyright. Use the same approach for later wars: find the text first with
+`tools/verify/research.py` and `read.py`, write the pack with `verified`, `ref`, and
+`refTitle` filled in, then run `tools/verify/recheck.py <projectDir> <warId>`.
+
+Battle entries may also set `sideLabels` (per-battle names for the two sides) and
+`casualties.hideBars` (show only a heading and note).
 
 ## Credits
 

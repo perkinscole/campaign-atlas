@@ -4,3 +4,4 @@ tools/verify/results*.json
 tools/verify/quotes.json
 tools/verify/*.log
 tools/image_files.json
+__pycache__/

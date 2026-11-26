@@ -36,6 +36,16 @@ def item_text(ident):
     if os.path.exists(path): return open(path, encoding='utf-8', errors='replace').read()
     raw = get("https://archive.org/download/%s/%s_djvu.txt" % (urllib.parse.quote(ident), urllib.parse.quote(ident)), tries=2); time.sleep(1.0)
     text = raw.decode('utf-8', errors='replace') if raw else ''
+    if not text:  # multi-file items: look up the text files by name
+        meta = get("https://archive.org/metadata/%s/files" % urllib.parse.quote(ident), tries=2)
+        try: names = [f['name'] for f in json.loads(meta)['result'] if f['name'].endswith('_djvu.txt')]
+        except Exception: names = []
+        parts = []
+        for nm in sorted(names)[:24]:
+            r2 = get("https://archive.org/download/%s/%s" % (urllib.parse.quote(ident), urllib.parse.quote(nm)), tries=2); time.sleep(0.7)
+            if r2: parts.append('\n\n[[FILE %s]]\n\n' % nm + r2.decode('utf-8', errors='replace'))
+            if sum(len(x) for x in parts) > 45_000_000: break
+        text = ''.join(parts)
     if len(text) > 30_000_000: text = text[:30_000_000]
     open(path, 'w', encoding='utf-8').write(text)
     return text

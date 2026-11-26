@@ -19,3 +19,10 @@ cites, using archive.org full-text search, Wikisource, and a few direct editions
 `decisions.json` is the record of the November 2026 pass: 126 of 130 entries verified.
 Quote numbers in `targets.json` and `build.py` refer to that export, so rebuild them
 when entries are added or reordered. `../validate.js <projectDir>` checks pack structure.
+
+## Source-first workflow (used for World War II)
+
+- `research.py <queries.json>` runs a batch of full-text searches and lists the oldest open scans.
+- `read.py <spec.json>` prints passages from archive.org item texts so quotes can be copied exactly.
+- `recheck.py <projectDir> <warId>` re-aligns every verified entry of a pack against the
+  text its `ref` points to (archive.org items, Wikisource pages, or plain pages such as Hansard).

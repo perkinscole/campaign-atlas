@@ -316,7 +316,7 @@ figcaption .credit { display: block; font-style: italic; }
 .facts dd { margin: 0; }
 .cas { margin-top: 12px; font-size: .85rem; }
 .cas .bar { display: flex; align-items: center; gap: 8px; margin: 4px 0; }
-.cas .bar b { width: 92px; font-weight: 600; }
+.cas .bar b { width: 118px; font-weight: 600; }
 .cas .bar i {
   height: 12px;
   border-radius: 2px;
