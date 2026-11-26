@@ -8,6 +8,8 @@ wrote at the time, alongside period images.
 Live atlases: **The American Revolution** (1775–1781) and **The American Civil War**
 (1861–1865). More are listed as planned in `data/index.js`.
 
+**Live site:** https://perkinscole.github.io/campaign-atlas/
+
 ## Running it
 
 Plain HTML, CSS, and JavaScript with no build step. Serve the folder with any static
