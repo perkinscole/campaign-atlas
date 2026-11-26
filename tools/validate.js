@@ -27,6 +27,17 @@ for (const w of window.ATLAS_SITE.wars.filter(w => w.status === 'live')) {
   for (const c of P.CAMPAIGNS) { if (!sides.includes(c.side)) err('campaign side ' + c.id); let prev = -1; for (const p of c.pts) { if (p.day < prev) err('route order ' + c.id + ' ' + p.label); prev = p.day; if (p.day < 0 || p.day > P.maxDay) err('route date ' + c.id + ' ' + p.label); } if (P.dayOf(c.start) !== c.d0 || P.dayOf(c.end) !== c.d1) err('route start/end mismatch ' + c.id); }
   for (const e of P.EVENTS) if (e.d0 < 0 || e.d0 > P.maxDay) err('event date ' + e.title);
   const oids = new Set();
+  if (w.period) {
+    let per = null; const keep = Atlas.period; Atlas.period = p => { per = p; };
+    try { delete require.cache[require.resolve(path.join(dir, 'data/period', w.id + '.js'))]; require(path.join(dir, 'data/period', w.id + '.js')); } catch (e) { err('period file missing or broken'); }
+    Atlas.period = keep;
+    if (per) {
+      for (const f of per.features) { if (!f.name || !f.shape.length || !f.label) err('period feature ' + f.name); const gs = f.groups ? f.groups.map(g => g[1]) : f.group ? [f.group] : []; for (const g of gs) if (!per.groups[g]) err('period group ' + f.name + ' ' + g); }
+      for (const pl of per.places) if (typeof pl[0] !== 'string' || !(pl[1] >= -90 && pl[1] <= 90) || ![1, 2, 3].includes(pl[3]) || (pl[4] && !['city', 'capital', 'region', 'nation', 'water'].includes(pl[4]))) err('period place ' + pl[0]);
+      console.log('  period map:', per.features.length, 'border shapes,', per.places.length, 'places');
+    }
+  }
+  for (const b of P.BATTLES) for (const l of (b.tactical && b.tactical.lines) || []) if (!['road', 'stream', 'rail'].includes(l.kind) || !l.name || l.pts.length < 2) err('tactical line ' + b.id + ' ' + l.name);
   for (const o of P.OBJECTS) {
     for (const k of ['id', 'group', 'kind', 'title', 'date', 'holder', 'src', 'ref', 'license', 'text']) if (!o[k]) err('object ' + (o.id || '?') + ' missing ' + k);
     if (oids.has(o.id)) err('duplicate object ' + o.id); oids.add(o.id);

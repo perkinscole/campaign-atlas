@@ -48,7 +48,7 @@ Atlas.load('teach', function (P) {
       </section>`).join('')}
 
     ${P.BATTLES.some(b => b.tactical) ? `<h2>Battlefield animations</h2>
-    <p>Step-by-step views of how a single battle unfolded on the ground, on a topographic map. Project one and click through it with the class, or press <em>Play all</em>. Each ends with discussion questions about how the ground shaped the fighting. Positions are simplified.</p>
+    <p>Step-by-step views of how a single battle unfolded on the ground. The period map shows the ridges, roads, and streams of the day; the switch on the map changes to a modern topographic map. Project one and click through it with the class, or press <em>Play all</em>. Each ends with discussion questions about how the ground shaped the fighting. Positions are simplified.</p>
     ${P.BATTLES.filter(b => b.tactical).map(b => `
       <section class="tour-card">
         <div class="tour-card-head">

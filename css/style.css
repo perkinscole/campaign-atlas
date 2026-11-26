@@ -810,3 +810,49 @@ kbd { border-radius: 5px; font-size: .9em; }
 }
 @media print { body { background: #fff; } }
 .card .badge { align-self: flex-start; }
+
+/* ---- Period map, name labels, and finding things on the map ------------- */
+.base-period .leaflet-tile-pane { filter: sepia(.12) saturate(.9) brightness(1.04); }
+.mode-switch { display: flex; background: var(--paper); border: 1px solid var(--line); border-radius: 999px; padding: 3px; box-shadow: var(--shadow); }
+.mode-switch button { border: 0; background: none; font: 600 .78rem var(--sans); color: var(--ink-2); padding: 5px 12px; border-radius: 999px; cursor: pointer; }
+.mode-switch button:hover { background: var(--paper-2); }
+.mode-switch button[aria-pressed="true"] { background: var(--accent); color: #fff; }
+
+.map-label-wrap { background: none; border: 0; }
+.map-label { display: block; width: 100%; text-align: center; white-space: nowrap; line-height: 14px; font: 500 11px var(--sans); color: var(--ink);
+  text-shadow: 0 0 2px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #fff; pointer-events: none; }
+.map-label.battle { font: 700 11.5px var(--sans); line-height: 15px; background: rgba(255, 255, 255, .92); border: 1px solid var(--line); border-radius: 999px;
+  text-shadow: none; box-shadow: 0 1px 2px rgba(20, 30, 50, .12); pointer-events: auto; cursor: pointer; }
+.map-label.battle:hover { border-color: var(--accent); color: var(--accent-dark); }
+.map-label.battle.future { font-weight: 600; color: var(--muted); background: rgba(255, 255, 255, .8); }
+.map-label.area, .map-label.region { font: 600 10px var(--sans); line-height: 14px; letter-spacing: .1em; color: rgba(45, 55, 75, .72); }
+.map-label.nation { font: italic 600 11px var(--quote); line-height: 14px; color: #6b5a2e; }
+.map-label.water { font: italic 500 11px var(--quote); line-height: 14px; color: #3b6c93; }
+
+.map-cta { position: absolute; z-index: 800; left: 50%; top: 14px; transform: translateX(-50%); display: flex; align-items: center; gap: 10px;
+  background: var(--paper); border: 1px solid var(--line); border-radius: 999px; padding: 5px 16px 5px 5px; box-shadow: var(--shadow-lg); white-space: nowrap; }
+.map-cta[hidden] { display: none; }
+.map-cta .btn { border-radius: 999px; display: inline-flex; align-items: center; gap: 6px; }
+.map-cta span { font-size: .82rem; color: var(--muted); }
+
+.legend { max-width: 240px; max-height: calc(100vh - 250px); overflow-y: auto; }
+.legend summary { font: 700 .8rem var(--sans); cursor: pointer; }
+.legend details[open] summary { margin-bottom: 4px; }
+.legend .box { width: 14px; height: 11px; border-radius: 2px; opacity: .55; border: 1px solid rgba(0, 0, 0, .35); flex: none; }
+.period-key { margin-top: 8px; padding-top: 7px; border-top: 1px solid var(--line); }
+.period-key .row { align-items: flex-start; }
+.period-key .row .box { margin-top: 3px; }
+.period-key details { margin-top: 5px; }
+.period-key details summary { font: 600 .72rem var(--sans); color: var(--accent-dark); margin: 0; }
+.period-key p { margin: 4px 0 0; font-size: .72rem; line-height: 1.4; color: var(--muted); }
+
+.all-list { margin: 8px 0; border: 1px solid var(--line); border-radius: var(--r); background: var(--paper); }
+.all-list summary { padding: 9px 12px; font-weight: 600; font-size: .9rem; cursor: pointer; }
+.all-list[open] summary { border-bottom: 1px solid var(--line); }
+.all-list ul { margin: 0; padding: 6px 12px 10px; max-height: 320px; overflow-y: auto; }
+.dot.side-future { background: #fff; box-shadow: inset 0 0 0 1.5px #5d6677; }
+@media (max-width: 760px) {
+  .map-cta span { display: none; }
+  .map-cta { padding: 4px; top: 56px; }
+  .mode-switch button { padding: 5px 9px; font-size: .72rem; }
+}

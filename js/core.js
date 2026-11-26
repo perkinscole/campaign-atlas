@@ -71,6 +71,18 @@ window.Atlas = (function () {
   }
   function register(pack) { packs[pack.meta.id] = prepare(pack); }
 
+  // Period map data (borders and place names of the time) lives in data/period/<id>.js and is loaded only by the map page.
+  const periods = {};
+  const period = p => { periods[p.id] = p; };
+  function loadPeriod(cb) {
+    if (!entry || !entry.period) { cb(null); return; }
+    const s = document.createElement('script');
+    s.src = 'data/period/' + entry.id + '.js';
+    s.onload = () => cb(periods[entry.id] || null);
+    s.onerror = () => cb(null);
+    document.head.appendChild(s);
+  }
+
   const url = (page, hash) => `${page}.html?war=${entry.id}${hash ? '#' + hash : ''}`;
 
   function renderHeader(active) {
@@ -99,5 +111,5 @@ window.Atlas = (function () {
     document.head.appendChild(s);
   }
 
-  return { SITE, entry, img, thumb, parse, fmt, fmtISO, fmtRange, num, esc, spell, register, load, url, renderHeader, NEUTRAL };
+  return { SITE, entry, img, thumb, parse, fmt, fmtISO, fmtRange, num, esc, spell, register, load, period, loadPeriod, url, renderHeader, NEUTRAL };
 })();

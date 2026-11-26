@@ -562,6 +562,8 @@
         bounds: [[35.12962, -81.82021], [35.14109, -81.80454]],
         note: 'This is a schematic. The three American lines are placed at the positions the National Park Service marks along the old Green River Road. Line lengths and the movements between steps are approximate.',
         places: [{ name: 'Low rise', ll: [35.13828, -81.8132] }, { name: 'To the Broad River', ll: [35.13856, -81.81709] }],
+        // Shown on the period map. The trace of the old road, from OpenStreetMap.
+        lines: [{kind: 'road', name: 'Green River Road', pts: [[35.13154, -81.80378], [35.13155, -81.80526], [35.13233, -81.80828], [35.13294, -81.81012], [35.13449, -81.81357], [35.13584, -81.81513], [35.141, -81.81881], [35.14241, -81.82069]]}],
         units: {
           skirm: { side: 'american', name: 'Rifle skirmishers', short: 'Skirmishers' },
           militia: { side: 'american', name: 'Pickens\'s militia', short: 'Militia' },

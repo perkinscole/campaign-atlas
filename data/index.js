@@ -9,21 +9,21 @@ window.ATLAS_SITE = {
   tagline: 'Interactive war maps for the K–12 classroom',
   wars: [
     {
-      id: 'american-revolution', status: 'live', objects: true,
+      id: 'american-revolution', status: 'live', objects: true, period: true,
       title: 'The American Revolution', years: '1775–1781',
       blurb: 'From Lexington Green to Yorktown: follow Washington\'s army, the British campaigns, and the war in the South, with the words of soldiers, officers, and civilians.',
       cover: 'Washington Crossing the Delaware by Emanuel Leutze, MMA-NYC, 1851.jpg',
       grades: '5–12'
     },
     {
-      id: 'civil-war', status: 'live', objects: true,
+      id: 'civil-war', status: 'live', objects: true, period: true,
       title: 'The American Civil War', years: '1861–1865',
       blurb: 'Forty-one battles and twenty-two army routes from Fort Sumter to Appomattox, with letters, diaries, and reports from both sides.',
       cover: 'Thure de Thulstrup - L. Prang and Co. - Battle of Gettysburg - Restoration by Adam Cuerden.jpg',
       grades: '5–12'
     },
     {
-      id: 'world-war-2-europe', status: 'live', objects: true,
+      id: 'world-war-2-europe', status: 'live', objects: true, period: true,
       title: 'World War II in Europe and North Africa', years: '1939–1945',
       blurb: 'From the invasion of Poland to V-E Day: the fall of France, the Eastern Front, North Africa, Italy, D-Day, and the liberation of the camps, told through official records and Nuremberg testimony.',
       cover: 'Into the Jaws of Death 23-0455M edit.jpg',

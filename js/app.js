@@ -9,7 +9,7 @@ Atlas.load('atlas', function (P) {
   document.title = `${M.title} — ${Atlas.SITE.name}`;
 
   // ---- State -----------------------------------------------------------
-  const state = { day: 0, playing: false, speed: 1, a: true, b: true, all: false, auto: true, view: 'home', sel: null, tour: null, stop: 0, tourReturn: null };
+  const state = { day: 0, playing: false, speed: 1, a: true, b: true, all: true, auto: true, view: 'home', sel: null, tour: null, stop: 0, tourReturn: null };
   const sideOn = id => id === SA.id ? state.a : state.b;
 
   // ---- DOM -------------------------------------------------------------
@@ -43,7 +43,13 @@ Atlas.load('atlas', function (P) {
   // Base maps. Each is a stack of tile layers; the choice is remembered on this device.
   const ESRI = 'https://server.arcgisonline.com/ArcGIS/rest/services/';
   const HILLSHADE = 'https://services.arcgisonline.com/arcgis/rest/services/Elevation/World_Hillshade/MapServer/tile/{z}/{y}/{x}';
+  const HAS_PERIOD = !!Atlas.entry.period;
   const BASES = {
+    ...(HAS_PERIOD ? { period: { name: 'Period map', hint: 'borders and place names of the time; no modern roads or cities',
+      layers: () => [
+        L.tileLayer(ESRI + 'World_Shaded_Relief/MapServer/tile/{z}/{y}/{x}', { maxNativeZoom: 13, maxZoom: 19, attribution: 'Relief &copy; Esri' }),
+        L.tileLayer(HILLSHADE, { minZoom: 13, maxNativeZoom: 15, maxZoom: 19, opacity: .5, className: 'blend-multiply', attribution: 'Hillshade &copy; Esri' })
+      ] } } : {}),
     topo: { name: 'Topographic', hint: 'terrain, rivers, and place names',
       layers: () => [
         L.tileLayer(ESRI + 'World_Topo_Map/MapServer/tile/{z}/{y}/{x}', { maxNativeZoom: 18, maxZoom: 19, attribution: 'Topographic map &copy; Esri and its data providers' }),
@@ -61,23 +67,141 @@ Atlas.load('atlas', function (P) {
       ] }
   };
   let baseId = null, baseLayers = [];
-  function setBase(id, remember) {
+  function setBase(id) {
+    if (!ready) return;
     if (!BASES[id]) id = 'topo';
-    if (id === baseId) return;
-    baseLayers.forEach(l => map.removeLayer(l));
-    baseLayers = BASES[id].layers(); baseLayers.forEach(l => l.addTo(map));
-    Object.keys(BASES).forEach(k => map.getContainer().classList.toggle('base-' + k, k === id));
-    baseId = id;
+    if (id !== baseId) {
+      baseLayers.forEach(l => map.removeLayer(l));
+      baseLayers = BASES[id].layers(); baseLayers.forEach(l => l.addTo(map));
+      Object.keys(BASES).forEach(k => map.getContainer().classList.toggle('base-' + k, k === id));
+      baseId = id;
+    }
     const r = document.querySelector(`input[name="base"][value="${id}"]`); if (r) r.checked = true;
-    if (remember) { try { localStorage.setItem('atlas-base', id); } catch (e) { /* storage unavailable */ } }
+    document.querySelectorAll('.mode-switch button').forEach(b => b.setAttribute('aria-pressed', String((b.dataset.mode === 'period') === (id === 'period'))));
+    periodSync(); periodLegend(); layoutLabels(); tacLinesSync();
+  }
+  // Two remembered choices: period or modern, and which modern style. A battlefield view can ask for its own modern style.
+  const store = (k, v) => { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { /* storage unavailable */ } return null; };
+  const view = { mode: HAS_PERIOD && store('atlas-mode') !== 'modern' ? 'period' : 'modern', modern: store('atlas-base') || 'topo', override: null };
+  if (view.modern === 'period' || !BASES[view.modern]) view.modern = 'topo';
+  function applyBase() {
+    setBase(view.mode === 'period' ? 'period' : view.override || (tac.b && tac.b.tactical.base) || view.modern);
+  }
+  function chooseBase(id) {
+    if (id === 'period') view.mode = 'period';
+    else { view.mode = 'modern'; if (tac.b) view.override = id; else { view.modern = id; store('atlas-base', id); } }
+    store('atlas-mode', view.mode);
+    applyBase();
   }
   const baseMenu = $('baseMenu');
   if (baseMenu) {
     baseMenu.innerHTML = Object.entries(BASES).map(([k, b]) => `<label><input type="radio" name="base" value="${k}"> <span><strong>${b.name}</strong> <small>${b.hint}</small></span></label>`).join('');
-    baseMenu.addEventListener('change', e => { if (e.target.name === 'base') setBase(e.target.value, true); });
+    baseMenu.addEventListener('change', e => { if (e.target.name === 'base') chooseBase(e.target.value); });
   }
-  let savedBase = null; try { savedBase = localStorage.getItem('atlas-base'); } catch (e) { /* storage unavailable */ }
-  setBase(savedBase || 'topo', false);
+  if (HAS_PERIOD) {
+    const sw = L.control({ position: 'topright' });
+    sw.onAdd = () => {
+      const div = L.DomUtil.create('div', 'mode-switch');
+      div.setAttribute('role', 'group'); div.setAttribute('aria-label', 'Map style');
+      div.innerHTML = '<button type="button" data-mode="period" title="Borders and place names of the time, with no modern roads or cities">Period map</button><button type="button" data-mode="modern" title="A present-day topographic map">Modern map</button>';
+      L.DomEvent.disableClickPropagation(div);
+      div.addEventListener('click', e => { const b = e.target.closest('button'); if (b) chooseBase(b.dataset.mode === 'period' ? 'period' : view.override || (tac.b && tac.b.tactical.base) || view.modern); });
+      return div;
+    };
+    sw.addTo(map);
+  }
+
+  // On the period map a battlefield view draws its own roads, streams, and railroads, since the base has none.
+  const tacLines = L.layerGroup();
+  const TAC_LINE = { road: { color: '#7a5a2c', weight: 2.4, opacity: .85 }, stream: { color: '#3f7fb5', weight: 1.8, opacity: .9 }, rail: { color: '#2b2f38', weight: 1.6, opacity: .85, dashArray: '7 4' } };
+  function tacLinesSync() {
+    const on = tac.b && baseId === 'period';
+    if (on && !map.hasLayer(tacLines)) { tacLines.addTo(map); tacLines.eachLayer(l => l.bringToBack()); }
+    if (!on && map.hasLayer(tacLines)) map.removeLayer(tacLines);
+  }
+
+  // ---- Period map: borders that change with the date ---------------------
+  map.createPane('period'); map.getPane('period').style.zIndex = 300; map.getPane('period').style.pointerEvents = 'none';
+  const periodLayer = L.layerGroup();
+  let PERIOD = null, periodShown = -1;
+  function periodSync() {
+    const on = baseId === 'period' && PERIOD;
+    if (!on) { if (map.hasLayer(periodLayer)) map.removeLayer(periodLayer); return; }
+    if (!map.hasLayer(periodLayer)) periodLayer.addTo(map);
+    const d = dateOfDay(state.day).toISOString().slice(0, 10);
+    let shown = 0;
+    PERIOD.features.forEach(f => {
+      const vis = (!f.from || d >= f.from) && (!f.to || d < f.to);
+      let g = f.group || null;
+      if (f.groups) f.groups.forEach(([from, id]) => { if (d >= from) g = id; });
+      if (vis !== f.vis) { if (vis) periodLayer.addLayer(f.poly); else periodLayer.removeLayer(f.poly); f.vis = vis; }
+      if (g !== f.g) { const G = PERIOD.groups[g]; f.poly.setStyle(G ? { fillColor: G.color, fillOpacity: G.opacity || .22 } : { fillOpacity: 0 }); f.g = g; }
+      if (vis) shown++;
+    });
+    if (shown !== periodShown) { periodShown = shown; layoutLabels(); }
+  }
+  function periodLegend() {
+    const el = document.getElementById('periodKey'); if (!el) return;
+    const on = baseId === 'period' && PERIOD;
+    el.hidden = !on;
+    if (on && !el.innerHTML) el.innerHTML = `<h4>Map of the time</h4>${Object.values(PERIOD.groups).map(g => `<div class="row"><span class="box" style="background:${g.color}"></span> ${esc(g.name)}</div>`).join('')}<details><summary>About these borders</summary><p>${esc(PERIOD.caption)}</p></details>`;
+  }
+
+  // ---- Name labels -------------------------------------------------------
+  // Battles are always named; on the period map so are the places of the time. Labels that would overlap are left out, least important first.
+  map.createPane('labels'); map.getPane('labels').style.zIndex = 610;
+  const labelLayer = L.layerGroup().addTo(map);
+  const measure = (() => { const c = document.createElement('canvas').getContext('2d'); return (t, font) => { c.font = font; return c.measureText(t).width; }; })();
+  const LABEL = {
+    battle: { font: '700 11.5px Inter, sans-serif', pad: 10, h: 17 }, city: { font: '500 11px Inter, sans-serif', pad: 4, h: 14 },
+    area: { font: '600 10px Inter, sans-serif', pad: 4, h: 14, track: 1.1 }, soft: { font: 'italic 500 11px Inter, sans-serif', pad: 4, h: 14 }
+  };
+  let ready = false;
+  function layoutLabels() {
+    if (!ready) return;
+    labelLayer.clearLayers();
+    if (tac.b) return;
+    const z = map.getZoom(), size = map.getSize(), hz = map.getBoundsZoom(HOME_BOUNDS), boxes = [], placed = [];
+    const free = b => b[0] > 2 && b[1] > 2 && b[2] < size.x - 2 && b[3] < size.y - 2 && !boxes.some(o => b[0] < o[2] && b[2] > o[0] && b[1] < o[3] && b[3] > o[1]);
+    // Try each offset in turn; dx and dy say which side of the point the label sits on.
+    const put = (ll, text, kind, cls, gap, sides, extra) => {
+      const L0 = LABEL[kind], w = Math.ceil(measure(text, L0.font) * (L0.track || 1)) + L0.pad, h = L0.h, p = map.latLngToContainerPoint(ll);
+      for (const [dx, dy] of sides) {
+        const x = dx > 0 ? p.x + gap : dx < 0 ? p.x - gap - w : p.x - w / 2, y = dy > 0 ? p.y + gap : dy < 0 ? p.y - gap - h : p.y - h / 2;
+        const box = [x, y, x + w, y + h];
+        if (!free(box)) continue;
+        boxes.push(box);
+        const m = L.marker(ll, Object.assign({ pane: 'labels', keyboard: false, interactive: false,
+          icon: L.divIcon({ className: 'map-label-wrap', iconSize: [w, h], iconAnchor: [p.x - x, p.y - y], html: `<span class="map-label ${cls}">${esc(text)}</span>` }) }, extra || {}));
+        labelLayer.addLayer(m); placed.push({ text, p });
+        return m;
+      }
+      return null;
+    };
+    const AROUND = [[1, 0], [-1, 0], [0, -1], [0, 1]], CENTER = [[0, 0]];
+    const shownBattles = P.BATTLES.filter(b => battleLayer.hasLayer(markers[b.id]));
+    shownBattles.forEach(b => { const p = map.latLngToContainerPoint([b.lat, b.lng]), r = markers[b.id].getRadius() + 1; boxes.push([p.x - r, p.y - r, p.x + r, p.y + r]); });
+    const sel = selectedBattle();
+    [...shownBattles].sort((a, b) => (b.id === sel) - (a.id === sel) || b.total - a.total).forEach(b => {
+      const m = put([b.lat, b.lng], b.name, 'battle', state.day < b.d0 ? 'battle future' : 'battle', markers[b.id].getRadius() + 3, AROUND, { interactive: true });
+      if (m) m.on('click', () => { state.tourReturn = null; selectBattle(b.id, { fly: false }); });
+    });
+    if (baseId !== 'period' || !PERIOD) return;
+    const places = PERIOD.places.filter(pl => pl[3] === 1 || (pl[3] === 2 ? z >= hz - .3 : z >= hz + 1));
+    const isCity = pl => !pl[4] || pl[4] === 'city' || pl[4] === 'capital';
+    const city = pl => {
+      const p = map.latLngToContainerPoint([pl[1], pl[2]]);
+      if (placed.some(o => o.text.includes(pl[0].split(' (')[0]) && Math.hypot(o.p.x - p.x, o.p.y - p.y) < 70)) return;   // a battle here already carries the name
+      if (!free([p.x - 4, p.y - 4, p.x + 4, p.y + 4])) return;
+      const m = put([pl[1], pl[2]], pl[0], 'city', 'city', 6, [[1, 0], [-1, 0]]);
+      if (m) { boxes.push([p.x - 4, p.y - 4, p.x + 4, p.y + 4]); labelLayer.addLayer(L.circleMarker([pl[1], pl[2]], { pane: 'period', interactive: false, radius: pl[4] === 'capital' ? 3.5 : 2.5, color: '#1c2333', weight: pl[4] === 'capital' ? 2 : 1, fillColor: pl[4] === 'capital' ? '#fff' : '#1c2333', fillOpacity: 1 })); }
+    };
+    places.filter(pl => isCity(pl) && pl[3] === 1).forEach(city);
+    PERIOD.features.filter(f => f.vis && !f.quiet).forEach(f => put(f.label, f.name.toUpperCase(), 'area', 'area', 0, CENTER));
+    places.filter(pl => !isCity(pl)).forEach(pl => put([pl[1], pl[2]], pl[4] === 'region' ? pl[0].toUpperCase() : pl[0], pl[4] === 'region' ? 'area' : 'soft', pl[4], 0, CENTER));
+    places.filter(pl => isCity(pl) && pl[3] > 1).sort((a, b) => a[3] - b[3]).forEach(city);
+  }
+  map.on('moveend zoomend resize', layoutLabels);
   const routeLayer = L.layerGroup().addTo(map);
   const headLayer = L.layerGroup().addTo(map);
   const battleLayer = L.layerGroup().addTo(map);
@@ -85,15 +209,16 @@ Atlas.load('atlas', function (P) {
   const legend = L.control({ position: 'bottomright' });
   legend.onAdd = () => {
     const div = L.DomUtil.create('div', 'legend');
-    div.innerHTML = `
-      <h4>Legend</h4>
+    div.innerHTML = `<details${map.getSize().x >= 760 ? ' open' : ''}><summary>Legend</summary>
       <div class="row"><span class="line" style="background:${SA.color}"></span> ${esc(SA.name)} army movement</div>
       <div class="row"><span class="line" style="background:${SB.color}"></span> ${esc(SB.name)} army movement</div>
       <div class="row"><span class="dot" style="background:${SA.color}"></span> ${esc(SA.name)} victory</div>
       <div class="row"><span class="dot" style="background:${SB.color}"></span> ${esc(SB.name)} victory</div>
       <div class="row"><span class="dot" style="background:${Atlas.NEUTRAL}"></span> Inconclusive or other</div>
-      <div class="sizes"><span style="width:8px;height:8px"></span><span style="width:14px;height:14px"></span><span style="width:22px;height:22px"></span> size = total casualties</div>`;
-    L.DomEvent.disableClickPropagation(div);
+      <div class="row"><span class="dot" style="background:#fff;box-shadow:0 0 0 1.5px #5d6677"></span> Battle still to come</div>
+      <div class="sizes"><span style="width:8px;height:8px"></span><span style="width:14px;height:14px"></span><span style="width:22px;height:22px"></span> size = total casualties</div>
+      <div class="period-key" id="periodKey" hidden></div></details>`;
+    L.DomEvent.disableClickPropagation(div); L.DomEvent.disableScrollPropagation(div);
     return div;
   };
   legend.addTo(map);
@@ -119,6 +244,9 @@ Atlas.load('atlas', function (P) {
     line.bindTooltip(`<strong>${esc(c.name)}</strong><br>${esc(c.commander)}`, { sticky: true });
     line.on('click', () => selectCampaign(c.id));
     const halo = L.polyline([], { color: '#fff', weight: 7, opacity: .55, interactive: false });
+    const ghost = L.polyline(c.pts.map(p => [p.lat, p.lng]), { color: col, weight: 3, opacity: .6, dashArray: '1 7', lineCap: 'round', className: 'route' });
+    ghost.bindTooltip(`<strong>${esc(c.name)}</strong><br>${esc(c.commander)}<br><span style="color:#5d6677">${fmtRange(c.pts[0].date, c.pts[c.pts.length - 1].date)}</span>`, { sticky: true });
+    ghost.on('click', () => selectCampaign(c.id));
     const wps = c.pts.map(p => L.circleMarker([p.lat, p.lng], { radius: 3, color: col, weight: 1.5, fillColor: '#fff', fillOpacity: 1, className: 'waypoint' })
       .bindTooltip(`${esc(p.label)}<br><span style="color:#6b5c48">${fmt(dateOfDay(p.day))}</span>`, { direction: 'top', offset: [0, -4] })
       .on('click', () => selectCampaign(c.id)));
@@ -128,7 +256,7 @@ Atlas.load('atlas', function (P) {
     });
     head.bindTooltip(`<strong>${esc(c.army)}</strong><br>${esc(c.commander)}`, first ? { direction: 'top', offset: [0, -36] } : { direction: 'bottom', offset: [0, 36] });
     head.on('click', () => selectCampaign(c.id));
-    routes[c.id] = { line, halo, wps, head };
+    routes[c.id] = { line, halo, ghost, wps, head };
   });
 
   function routeState(c, day) {
@@ -151,7 +279,13 @@ Atlas.load('atlas', function (P) {
   }
 
   // ---- Render ----------------------------------------------------------
-  let lastHomeKey = '';
+  let lastHomeKey = '', labelKey = '';
+  const cta = document.createElement('div');
+  cta.className = 'map-cta'; cta.hidden = true;
+  cta.innerHTML = `<button type="button" class="btn primary"><svg viewBox="0 0 20 20" width="14" height="14" aria-hidden="true"><path d="M5 3l12 7-12 7z" fill="currentColor"/></svg> Play the timeline</button><span>or click any battle or dotted route</span>`;
+  map.getContainer().appendChild(cta);
+  L.DomEvent.disableClickPropagation(cta);
+  cta.querySelector('button').addEventListener('click', () => { state.speed = Number($('speed').value); play(); render(); });
   const selectedBattle = () => state.view === 'battle' ? state.sel : (state.view === 'tour' ? (state.tour.stops[state.stop].battle || null) : null);
   const selectedCampaign = () => state.view === 'campaign' ? state.sel : (state.view === 'tour' ? (state.tour.stops[state.stop].campaign || null) : null);
 
@@ -174,13 +308,16 @@ Atlas.load('atlas', function (P) {
         el.classList.toggle('is-active', active);
         el.classList.toggle('is-selected', selB === b.id);
       }
-      m.setStyle({ fillOpacity: future ? .3 : .85, opacity: future ? .4 : 1 });
+      if (future !== m.future) { m.future = future; m.setStyle(future ? { fillColor: '#fff', fillOpacity: .92, color: '#5d6677' } : { fillColor: P.color(b.result), fillOpacity: .85, color: '#fff' }); }
       if (active || selB === b.id) m.bringToFront();
     });
 
     P.CAMPAIGNS.forEach(c => {
       const r = routes[c.id];
       const on = sideOn(c.side);
+      const ghost = on && state.all && day < c.d1;
+      if (ghost && !routeLayer.hasLayer(r.ghost)) { routeLayer.addLayer(r.ghost); r.ghost.bringToBack(); }
+      if (!ghost && routeLayer.hasLayer(r.ghost)) routeLayer.removeLayer(r.ghost);
       const rs = on ? routeState(c, day) : { pts: [], head: null, status: 'future', reached: 0 };
       const show = rs.pts.length > 1;
       [r.halo, r.line].forEach(l => {
@@ -204,6 +341,11 @@ Atlas.load('atlas', function (P) {
         if (!headLayer.hasLayer(r.head)) headLayer.addLayer(r.head);
       } else if (headLayer.hasLayer(r.head)) headLayer.removeLayer(r.head);
     });
+
+    periodSync();
+    const lk = P.BATTLES.filter(b => day >= b.d0).length + ':' + state.all + ':' + (selB || '');
+    if (lk !== labelKey) { labelKey = lk; layoutLabels(); }
+    cta.hidden = !(state.view === 'home' && day === 0 && !state.playing && !tac.b);
 
     if (state.view === 'home') {
       const key = P.BATTLES.filter(b => day >= b.d0).length + ':' + P.EVENTS.filter(e => day >= e.d0).length + ':' + P.CAMPAIGNS.filter(c => day >= c.d0 && day < c.d1).map(c => c.id).join(',');
@@ -238,9 +380,11 @@ Atlas.load('atlas', function (P) {
       <div class="panel-inner">
         <div class="intro">
           <h2>${esc(M.title)}</h2>
-          <p>Press <strong>play</strong> or drag the timeline. ${esc(M.intro)} Click any marker, route, or dispatch below to open the full story, with period images and the words of people who were there.</p>
+          <p>Every battle is a circle on the map and every army route is a dotted line. Press <strong>play</strong> or drag the timeline: the routes draw themselves as the armies march, and each circle fills with the winner's color when its battle is fought. Click any circle or route to open the full story, with period images and the words of people who were there.</p>
         </div>
         ${upcoming ? `<p class="empty">Next: <button class="btn" data-jump="${upcoming.id}">${esc(upcoming.name)} · ${fmtISO(upcoming.start)}</button></p>` : ''}
+        <details class="all-list"><summary>All ${byDate.length} battles</summary><ul class="dispatch-list">${byDate.map(b => `<li><time>${fmtISO(b.start)}</time><button data-jump="${b.id}"><span class="dot ${day >= b.d0 ? P.sideClass(b.result) : 'side-future'}"></span>${esc(b.name)}</button></li>`).join('')}</ul></details>
+        <details class="all-list"><summary>All ${P.CAMPAIGNS.length} army movements</summary><ul class="campaign-list">${[...P.CAMPAIGNS].sort((a, b) => a.d0 - b.d0).map(c => `<li><button data-campaign="${c.id}"><span class="swatch ${P.sideClass(c.side)}"></span><span><strong>${esc(c.short)}</strong> — ${esc(c.name)}<br><small style="color:var(--muted)">${fmtRange(c.pts[0].date, c.pts[c.pts.length - 1].date)}</small></span></button></li>`).join('')}</ul></details>
         ${P.TOURS.length ? `<h3>Guided tours</h3><ul class="tour-list">${P.TOURS.map(t => `<li><button data-tour="${t.id}"><strong>${esc(t.title)}</strong><span>${esc(t.question)}</span><small>${t.stops.length} stops · about ${t.minutes} minutes · grades ${esc(t.grades)}</small></button></li>`).join('')}</ul>` : ''}
         <h3>Armies on the march</h3>
         ${active.length ? `<ul class="campaign-list">${active.map(c => `<li><button data-campaign="${c.id}"><span class="swatch ${P.sideClass(c.side)}"></span><span><strong>${esc(c.short)}</strong> — ${esc(c.name)}<br><small style="color:var(--muted)">${esc(c.army)}</small></span></button></li>`).join('')}</ul>`
@@ -359,7 +503,7 @@ Atlas.load('atlas', function (P) {
   // ---- Battlefield view: unit positions animated phase by phase ---------
   const TAC_N = 12; // points per unit line, so any two shapes can be blended
   const tacLayer = L.layerGroup();
-  const tac = { b: null, i: 0, shapes: {}, labels: {}, arrows: [], raf: null, auto: null, prevBase: null, cur: {} };
+  const tac = { b: null, i: 0, shapes: {}, labels: {}, arrows: [], raf: null, auto: null, cur: {} };
   const lerp = (a, b, f) => a + (b - a) * f;
   function resample(pts, n) {
     if (pts.length === 1) return Array.from({ length: n }, () => pts[0].slice());
@@ -449,13 +593,14 @@ Atlas.load('atlas', function (P) {
       [routeLayer, headLayer, battleLayer].forEach(l => map.removeLayer(l));
       tacLayer.addTo(map);
       document.querySelector('.atlas').classList.add('tactical-on');
-      tac.prevBase = baseId;
-      if (b.tactical.base) setBase(b.tactical.base, false);
+      tacLines.clearLayers();
+      (b.tactical.lines || []).forEach(l => L.polyline(l.pts, Object.assign({ className: 'tac-line' }, TAC_LINE[l.kind] || TAC_LINE.road)).bindTooltip(l.name, { sticky: true }).addTo(tacLines));
       (b.tactical.places || []).forEach(pl => L.marker(pl.ll, { interactive: false, keyboard: false, icon: L.divIcon({ className: 'army-head-wrap', iconSize: [0, 0], html: `<div class="place-label">${esc(pl.name)}</div>` }) }).addTo(tacLayer));
       map.invalidateSize();
       map.fitBounds(b.tactical.bounds, { padding: [10, 10] });
     }
-    tac.b = b; tac.cur = {};
+    tac.b = b; tac.cur = {}; cta.hidden = true;
+    applyBase();
     state.view = 'tactical'; state.sel = id;
     if (state.day < b.d0) setDay(b.d0);
     dateLabel.textContent = fmtRange(b.start, b.end);
@@ -465,12 +610,12 @@ Atlas.load('atlas', function (P) {
   function exitTactical(silent) {
     if (!tac.b) return;
     tacAuto(false); if (tac.raf) cancelAnimationFrame(tac.raf);
-    tacLayer.clearLayers(); map.removeLayer(tacLayer);
+    tacLayer.clearLayers(); map.removeLayer(tacLayer); tacLines.clearLayers();
     tac.shapes = {}; tac.labels = {}; tac.arrows = []; tac.cur = {};
     [routeLayer, headLayer, battleLayer].forEach(l => l.addTo(map));
     document.querySelector('.atlas').classList.remove('tactical-on');
-    if (tac.prevBase) setBase(tac.prevBase, false);
-    const b = tac.b; tac.b = null;
+    const b = tac.b; tac.b = null; view.override = null;
+    applyBase();
     map.invalidateSize();
     if (!silent) { state.view = 'battle'; selectBattle(b.id, { jump: false }); map.setView([b.lat, b.lng], 7); }
   }
@@ -499,7 +644,7 @@ Atlas.load('atlas', function (P) {
         <h3>The battle step by step</h3>
         <ol class="phase-list">${T.phases.map((p, k) => `<li class="${k === i ? 'now' : ''}"><button data-tac-go="${k}"><time>${esc(p.time)}</time>${esc(p.title)}</button></li>`).join('')}</ol>
         ${T.ask ? `<div class="discuss"><h3>Discuss</h3><ol>${T.ask.map(q => `<li>${esc(q)}</li>`).join('')}</ol></div>` : ''}
-        <p class="kbd">${esc(T.note || 'Unit positions are simplified from standard battle maps. Each bar is a body of troops; the bar shows roughly where its line stood.')} Use <kbd>←</kbd> <kbd>→</kbd> to step and the Layers menu to change the base map.</p>
+        <p class="kbd">${esc(T.note || 'Unit positions are simplified from standard battle maps. Each bar is a body of troops; the bar shows roughly where its line stood.')} ${T.lines ? 'On the period map, roads and streams are traced along the routes they follow today. ' : ''}Use <kbd>←</kbd> <kbd>→</kbd> to step, and the switch on the map to compare the period map with a modern one.</p>
       </div>`;
     panel.scrollTop = 0;
   }
@@ -596,7 +741,7 @@ Atlas.load('atlas', function (P) {
   $('speed').addEventListener('change', e => { state.speed = Number(e.target.value); });
   $('optA').addEventListener('change', e => { state.a = e.target.checked; lastHomeKey = ''; render(); });
   $('optB').addEventListener('change', e => { state.b = e.target.checked; lastHomeKey = ''; render(); });
-  $('optAll').addEventListener('change', e => { state.all = e.target.checked; render(); });
+  $('optAll').addEventListener('change', e => { state.all = e.target.checked; render(); layoutLabels(); });
   $('optAuto').addEventListener('change', e => { state.auto = e.target.checked; });
 
   panel.addEventListener('click', e => {
@@ -649,7 +794,15 @@ Atlas.load('atlas', function (P) {
   window.addEventListener('hashchange', fromHash);
 
   // ---- Start -----------------------------------------------------------
+  $('optAll').checked = state.all;
+  ready = true;
+  applyBase();
   render();
   if (!fromHash()) renderHome();
+  Atlas.loadPeriod(p => {
+    if (!p) return;
+    p.features.forEach(f => { f.poly = L.polygon(f.shape, { pane: 'period', interactive: false, color: '#4a5263', weight: 1, opacity: .75, fillOpacity: 0 }); });
+    PERIOD = p; applyBase();
+  });
   setTimeout(() => { map.invalidateSize(); if (state.view === 'home') map.fitBounds(HOME_BOUNDS, { padding: [6, 6] }); }, 60);
 });

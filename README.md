@@ -79,6 +79,24 @@ A pack calls `Atlas.register({...})` with:
 
 Images are referenced by their exact Wikimedia Commons filename via `Atlas.img(...)`.
 
+## Period maps
+
+The map opens on a period map: shaded relief with no modern roads, cities, or borders, overlaid with the borders and place names of the time. A switch on the map changes to a modern topographic map and back, and the choice is remembered.
+
+The overlay for each atlas is `data/period/<id>.js`, loaded when the catalog entry has `period: true`. The files are built, not written by hand:
+
+```
+node tools/period/build.js <ne_50m_admin_1_states_provinces.geojson> <world_1938.geojson>
+```
+
+- `tools/period/build.js` holds the recipe for each atlas: which modern shapes are merged or cut to make each period unit, the dates a unit exists (`from`, `to`), and the group it belongs to on a given date (`groups: [[date, group], ...]`). The Civil War states change color as they secede, and West Virginia appears on June 20, 1863.
+- `tools/period/places.js` lists cities under their period names (Charles Town, Leningrad, Königsberg), rivers, regions, and Native nations, each with a rank that controls the zoom at which it appears.
+- U.S. state lines come from Natural Earth (public domain) and are exact only where a boundary has not moved; lines that did move, such as the far-western territories, are left out. European borders are the 1938 set from [historical-basemaps](https://github.com/aourednik/historical-basemaps), which is licensed GPL-3.0, so `data/period/world-war-2-europe.js` carries that license.
+
+Name labels are placed by the engine. Battles come first, largest first, and any label that would overlap one already placed is left out.
+
+A battlefield view can carry `lines` (period roads, streams, and railroads), drawn only on the period map. `tools/period/osm_lines.py` makes them from an Overpass API result.
+
 ## Battlefield animations
 
 A battle can carry a `tactical` object, which adds a "Watch the battle unfold on the ground" button and a step-by-step view on a topographic base map (`#battlefield=<id>:<step>`).
@@ -86,8 +104,9 @@ A battle can carry a `tactical` object, which adds a "Watch the battle unfold on
 ```js
 tactical: {
   bounds: [[south, west], [north, east]],
-  base: 'contour',                       // optional: topo | contour | atlas | relief
+  base: 'contour',                       // optional modern base: topo | contour | atlas | relief
   places: [{ name: 'Cemetery Hill', ll: [39.8203, -77.2292] }],
+  lines: [{ kind: 'road', name: 'Emmitsburg Road', pts: [[39.7751, -77.2645], [39.8159, -77.2370]] }],   // optional: road | stream | rail, drawn on the period map
   units: { ii: { side: 'union', name: 'II Corps (Hancock)', short: 'II Corps' } },
   phases: [{
     time: 'July 2, 3:30 p.m.', title: 'The fishhook', text: '...',
@@ -143,6 +162,6 @@ Battle entries may also set `sideLabels` (per-battle names for the two sides) an
 
 ## Credits
 
-Map rendering by [Leaflet](https://leafletjs.com/); topographic, hillshade, and boundary tiles by Esri; contour-line tiles by [OpenTopoMap](https://opentopomap.org/) (CC-BY-SA; map data © OpenStreetMap contributors, SRTM). 3D scans from the Smithsonian Institution (CC0) and from museums and makers on Sketchfab, credited beside each object; Smithsonian scans are displayed with Google's [model-viewer](https://modelviewer.dev/).
+Map rendering by [Leaflet](https://leafletjs.com/); relief, topographic, hillshade, and boundary tiles by Esri; period state lines made from [Natural Earth](https://www.naturalearthdata.com/) (public domain); 1938 European borders from [historical-basemaps](https://github.com/aourednik/historical-basemaps) by André Ourednik (GPL-3.0); battlefield roads and streams © OpenStreetMap contributors (ODbL); contour-line tiles by [OpenTopoMap](https://opentopomap.org/) (CC-BY-SA; map data © OpenStreetMap contributors, SRTM). 3D scans from the Smithsonian Institution (CC0) and from museums and makers on Sketchfab, credited beside each object; Smithsonian scans are displayed with Google's [model-viewer](https://modelviewer.dev/).
 Quotations are from public-domain memoirs, diaries, letters, and official records.
 Images are public-domain works from Wikimedia Commons and the Library of Congress.

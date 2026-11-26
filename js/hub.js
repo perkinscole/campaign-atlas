@@ -27,8 +27,8 @@
 
     <h2 id="teachers">For teachers</h2>
     <div class="features">
-      <div><h3>Animated maps</h3><p>Army routes draw themselves day by day on a topographic map, so students see why rivers, mountains, and railroads decided where battles were fought.</p></div>
-      <div><h3>Battlefield animations</h3><p>Step through Cowpens, Gettysburg, and D-Day on a topographic map and see how the ground shaped each move.</p></div>
+      <div><h3>Animated maps</h3><p>Army routes draw themselves day by day on a map of the time: period borders and place names over the terrain, with no modern roads or cities. One click switches to a modern topographic map.</p></div>
+      <div><h3>Battlefield animations</h3><p>Step through Cowpens, Gettysburg, and D-Day on the ground as it was, with the ridges, roads, and streams of the day, and see how the terrain shaped each move.</p></div>
       <div><h3>Objects in 3D</h3><p>Turn and zoom museum scans of soldiers' gear, weapons, and things civilians left behind, each with questions for close looking.</p></div>
       <div><h3>Primary sources</h3><p>Every battle carries the words of soldiers, commanders, and civilians, labeled with who wrote them, when, and where the text comes from.</p></div>
       <div><h3>Guided tours</h3><p>Ready-made sequences of stops with discussion questions. Share one link and the whole class starts at the same place. Works on a projector or on student devices.</p></div>
