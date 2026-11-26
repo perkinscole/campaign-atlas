@@ -77,9 +77,13 @@ Images are referenced by their exact Wikimedia Commons filename via `Atlas.img(.
 
 ## Verifying quotations
 
-Journal entries carry `verified: true` once their wording has been checked against the
-printed source. Verified entries show a check mark on the map, and the teacher guide
-and sources page report how many are verified. No entry has been marked yet.
+Journal entries carry `verified: true`, a `ref` link, and a `refTitle` once their wording
+has been checked against a printed text. Verified entries show a check mark on the map
+that links to that text, and the teacher guide and sources page report how many are
+verified. As of the last pass, 126 of 130 entries are verified. The four that are not
+are two traditional sayings with no fixed wording ("the whites of their eyes" and "Damn
+the torpedoes"), Nathaniel Lyon's reported last words, and the Elisha Hunt Rhodes diary,
+which is under copyright with no open text.
 
 ## Credits
 

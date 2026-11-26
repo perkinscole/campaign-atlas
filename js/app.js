@@ -188,7 +188,7 @@ Atlas.load('atlas', function (P) {
     <article class="entry ${j.side === 'civilian' ? 'civilian' : P.sideClass(j.side)}">
       <blockquote>${esc(j.quote)}</blockquote>
       <div class="who">${portrait(j)}<div><b>${esc(j.who)}</b><span>${esc(j.role)}</span><span>${esc(j.date)}</span></div></div>
-      <div class="src">Source: ${esc(j.source)}${j.verified ? ' <span class="verified" title="Wording checked against the printed source">✓ verified</span>' : ''}</div>
+      <div class="src">Source: ${esc(j.source)}${j.verified ? (j.ref ? ` <a class="verified" href="${esc(j.ref)}" target="_blank" rel="noopener" title="Wording checked against this printed text${j.refTitle ? ': ' + esc(j.refTitle) : ''}">✓ verified</a>` : ' <span class="verified" title="Wording checked against the printed source">✓ verified</span>') : ''}</div>
     </article>`;
 
   // ---- Panel: home -----------------------------------------------------

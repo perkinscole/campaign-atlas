@@ -61,12 +61,12 @@
         {
           quote: 'I do not pretend to go to sleep. How can I? If Anderson does not accept terms at four, the orders are he shall be fired upon. I count four, St. Michael\'s bells chime out, and I begin to hope. At half-past four the heavy booming of a cannon. I sprang out of bed, and on my knees prostrate I prayed as I never prayed before.',
           who: 'Mary Boykin Chesnut', role: 'Diarist, wife of a Confederate aide in Charleston', side: 'confederate',
-          date: 'April 12, 1861', source: 'A Diary from Dixie (1905)', portrait: 'chesnut'
+          date: 'April 12, 1861', source: 'A Diary from Dixie (1905)', portrait: 'chesnut', verified: true, ref: 'https://docsouth.unc.edu/southlit/chesnut/maryches.html', refTitle: 'A Diary from Dixie, Documenting the American South'
         },
         {
           quote: 'Having defended Fort Sumter for thirty-four hours, until the quarters were entirely burned, the main gates destroyed by fire, the gorge walls seriously injured, the magazine surrounded by flames, and its door closed from the effects of heat … I accepted terms of evacuation offered by General Beauregard.',
           who: 'Maj. Robert Anderson', role: 'Commander of the Fort Sumter garrison', side: 'union',
-          date: 'April 18, 1861', source: 'Dispatch to the Secretary of War, Official Records'
+          date: 'April 18, 1861', source: 'Dispatch to the Secretary of War, Official Records', verified: true, ref: 'https://archive.org/details/warofrebellionco0050vari?q=%22Having%20defended%20Fort%20Sumter%22', refTitle: 'The War of the Rebellion: Official Records of the Union and Confederate Armies'
         }
       ]
     },
@@ -90,12 +90,12 @@
         {
           quote: 'Sarah, my love for you is deathless, it seems to bind me to you with mighty cables that nothing but Omnipotence could break … But, O Sarah! if the dead can come back to this earth and flit unseen around those they loved, I shall always be near you.',
           who: 'Maj. Sullivan Ballou', role: '2nd Rhode Island Infantry; killed a week later at Bull Run', side: 'union',
-          date: 'July 14, 1861', source: 'Letter to his wife Sarah, written at Camp Clark, Washington', portrait: 'ballou'
+          date: 'July 14, 1861', source: 'Letter to his wife Sarah, written at Camp Clark, Washington', portrait: 'ballou', verified: true, ref: 'https://en.wikisource.org/wiki/Letter_from_Captain_Sullivan_Ballou_to_His_Wife_Sarah', refTitle: 'Letter from Captain Sullivan Ballou to His Wife Sarah (Wikisource transcription)'
         },
         {
           quote: 'There is Jackson standing like a stone wall! Rally behind the Virginians!',
           who: 'Brig. Gen. Barnard Bee', role: 'Confederate brigade commander, mortally wounded minutes later', side: 'confederate',
-          date: 'July 21, 1861', source: 'As reported by witnesses on Henry House Hill; the origin of Jackson\'s nickname'
+          date: 'July 21, 1861', source: 'As reported by witnesses on Henry House Hill; the origin of Jackson\'s nickname', verified: true, ref: 'https://archive.org/details/inaugurationofja01virg?q=%22There%20is%20Jackson%20standing%22', refTitle: 'Inauguration of the Jackson Statue, Richmond (1875)'
         }
       ]
     },
@@ -120,12 +120,12 @@
         {
           quote: 'No terms except an unconditional and immediate surrender can be accepted. I propose to move immediately upon your works.',
           who: 'Brig. Gen. Ulysses S. Grant', role: 'Commander, Union forces', side: 'union',
-          date: 'February 16, 1862', source: 'Note to Gen. Buckner, Official Records', portrait: 'grant'
+          date: 'February 16, 1862', source: 'Note to Gen. Buckner, Official Records', portrait: 'grant', verified: true, ref: 'https://en.wikisource.org/wiki/Personal_Memoirs_of_U._S._Grant/Chapter_XXII', refTitle: 'Personal Memoirs of U. S. Grant (1885)'
         },
         {
           quote: 'The distribution of the forces under my command, incident to an unexpected change of commanders, and the overwhelming force under your command, compel me, notwithstanding the brilliant success of the Confederate arms yesterday, to accept the ungenerous and unchivalrous terms which you propose.',
           who: 'Brig. Gen. Simon Bolivar Buckner', role: 'Confederate commander at the surrender', side: 'confederate',
-          date: 'February 16, 1862', source: 'Reply to Gen. Grant, Official Records'
+          date: 'February 16, 1862', source: 'Reply to Gen. Grant, Official Records', verified: true, ref: 'https://archive.org/details/warofrebellion07unit?q=%22The%20distribution%20of%20the%22', refTitle: 'The War of the Rebellion: Official Records of the Union and Confederate Armies'
         }
       ]
     },
@@ -148,19 +148,19 @@
       ],
       journal: [
         {
-          quote: 'I had heard and read of battlefields and seen pictures of battlefields, of horses and men, of cannon and wagons, all jumbled together, while the ground was strewn with dead and dying and wounded, but I must confess that I never realized the "pomp and circumstance" of the thing called glorious war until I saw this.',
+          quote: 'I had heard and read of battlefields, seen pictures of battlefields, of horses and men, of cannon and wagons, all jumbled together, while the ground was strewn with dead and dying and wounded, but I must confess that I never realized the "pomp and circumstance" of the thing called glorious war until I saw this.',
           who: 'Pvt. Sam Watkins', role: 'Company H, 1st Tennessee Infantry', side: 'confederate',
-          date: 'April 1862', source: 'Co. Aytch (1882)', portrait: 'watkins'
+          date: 'April 1862', source: 'Co. Aytch (1882)', portrait: 'watkins', verified: true, ref: 'https://archive.org/details/bub_gb_ssIdAQAAMAAJ?q=%22had%20heard%20and%20read%22', refTitle: 'Sam R. Watkins, "Co. Aytch" (1882)'
         },
         {
           quote: 'I saw an open field, in our possession on the second day, over which the Confederates had made repeated charges the day before, so covered with dead that it would have been possible to walk across the clearing, in any direction, stepping on dead bodies, without a foot touching the ground.',
           who: 'Maj. Gen. Ulysses S. Grant', role: 'Commander, Army of the Tennessee', side: 'union',
-          date: 'April 7, 1862 (recalled)', source: 'Personal Memoirs of U. S. Grant (1885)', portrait: 'grant'
+          date: 'April 7, 1862 (recalled)', source: 'Personal Memoirs of U. S. Grant (1885)', portrait: 'grant', verified: true, ref: 'https://en.wikisource.org/wiki/Personal_Memoirs_of_U._S._Grant/Chapter_XXV', refTitle: 'Personal Memoirs of U. S. Grant (1885)'
         },
         {
           quote: 'Up to the battle of Shiloh I, as well as thousands of other citizens, believed that the rebellion against the Government would collapse suddenly and soon … but when Confederate armies were collected which not only attempted to hold a line farther south … but assumed the offensive and made such a gallant effort to regain what had been lost, then, indeed, I gave up all idea of saving the Union except by complete conquest.',
           who: 'Maj. Gen. Ulysses S. Grant', role: 'Commander, Army of the Tennessee', side: 'union',
-          date: 'Recalled, 1885', source: 'Personal Memoirs of U. S. Grant (1885)', portrait: 'grant'
+          date: 'Recalled, 1885', source: 'Personal Memoirs of U. S. Grant (1885)', portrait: 'grant', verified: true, ref: 'https://en.wikisource.org/wiki/Personal_Memoirs_of_U._S._Grant/Chapter_XXV', refTitle: 'Personal Memoirs of U. S. Grant (1885)'
         }
       ]
     },
@@ -186,12 +186,12 @@
         {
           quote: 'It was not war—it was murder.',
           who: 'Maj. Gen. Daniel Harvey Hill', role: 'Confederate division commander, on the assault at Malvern Hill', side: 'confederate',
-          date: 'July 1, 1862 (recalled)', source: 'Battles and Leaders of the Civil War, vol. 2 (1887)'
+          date: 'July 1, 1862 (recalled)', source: 'Battles and Leaders of the Civil War, vol. 2 (1887)', verified: true, ref: 'https://archive.org/details/bwb_Y0-BNJ-154?q=%22It%20was%20not%20war%E2%80%94it%22', refTitle: 'Battles and Leaders of the Civil War (1884–1888)'
         },
         {
           quote: 'If I save this army now, I tell you plainly that I owe no thanks to you or to any other persons in Washington. You have done your best to sacrifice this army.',
           who: 'Maj. Gen. George B. McClellan', role: 'Commander, Army of the Potomac', side: 'union',
-          date: 'June 28, 1862', source: 'Telegram to Secretary of War Stanton after Gaines\' Mill, Official Records', portrait: 'mcclellan'
+          date: 'June 28, 1862', source: 'Telegram to Secretary of War Stanton after Gaines\' Mill, Official Records', portrait: 'mcclellan', verified: true, ref: 'https://en.wikisource.org/wiki/History_of_the_Civil_War%2C_1861-1865/Chapter_3', refTitle: 'James Ford Rhodes, History of the Civil War, 1861–1865, quoting the telegram (Wikisource transcription)'
         }
       ]
     },
@@ -215,12 +215,12 @@
         {
           quote: 'I have come to you from the West, where we have always seen the backs of our enemies; from an army whose business it has been to seek the adversary and to beat him when he was found.',
           who: 'Maj. Gen. John Pope', role: 'Commander, Army of Virginia', side: 'union',
-          date: 'July 14, 1862', source: 'Address to the officers and soldiers of the Army of Virginia, Official Records'
+          date: 'July 14, 1862', source: 'Address to the officers and soldiers of the Army of Virginia, Official Records', verified: true, ref: 'https://en.wikisource.org/wiki/The_Reminiscences_of_Carl_Schurz/Volume_Two/7_War', refTitle: 'The Reminiscences of Carl Schurz, quoting the address (Wikisource transcription)'
         },
         {
           quote: 'This army achieved to-day, on the plains of Manassas, a signal victory over the combined forces of Generals McClellan and Pope.',
           who: 'Gen. Robert E. Lee', role: 'Commander, Army of Northern Virginia', side: 'confederate',
-          date: 'August 30, 1862', source: 'Dispatch to President Jefferson Davis, Official Records', portrait: 'lee'
+          date: 'August 30, 1862', source: 'Dispatch to President Jefferson Davis, as printed in the Asheville News, September 4, 1862', portrait: 'lee', verified: true, ref: 'https://archive.org/details/per_asheville-news_asheville-news_1862-09-04_14_111?q=%22on%20the%20plains%20of%22', refTitle: 'Asheville News, September 4, 1862'
         }
       ]
     },
@@ -246,17 +246,17 @@
         {
           quote: 'In the time I am writing every stalk of corn in the northern and greater part of the field was cut as closely as could have been done with a knife, and the slain lay in rows precisely as they had stood in their ranks a few moments before.',
           who: 'Maj. Gen. Joseph Hooker', role: 'Commander, Union I Corps, on the Cornfield', side: 'union',
-          date: 'September 17, 1862', source: 'Official report, Official Records'
+          date: 'September 17, 1862', source: 'Official report, Official Records', verified: true, ref: 'https://archive.org/details/warrebellionaco32offigoog?q=%22am%20writing%20every%20stalk%22', refTitle: 'The War of the Rebellion: Official Records of the Union and Confederate Armies'
         },
         {
           quote: 'The mental strain was so great that I saw at that moment the singular effect mentioned, I think, in the life of Goethe on a similar occasion—the whole landscape for an instant turned slightly red.',
           who: 'Pvt. David L. Thompson', role: 'Company G, 9th New York Volunteers', side: 'union',
-          date: 'September 17, 1862 (recalled)', source: 'Battles and Leaders of the Civil War, vol. 2 (1887)'
+          date: 'September 17, 1862 (recalled)', source: 'Battles and Leaders of the Civil War, vol. 2 (1887)', verified: true, ref: 'https://archive.org/details/bwb_Y0-BNJ-154?q=%22The%20mental%20strain%20was%22', refTitle: 'Battles and Leaders of the Civil War, vol. 2'
         },
         {
           quote: 'Mr. Brady has done something to bring home to us the terrible reality and earnestness of war. If he has not brought bodies and laid them in our dooryards and along the streets, he has done something very like it.',
           who: 'New York Times', role: 'Review of the exhibition "The Dead of Antietam"', side: 'civilian',
-          date: 'October 20, 1862', source: 'New York Times'
+          date: 'October 20, 1862', source: 'New York Times', verified: true, ref: 'https://archive.org/details/ERIC_ED370593?q=%22Mr%20Brady%20has%20done%22', refTitle: 'Civil War Photography and Its Impact (1993), quoting the review'
         }
       ]
     },
@@ -278,14 +278,14 @@
       ],
       journal: [
         {
-          quote: 'It is well that war is so terrible—we should grow too fond of it.',
+          quote: 'It is well this is so terrible; we would grow too fond of it!',
           who: 'Gen. Robert E. Lee', role: 'Commander, Army of Northern Virginia, watching from Lee\'s Hill', side: 'confederate',
-          date: 'December 13, 1862', source: 'As recorded by James Longstreet, From Manassas to Appomattox (1896)', portrait: 'lee'
+          date: 'December 13, 1862', source: 'As recorded by John Esten Cooke, a Confederate staff officer, in Hammer and Rapier (1870). Later writers reworded it as "It is well that war is so terrible."', portrait: 'lee', verified: true, ref: 'https://archive.org/details/hammerrapier00cook?q=%22It%20is%20well%20this%22', refTitle: 'John Esten Cooke, Hammer and Rapier (1870)'
         },
         {
           quote: 'As they charged the artillery fire would break their formation and they would get mixed; then they would close up, go forward, receive the withering infantry fire, and those who were able would run to the houses and fight as best they could; and then the next brigade coming up in succession would do its duty and melt like snow coming down on warm ground.',
           who: 'Maj. Gen. Darius N. Couch', role: 'Commander, Union II Corps, watching from the courthouse steeple', side: 'union',
-          date: 'December 13, 1862 (recalled)', source: 'Battles and Leaders of the Civil War, vol. 3 (1888)'
+          date: 'December 13, 1862 (recalled)', source: 'Battles and Leaders of the Civil War, vol. 3 (1888)', verified: true, ref: 'https://archive.org/details/bwb_Y0-BNJ-150_3?q=%22As%20they%20charged%20the%22', refTitle: 'Battles and Leaders of the Civil War (1884–1888)'
         }
       ]
     },
@@ -310,12 +310,12 @@
         {
           quote: 'The enemy has yielded his strong position and is falling back. We occupy whole field and shall follow him … God has granted us a happy New Year.',
           who: 'Gen. Braxton Bragg', role: 'Commander, Army of Tennessee, after the first day', side: 'confederate',
-          date: 'December 31, 1862', source: 'Telegram to Richmond, Official Records', portrait: 'bragg'
+          date: 'December 31, 1862', source: 'Telegram to Richmond, Official Records', portrait: 'bragg', verified: true, ref: 'https://archive.org/details/warofrebellion522unit?q=%22The%20enemy%20has%20yielded%22', refTitle: 'The War of the Rebellion: Official Records of the Union and Confederate Armies'
         },
         {
           quote: 'I can never forget, whilst I remember anything, that about the end of last year and beginning of this, you gave us a hard-earned victory, which had there been a defeat instead, the nation could scarcely have lived over.',
           who: 'President Abraham Lincoln', role: 'To Gen. Rosecrans', side: 'union',
-          date: 'August 31, 1863', source: 'Letter to William S. Rosecrans', portrait: 'lincoln'
+          date: 'August 31, 1863', source: 'Letter to William S. Rosecrans', portrait: 'lincoln', verified: true, ref: 'https://archive.org/details/completeworksab06fishgoog?q=%22can%20never%20forget%20whilst%22', refTitle: 'Complete Works of Abraham Lincoln (1905)'
         }
       ]
     },
@@ -340,17 +340,17 @@
         {
           quote: 'Could I have directed events, I should have chosen for the good of the country to be disabled in your stead. I congratulate you upon the victory, which is due to your skill and energy.',
           who: 'Gen. Robert E. Lee', role: 'Note to the wounded Jackson', side: 'confederate',
-          date: 'May 3, 1863', source: 'Letter to Lt. Gen. T. J. Jackson, Official Records', portrait: 'lee'
+          date: 'May 3, 1863', source: 'Letter to Lt. Gen. T. J. Jackson, Official Records', portrait: 'lee', verified: true, ref: 'https://archive.org/details/warofrebellionco0025unit?q=%22should%20have%20chosen%20for%22', refTitle: 'The War of the Rebellion: Official Records of the Union and Confederate Armies'
         },
         {
           quote: 'Let us cross over the river, and rest under the shade of the trees.',
           who: 'Lt. Gen. Thomas J. "Stonewall" Jackson', role: 'His last words', side: 'confederate',
-          date: 'May 10, 1863', source: 'As recorded by Dr. Hunter McGuire and Jackson\'s staff', portrait: 'jackson'
+          date: 'May 10, 1863', source: 'As recorded by Dr. Hunter McGuire and Jackson\'s staff', portrait: 'jackson', verified: true, ref: 'https://archive.org/details/09098560.4267.emory.edu?q=%22rest+under+the+shade+of+the+trees%22', refTitle: 'The Life of Lieut. Gen. T. J. Jackson (1863)'
         },
         {
           quote: 'For once I lost confidence in Hooker.',
           who: 'Maj. Gen. Joseph Hooker', role: 'Commander, Army of the Potomac, on his own failure', side: 'union',
-          date: 'Recalled after the war', source: 'Remark to Abner Doubleday, quoted in Battles and Leaders, vol. 3'
+          date: 'Recalled after the war', source: 'Remark to Abner Doubleday, as reported in John Bigelow, The Campaign of Chancellorsville (1910)', verified: true, ref: 'https://archive.org/details/campaignofchanc00bige?q=%22lost%20confidence%20in%20Hooker%22', refTitle: 'John Bigelow, The Campaign of Chancellorsville (1910)'
         }
       ]
     },
@@ -375,17 +375,17 @@
         {
           quote: 'Terror stricken, we remained crouched in the cave, while shell after shell followed each other in quick succession.',
           who: 'Mary Ann Loughborough', role: 'Civilian living in a cave during the siege', side: 'civilian',
-          date: 'May 1863', source: 'My Cave Life in Vicksburg (1864)'
+          date: 'May 1863', source: 'My Cave Life in Vicksburg (1864)', verified: true, ref: 'https://archive.org/details/mycavelifeinvic00louggoog?q=%22Terror%20stricken%20we%20remained%22', refTitle: 'Mary Ann Loughborough, My Cave Life in Vicksburg (1864)'
         },
         {
           quote: 'The fate of the Confederacy was sealed when Vicksburg fell.',
           who: 'Maj. Gen. Ulysses S. Grant', role: 'Commander, Army of the Tennessee', side: 'union',
-          date: 'Recalled, 1885', source: 'Personal Memoirs of U. S. Grant (1885)', portrait: 'grant'
+          date: 'Recalled, 1885', source: 'Personal Memoirs of U. S. Grant (1885)', portrait: 'grant', verified: true, ref: 'https://archive.org/details/personalmemoirso0001ulys_j6y1?q=%22The%20fate%20of%20the%22', refTitle: 'Personal Memoirs of U. S. Grant (1885)'
         },
         {
           quote: 'The Father of Waters again goes unvexed to the sea.',
           who: 'President Abraham Lincoln', role: 'On the reopening of the Mississippi', side: 'union',
-          date: 'August 26, 1863', source: 'Letter to James C. Conkling', portrait: 'lincoln'
+          date: 'August 26, 1863', source: 'Letter to James C. Conkling', portrait: 'lincoln', verified: true, ref: 'https://archive.org/details/completeworks00lincgoog?q=%22The%20Father%20of%20Waters%22', refTitle: 'Complete Works of Abraham Lincoln (1894)'
         }
       ]
     },
@@ -411,22 +411,22 @@
         {
           quote: 'At that crisis, I ordered the bayonet. The word was enough.',
           who: 'Col. Joshua Lawrence Chamberlain', role: '20th Maine Infantry, Little Round Top', side: 'union',
-          date: 'July 2, 1863 (recalled)', source: '"Through Blood and Fire at Gettysburg," Hearst\'s Magazine (1913)', portrait: 'chamberlain'
+          date: 'July 6, 1863', source: 'Official report of the 20th Maine Infantry', portrait: 'chamberlain', verified: true, ref: 'https://archive.org/details/strongvincentan00nortgoog?q=%22ordered%20the%20bayonet%20The%22', refTitle: 'Oliver W. Norton, Strong Vincent and His Brigade at Gettysburg (1909), reprinting the report'
         },
         {
           quote: 'All this will come right in the end: we\'ll talk it over afterwards; but, in the mean time, all good men must rally. We want all good and true men just now.',
           who: 'Gen. Robert E. Lee', role: 'Rallying survivors of Pickett\'s Charge', side: 'confederate',
-          date: 'July 3, 1863', source: 'As recorded by Lt. Col. Arthur Fremantle, Three Months in the Southern States (1863)', portrait: 'lee'
+          date: 'July 3, 1863', source: 'As recorded by Lt. Col. Arthur Fremantle, Three Months in the Southern States (1863)', portrait: 'lee', verified: true, ref: 'https://docsouth.unc.edu/imls/fremantle/fremantle.html', refTitle: 'Three Months in the Southern States, Documenting the American South'
         },
         {
           quote: 'Was ever the Nation\'s Birthday celebrated in such a way before? … General Lee and his Rebel Army had fallen back. It was impossible to march across the field without stepping upon dead or wounded men, while horses and broken artillery lay on every side.',
           who: 'Lt. Elisha Hunt Rhodes', role: '2nd Rhode Island Infantry', side: 'union',
-          date: 'July 4, 1863', source: 'Diary, published as All for the Union', portrait: 'rhodes'
+          date: 'July 4, 1863', source: 'Diary, published as All for the Union (1985); under copyright, so not checked against an open text', portrait: 'rhodes'
         },
         {
           quote: 'It is for us the living, rather, to be dedicated here to the unfinished work which they who fought here have thus far so nobly advanced … that we here highly resolve that these dead shall not have died in vain—that this nation, under God, shall have a new birth of freedom.',
           who: 'President Abraham Lincoln', role: 'Dedication of the Soldiers\' National Cemetery', side: 'union',
-          date: 'November 19, 1863', source: 'The Gettysburg Address (Bliss copy)', portrait: 'lincoln'
+          date: 'November 19, 1863', source: 'The Gettysburg Address (Bliss copy)', portrait: 'lincoln', verified: true, ref: 'https://en.wikisource.org/wiki/Gettysburg_Address_%28Lincoln_Memorial%29', refTitle: 'Gettysburg Address (Lincoln Memorial) (Wikisource transcription)'
         }
       ]
     },
@@ -450,7 +450,7 @@
         {
           quote: 'Not a man flinched, though it was a trying time. Men fell all around me. A shell would explode and clear a space of twenty feet, our men would close up again, but it was no use we had to retreat … Remember if I die I die in a good cause. I wish we had a hundred thousand colored troops we would put an end to this war.',
           who: 'Sgt. Maj. Lewis H. Douglass', role: '54th Massachusetts Infantry; son of Frederick Douglass', side: 'union',
-          date: 'July 20, 1863', source: 'Letter to Amelia Loguen', portrait: 'douglass'
+          date: 'July 20, 1863', source: 'Letter to Amelia Loguen, printed in The Journal of Negro History (January 1926)', portrait: 'douglass', verified: true, ref: 'https://archive.org/details/sim_journal-of-african-american-history_1926-01_11_1?q=%22man%20flinched%20though%20it%22', refTitle: 'The Journal of Negro History, January 1926'
         }
       ]
     },
@@ -476,12 +476,12 @@
         {
           quote: 'We have met with a serious disaster; extent not yet ascertained. Enemy overwhelmed us, drove our right, pierced our center, and scattered troops there.',
           who: 'Maj. Gen. William S. Rosecrans', role: 'Commander, Army of the Cumberland', side: 'union',
-          date: 'September 20, 1863', source: 'Telegram to Gen. Halleck, Official Records'
+          date: 'September 20, 1863', source: 'Telegram to Gen. Halleck, Official Records', verified: true, ref: 'https://archive.org/details/warofrebellion0030geor?q=%22We%20have%20met%20with%22', refTitle: 'The War of the Rebellion: Official Records of the Union and Confederate Armies'
         },
         {
           quote: 'It seems to me that the élan of the Southern soldier was never seen after Chickamauga … He fought stoutly to the last, but, after Chickamauga, with the sullenness of despair and without the enthusiasm of hope.',
           who: 'Lt. Gen. Daniel Harvey Hill', role: 'Confederate corps commander', side: 'confederate',
-          date: 'Recalled, 1887', source: 'Battles and Leaders of the Civil War, vol. 3 (1888)'
+          date: 'Recalled, 1887', source: 'Battles and Leaders of the Civil War, vol. 3 (1888)', verified: true, ref: 'https://archive.org/details/bwb_Y0-BNJ-150_3?q=%22It%20seems%20to%20me%22', refTitle: 'Battles and Leaders of the Civil War, vol. 3'
         }
       ]
     },
@@ -504,14 +504,14 @@
       ],
       journal: [
         {
-          quote: '"Thomas, who ordered those men up the ridge?" "I don\'t know; I did not."',
+          quote: '"Thomas, who ordered those men up the ridge?" … "I don\'t know; I did not."',
           who: 'Maj. Gen. Ulysses S. Grant and Maj. Gen. George H. Thomas', role: 'Watching the unplanned assault on Missionary Ridge from Orchard Knob', side: 'union',
-          date: 'November 25, 1863', source: 'As recorded by Col. Joseph S. Fullerton, Battles and Leaders, vol. 3', portrait: 'grant'
+          date: 'November 25, 1863', source: 'As recorded by Col. Joseph S. Fullerton, Battles and Leaders, vol. 3', portrait: 'grant', verified: true, ref: 'https://archive.org/details/battlesleadersof03cent?q=%22Thomas%20who%20ordered%20those%22', refTitle: 'Battles and Leaders of the Civil War, vol. 3'
         },
         {
-          quote: 'The disaster admits of no palliation, and is justly disparaging to me as a commander … The position was one which ought to have been held by a line of skirmishers against any assaulting column.',
+          quote: 'No satisfactory excuse can possibly be given for the shameful conduct of our troops on the left in allowing their line to be penetrated. The position was one which ought to have been held by a line of skirmishers against any assaulting column.',
           who: 'Gen. Braxton Bragg', role: 'Commander, Army of Tennessee', side: 'confederate',
-          date: 'December 1, 1863', source: 'Letter to President Davis, Official Records', portrait: 'bragg'
+          date: 'November 1863', source: 'Official report of the battle, Official Records', portrait: 'bragg', verified: true, ref: 'https://archive.org/details/warofrebellion312unit?q=%22No%20satisfactory%20excuse%20can%22', refTitle: 'The War of the Rebellion: Official Records of the Union and Confederate Armies'
         }
       ]
     },
@@ -536,12 +536,12 @@
         {
           quote: 'More desperate fighting has not been witnessed on this continent than that of the 5th and 6th of May.',
           who: 'Lt. Gen. Ulysses S. Grant', role: 'General-in-Chief of the Union armies', side: 'union',
-          date: 'Recalled, 1885', source: 'Personal Memoirs of U. S. Grant (1885)', portrait: 'grant'
+          date: 'Recalled, 1885', source: 'Personal Memoirs of U. S. Grant (1885)', portrait: 'grant', verified: true, ref: 'https://archive.org/details/personalmemoirsop102granuoft?q=%22More%20desperate%20fighting%20has%22', refTitle: 'Personal Memoirs of U. S. Grant (1885)'
         },
         {
           quote: 'Forest fires raged; ammunition trains exploded; the dead were roasted in the conflagration; the wounded, roused by its hot breath, dragged themselves along, with their torn and mangled limbs, in the mad energy of despair, to escape the ravages of the flames.',
           who: 'Lt. Col. Horace Porter', role: 'Aide-de-camp to Gen. Grant', side: 'union',
-          date: 'May 6, 1864 (recalled)', source: 'Campaigning with Grant (1897)'
+          date: 'May 6, 1864 (recalled)', source: 'Campaigning with Grant (1897)', verified: true, ref: 'https://archive.org/details/campaigningwith00unkngoog?q=%22Forest%20fires%20raged%20ammunition%22', refTitle: 'Horace Porter, Campaigning with Grant (1897)'
         }
       ]
     },
@@ -566,12 +566,12 @@
         {
           quote: 'I propose to fight it out on this line if it takes all summer.',
           who: 'Lt. Gen. Ulysses S. Grant', role: 'General-in-Chief of the Union armies', side: 'union',
-          date: 'May 11, 1864', source: 'Dispatch to Gen. Halleck, Official Records', portrait: 'grant'
+          date: 'May 11, 1864', source: 'Dispatch to Gen. Halleck, Official Records', portrait: 'grant', verified: true, ref: 'https://archive.org/details/warofrebellion371unit?q=%22propose%20to%20fight%20it%22', refTitle: 'The War of the Rebellion: Official Records of the Union and Confederate Armies'
         },
         {
           quote: 'Rank after rank was riddled by shot and shell and bayonet-thrusts, and finally sank, a mass of torn and mutilated corpses; then fresh troops rushed madly forward to replace the dead, and so the murderous work went on.',
           who: 'Lt. Col. Horace Porter', role: 'Aide-de-camp to Gen. Grant, on the Bloody Angle', side: 'union',
-          date: 'May 12, 1864 (recalled)', source: 'Campaigning with Grant (1897)'
+          date: 'May 12, 1864 (recalled)', source: 'Campaigning with Grant (1897)', verified: true, ref: 'https://archive.org/details/bwb_S0-ECN-710?q=%22Rank%20after%20rank%20was%22', refTitle: 'Horace Porter, Campaigning with Grant (1897)'
         }
       ]
     },
@@ -594,14 +594,14 @@
       ],
       journal: [
         {
-          quote: 'I noticed that many of the soldiers had taken off their coats and seemed to be engaged in sewing up rents in them … they were calmly writing their names and home addresses on slips of paper and pinning them on the backs of their coats, so that their dead bodies might be recognized upon the field, and their fate made known to their families at home.',
+          quote: 'I noticed that many of the soldiers had taken off their coats, and seemed to be engaged in sewing up rents in them … the men were calmly writing their names and home addresses on slips of paper, and pinning them on the backs of their coats, so that their dead bodies might be recognized upon the field, and their fate made known to their families at home.',
           who: 'Lt. Col. Horace Porter', role: 'Aide-de-camp to Gen. Grant, the evening before the assault', side: 'union',
-          date: 'June 2, 1864 (recalled)', source: 'Campaigning with Grant (1897)'
+          date: 'June 2, 1864 (recalled)', source: 'Campaigning with Grant (1897)', verified: true, ref: 'https://archive.org/details/cu31924030927002?q=%22noticed%20that%20many%20of%22', refTitle: 'Horace Porter, Campaigning with Grant (1897)'
         },
         {
           quote: 'I have always regretted that the last assault at Cold Harbor was ever made … no advantage whatever was gained to compensate for the heavy loss we sustained.',
           who: 'Lt. Gen. Ulysses S. Grant', role: 'General-in-Chief of the Union armies', side: 'union',
-          date: 'Recalled, 1885', source: 'Personal Memoirs of U. S. Grant (1885)', portrait: 'grant'
+          date: 'Recalled, 1885', source: 'Personal Memoirs of U. S. Grant (1885)', portrait: 'grant', verified: true, ref: 'https://en.wikisource.org/wiki/Personal_Memoirs_of_U._S._Grant/Chapter_LV', refTitle: 'Personal Memoirs of U. S. Grant (1885)'
         }
       ]
     },
@@ -627,12 +627,12 @@
         {
           quote: 'Atlanta is ours, and fairly won.',
           who: 'Maj. Gen. William T. Sherman', role: 'Commander, Military Division of the Mississippi', side: 'union',
-          date: 'September 3, 1864', source: 'Telegram to Gen. Halleck, Official Records', portrait: 'sherman'
+          date: 'September 3, 1864', source: 'Telegram to Gen. Halleck, Official Records', portrait: 'sherman', verified: true, ref: 'https://archive.org/details/warofrebellion521unit?q=%22Atlanta%20is%20ours%20and%22', refTitle: 'The War of the Rebellion: Official Records of the Union and Confederate Armies'
         },
         {
           quote: 'You cannot qualify war in harsher terms than I will. War is cruelty, and you cannot refine it; and those who brought war into our country deserve all the curses and maledictions a people can pour out.',
           who: 'Maj. Gen. William T. Sherman', role: 'Reply to the mayor of Atlanta\'s plea to halt the expulsion of civilians', side: 'union',
-          date: 'September 12, 1864', source: 'Letter to James M. Calhoun, Memoirs of General W. T. Sherman (1875)', portrait: 'sherman'
+          date: 'September 12, 1864', source: 'Letter to James M. Calhoun, Memoirs of General W. T. Sherman (1875)', portrait: 'sherman', verified: true, ref: 'https://en.wikisource.org/wiki/Letter_to_James_M._Calhoun%2C_et_al.%2C_September_12%2C_1864', refTitle: 'Letter to James M. Calhoun, et al., September 12, 1864 (Wikisource transcription)'
         }
       ]
     },
@@ -658,12 +658,12 @@
         {
           quote: 'I cannot describe it. It beggars description. I will not attempt to describe it. I could not. The death-angel was there to gather its last harvest. It was the grand coronation of death.',
           who: 'Pvt. Sam Watkins', role: 'Company H, 1st Tennessee Infantry', side: 'confederate',
-          date: 'November 30, 1864 (recalled)', source: 'Co. Aytch (1882)', portrait: 'watkins'
+          date: 'November 30, 1864 (recalled)', source: 'Co. Aytch (1882)', portrait: 'watkins', verified: true, ref: 'https://archive.org/details/1861vs1882coaytc00watk?q=%22cannot%20describe%20it%20It%22', refTitle: 'Sam R. Watkins, "Co. Aytch" (1882)'
         },
         {
-          quote: 'The number of dead left by the enemy on the field indicates that his loss was equal to or near our own … Our loss of officers was excessively large in proportion to the loss of men.',
+          quote: 'Our loss of officers was excessively large in proportion to the loss of men.',
           who: 'Gen. John Bell Hood', role: 'Commander, Army of Tennessee', side: 'confederate',
-          date: 'December 3, 1864', source: 'Dispatch to Richmond, Official Records', portrait: 'hood'
+          date: 'December 3, 1864', source: 'Dispatch to Richmond, as printed in William P. Snow, Southern Generals (1865)', portrait: 'hood', verified: true, ref: 'https://archive.org/details/southgenerals00snowrich?q=%22Our%20loss%20of%20officers%22', refTitle: 'William P. Snow, Southern Generals (1865)'
         }
       ]
     },
@@ -689,12 +689,12 @@
         {
           quote: 'I beheld for the first and only time a Confederate army abandon the field in confusion.',
           who: 'Gen. John Bell Hood', role: 'Commander, Army of Tennessee', side: 'confederate',
-          date: 'December 16, 1864 (recalled)', source: 'Advance and Retreat (1880)', portrait: 'hood'
+          date: 'December 16, 1864 (recalled)', source: 'Advance and Retreat (1880)', portrait: 'hood', verified: true, ref: 'https://archive.org/details/advanceretreatpe00hood?q=%22beheld%20for%20the%20first%22', refTitle: 'John Bell Hood, Advance and Retreat (1880)'
         },
         {
           quote: 'Attack Hood at once and wait no longer for a remount of your cavalry. There is great danger of delay resulting in a campaign back to the Ohio River.',
           who: 'Lt. Gen. Ulysses S. Grant', role: 'Telegram to Thomas, one of several pressing him to attack', side: 'union',
-          date: 'December 6, 1864', source: 'Official Records', portrait: 'grant'
+          date: 'December 6, 1864', source: 'Official Records', portrait: 'grant', verified: true, ref: 'https://archive.org/details/warofrebellion452unit?q=%22Attack%20Hood%20at%20once%22', refTitle: 'The War of the Rebellion: Official Records of the Union and Confederate Armies'
         }
       ]
     },
@@ -719,12 +719,12 @@
         {
           quote: 'Behind us lay Atlanta, smouldering and in ruins, the black smoke rising high in air, and hanging like a pall over the ruined city.',
           who: 'Maj. Gen. William T. Sherman', role: 'Leaving Atlanta', side: 'union',
-          date: 'November 16, 1864 (recalled)', source: 'Memoirs of General W. T. Sherman (1875)', portrait: 'sherman'
+          date: 'November 16, 1864 (recalled)', source: 'Memoirs of General W. T. Sherman (1875)', portrait: 'sherman', verified: true, ref: 'https://archive.org/details/memoirsgeneralw00shergoog?q=%22Behind%20us%20lay%20Atlanta%22', refTitle: 'Memoirs of General William T. Sherman (1875)'
         },
         {
           quote: 'I beg to present you as a Christmas gift the city of Savannah, with one hundred and fifty heavy guns and plenty of ammunition, also about twenty-five thousand bales of cotton.',
           who: 'Maj. Gen. William T. Sherman', role: 'Telegram to President Lincoln', side: 'union',
-          date: 'December 22, 1864', source: 'Official Records', portrait: 'sherman'
+          date: 'December 22, 1864', source: 'Official Records', portrait: 'sherman', verified: true, ref: 'https://archive.org/details/freedomtriumpha01coffgoog?q=%22beg%20to%20present%20you%22', refTitle: 'Charles C. Coffin, Freedom Triumphant (1890), quoting the telegram'
         }
       ]
     },
@@ -749,12 +749,12 @@
         {
           quote: 'It was the saddest affair I have witnessed in the war. Such opportunity for carrying fortifications I have never seen and do not expect again to have.',
           who: 'Lt. Gen. Ulysses S. Grant', role: 'On the Battle of the Crater', side: 'union',
-          date: 'August 1, 1864', source: 'Telegram to Gen. Halleck, Official Records', portrait: 'grant'
+          date: 'August 1, 1864', source: 'Telegram to Gen. Halleck, Official Records', portrait: 'grant', verified: true, ref: 'https://archive.org/details/cu31924030909844?q=%22It%20was%20the%20saddest%22', refTitle: 'The Story of a Regiment (1895), quoting the telegram'
         },
         {
           quote: 'I see no prospect of doing more than holding our position here till night. I am not certain that I can do that … I advise that all preparation be made for leaving Richmond to-night.',
           who: 'Gen. Robert E. Lee', role: 'Commander, Army of Northern Virginia', side: 'confederate',
-          date: 'April 2, 1865', source: 'Telegram to the Secretary of War, Official Records', portrait: 'lee'
+          date: 'April 2, 1865', source: 'Telegram to the Secretary of War, Official Records', portrait: 'lee', verified: true, ref: 'https://archive.org/details/warofrebellion463unit?q=%22see%20no%20prospect%20of%22', refTitle: 'The War of the Rebellion: Official Records of the Union and Confederate Armies'
         }
       ]
     },
@@ -780,17 +780,17 @@
         {
           quote: 'I felt like anything rather than rejoicing at the downfall of a foe who had fought so long and valiantly, and had suffered so much for a cause, though that cause was, I believe, one of the worst for which a people ever fought, and one for which there was the least excuse.',
           who: 'Lt. Gen. Ulysses S. Grant', role: 'On meeting Lee in the McLean House', side: 'union',
-          date: 'April 9, 1865 (recalled)', source: 'Personal Memoirs of U. S. Grant (1885)', portrait: 'grant'
+          date: 'April 9, 1865 (recalled)', source: 'Personal Memoirs of U. S. Grant (1885)', portrait: 'grant', verified: true, ref: 'https://en.wikisource.org/wiki/Personal_Memoirs_of_U._S._Grant/Chapter_LXVII', refTitle: 'Personal Memoirs of U. S. Grant (1885)'
         },
         {
-          quote: 'After four years of arduous service marked by unsurpassed courage and fortitude, the Army of Northern Virginia has been compelled to yield to overwhelming numbers and resources … With an unceasing admiration of your constancy and devotion to your country, and a grateful remembrance of your kind and generous consideration for myself, I bid you all an affectionate farewell.',
+          quote: 'After four years of arduous service marked by unsurpassed courage and fortitude, the Army of Northern Virginia has been compelled to yield to overwhelming numbers and resources … I bid you all an affectionate farewell.',
           who: 'Gen. Robert E. Lee', role: 'Farewell address to his army', side: 'confederate',
-          date: 'April 10, 1865', source: 'General Order No. 9', portrait: 'lee'
+          date: 'April 10, 1865', source: 'General Order No. 9, Official Records', portrait: 'lee', verified: true, ref: 'https://archive.org/details/warofrebellion461unit?q=%22After%20four%20years%20of%22', refTitle: 'The War of the Rebellion: Official Records of the Union and Confederate Armies'
         },
         {
           quote: 'On our part not a sound of trumpet more, nor roll of drum; not a cheer, nor word nor whisper of vain-glorying, nor motion of man standing again at the order, but an awed stillness rather, and breath-holding, as if it were the passing of the dead!',
           who: 'Bvt. Maj. Gen. Joshua L. Chamberlain', role: 'Receiving the formal surrender of Confederate infantry', side: 'union',
-          date: 'April 12, 1865 (recalled)', source: 'The Passing of the Armies (1915)', portrait: 'chamberlain'
+          date: 'April 12, 1865 (recalled)', source: 'The Passing of the Armies (1915)', portrait: 'chamberlain', verified: true, ref: 'https://archive.org/details/bwb_S0-BGJ-081?q=%22On%20our%20part%20not%22', refTitle: 'Joshua L. Chamberlain, The Passing of the Armies (1915)'
         }
       ]
     },
@@ -812,14 +812,14 @@
       ],
       journal: [
         {
-          quote: 'Rather than concede to the State of Missouri the right to dictate to my Government in any matter however unimportant, I would see you, and you, and you, and you, and every man, woman, and child in the State, dead and buried. This means war.',
+          quote: 'Rather than concede to the State of Missouri for one single instant the right to dictate to my Government in any matter however unimportant, I would … see you, and you, and you, and you, and you, and every man, woman, and child in the State, dead and buried … This means war.',
           who: 'Brig. Gen. Nathaniel Lyon', role: 'To Governor Claiborne Jackson at the Planters\' House, St. Louis', side: 'union',
-          date: 'June 11, 1861', source: 'As recorded by Thomas L. Snead, The Fight for Missouri (1886)', portrait: 'lyon'
+          date: 'June 11, 1861', source: 'As recorded by Thomas L. Snead, The Fight for Missouri (1886)', portrait: 'lyon', verified: true, ref: 'https://archive.org/details/fightformissouri00snea?q=%22Rather%20than%20concede%20to%22', refTitle: 'Thomas L. Snead, The Fight for Missouri (1886)'
         },
         {
           quote: 'Come on, my brave boys, I will lead you! Forward!',
           who: 'Brig. Gen. Nathaniel Lyon', role: 'His last words, leading the 2nd Kansas on Bloody Hill', side: 'union',
-          date: 'August 10, 1861', source: 'As reported by soldiers of the 2nd Kansas Infantry', portrait: 'lyon'
+          date: 'August 10, 1861', source: 'As reported by soldiers of the 2nd Kansas Infantry; early accounts differ on the exact words', portrait: 'lyon'
         }
       ]
     },
@@ -843,7 +843,7 @@
         {
           quote: 'Here I am flat on my back after our first engagement—wounded but pretty comfortable—I can\'t write an account now but I felt and acted very cool and did my duty I am sure.',
           who: 'Lt. Oliver Wendell Holmes Jr.', role: '20th Massachusetts Infantry; shot through the chest at Ball\'s Bluff', side: 'union',
-          date: 'October 23, 1861', source: 'Letter to his mother; later a Justice of the U.S. Supreme Court', portrait: 'holmes'
+          date: 'October 23, 1861', source: 'Letter to his mother; later a Justice of the U.S. Supreme Court', portrait: 'holmes', verified: true, ref: 'https://archive.org/details/in.ernet.dli.2015.75551?q=%22flat+on+my+back%22', refTitle: 'Touched with Fire: Civil War Letters and Diary of Oliver Wendell Holmes, Jr. (1946)'
         }
       ]
     },
@@ -865,14 +865,14 @@
       ],
       journal: [
         {
-          quote: 'I must have St. Louis—then huzza!',
+          quote: 'I must have St. Louis—then Huzza!',
           who: 'Maj. Gen. Earl Van Dorn', role: 'Commander, Confederate Trans-Mississippi District', side: 'confederate',
-          date: 'January 1862', source: 'Letter to his wife on taking command in the West'
+          date: 'January 1862', source: 'Letter to his wife on taking command in the West', verified: true, ref: 'https://archive.org/details/sim_civil-war-history_1958-12_4_4?q=%22I%20must%20have%20St%22', refTitle: 'Civil War History, December 1958, quoting the letter'
         },
         {
-          quote: 'The scene is silent and sad. The vulture and the wolf have now the dominion, and the dead friends and foes sleep in the same lonely grave.',
+          quote: 'The vulture and the wolf have now communion, and the dead, friends and foes, sleep in the same lonely grave.',
           who: 'Brig. Gen. Samuel R. Curtis', role: 'Commander, Army of the Southwest, revisiting the field', side: 'union',
-          date: 'March 1862', source: 'Letter to his brother'
+          date: 'March 1862', source: 'Letter to his brother, quoted in Jay Monaghan, Civil War on the Western Border (1955)', verified: true, ref: 'https://archive.org/details/civilwaronwester00mona?q=%22The%20vulture%20and%20the%22', refTitle: 'Jay Monaghan, Civil War on the Western Border (1955), quoting the letter'
         }
       ]
     },
@@ -894,9 +894,9 @@
       ],
       journal: [
         {
-          quote: 'Gun after gun was fired by the Monitor, which was returned with whole broadsides from the rebels with no more effect than so many pebble-stones thrown by a child.',
+          quote: 'Gun after gun was fired by the Monitor, which was returned with whole broadsides by the rebels with no more effect apparently than so many pebble-stones thrown by a child.',
           who: 'Lt. Samuel Dana Greene', role: 'Executive officer, USS Monitor, who commanded the turret', side: 'union',
-          date: 'March 14, 1862', source: 'Letter to his parents'
+          date: 'March 14, 1862', source: 'Letter to his parents', verified: true, ref: 'https://archive.org/details/miscellaneouspa00unkngoog?q=%22Gun%20after%20gun%20was%22', refTitle: 'Miscellaneous Papers, 1672–1865, Now First Printed from the Manuscript (1887)'
         }
       ]
     },
@@ -920,12 +920,12 @@
         {
           quote: 'The Flag-Officer, having heard all the opinions expressed by the different commanders, is of the opinion that whatever is to be done will have to be done quickly, or we will be again reduced to a blockading squadron.',
           who: 'Flag Officer David G. Farragut', role: 'Commander, West Gulf Blockading Squadron', side: 'union',
-          date: 'April 20, 1862', source: 'General order to the fleet, Official Records of the Navies', portrait: 'farragut'
+          date: 'April 20, 1862', source: 'General order to the fleet, Official Records of the Navies', portrait: 'farragut', verified: true, ref: 'https://archive.org/details/officialrecordso0018unse?q=%22having%20heard%20all%20the%22', refTitle: 'The War of the Rebellion: Official Records of the Union and Confederate Armies'
         },
         {
           quote: 'The city is yours by the power of brutal force, and not by any choice or consent of its inhabitants.',
           who: 'John T. Monroe', role: 'Mayor of New Orleans, refusing to surrender the city or lower its flag', side: 'civilian',
-          date: 'April 26, 1862', source: 'Letter to Flag Officer Farragut'
+          date: 'April 26, 1862', source: 'Letter to Flag Officer Farragut', verified: true, ref: 'https://archive.org/details/correspondencebe00newo?q=%22The%20city%20is%20yours%22', refTitle: 'Correspondence between the Mayor and Federal Authorities Relative to the Occupation of New Orleans (1862)'
         }
       ]
     },
@@ -950,12 +950,12 @@
         {
           quote: 'I have the whole rebel force in front of me … I think Lee has made a gross mistake, and that he will be severely punished for it … I have all the plans of the rebels, and will catch them in their own trap if my men are equal to the emergency.',
           who: 'Maj. Gen. George B. McClellan', role: 'Commander, Army of the Potomac, the day after the Lost Order was found', side: 'union',
-          date: 'September 13, 1862', source: 'Telegram to President Lincoln, Official Records', portrait: 'mcclellan'
+          date: 'September 13, 1862', source: 'Telegram to President Lincoln, Official Records', portrait: 'mcclellan', verified: true, ref: 'https://archive.org/details/warofrebellion192unit?q=%22have%20the%20whole%20rebel%22', refTitle: 'The War of the Rebellion: Official Records of the Union and Confederate Armies'
         },
         {
           quote: 'The day has gone against us and this army will go by Sharpsburg and cross the river.',
           who: 'Gen. Robert E. Lee', role: 'Commander, Army of Northern Virginia', side: 'confederate',
-          date: 'September 14, 1862', source: 'Order to Maj. Gen. Lafayette McLaws, Official Records', portrait: 'lee'
+          date: 'September 14, 1862', source: 'Order to Maj. Gen. Lafayette McLaws, Official Records', portrait: 'lee', verified: true, ref: 'https://archive.org/details/warofrebellion512unit_0?q=%22The%20day%20has%20gone%22', refTitle: 'The War of the Rebellion: Official Records of the Union and Confederate Armies'
         }
       ]
     },
@@ -978,14 +978,14 @@
       ],
       journal: [
         {
-          quote: 'I have heard men say that if they ever killed a Yankee during the war they were not aware of it. I am satisfied that on this memorable day, every man in our regiment killed from one to twenty each; for we were just crowded up near enough to see them, and at every discharge we could see them fall in their tracks.',
+          quote: 'I was in every battle, skirmish and march that was made by the First Tennessee Regiment during the war, and I do not remember of a harder contest and more evenly fought battle than that of Perryville. If it had been two men wrestling, it would have been called a "dog fall." Both sides claim the victory—both whipped.',
           who: 'Pvt. Sam Watkins', role: 'Company H, 1st Tennessee Infantry', side: 'confederate',
-          date: 'October 8, 1862 (recalled)', source: 'Co. Aytch (1882)', portrait: 'watkins'
+          date: 'October 8, 1862 (recalled)', source: 'Co. Aytch (1882)', portrait: 'watkins', verified: true, ref: 'https://archive.org/details/bub_gb_ssIdAQAAMAAJ?q=%22was%20in%20every%20battle%22', refTitle: 'Sam R. Watkins, "Co. Aytch" (1882)'
         },
         {
           quote: 'For the time engaged it was the severest and most desperately contested engagement within my knowledge.',
           who: 'Gen. Braxton Bragg', role: 'Commander, Army of Mississippi', side: 'confederate',
-          date: 'October 1862', source: 'Official report, Official Records', portrait: 'bragg'
+          date: 'October 1862', source: 'Official report, Official Records', portrait: 'bragg', verified: true, ref: 'https://archive.org/details/warofrebellion161unit?q=%22For%20the%20time%20engaged%22', refTitle: 'The War of the Rebellion: Official Records of the Union and Confederate Armies'
         }
       ]
     },
@@ -1010,12 +1010,12 @@
         {
           quote: 'It made the Federal cavalry. Up to that time confessedly inferior to the Southern horsemen, they gained on this day that confidence in themselves and in their commanders which enabled them to contest so fiercely the subsequent battle-fields of June, July, and October.',
           who: 'Maj. Henry B. McClellan', role: 'Stuart\'s adjutant general, on the battle\'s effect', side: 'confederate',
-          date: 'Recalled, 1885', source: 'The Life and Campaigns of Major-General J. E. B. Stuart (1885)'
+          date: 'Recalled, 1885', source: 'The Life and Campaigns of Major-General J. E. B. Stuart (1885)', verified: true, ref: 'https://archive.org/details/lifecampaignsofm00mccl?q=%22It%20made%20the%20Federal%22', refTitle: 'H. B. McClellan, The Life and Campaigns of Major-General J. E. B. Stuart (1885)'
         },
         {
-          quote: 'This puffed up cavalry of the Army of Northern Virginia has been twice, if not three times, surprised since the battles of December, and such repeated accidents can be regarded as nothing but the necessary consequences of negligence and bad management.',
+          quote: 'This much puffed cavalry of Northern Virginia has been twice, if not three times, surprised since the battles of December, and such repeated accidents can be regarded as nothing but the necessary consequences of negligence and bad management.',
           who: 'Richmond Examiner', role: 'Editorial criticizing Stuart', side: 'civilian',
-          date: 'June 12, 1863', source: 'Richmond Examiner'
+          date: 'June 12, 1863', source: 'Richmond Examiner', verified: true, ref: 'https://archive.org/details/sabresandspursf00denigoog?q=%22This%20much%20puffed%20cavalry%22', refTitle: 'Frederic Denison, Sabres and Spurs (1876), quoting the editorial'
         }
       ]
     },
@@ -1040,7 +1040,7 @@
         {
           quote: 'I cannot think of this bloody hill without sadness and pride.',
           who: 'Brig. Gen. Alvin P. Hovey', role: 'Union division commander whose men took the crest', side: 'union',
-          date: 'May 1863', source: 'Official report, Official Records'
+          date: 'May 1863', source: 'Official report, Official Records', verified: true, ref: 'https://archive.org/details/warofrebellion242unit?q=%22cannot%20think%20of%20this%22', refTitle: 'The War of the Rebellion: Official Records of the Union and Confederate Armies'
         }
       ]
     },
@@ -1064,7 +1064,7 @@
         {
           quote: 'The position occupied by these troops was one of importance, and called for the utmost steadiness and bravery … Whatever doubt may have existed heretofore as to the efficiency of organizations of this character, the history of this day proves conclusively to those who were in condition to observe the conduct of these regiments, that the Government will find in this class of troops effective supporters and defenders.',
           who: 'Maj. Gen. Nathaniel P. Banks', role: 'On the Louisiana Native Guards\' assault of May 27', side: 'union',
-          date: 'May 30, 1863', source: 'Report to Gen. Halleck, Official Records', portrait: 'banks'
+          date: 'May 30, 1863', source: 'Report to Gen. Halleck, Official Records', portrait: 'banks', verified: true, ref: 'https://archive.org/details/cu31924079575225?q=%22The%20position%20occupied%20by%22', refTitle: 'The War of the Rebellion: Official Records of the Union and Confederate Armies'
         }
       ]
     },
@@ -1088,12 +1088,12 @@
         {
           quote: 'The river was dyed with the blood of the slaughtered for two hundred yards. The approximate loss was upward of five hundred killed, but few of the officers escaping … It is hoped that these facts will demonstrate to the Northern people that negro soldiers cannot cope with Southerners.',
           who: 'Maj. Gen. Nathan Bedford Forrest', role: 'Commander of the Confederate cavalry at Fort Pillow', side: 'confederate',
-          date: 'April 15, 1864', source: 'Report to Lt. Gen. Leonidas Polk, Official Records', portrait: 'forrest'
+          date: 'April 15, 1864', source: 'Report to Lt. Gen. Leonidas Polk, Official Records', portrait: 'forrest', verified: true, ref: 'https://en.wikisource.org/wiki/Personal_Memoirs_of_U._S._Grant/Chapter_XLVII', refTitle: 'Personal Memoirs of U. S. Grant, chapter 47, quoting the dispatch (Wikisource transcription)'
         },
         {
           quote: 'If there has been the massacre of three hundred there, or even the tenth part of three hundred, it will be conclusively proved; and being so proved, the retribution shall as surely come.',
           who: 'President Abraham Lincoln', role: 'Address at the Sanitary Fair, Baltimore', side: 'union',
-          date: 'April 18, 1864', source: 'Collected Works of Abraham Lincoln', portrait: 'lincoln'
+          date: 'April 18, 1864', source: 'Collected Works of Abraham Lincoln', portrait: 'lincoln', verified: true, ref: 'https://archive.org/details/completeworksvo00lincgoog?q=%22If%20there%20has%20been%22', refTitle: 'Complete Works of Abraham Lincoln, vol. 10 (1894)'
         }
       ]
     },
@@ -1117,14 +1117,14 @@
       ],
       journal: [
         {
-          quote: 'I perceived that the enemy and our own officers had settled down into a conviction that I would not assault fortified lines. All looked to me to "outflank." An army to be efficient must not settle down to a single mode of offense, but must be prepared to execute any plan which promises success.',
+          quote: 'I perceived that the enemy and our own officers had settled down into a conviction that I would not assault fortified lines. All looked to me to "outflank." An army to be efficient must not settle down to one single mode of offence, but must be prepared to execute any plan which promises success.',
           who: 'Maj. Gen. William T. Sherman', role: 'On his decision to attack', side: 'union',
-          date: 'Recalled, 1875', source: 'Memoirs of General W. T. Sherman (1875)', portrait: 'sherman'
+          date: 'September 1864', source: 'Official report of the Atlanta Campaign', portrait: 'sherman', verified: true, ref: 'https://archive.org/details/generalshermans00shergoog?q=%22perceived%20that%20the%20enemy%22', refTitle: 'General Sherman\'s Official Account of His Great March (1865)'
         },
         {
-          quote: 'I will ever think that the reason they did not capture our works was the impossibility of their living men to pass over the bodies of their dead.',
+          quote: 'I will ever think that the reason they did not capture our works was the impossibility of their living men passing over the bodies of their dead.',
           who: 'Pvt. Sam Watkins', role: 'Company H, 1st Tennessee Infantry, at the Dead Angle', side: 'confederate',
-          date: 'June 27, 1864 (recalled)', source: 'Co. Aytch (1882)', portrait: 'watkins'
+          date: 'June 27, 1864 (recalled)', source: 'Co. Aytch (1882)', portrait: 'watkins', verified: true, ref: 'https://archive.org/details/maurygrays00watkrich?q=%22will%20ever%20think%20that%22', refTitle: 'Sam R. Watkins, "Co. Aytch" (1900 edition)'
         }
       ]
     },
@@ -1150,12 +1150,12 @@
         {
           quote: 'These men died to save the National Capital, and they did save it.',
           who: 'Maj. Gen. Lew Wallace', role: 'Inscription he proposed for the Union dead at Monocacy', side: 'union',
-          date: 'July 1864', source: 'Lew Wallace: An Autobiography (1906)', portrait: 'wallace'
+          date: 'July 1864', source: 'Lew Wallace: An Autobiography (1906)', portrait: 'wallace', verified: true, ref: 'https://archive.org/details/autobiography0002leww?q=%22These%20men%20died%20to%22', refTitle: 'Lew Wallace: An Autobiography (1906)'
         },
         {
           quote: 'If Early had been but one day earlier he might have entered the capital before the arrival of the reinforcements I had sent … General Wallace contributed on this occasion, by the defeat of the troops under him, a greater benefit to the cause than often falls to the lot of a commander of an equal force to render by means of a victory.',
           who: 'Lt. Gen. Ulysses S. Grant', role: 'General-in-Chief of the Union armies', side: 'union',
-          date: 'Recalled, 1885', source: 'Personal Memoirs of U. S. Grant (1885)', portrait: 'grant'
+          date: 'Recalled, 1885', source: 'Personal Memoirs of U. S. Grant (1885)', portrait: 'grant', verified: true, ref: 'https://archive.org/details/personalmemoirso02granuoft?q=%22If%20Early%20had%20been%22', refTitle: 'Personal Memoirs of U. S. Grant (1885)'
         }
       ]
     },
@@ -1185,7 +1185,7 @@
         {
           quote: 'The Almighty has smiled upon me once more. I am in Mobile Bay.',
           who: 'Rear Adm. David G. Farragut', role: 'To his wife, that evening', side: 'union',
-          date: 'August 5, 1864', source: 'Letter, in Loyall Farragut, The Life of David Glasgow Farragut (1879)', portrait: 'farragut'
+          date: 'August 5, 1864', source: 'Letter, in Loyall Farragut, The Life of David Glasgow Farragut (1879)', portrait: 'farragut', verified: true, ref: 'https://archive.org/details/lifeofdavidglasg01farr?q=%22The%20Almighty%20has%20smiled%22', refTitle: 'Loyall Farragut, The Life of David Glasgow Farragut (1879)'
         }
       ]
     },
@@ -1211,12 +1211,12 @@
         {
           quote: 'Turning what bid fair to be a disaster into a glorious victory stamps Sheridan what I always thought him, one of the ablest of generals.',
           who: 'Lt. Gen. Ulysses S. Grant', role: 'General-in-Chief of the Union armies', side: 'union',
-          date: 'October 20, 1864', source: 'Telegram to Secretary of War Stanton, Official Records', portrait: 'grant'
+          date: 'October 20, 1864', source: 'Telegram to Secretary of War Stanton, Official Records', portrait: 'grant', verified: true, ref: 'https://archive.org/details/personalrecolle00coangoog?q=%22Turning%20what%20bid%20fair%22', refTitle: 'Personal Recollections of the War of the Rebellion (1891), quoting the telegram'
         },
         {
           quote: 'The Yankees got whipped and we got scared.',
           who: 'Lt. Gen. Jubal A. Early', role: 'Explaining the day\'s reversal to his officers', side: 'confederate',
-          date: 'October 19, 1864', source: 'As recorded by Maj. Gen. John B. Gordon, Reminiscences of the Civil War (1903)', portrait: 'early'
+          date: 'October 19, 1864', source: 'As recorded by Jedediah Hotchkiss, Early\'s mapmaker, in his journal for October 19, 1864, Official Records', portrait: 'early', verified: true, ref: 'https://archive.org/details/warofrebellion431unit_0?q=%22The%20Yankees%20got%20whipped%22', refTitle: 'The War of the Rebellion: Official Records of the Union and Confederate Armies'
         }
       ]
     },
@@ -1241,12 +1241,12 @@
         {
           quote: 'Sherman\'s course cannot be hindered by the small force I have. I can do no more than annoy him.',
           who: 'Gen. Joseph E. Johnston', role: 'Commander, Confederate forces in the Carolinas', side: 'confederate',
-          date: 'March 23, 1865', source: 'Telegram to Gen. Lee, Official Records', portrait: 'jjohnston'
+          date: 'March 23, 1865', source: 'Telegram to Gen. Lee, Official Records', portrait: 'jjohnston', verified: true, ref: 'https://archive.org/details/warofrebellionco0047majg_a5h2?q=%22course%20cannot%20be%20hindered%22', refTitle: 'The War of the Rebellion: Official Records of the Union and Confederate Armies'
         },
         {
           quote: 'I think I made a mistake there, and should rapidly have followed Mower\'s lead with the whole of the right wing, which would have brought on a general battle, and it could not have resulted otherwise than successfully to us.',
           who: 'Maj. Gen. William T. Sherman', role: 'On recalling Mower\'s division on March 21', side: 'union',
-          date: 'Recalled, 1875', source: 'Memoirs of General W. T. Sherman (1875)', portrait: 'sherman'
+          date: 'Recalled, 1875', source: 'Memoirs of General W. T. Sherman (1875)', portrait: 'sherman', verified: true, ref: 'https://archive.org/details/memoirsgeneralw01shergoog?q=%22mistake%20there%20and%20should%22', refTitle: 'Memoirs of General William T. Sherman (1875)'
         }
       ]
     },
@@ -1262,21 +1262,21 @@
       commanders: { union: 'Maj. Gen. Philip H. Sheridan, Maj. Gen. Horatio Wright, Maj. Gen. Andrew Humphreys', confederate: 'Lt. Gen. Richard S. Ewell, Lt. Gen. Richard H. Anderson, Maj. Gen. John B. Gordon' },
       forces: { union: 'about 36,000', confederate: 'about 18,500' },
       casualties: { union: 1148, confederate: 7700, note: 'Nearly all Confederate losses were men captured, including eight generals and Lee\'s eldest son, Custis Lee.' },
-      summary: 'Three days out of Petersburg, Lee\'s retreating army came apart. Union cavalry and two infantry corps caught the rear third of it, strung out at the crossings of Sailor\'s Creek, and in three separate fights captured almost a quarter of the Army of Northern Virginia. Lee, watching the survivors stream past, asked whether the army had been dissolved. Three days later he surrendered at Appomattox.',
+      summary: 'Three days out of Petersburg, Lee\'s retreating army came apart. Union cavalry and two infantry corps caught the rear third of it, strung out at the crossings of Sailor\'s Creek, and in three separate fights captured almost a quarter of the Army of Northern Virginia. Lee, watching the survivors stream past, asked aloud whether the army had dissolved. Three days later he surrendered at Appomattox.',
       significance: 'The last major battle of the war in Virginia, and the one that made Appomattox inevitable.',
       images: [
         img('April 6. Custer ready for his 3rd charge at Sailors Creek 1865 LCCN2004660781.jpg', 'Custer\'s cavalry ready for its third charge at Sailor\'s Creek, April 6, 1865.', 'Alfred R. Waud, sketch, 1865. Library of Congress.')
       ],
       journal: [
         {
-          quote: 'My God! Has the army been dissolved?',
+          quote: 'My God! has the army dissolved?',
           who: 'Gen. Robert E. Lee', role: 'Watching the survivors of Ewell\'s and Anderson\'s commands stream past', side: 'confederate',
-          date: 'April 6, 1865', source: 'As recorded by Maj. Gen. William Mahone, who replied, "No, General, here are troops ready to do their duty."', portrait: 'lee'
+          date: 'April 6, 1865', source: 'As recorded by Maj. Gen. William Mahone, who was beside him; quoted in Morris Schaff, The Sunset of the Confederacy (1912)', portrait: 'lee', verified: true, ref: 'https://archive.org/details/sunsetofconfeder00scha?q=%22My%20God%20has%20the%22', refTitle: 'Morris Schaff, The Sunset of the Confederacy (1912), quoting Mahone'
         },
         {
           quote: 'If the thing is pressed I think that Lee will surrender.',
           who: 'Maj. Gen. Philip H. Sheridan', role: 'Dispatch to Grant that evening; Lincoln, reading it, wired back: "Let the thing be pressed."', side: 'union',
-          date: 'April 6, 1865', source: 'Official Records', portrait: 'sheridan'
+          date: 'April 6, 1865', source: 'Official Records', portrait: 'sheridan', verified: true, ref: 'https://archive.org/details/warofrebellion463unit?q=%22If%20the%20thing%20is%22', refTitle: 'The War of the Rebellion: Official Records of the Union and Confederate Armies'
         }
       ]
     }
@@ -1678,32 +1678,37 @@
   ];
 
   const SOURCES = [
-    { title: 'Personal Memoirs of U. S. Grant', author: 'Ulysses S. Grant', year: 1885, url: 'https://www.gutenberg.org/ebooks/4367' },
-    { title: 'Memoirs of General W. T. Sherman', author: 'William T. Sherman', year: 1875, url: 'https://www.gutenberg.org/ebooks/4361' },
-    { title: 'Co. Aytch: A Side Show of the Big Show', author: 'Sam R. Watkins', year: 1882, url: 'https://www.gutenberg.org/ebooks/13202' },
+    { title: 'Personal Memoirs of U. S. Grant', author: 'Ulysses S. Grant', year: 1885, url: 'https://en.wikisource.org/wiki/Personal_Memoirs_of_U._S._Grant' },
+    { title: 'Memoirs of General W. T. Sherman', author: 'William T. Sherman', year: 1875, url: 'https://archive.org/details/memoirsgeneralw01shergoog' },
+    { title: 'General Sherman\'s Official Account of His Great March', author: 'William T. Sherman', year: 1865, url: 'https://archive.org/details/generalshermans00shergoog' },
+    { title: 'Co. Aytch: A Side Show of the Big Show', author: 'Sam R. Watkins', year: 1882, url: 'https://archive.org/details/bub_gb_ssIdAQAAMAAJ' },
     { title: 'A Diary from Dixie', author: 'Mary Boykin Chesnut', year: 1905, url: 'https://docsouth.unc.edu/southlit/chesnut/maryches.html' },
     { title: 'All for the Union: The Civil War Diary and Letters of Elisha Hunt Rhodes', author: 'Elisha Hunt Rhodes', year: 1985, url: 'https://archive.org/search?query=All+for+the+Union+Elisha+Hunt+Rhodes' },
-    { title: 'Battles and Leaders of the Civil War (4 vols.)', author: 'Robert U. Johnson and Clarence C. Buel, eds.', year: 1887, url: 'https://archive.org/details/battlesleadersof02john' },
-    { title: 'Campaigning with Grant', author: 'Horace Porter', year: 1897, url: 'https://archive.org/search?query=Horace+Porter+Campaigning+with+Grant' },
-    { title: 'The Passing of the Armies', author: 'Joshua L. Chamberlain', year: 1915, url: 'https://archive.org/search?query=Chamberlain+The+Passing+of+the+Armies' },
-    { title: 'Through Blood and Fire at Gettysburg', author: 'Joshua L. Chamberlain', year: 1913, url: 'https://archive.org/search?query=Chamberlain+Through+Blood+and+Fire+at+Gettysburg' },
-    { title: 'My Cave Life in Vicksburg', author: 'Mary Ann Loughborough', year: 1864, url: 'https://archive.org/search?query=Loughborough+My+Cave+Life+in+Vicksburg' },
+    { title: 'Battles and Leaders of the Civil War (4 vols.)', author: 'Robert U. Johnson and Clarence C. Buel, eds.', year: 1887, url: 'https://archive.org/details/battlesleadersof03cent' },
+    { title: 'Campaigning with Grant', author: 'Horace Porter', year: 1897, url: 'https://archive.org/details/cu31924030927002' },
+    { title: 'The Passing of the Armies', author: 'Joshua L. Chamberlain', year: 1915, url: 'https://archive.org/details/bwb_S0-BGJ-081' },
+    { title: 'Strong Vincent and His Brigade at Gettysburg (reprints Chamberlain\'s official report)', author: 'Oliver W. Norton', year: 1909, url: 'https://archive.org/details/strongvincentan00nortgoog' },
+    { title: 'My Cave Life in Vicksburg', author: 'Mary Ann Loughborough', year: 1864, url: 'https://archive.org/details/mycavelifeinvic00louggoog' },
     { title: 'Advance and Retreat', author: 'John Bell Hood', year: 1880, url: 'https://archive.org/details/advanceretreatpe00hood' },
     { title: 'Three Months in the Southern States', author: 'Arthur J. L. Fremantle', year: 1863, url: 'https://docsouth.unc.edu/imls/fremantle/fremantle.html' },
-    { title: 'From Manassas to Appomattox', author: 'James Longstreet', year: 1896, url: 'https://archive.org/search?query=Longstreet+From+Manassas+to+Appomattox' },
-    { title: 'The War of the Rebellion: Official Records of the Union and Confederate Armies', author: 'U.S. War Department', year: 1880, url: 'https://ehistory.osu.edu/books/official-records' },
-    { title: 'Sullivan Ballou letter, July 14, 1861', author: 'Sullivan Ballou', year: 1861, url: 'https://archive.org/search?query=Sullivan+Ballou+letter+1861' },
-    { title: 'Lewis Douglass to Amelia Loguen, July 20, 1863', author: 'Lewis H. Douglass', year: 1863, url: 'https://dh.howard.edu/' },
+    { title: 'Hammer and Rapier', author: 'John Esten Cooke', year: 1870, url: 'https://archive.org/details/hammerrapier00cook' },
+    { title: 'The Campaign of Chancellorsville', author: 'John Bigelow', year: 1910, url: 'https://archive.org/details/campaignofchanc00bige' },
+    { title: 'The Sunset of the Confederacy', author: 'Morris Schaff', year: 1912, url: 'https://archive.org/details/sunsetofconfeder00scha' },
+    { title: 'Southern Generals, Who They Are, and What They Have Done', author: 'William P. Snow', year: 1865, url: 'https://archive.org/details/southgenerals00snowrich' },
+    { title: 'The War of the Rebellion: Official Records of the Union and Confederate Armies', author: 'U.S. War Department', year: 1880, url: 'https://archive.org/search?query=title%3A%28war+of+the+rebellion%29+official+records+union+confederate+armies' },
+    { title: 'Official Records of the Union and Confederate Navies', author: 'U.S. Navy Department', year: 1894, url: 'https://archive.org/details/officialrecordso0018unse' },
+    { title: 'Sullivan Ballou letter, July 14, 1861', author: 'Sullivan Ballou', year: 1861, url: 'https://en.wikisource.org/wiki/Letter_from_Captain_Sullivan_Ballou_to_His_Wife_Sarah' },
+    { title: 'Lewis Douglass to Amelia Loguen, July 20, 1863, in The Journal of Negro History', author: 'Lewis H. Douglass', year: 1926, url: 'https://archive.org/details/sim_journal-of-african-american-history_1926-01_11_1' },
     { title: 'The Gettysburg Address', author: 'Abraham Lincoln', year: 1863, url: 'https://www.loc.gov/exhibits/gettysburg-address/' },
-    { title: 'Collected Works of Abraham Lincoln', author: 'Roy P. Basler, ed.', year: 1953, url: 'https://quod.lib.umich.edu/l/lincoln/' },
+    { title: 'Complete Works of Abraham Lincoln', author: 'John G. Nicolay and John Hay, eds.', year: 1894, url: 'https://archive.org/details/completeworks00lincgoog' },
     { title: 'The Life and Campaigns of Major-General J. E. B. Stuart', author: 'Henry B. McClellan', year: 1885, url: 'https://archive.org/details/lifecampaignsofm00mccl' },
     { title: 'The Fight for Missouri', author: 'Thomas L. Snead', year: 1886, url: 'https://archive.org/details/fightformissouri00snea' },
-    { title: 'Reminiscences of the Civil War', author: 'John B. Gordon', year: 1903, url: 'https://docsouth.unc.edu/fpn/gordon/gordon.html' },
-    { title: 'The Life of David Glasgow Farragut', author: 'Loyall Farragut', year: 1879, url: 'https://archive.org/search?query=Loyall+Farragut+Life+of+David+Glasgow+Farragut' },
-    { title: 'Lew Wallace: An Autobiography', author: 'Lew Wallace', year: 1906, url: 'https://archive.org/search?query=Lew+Wallace+An+Autobiography+1906' },
+    { title: 'Civil War on the Western Border, 1854–1865', author: 'Jay Monaghan', year: 1955, url: 'https://archive.org/details/civilwaronwester00mona' },
+    { title: 'The Life of David Glasgow Farragut', author: 'Loyall Farragut', year: 1879, url: 'https://archive.org/details/lifeofdavidglasg01farr' },
+    { title: 'Lew Wallace: An Autobiography', author: 'Lew Wallace', year: 1906, url: 'https://archive.org/details/autobiography0002leww' },
     { title: 'Fort Pillow Massacre: Report of the Joint Committee on the Conduct of the War', author: 'U.S. Congress', year: 1864, url: 'https://archive.org/details/fortpillowmassac00unit' },
-    { title: 'Official Records of the Union and Confederate Navies', author: 'U.S. Navy Department', year: 1894, url: 'https://archive.org/search?query=Official+Records+of+the+Union+and+Confederate+Navies' },
-    { title: 'Touched with Fire: Civil War Letters and Diary of Oliver Wendell Holmes, Jr.', author: 'Mark DeWolfe Howe, ed.', year: 1946, url: 'https://archive.org/details/touchedwithfirec0000holm' }
+    { title: 'Miscellaneous Papers, 1672–1865 (prints Lt. S. D. Greene\'s letter on the Monitor)', author: 'Rhode Island Historical Society', year: 1887, url: 'https://archive.org/details/miscellaneouspa00unkngoog' },
+    { title: 'Touched with Fire: Civil War Letters and Diary of Oliver Wendell Holmes, Jr.', author: 'Mark DeWolfe Howe, ed.', year: 1946, url: 'https://archive.org/details/in.ernet.dli.2015.75551' }
   ];
 
   const TOURS = [
@@ -1813,7 +1818,7 @@
   ];
 
   const NOTES = {
-    quotes: 'Some of the best-known lines of the war were recorded by others, such as Barnard Bee\'s "stone wall" and Lee\'s "It is well that war is so terrible." Those entries name the person who reported them.',
+    quotes: 'Some of the best-known lines of the war were recorded by others, such as Barnard Bee\'s "stone wall" remark. Those entries name the person who reported them. Checking against the earliest printed texts changed a few familiar wordings: Lee\'s remark at Fredericksburg, usually given as "It is well that war is so terrible," reads differently in its first printing of 1870, and the entry gives that version.',
     numbers: 'Casualty figures combine killed, wounded, captured, and missing. Civil War returns were incomplete and Confederate records especially so; the figures here are the commonly cited estimates from the National Park Service and standard references, rounded. Army strengths are approximate.',
     images: 'Most are chromolithographs published by Kurz & Allison of Chicago in the late 1880s and 1890s, or prints by L. Prang & Co. after paintings by Thure de Thulstrup; these are romanticized views made decades after the events. The photographs by Alexander Gardner, Timothy O\'Sullivan, and Thomas Roche were taken on the battlefields within days of the fighting.'
   };

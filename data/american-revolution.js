@@ -57,17 +57,17 @@
         {
           quote: 'Stand your ground. Don\'t fire unless fired upon, but if they mean to have a war, let it begin here.',
           who: 'Capt. John Parker', role: 'Commander of the Lexington militia company', side: 'american',
-          date: 'April 19, 1775', source: 'As recalled decades later by William Munroe, Parker\'s orderly sergeant; the words are carved on a stone on Lexington Green'
+          date: 'April 19, 1775', source: 'As recalled decades later by William Munroe, Parker\'s orderly sergeant; the words are carved on a stone on Lexington Green', verified: true, ref: 'https://archive.org/details/gri_33125010706766?q=%22fire%20unless%20fired%20upon%22', refTitle: 'Memories of seventeen hundred and seventy-five'
         },
         {
-          quote: 'We were fired on from all sides, but mostly from the rear, where people had hid themselves in houses till we had passed, and then fired; the country was an amazing strong one, full of hills, woods, stone walls, &c., which the Rebels did not fail to take advantage of.',
+          quote: 'We were fired on from all sides, but mostly from the Rear, where People had hid themselves in houses till we had passed, and then fired; the Country was an amazing strong one, full of Hills, Woods, stone Walls, &c., which the Rebels did not fail to take advantage of.',
           who: 'Lt. John Barker', role: '4th (King\'s Own) Regiment of Foot', side: 'british',
-          date: 'April 19, 1775', source: 'Diary, published as The British in Boston (1924)'
+          date: 'April 19, 1775', source: 'Diary, first published in The Atlantic Monthly (April 1877)', verified: true, ref: 'https://archive.org/details/sim_atlantic_1877-04_39_234?q=%22We%20were%20fired%20on%22', refTitle: 'The Atlantic Monthly, April 1877'
         },
         {
-          quote: 'Whoever looks upon them as an irregular mob, will find himself much mistaken. They have men amongst them who know very well what they are about, having been employed as Rangers against the Indians and Canadians, and this country being much covered with wood, and hilly, is very advantageous for their method of fighting.',
+          quote: 'Whoever looks upon them as an irregular mob, will find himself much mistaken. They have men amongst them who know very well what they are about.',
           who: 'Brig. Gen. Hugh, Earl Percy', role: 'Commander of the British relief column', side: 'british',
-          date: 'April 20, 1775', source: 'Letter to Gen. Edward Harvey', portrait: 'percy'
+          date: 'April 20, 1775', source: 'Letter to Gen. Edward Harvey', portrait: 'percy', verified: true, ref: 'https://archive.org/details/lettershughearl00boltgoog?q=%22Whoever%20looks%20upon%20them%22', refTitle: 'Letters of Hugh, Earl Percy, from Boston and New York, 1774–1776 (1902)'
         }
       ]
     },
@@ -91,7 +91,7 @@
         {
           quote: 'He asked me by what authority I demanded it: I answered him, "In the name of the great Jehovah, and the Continental Congress."',
           who: 'Col. Ethan Allen', role: 'Commander of the Green Mountain Boys', side: 'american',
-          date: 'May 10, 1775 (recalled)', source: 'A Narrative of Colonel Ethan Allen\'s Captivity (1779)'
+          date: 'May 10, 1775 (recalled)', source: 'A Narrative of Colonel Ethan Allen\'s Captivity (1779)', verified: true, ref: 'https://archive.org/details/cihm_42517?q=%22He%20asked%20me%20by%22', refTitle: 'A Narrative of the Captivity of Col. Ethan Allen (1814 edition)'
         }
       ]
     },
@@ -116,7 +116,7 @@
         {
           quote: 'The day—perhaps the decisive day—is come, on which the fate of America depends. My bursting heart must find vent at my pen. I have just heard that our dear friend, Dr. Warren, is no more, but fell gloriously fighting for his country.',
           who: 'Abigail Adams', role: 'Writing from Braintree, where she and her son John Quincy watched the smoke from a hilltop', side: 'civilian',
-          date: 'June 18, 1775', source: 'Letter to John Adams, Adams Family Papers', portrait: 'abigail'
+          date: 'June 18, 1775', source: 'Letter to John Adams, Adams Family Papers', portrait: 'abigail', verified: true, ref: 'https://www.masshist.org/digitaladams/archive/doc?id=L17750618aa', refTitle: 'Adams Family Papers, Massachusetts Historical Society'
         },
         {
           quote: 'Don\'t fire until you see the whites of their eyes!',
@@ -124,14 +124,14 @@
           date: 'June 17, 1775', source: 'Tradition. No account written at the time records these words, and historians are not sure who said them, or whether anyone did'
         },
         {
-          quote: 'These people shew a spirit and conduct against us they never shewed against the French … The loss we have sustained is greater than we can bear.',
+          quote: 'These People Shew a Spirit and Conduct against us they never shewed against the French … The loss we have Sustained is greater than we can bear.',
           who: 'Lt. Gen. Thomas Gage', role: 'British commander in chief in North America', side: 'british',
-          date: 'June 26, 1775', source: 'Letter to Lord Barrington, Secretary at War', portrait: 'gage'
+          date: 'June 26, 1775', source: 'Letter to Lord Barrington, Secretary at War', portrait: 'gage', verified: true, ref: 'https://archive.org/details/warforindependen012513mbp?q=%22Spirit%20and%20Conduct%20against%22', refTitle: 'Howard H. Peckham, The War for Independence (1958), quoting the letter'
         },
         {
           quote: 'I wish we could sell them another hill at the same price.',
           who: 'Brig. Gen. Nathanael Greene', role: 'Commander of the Rhode Island troops outside Boston', side: 'american',
-          date: 'June 1775', source: 'Letter to his brother', portrait: 'greene'
+          date: 'June 1775', source: 'Letter to his brother', portrait: 'greene', verified: true, ref: 'https://archive.org/details/commandinbattleo00frot?q=%22wish%20we%20could%20sell%22', refTitle: 'Richard Frothingham, The Command in the Battle of Bunker Hill (1850)'
         }
       ]
     },
@@ -156,12 +156,12 @@
         {
           quote: 'A poor dog, hitherto lived through all the tribulations, became a prey for the sustenance of the assassinators. This poor animal was instantly devoured, without leaving any vestige of the sacrifice.',
           who: 'Dr. Isaac Senter', role: 'Surgeon on Arnold\'s march through Maine', side: 'american',
-          date: 'November 1, 1775', source: 'Journal of Isaac Senter (published 1846)'
+          date: 'November 1, 1775', source: 'Journal of Isaac Senter (published 1846)', verified: true, ref: 'https://archive.org/details/journalofisaacse00sentuoft?q=%22poor%20dog%20hitherto%20lived%22', refTitle: 'The Journal of Isaac Senter (1846)'
         },
         {
           quote: 'I have no thoughts of leaving this proud town, until I first enter it in triumph … I am in the way of my duty, and know no fear.',
           who: 'Col. Benedict Arnold', role: 'Wounded, and continuing the siege from a hospital bed', side: 'american',
-          date: 'January 6, 1776', source: 'Letter to his sister Hannah Arnold', portrait: 'arnold'
+          date: 'January 6, 1776', source: 'Letter to his sister Hannah Arnold; an extract was printed in the Maryland Gazette, February 1, 1776', portrait: 'arnold', verified: true, ref: 'https://archive.org/details/mg02011766?q=%22proud+town%22', refTitle: 'Maryland Gazette, February 1, 1776'
         }
       ]
     },
@@ -184,14 +184,14 @@
       ],
       journal: [
         {
-          quote: 'I went to bed about twelve, and rose again a little after one. I could no more sleep than if I had been in the engagement; the rattling of the windows, the jar of the house, the continual roar of twenty-four pounders, and the bursting of shells give us such ideas, and realize a scene to us of which we could form scarcely any conception.',
+          quote: 'I went to bed about 12 and rose again a little after one. I could no more sleep than if I had been in the ingagement. The ratling of the windows, the jar of the house and the continual roar of 24 pounders, the Bursting of shells give us such Ideas, and realize a scene to us of which we could scarcly form any conception.',
           who: 'Abigail Adams', role: 'Listening to the cannonade from Braintree, ten miles away', side: 'civilian',
-          date: 'March 5, 1776', source: 'Letter to John Adams, Adams Family Papers', portrait: 'abigail'
+          date: 'March 5, 1776', source: 'Letter to John Adams, Adams Family Papers', portrait: 'abigail', verified: true, ref: 'https://www.masshist.org/digitaladams/archive/doc?id=L17760302aa', refTitle: 'Adams Family Papers, Massachusetts Historical Society'
         },
         {
-          quote: 'The rebels have done more in one night than my whole army would have done in a month.',
+          quote: 'The rebels have done more in one night, than my whole army would have done in months.',
           who: 'Gen. William Howe', role: 'British commander in Boston, on seeing the fortified heights at dawn', side: 'british',
-          date: 'March 5, 1776', source: 'As reported by officers present', portrait: 'howe'
+          date: 'March 5, 1776', source: 'As reported in William Gordon\'s history of the war (1788), the earliest printed version; later books changed "months" to "a month"', portrait: 'howe', verified: true, ref: 'https://archive.org/details/historyofrisepro02gord_0?q=%22The%20rebels%20have%20done%22', refTitle: 'William Gordon, The History of the Rise, Progress, and Establishment of the Independence of the United States (1788)'
         }
       ]
     },
@@ -216,17 +216,17 @@
         {
           quote: 'We now began to meet the wounded men, another sight I was unacquainted with, some with broken arms, some with broken legs, and some with broken heads. The sight of these a little daunted me, and made me think of home.',
           who: 'Pvt. Joseph Plumb Martin', role: 'Connecticut state troops; he was fifteen years old', side: 'american',
-          date: 'August 27, 1776 (recalled)', source: 'A Narrative of Some of the Adventures, Dangers and Sufferings of a Revolutionary Soldier (1830)'
+          date: 'August 27, 1776 (recalled)', source: 'A Narrative of Some of the Adventures, Dangers and Sufferings of a Revolutionary Soldier (1830)', verified: true, ref: 'https://en.wikisource.org/wiki/The_Adventures_Of_A_Revolutionary_Soldier/Chapter_II.', refTitle: 'Joseph Plumb Martin, A Narrative of Some of the Adventures, Dangers and Sufferings of a Revolutionary Soldier (Wikisource transcription)'
         },
         {
           quote: 'Good God! What brave fellows I must this day lose!',
           who: 'Gen. George Washington', role: 'Watching the Maryland regiment charge', side: 'american',
-          date: 'August 27, 1776', source: 'As reported by an officer who stood near him', portrait: 'washington'
+          date: 'August 27, 1776', source: 'As reported by an officer who stood near him', portrait: 'washington', verified: true, ref: 'https://archive.org/details/lifeofgeneralwas00nort?q=%22Good%20God%20What%20brave%22', refTitle: 'Life of General Washington'
         },
         {
           quote: 'A very dense fog began to rise, and it seemed to settle in a peculiar manner over both encampments. I recollect this peculiar providential occurrence perfectly well; and so very dense was the atmosphere that I could scarcely discern a man at six yards\' distance.',
           who: 'Maj. Benjamin Tallmadge', role: 'Among the last troops to leave the Brooklyn lines', side: 'american',
-          date: 'August 30, 1776 (recalled)', source: 'Memoir of Col. Benjamin Tallmadge (1858)'
+          date: 'August 30, 1776 (recalled)', source: 'Memoir of Col. Benjamin Tallmadge (1858)', verified: true, ref: 'https://archive.org/details/memoirofcolonelb027409mbp?q=%22very%20dense%20fog%20began%22', refTitle: 'Memoir of Colonel Benjamin Tallmadge'
         }
       ]
     },
@@ -250,19 +250,19 @@
       ],
       journal: [
         {
-          quote: 'These are the times that try men\'s souls. The summer soldier and the sunshine patriot will, in this crisis, shrink from the service of their country; but he that stands by it now, deserves the love and thanks of man and woman.',
+          quote: 'These are the times that try men\'s souls. The summer soldier and the sunshine patriot will, in this crisis, shrink from the service of their country; but he that stands it now, deserves the love and thanks of man and woman.',
           who: 'Thomas Paine', role: 'Writer, then serving with the retreating army; Washington had this read aloud to the troops', side: 'american',
-          date: 'December 19, 1776', source: 'The American Crisis, No. 1', portrait: 'paine'
+          date: 'December 19, 1776', source: 'The American Crisis, No. 1', portrait: 'paine', verified: true, ref: 'https://en.wikisource.org/wiki/The_American_Crisis/The_Crisis_No._I', refTitle: 'Thomas Paine, The American Crisis, No. 1 (Wikisource transcription)'
         },
         {
           quote: 'If every nerve is not strained to recruit the New Army with all possible expedition, I think the game is pretty near up.',
           who: 'Gen. George Washington', role: 'Commander in chief, eight days before the attack', side: 'american',
-          date: 'December 18, 1776', source: 'Letter to his brother', portrait: 'washington'
+          date: 'December 18, 1776', source: 'Letter to his brother', portrait: 'washington', verified: true, ref: 'https://archive.org/details/writingsgeorgew44washgoog?q=%22If%20every%20nerve%20is%22', refTitle: 'The Writings of George Washington (19th-century edition)'
         },
         {
-          quote: 'The difficulty of passing the River in a very severe Night, and their march through a violent Storm of Snow and Hail, did not in the least abate their Ardour. But when they came to the Charge, each seemed to vie with the other in pressing forward.',
+          quote: 'The difficulty of passing the river in a very severe night, and their march through a violent storm of snow and hail, did not in the least abate their ardor; but, when they came to the charge, each seemed to vie with the other in pressing forward.',
           who: 'Gen. George Washington', role: 'Commander in chief', side: 'american',
-          date: 'December 27, 1776', source: 'Report to John Hancock, President of Congress', portrait: 'washington'
+          date: 'December 27, 1776', source: 'Report to John Hancock, President of Congress', portrait: 'washington', verified: true, ref: 'https://archive.org/details/writingsgeorgew44washgoog?q=%22The%20difficulty%20of%20passing%22', refTitle: 'The Writings of George Washington, ed. Worthington C. Ford (1889)'
         }
       ]
     },
@@ -285,14 +285,14 @@
       ],
       journal: [
         {
-          quote: 'My brave fellows, you have done all I asked you to do, and more than could be reasonably expected; but your country is at stake, your wives, your houses and all that you hold dear … If you will consent to stay only one month longer, you will render that service to the cause of liberty and to your country which you probably never can do under any other circumstances.',
+          quote: 'My brave fellows, you have done all I asked you to do, and more than could be reasonably expected; but your country is at stake, your wives, your houses, and all that you hold dear … If you will consent to stay only one month longer, you will render that service to the cause of liberty, and to your country, which you probably never can do under any other circumstances.',
           who: 'Gen. George Washington', role: 'Appealing to soldiers whose enlistments ended the next day', side: 'american',
-          date: 'December 30, 1776', source: 'As recorded by a sergeant who was present, published 1832', portrait: 'washington'
+          date: 'December 30, 1776', source: 'As recorded by a sergeant who was present; published 1832 and reprinted in the Pennsylvania Magazine of History and Biography (1896)', portrait: 'washington', verified: true, ref: 'https://archive.org/details/sim_pennsylvania-magazine-of-history-and-biography_1896_20_4?q=%22My%20brave%20fellows%20you%22', refTitle: 'The Pennsylvania Magazine of History and Biography, vol. 20 (1896)'
         },
         {
           quote: 'Parade with us, my brave fellows! There is but a handful of the enemy, and we will have them directly.',
           who: 'Gen. George Washington', role: 'Rallying Mercer\'s broken brigade under fire', side: 'american',
-          date: 'January 3, 1777', source: 'As reported by soldiers present', portrait: 'washington'
+          date: 'January 3, 1777', source: 'As reported by soldiers present', portrait: 'washington', verified: true, ref: 'https://archive.org/details/princetonbattl00prin?q=%22Parade%20with%20us%20my%22', refTitle: 'The Princeton Battle Monument (1922)'
         }
       ]
     },
@@ -315,14 +315,14 @@
       ],
       journal: [
         {
-          quote: 'There are the Red Coats, and they are ours, or this night Molly Stark sleeps a widow!',
+          quote: 'There are the redcoats, and they are ours, or this night Molly Stark sleeps a widow!',
           who: 'Brig. Gen. John Stark', role: 'Commander of the New Hampshire militia, before the attack', side: 'american',
-          date: 'August 16, 1777', source: 'As reported by his soldiers; versions differ in wording', portrait: 'stark'
+          date: 'August 16, 1777', source: 'As reported by his soldiers; versions differ in wording', portrait: 'stark', verified: true, ref: 'https://archive.org/details/battleofbenningt00brit?q=%22There%20are%20the%20redcoats%22', refTitle: 'The Battle of Bennington (1908)'
         },
         {
-          quote: 'The Hampshire Grants in particular, a country unpeopled and almost unknown in the last war, now abounds in the most active and most rebellious race of the continent, and hangs like a gathering storm upon my left.',
+          quote: 'The Hampshire Grants, in particular, a country unpeopled, and almost unknown the last war, now abounds in the most active and most rebellious race of the continent, and hangs like a gathering storm upon my left.',
           who: 'Lt. Gen. John Burgoyne', role: 'Commander of the British army from Canada', side: 'british',
-          date: 'August 20, 1777', source: 'Letter to Lord George Germain, Secretary of State for the Colonies', portrait: 'burgoyne'
+          date: 'August 20, 1777', source: 'Letter to Lord George Germain, printed in Burgoyne\'s A State of the Expedition from Canada (1780)', portrait: 'burgoyne', verified: true, ref: 'https://archive.org/details/bim_eighteenth-century_a-state-of-the-expeditio_burgoyne-john_1780?q=%22The%20Hampshire%20Grants%20in%22', refTitle: 'John Burgoyne, A State of the Expedition from Canada (1780)'
         }
       ]
     },
@@ -347,12 +347,12 @@
         {
           quote: 'Sir: I am sorry to inform you that in this day\'s engagement we have been obliged to leave the enemy masters of the field.',
           who: 'Gen. George Washington', role: 'Commander in chief, writing at midnight', side: 'american',
-          date: 'September 11, 1777', source: 'Report to John Hancock, President of Congress', portrait: 'washington'
+          date: 'September 11, 1777', source: 'Report to John Hancock, President of Congress', portrait: 'washington', verified: true, ref: 'https://archive.org/details/writingsgeorgew00spargoog?q=%22am%20sorry%20to%20inform%22', refTitle: 'The Writings of George Washington, ed. Jared Sparks (1834)'
         },
         {
           quote: 'Oh, Heaven! grant us one great soul! One leading mind would extricate the best cause from that ruin which seems to await it.',
           who: 'John Adams', role: 'Delegate to Congress, which had just fled Philadelphia', side: 'american',
-          date: 'September 21, 1777', source: 'Diary of John Adams'
+          date: 'September 21, 1777', source: 'Diary of John Adams', verified: true, ref: 'https://www.masshist.org/digitaladams/archive/doc?id=D28', refTitle: 'Diary of John Adams, Massachusetts Historical Society'
         }
       ]
     },
@@ -377,17 +377,17 @@
         {
           quote: 'Eleven cannon balls went through the house, and we could plainly hear them rolling over our heads. One poor soldier, whose leg they were about to amputate, having been laid upon a table for this purpose, had the other leg taken off by another cannon ball, in the very middle of the operation.',
           who: 'Baroness Frederika von Riedesel', role: 'Wife of the German commander, sheltering in a cellar with her three small daughters', side: 'civilian',
-          date: 'October 1777', source: 'Letters and Journals Relating to the War of the American Revolution (English translation, 1827)', portrait: 'riedesel'
+          date: 'October 1777', source: 'Letters and Journals Relating to the War of the American Revolution (translated by William L. Stone, 1867)', portrait: 'riedesel', verified: true, ref: 'https://archive.org/details/lettersjournalsr00ried?q=%22Eleven%20cannon%20balls%20went%22', refTitle: 'Letters and Journals Relating to the War of the American Revolution, trans. William L. Stone (1867)'
         },
         {
-          quote: 'We marched out, according to treaty, with drums beating and the honours of war, but the drums seemed to have lost their former inspiriting sounds, and though we beat the Grenadiers\' march, which not long before was so animating, yet then it seemed by its last feeble effort, as if almost ashamed to be heard on such an occasion.',
+          quote: 'We marched out, according to treaty, with drums beating & the honours of war, but the drums seemed to have lost their former inspiriting sounds, and though we beat the Grenadiers march, which not long before was so animating, yet then it seemed by its last feeble effort, as if almost ashamed to be heard on such an occasion.',
           who: 'Lt. William Digby', role: '53rd Regiment of Foot', side: 'british',
-          date: 'October 17, 1777', source: 'Journal, published as The British Invasion from the North (1887)'
+          date: 'October 17, 1777', source: 'Journal, published as The British Invasion from the North (1887)', verified: true, ref: 'https://archive.org/details/britishinvasionf0000digb?q=%22We%20marched%20out%20according%22', refTitle: 'The British Invasion from the North: The Journal of Lieut. William Digby (1887)'
         },
         {
           quote: 'The voice of fame, ere this reaches you, will tell how greatly fortunate we have been in this department. Burgoyne and his whole army have laid down their arms, and surrendered themselves to me and my Yankees.',
           who: 'Maj. Gen. Horatio Gates', role: 'Commander of the American northern army', side: 'american',
-          date: 'October 20, 1777', source: 'Letter to his wife', portrait: 'gates'
+          date: 'October 20, 1777', source: 'Letter to his wife', portrait: 'gates', verified: true, ref: 'https://archive.org/details/gentlemanjohnnyb00hudl?q=%22The%20voice%20of%20fame%22', refTitle: 'F. J. Hudleston, Gentleman Johnny Burgoyne (1927), quoting the letter'
         }
       ]
     },
@@ -413,22 +413,22 @@
         {
           quote: 'I am Sick—discontented—and out of humour. Poor food—hard lodging—Cold Weather—fatigue—Nasty Cloaths—nasty Cookery—Vomit half my time—smoak\'d out of my senses—the Devil\'s in\'t—I can\'t Endure it—Why are we sent here to starve and Freeze?',
           who: 'Dr. Albigence Waldo', role: 'Surgeon, 1st Connecticut Regiment', side: 'american',
-          date: 'December 14, 1777', source: 'Diary of Albigence Waldo'
+          date: 'December 14, 1777', source: 'Diary of Albigence Waldo, printed in the Pennsylvania Magazine of History and Biography (1897)', verified: true, ref: 'https://archive.org/details/sim_pennsylvania-magazine-of-history-and-biography_1897_21_3?q=%22out%20of%20humour%20Poor%22', refTitle: 'The Pennsylvania Magazine of History and Biography, vol. 21 (1897)'
         },
         {
           quote: 'Unless some great and capital change suddenly takes place … this Army must inevitably be reduced to one or other of these three things. Starve, dissolve, or disperse, in order to obtain subsistence in the best manner they can.',
           who: 'Gen. George Washington', role: 'Commander in chief', side: 'american',
-          date: 'December 23, 1777', source: 'Letter to Henry Laurens, President of Congress', portrait: 'washington'
+          date: 'December 23, 1777', source: 'Letter to Henry Laurens, President of Congress', portrait: 'washington', verified: true, ref: 'https://archive.org/details/writingsgeorgew08washgoog?q=%22Unless%20some%20great%20and%22', refTitle: 'The Writings of George Washington (19th-century edition)'
         },
         {
-          quote: 'Our country, ever mindful of its suffering army, opened her sympathizing heart so wide, upon this occasion, as to give us something to make the world stare. And what do you think it was, reader? Guess. You cannot guess, be you as much of a Yankee as you will. I will tell you: it gave each and every man half a gill of rice and a table spoonful of vinegar!!',
+          quote: 'Our country, ever mindful of its suffering army, opened her sympathizing heart so wide, upon this occasion, as to give us something to make the world stare. And what do you think it was, reader?—Guess.—You cannot guess, be you as much of a Yankee as you will. I will tell you: it gave each and every man half a gill of rice, and a table spoon full of vinegar!!',
           who: 'Pvt. Joseph Plumb Martin', role: '8th Connecticut Regiment, on the Thanksgiving dinner ordered by Congress', side: 'american',
-          date: 'December 18, 1777 (recalled)', source: 'A Narrative of Some of the Adventures, Dangers and Sufferings of a Revolutionary Soldier (1830)'
+          date: 'December 18, 1777 (recalled)', source: 'A Narrative of Some of the Adventures, Dangers and Sufferings of a Revolutionary Soldier (1830)', verified: true, ref: 'https://en.wikisource.org/wiki/The_Adventures_Of_A_Revolutionary_Soldier/Chapter_III.', refTitle: 'Joseph Plumb Martin, A Narrative of Some of the Adventures, Dangers and Sufferings of a Revolutionary Soldier (Wikisource transcription)'
         },
         {
-          quote: 'The genius of this nation is not in the least to be compared with that of the Prussians, Austrians, or French. You say to your soldier, "Do this," and he doeth it; but I am obliged to say, "This is the reason why you ought to do that," and then he does it.',
+          quote: 'The genius of this nation is not in the least to be compared with that of the Prussians, Austrians, or French. You say to your soldier, "Do this, and he doeth it;" but I am obliged to say, "This is the reason why you ought to do that," and then he does it.',
           who: 'Baron Friedrich von Steuben', role: 'Inspector general, who trained the army at Valley Forge', side: 'american',
-          date: 'Recalled after the war', source: 'Letter to a Prussian officer'
+          date: 'Recalled after the war', source: 'Letter to a Prussian officer, in Friedrich Kapp, The Life of Frederick William von Steuben (1859)', verified: true, ref: 'https://archive.org/details/lifeoffrederickw00kappuoft?q=%22The%20genius%20of%20this%22', refTitle: 'Friedrich Kapp, The Life of Frederick William von Steuben (1859)'
         }
       ]
     },
@@ -454,12 +454,12 @@
         {
           quote: 'A woman whose husband belonged to the Artillery, and who was then attached to a piece in the engagement, attended with her husband at the piece the whole time; while in the act of reaching a cartridge and having one of her feet as far before the other as she could step, a cannon shot from the enemy passed directly between her legs without doing any other damage than carrying away all the lower part of her petticoat.',
           who: 'Pvt. Joseph Plumb Martin', role: '8th Connecticut Regiment; the only eyewitness account behind the "Molly Pitcher" story', side: 'american',
-          date: 'June 28, 1778 (recalled)', source: 'A Narrative of Some of the Adventures, Dangers and Sufferings of a Revolutionary Soldier (1830)'
+          date: 'June 28, 1778 (recalled)', source: 'A Narrative of Some of the Adventures, Dangers and Sufferings of a Revolutionary Soldier (1830)', verified: true, ref: 'https://en.wikisource.org/wiki/The_Adventures_Of_A_Revolutionary_Soldier/Chapter_IV.', refTitle: 'Joseph Plumb Martin, A Narrative of Some of the Adventures, Dangers and Sufferings of a Revolutionary Soldier (Wikisource transcription)'
         },
         {
-          quote: 'I thought then, as now, that never had I beheld so superb a man.',
+          quote: 'I thought then, as now … that never had I beheld so superb a man.',
           who: 'The marquis de Lafayette', role: 'Major general, on Washington riding along the line at Monmouth', side: 'american',
-          date: 'Recalled years later', source: 'As told to Washington\'s step-grandson, G. W. P. Custis', portrait: 'lafayette'
+          date: 'Recalled years later', source: 'As told to Washington\'s step-grandson, G. W. P. Custis, Recollections and Private Memoirs of Washington (1859)', portrait: 'lafayette', verified: true, ref: 'https://archive.org/details/recollectionspri00cust?q=%22thought%20then%20as%20now%22', refTitle: 'G. W. P. Custis, Recollections and Private Memoirs of Washington (1859)'
         }
       ]
     },
@@ -483,7 +483,7 @@
         {
           quote: 'It appeared as if the stars were tumbling down. The fire was incessant almost the whole night; cannon-balls whizzing and shells hissing continually amongst us; ammunition chests and temporary magazines blowing up; great guns bursting, and wounded men groaning along the lines. It was a dreadful night!',
           who: 'Brig. Gen. William Moultrie', role: 'Second in command of the Charleston garrison', side: 'american',
-          date: 'May 9, 1780 (recalled)', source: 'Memoirs of the American Revolution (1802)', portrait: 'moultrie'
+          date: 'May 9, 1780 (recalled)', source: 'Memoirs of the American Revolution (1802)', portrait: 'moultrie', verified: true, ref: 'https://archive.org/details/memoirsamerican00moulgoog?q=%22It%20appeared%20as%20if%22', refTitle: 'William Moultrie, Memoirs of the American Revolution (1802)'
         }
       ]
     },
@@ -508,12 +508,12 @@
         {
           quote: 'The impetuosity with which they advanced, firing and huzzaing, threw the whole body of the militia into such a panic that they generally threw down their loaded arms and fled, in the utmost consternation.',
           who: 'Col. Otho Holland Williams', role: 'Adjutant general of Gates\'s army', side: 'american',
-          date: 'August 16, 1780 (recalled)', source: 'A Narrative of the Campaign of 1780'
+          date: 'August 16, 1780 (recalled)', source: 'A Narrative of the Campaign of 1780', verified: true, ref: 'https://archive.org/details/lifenathanael00simmrich?q=%22The%20impetuosity%20with%20which%22', refTitle: 'William Gilmore Simms, The Life of Nathanael Greene (1861), quoting the narrative'
         },
         {
           quote: 'Was there ever an instance of a General running away as Gates has done from his whole army? And was there ever so precipitous a flight? One hundred and eighty miles in three days and a half. It does admirable credit to the activity of a man at his time of life.',
           who: 'Lt. Col. Alexander Hamilton', role: 'Aide-de-camp to Washington', side: 'american',
-          date: 'September 6, 1780', source: 'Letter to James Duane', portrait: 'hamilton'
+          date: 'September 6, 1780', source: 'Letter to James Duane', portrait: 'hamilton', verified: true, ref: 'https://archive.org/details/worksalexanderh35hamigoog?q=%22Was%20there%20ever%20an%22', refTitle: 'The Works of Alexander Hamilton (1850)'
         }
       ]
     },
@@ -539,12 +539,12 @@
         {
           quote: 'The first link in a chain of evils that followed each other in regular succession until they at last ended in the total loss of America.',
           who: 'Lt. Gen. Sir Henry Clinton', role: 'British commander in chief in North America', side: 'british',
-          date: 'Recalled after the war', source: 'Clinton\'s narrative of his campaigns, published as The American Rebellion', portrait: 'clinton'
+          date: 'Recalled after the war', source: 'Clinton\'s narrative of his campaigns, published as The American Rebellion', portrait: 'clinton', verified: true, ref: 'https://archive.org/details/musgrovemillhist01unse?q=%22The%20first%20link%20in%22', refTitle: 'Musgrove Mill Historic Resource Study (National Park Service), quoting Clinton'
         },
         {
-          quote: 'That memorable victory was the joyful annunciation of that turn of the tide of success which terminated the Revolutionary War with the seal of our independence.',
+          quote: 'It [the victory at Kings Mountain] was the joyful annunciation of that turn of the tide of success which terminated the revolutionary war with the seal of our independence.',
           who: 'Thomas Jefferson', role: 'Governor of Virginia in 1780', side: 'american',
-          date: 'November 10, 1822', source: 'Letter to John Campbell', portrait: 'jefferson'
+          date: 'November 10, 1822', source: 'Letter to John Campbell', portrait: 'jefferson', verified: true, ref: 'https://archive.org/details/writingsthomasj05washgoog?q=%22It%20was%20the%20joyful%22', refTitle: 'The Writings of Thomas Jefferson, ed. H. A. Washington (1854)'
         }
       ]
     },
@@ -569,12 +569,12 @@
         {
           quote: 'He went among the volunteers, helped them fix their swords, joked with them about their sweethearts, told them to keep in good spirits, and the day would be ours … "Just hold up your heads, boys, three fires," he would say, "and you are free."',
           who: 'Pvt. Thomas Young', role: 'South Carolina militia, sixteen years old, on Morgan the night before the battle', side: 'american',
-          date: 'January 16, 1781 (recalled)', source: 'Memoir of Major Thomas Young (1843)'
+          date: 'January 16, 1781 (recalled)', source: 'Memoir of Major Thomas Young, printed in The Orion magazine (October 1843)', verified: true, ref: 'https://archive.org/details/sim_orion-a-monthly-magazine-of-literature-and-art_1843-10_3_2?q=%22He%20went%20among%20the%22', refTitle: 'The Orion magazine, October 1843'
         },
         {
-          quote: 'I have given him a devil of a whipping, a more complete victory never was obtained.',
+          quote: 'I have given him a devil of a whipping—a more complete victory never was.',
           who: 'Brig. Gen. Daniel Morgan', role: 'American commander, on Tarleton', side: 'american',
-          date: 'January 26, 1781', source: 'Letter to William Snickers', portrait: 'morgan'
+          date: 'January 26, 1781', source: 'Letter to William Snickers, as first printed in William Dunlap, A History of New York, for Schools (1837)', portrait: 'morgan', verified: true, ref: 'https://archive.org/details/ahistorynewyork00dunlgoog?q=%22more%20complete%20victory%20never%22', refTitle: 'William Dunlap, A History of New York, for Schools (1837)'
         }
       ]
     },
@@ -599,17 +599,17 @@
         {
           quote: 'We fight, get beat, rise, and fight again.',
           who: 'Maj. Gen. Nathanael Greene', role: 'Commander of the American southern army', side: 'american',
-          date: 'June 22, 1781', source: 'Letter to the chevalier de La Luzerne, French minister to the United States', portrait: 'greene'
+          date: 'June 22, 1781', source: 'Letter to the chevalier de La Luzerne, French minister to the United States', portrait: 'greene', verified: true, ref: 'https://archive.org/details/nathanaelgreenes010777mbp?q=%22We%20fight%20get%20beat%22', refTitle: 'Theodore Thayer, Nathanael Greene: Strategist of the American Revolution (1960), quoting the letter'
         },
         {
           quote: 'I am quite tired of marching about the country in quest of adventures.',
           who: 'Lt. Gen. Charles Cornwallis', role: 'Commander of the British southern army', side: 'british',
-          date: 'April 10, 1781', source: 'Letter to Maj. Gen. William Phillips', portrait: 'cornwallis'
+          date: 'April 10, 1781', source: 'Letter to Maj. Gen. William Phillips', portrait: 'cornwallis', verified: true, ref: 'https://archive.org/details/correspondencec03rossgoog?q=%22am%20quite%20tired%20of%22', refTitle: 'Correspondence of Charles, First Marquis Cornwallis (1859)'
         },
         {
           quote: 'Another such victory would ruin the British army.',
           who: 'Charles James Fox', role: 'Member of Parliament and leading opponent of the war', side: 'british',
-          date: 'June 1781', source: 'Speech in the House of Commons', portrait: 'fox'
+          date: 'June 1781', source: 'Speech in the House of Commons', portrait: 'fox', verified: true, ref: 'https://archive.org/details/jessupfamilycont00jess?q=%22Another%20such%20victory%20would%22', refTitle: 'The Jessup Family (1908), quoting the speech'
         }
       ]
     },
@@ -634,17 +634,17 @@
         {
           quote: 'I have the mortification to inform your Excellency that I have been forced to give up the posts of York and Gloucester, and to surrender the troops under my command, by capitulation on the 19th instant, as prisoners of war to the combined forces of America and France.',
           who: 'Lt. Gen. Charles Cornwallis', role: 'Commander of the British army in Virginia', side: 'british',
-          date: 'October 20, 1781', source: 'Dispatch to Sir Henry Clinton', portrait: 'cornwallis'
+          date: 'October 20, 1781', source: 'Dispatch to Sir Henry Clinton', portrait: 'cornwallis', verified: true, ref: 'https://en.wikisource.org/wiki/History_of_the_Rise%2C_Progress%2C_and_Termination_of_the_American_Revolution/Chapter_XXI', refTitle: 'Mercy Otis Warren, History of the Rise, Progress, and Termination of the American Revolution (1805) (Wikisource transcription)'
         },
         {
           quote: 'It was in the field, when they came to the last act of the drama, that the spirit and pride of the British soldier was put to the severest test: here their mortification could not be concealed.',
           who: 'Dr. James Thacher', role: 'Surgeon, Continental Army, watching the British lay down their arms', side: 'american',
-          date: 'October 19, 1781', source: 'A Military Journal during the American Revolutionary War (1823)'
+          date: 'October 19, 1781', source: 'A Military Journal during the American Revolutionary War (1823)', verified: true, ref: 'https://archive.org/details/militaryjournal00thac?q=%22It%20was%20in%20the%22', refTitle: 'James Thacher, A Military Journal during the American Revolutionary War (1823)'
         },
         {
           quote: 'Oh God! It is all over!',
           who: 'Frederick, Lord North', role: 'British prime minister, on hearing the news from Yorktown', side: 'british',
-          date: 'November 25, 1781', source: 'As reported by Lord George Germain, in Nathaniel Wraxall\'s Historical Memoirs (1815)', portrait: 'north'
+          date: 'November 25, 1781', source: 'As reported by Lord George Germain, in Nathaniel Wraxall\'s Historical Memoirs (1815)', portrait: 'north', verified: true, ref: 'https://archive.org/details/historicalmemoi00wraxgoog?q=%22Oh%20God%20It%20is%22', refTitle: 'Nathaniel Wraxall, Historical Memoirs of My Own Time (1815)'
         }
       ]
     }
@@ -933,27 +933,34 @@
   ];
 
   const SOURCES = [
-    { title: 'A Narrative of Some of the Adventures, Dangers and Sufferings of a Revolutionary Soldier', author: 'Joseph Plumb Martin', year: 1830, url: 'https://archive.org/search?query=Joseph+Plumb+Martin+Narrative+Revolutionary+Soldier' },
+    { title: 'A Narrative of Some of the Adventures, Dangers and Sufferings of a Revolutionary Soldier', author: 'Joseph Plumb Martin', year: 1830, url: 'https://en.wikisource.org/wiki/The_Adventures_Of_A_Revolutionary_Soldier' },
     { title: 'Adams Family Papers: letters of Abigail and John Adams; diary of John Adams', author: 'Massachusetts Historical Society', year: 1775, url: 'https://www.masshist.org/digitaladams/archive/' },
-    { title: 'The Papers of George Washington (Founders Online)', author: 'National Archives', year: 1776, url: 'https://founders.archives.gov/about/Washington' },
-    { title: 'The Papers of Alexander Hamilton (Founders Online)', author: 'National Archives', year: 1780, url: 'https://founders.archives.gov/about/Hamilton' },
-    { title: 'The Papers of Thomas Jefferson (Founders Online)', author: 'National Archives', year: 1822, url: 'https://founders.archives.gov/about/Jefferson' },
-    { title: 'The American Crisis', author: 'Thomas Paine', year: 1776, url: 'https://www.gutenberg.org/ebooks/3741' },
-    { title: 'A Military Journal during the American Revolutionary War', author: 'James Thacher', year: 1823, url: 'https://archive.org/search?query=Thacher+Military+Journal+American+Revolutionary+War' },
-    { title: 'Letters and Journals Relating to the War of the American Revolution', author: 'Frederika von Riedesel', year: 1827, url: 'https://archive.org/search?query=Riedesel+Letters+and+Journals+American+Revolution' },
-    { title: 'The British Invasion from the North: The Journal of Lieut. William Digby', author: 'William Digby', year: 1887, url: 'https://archive.org/search?query=Digby+British+Invasion+from+the+North' },
-    { title: 'The British in Boston: The Diary of Lieutenant John Barker', author: 'John Barker', year: 1924, url: 'https://archive.org/search?query=Barker+British+in+Boston+diary' },
-    { title: 'Letters of Hugh, Earl Percy, from Boston and New York', author: 'Hugh, Earl Percy', year: 1902, url: 'https://archive.org/search?query=Letters+of+Hugh+Earl+Percy+Boston+New+York' },
-    { title: 'A Narrative of Colonel Ethan Allen\'s Captivity', author: 'Ethan Allen', year: 1779, url: 'https://archive.org/search?query=Narrative+of+Colonel+Ethan+Allen%27s+Captivity' },
-    { title: 'Diary of Surgeon Albigence Waldo, Valley Forge', author: 'Albigence Waldo', year: 1777, url: 'https://archive.org/search?query=Albigence+Waldo+diary+Valley+Forge' },
-    { title: 'The Journal of Isaac Senter', author: 'Isaac Senter', year: 1846, url: 'https://archive.org/search?query=Journal+of+Isaac+Senter+Quebec' },
-    { title: 'Memoir of Col. Benjamin Tallmadge', author: 'Benjamin Tallmadge', year: 1858, url: 'https://archive.org/search?query=Memoir+of+Col.+Benjamin+Tallmadge' },
-    { title: 'Memoirs of the American Revolution', author: 'William Moultrie', year: 1802, url: 'https://archive.org/search?query=Moultrie+Memoirs+of+the+American+Revolution' },
-    { title: 'A Narrative of the Campaign of 1780', author: 'Otho Holland Williams', year: 1822, url: 'https://archive.org/search?query=Otho+Williams+Narrative+Campaign+of+1780' },
-    { title: 'Memoir of Major Thomas Young', author: 'Thomas Young', year: 1843, url: 'https://archive.org/search?query=Memoir+of+Major+Thomas+Young+Revolutionary' },
+    { title: 'The Writings of George Washington (Ford edition)', author: 'Worthington C. Ford, ed.', year: 1889, url: 'https://archive.org/details/writingsgeorgew44washgoog' },
+    { title: 'The Writings of George Washington (Sparks edition)', author: 'Jared Sparks, ed.', year: 1834, url: 'https://archive.org/details/writingsgeorgew00spargoog' },
+    { title: 'Recollections and Private Memoirs of Washington', author: 'George Washington Parke Custis', year: 1859, url: 'https://archive.org/details/recollectionspri00cust' },
+    { title: 'The Works of Alexander Hamilton', author: 'John C. Hamilton, ed.', year: 1850, url: 'https://archive.org/details/worksalexanderh35hamigoog' },
+    { title: 'The Writings of Thomas Jefferson', author: 'H. A. Washington, ed.', year: 1854, url: 'https://archive.org/details/writingsthomasj05washgoog' },
+    { title: 'The American Crisis', author: 'Thomas Paine', year: 1776, url: 'https://en.wikisource.org/wiki/The_American_Crisis' },
+    { title: 'A Military Journal during the American Revolutionary War', author: 'James Thacher', year: 1823, url: 'https://archive.org/details/militaryjournal00thac' },
+    { title: 'Letters and Journals Relating to the War of the American Revolution (trans. William L. Stone)', author: 'Frederika von Riedesel', year: 1867, url: 'https://archive.org/details/lettersjournalsr00ried' },
+    { title: 'The British Invasion from the North: The Journal of Lieut. William Digby', author: 'William Digby', year: 1887, url: 'https://archive.org/details/britishinvasionf0000digb' },
+    { title: 'A State of the Expedition from Canada', author: 'John Burgoyne', year: 1780, url: 'https://archive.org/details/bim_eighteenth-century_a-state-of-the-expeditio_burgoyne-john_1780' },
+    { title: 'Diary of a British Officer in Boston in 1775, The Atlantic Monthly', author: 'John Barker', year: 1877, url: 'https://archive.org/details/sim_atlantic_1877-04_39_234' },
+    { title: 'Letters of Hugh, Earl Percy, from Boston and New York, 1774–1776', author: 'Hugh, Earl Percy', year: 1902, url: 'https://archive.org/details/lettershughearl00boltgoog' },
+    { title: 'A Narrative of Colonel Ethan Allen\'s Captivity', author: 'Ethan Allen', year: 1779, url: 'https://archive.org/details/cihm_42517' },
+    { title: 'Diary of Surgeon Albigence Waldo, Pennsylvania Magazine of History and Biography', author: 'Albigence Waldo', year: 1897, url: 'https://archive.org/details/sim_pennsylvania-magazine-of-history-and-biography_1897_21_3' },
+    { title: 'The Battle of Princeton, by Sergeant R—, Pennsylvania Magazine of History and Biography', author: 'A sergeant of the Continental Army', year: 1896, url: 'https://archive.org/details/sim_pennsylvania-magazine-of-history-and-biography_1896_20_4' },
+    { title: 'The Journal of Isaac Senter', author: 'Isaac Senter', year: 1846, url: 'https://archive.org/details/journalofisaacse00sentuoft' },
+    { title: 'Memoir of Col. Benjamin Tallmadge', author: 'Benjamin Tallmadge', year: 1858, url: 'https://archive.org/details/memoirofcolonelb027409mbp' },
+    { title: 'Memoirs of the American Revolution', author: 'William Moultrie', year: 1802, url: 'https://archive.org/details/memoirsamerican00moulgoog' },
+    { title: 'The Life of Nathanael Greene (prints Otho Williams\'s narrative of 1780)', author: 'William Gilmore Simms, ed.', year: 1861, url: 'https://archive.org/details/lifenathanael00simmrich' },
+    { title: 'Memoir of Major Thomas Young, The Orion magazine', author: 'Thomas Young', year: 1843, url: 'https://archive.org/details/sim_orion-a-monthly-magazine-of-literature-and-art_1843-10_3_2' },
+    { title: 'A History of New York, for Schools (prints Morgan\'s letter on Cowpens)', author: 'William Dunlap', year: 1837, url: 'https://archive.org/details/ahistorynewyork00dunlgoog' },
     { title: 'The American Rebellion: Sir Henry Clinton\'s Narrative of His Campaigns', author: 'Henry Clinton', year: 1954, url: 'https://archive.org/search?query=Clinton+American+Rebellion+narrative+campaigns' },
-    { title: 'Correspondence of Charles, First Marquis Cornwallis', author: 'Charles Cornwallis', year: 1859, url: 'https://archive.org/search?query=Correspondence+of+Charles+First+Marquis+Cornwallis' },
-    { title: 'Historical Memoirs of My Own Time', author: 'Nathaniel Wraxall', year: 1815, url: 'https://archive.org/search?query=Wraxall+Historical+Memoirs+of+My+Own+Time' }
+    { title: 'Correspondence of Charles, First Marquis Cornwallis', author: 'Charles Cornwallis', year: 1859, url: 'https://archive.org/details/correspondencec03rossgoog' },
+    { title: 'Historical Memoirs of My Own Time', author: 'Nathaniel Wraxall', year: 1815, url: 'https://archive.org/details/historicalmemoi00wraxgoog' },
+    { title: 'The History of the Rise, Progress, and Establishment of the Independence of the United States', author: 'William Gordon', year: 1788, url: 'https://archive.org/details/historyofrisepro02gord_0' },
+    { title: 'The Life of Frederick William von Steuben', author: 'Friedrich Kapp', year: 1859, url: 'https://archive.org/details/lifeoffrederickw00kappuoft' }
   ];
 
   const TOURS = [
@@ -1061,7 +1068,7 @@
   ];
 
   const NOTES = {
-    quotes: 'Some of the best-known lines of the Revolution were recalled or reported years later. Those entries name who reported them and when.',
+    quotes: 'Some of the best-known lines of the Revolution were recalled or reported years later. Those entries name who reported them and when. Checking against the earliest printed texts changed a few familiar wordings: Thomas Paine wrote "he that stands it now," not "stands by it," and General Howe\'s remark on Dorchester Heights first appeared in 1788 as "in months," not "in a month."',
     numbers: 'Casualty figures combine killed, wounded, captured, and missing. Eighteenth-century returns were incomplete, especially for militia, so the figures here are commonly cited estimates from the National Park Service and standard references, rounded. British figures include German and Loyalist troops; American figures at Yorktown include French losses.',
     images: 'No photographs of the war exist. John Trumbull served as an officer early in the war and painted his history series from 1786 onward, sketching many participants from life. Amos Doolittle\'s engravings of Lexington and Concord were made in 1775 after he visited the sites and questioned witnesses. Works by Leutze, Chappel, Pyle, and others were painted 70 to 130 years later.'
   };

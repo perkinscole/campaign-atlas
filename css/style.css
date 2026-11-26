@@ -473,6 +473,8 @@ kbd { font-family: inherit; border: 1px solid var(--line); border-radius: 3px; p
 /* ---------- Platform additions ---------- */
 .site-header nav a.all { color: var(--muted); font-size: .85rem; border-left: 1px solid var(--line); padding-left: 16px; }
 .verified { color: #3d6b35; font-style: normal; font-weight: 600; margin-left: 4px; white-space: nowrap; }
+a.verified { text-decoration: underline dotted; text-underline-offset: 3px; }
+a.verified:hover { text-decoration-style: solid; }
 .classroom { margin: 20px 0 0; }
 a.btn { text-decoration: none; display: inline-block; }
 

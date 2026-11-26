@@ -43,7 +43,7 @@ Atlas.load('teach', function (P) {
         <p class="attr"><b>${esc(j.who)}</b> · ${esc(j.role)}<br>${esc(j.date)} · ${esc(j.source)}</p>
         <ol class="ws-q">
           <li><b>Sourcing.</b> Who created this source, and what was their part in the events?${lines(2)}${ans(`${esc(j.who)}: ${esc(j.role)}. Side: ${esc(sideName(j))}.`)}</li>
-          <li><b>Timing.</b> Was this written at the time, recalled later, or reported by someone else? How might that affect how far we trust it?${lines(2)}${ans(`${esc(j.date)}. ${timing(j)}${j.verified ? '' : ' (Wording not yet verified against the printed source.)'}`)}</li>
+          <li><b>Timing.</b> Was this written at the time, recalled later, or reported by someone else? How might that affect how far we trust it?${lines(2)}${ans(`${esc(j.date)}. ${timing(j)}${j.verified ? (j.ref ? ` Wording verified against <a href="${esc(j.ref)}">${esc(j.refTitle || 'the printed text')}</a>.` : ' Wording verified against the printed source.') : ' (Wording not yet verified against the printed source.)'}`)}</li>
           <li><b>Close reading.</b> In your own words, what does the author describe or claim? Quote one phrase that supports your answer.${lines(3)}${ans('Answers vary. Look for an accurate paraphrase and a phrase quoted exactly from the source.')}</li>
           <li><b>Perspective.</b> How might the author's position or side have shaped what they wrote or left out?${lines(3)}${ans('Answers vary. Students should connect the content or tone to the author\'s role, audience, or purpose.')}</li>
         </ol>

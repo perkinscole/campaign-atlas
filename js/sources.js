@@ -15,7 +15,7 @@ Atlas.load('sources', function (P) {
 
     <h2>About the quotations</h2>
     <p>Every journal entry on the map is drawn from a primary source: a diary or letter written during the war, a memoir written afterward by a participant, or an official dispatch or report. Entries are labeled with the author, their role at the time, the date, and the work the words come from. Where a remark was recorded by someone else, the entry says who reported it. Ellipses mark places where a passage was shortened. Spelling has been left as the authors wrote it.</p>
-    <p class="significance"><strong>Verification status.</strong> ${verified} of ${P.entries.length} quotations in this atlas have been checked word for word against the printed source and are marked “✓ verified” on the map. The rest are transcribed from standard editions and are awaiting that check. Before quoting one in an assessment, compare it with the linked source below.</p>
+    <p class="significance"><strong>Verification status.</strong> ${verified} of ${P.entries.length} quotations in this atlas have been checked word for word against the printed source and are marked “✓ verified” on the map. Each check mark links to the page it was verified against. Entries without one are sayings handed down by tradition with no fixed wording, or come from a work with no open text to check; their source lines say so.</p>
     ${N.quotes ? `<p>${esc(N.quotes)}</p>` : ''}
 
     <h2>About the numbers</h2>

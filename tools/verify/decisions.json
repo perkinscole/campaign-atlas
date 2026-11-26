@@ -1,0 +1,694 @@
+{
+ "american-revolution/lexington-concord/0": {
+  "verified": true,
+  "ref": "https://archive.org/details/gri_33125010706766?q=%22fire%20unless%20fired%20upon%22",
+  "refTitle": "Memories of seventeen hundred and seventy-five"
+ },
+ "american-revolution/lexington-concord/1": {
+  "quote": "We were fired on from all sides, but mostly from the Rear, where People had hid themselves in houses till we had passed, and then fired; the Country was an amazing strong one, full of Hills, Woods, stone Walls, &c., which the Rebels did not fail to take advantage of.",
+  "source": "Diary, first published in The Atlantic Monthly (April 1877)",
+  "verified": true,
+  "ref": "https://archive.org/details/sim_atlantic_1877-04_39_234?q=%22We%20were%20fired%20on%22",
+  "refTitle": "The Atlantic Monthly, April 1877"
+ },
+ "american-revolution/lexington-concord/2": {
+  "quote": "Whoever looks upon them as an irregular mob, will find himself much mistaken. They have men amongst them who know very well what they are about.",
+  "verified": true,
+  "ref": "https://archive.org/details/lettershughearl00boltgoog?q=%22Whoever%20looks%20upon%20them%22",
+  "refTitle": "Letters of Hugh, Earl Percy, from Boston and New York, 1774–1776 (1902)"
+ },
+ "american-revolution/fort-ticonderoga/0": {
+  "verified": true,
+  "ref": "https://archive.org/details/cihm_42517?q=%22He%20asked%20me%20by%22",
+  "refTitle": "A Narrative of the Captivity of Col. Ethan Allen (1814 edition)"
+ },
+ "american-revolution/bunker-hill/0": {
+  "verified": true,
+  "ref": "https://www.masshist.org/digitaladams/archive/doc?id=L17750618aa",
+  "refTitle": "Adams Family Papers, Massachusetts Historical Society"
+ },
+ "american-revolution/bunker-hill/1": {},
+ "american-revolution/bunker-hill/2": {
+  "quote": "These People Shew a Spirit and Conduct against us they never shewed against the French … The loss we have Sustained is greater than we can bear.",
+  "verified": true,
+  "ref": "https://archive.org/details/warforindependen012513mbp?q=%22Spirit%20and%20Conduct%20against%22",
+  "refTitle": "Howard H. Peckham, The War for Independence (1958), quoting the letter"
+ },
+ "american-revolution/bunker-hill/3": {
+  "verified": true,
+  "ref": "https://archive.org/details/commandinbattleo00frot?q=%22wish%20we%20could%20sell%22",
+  "refTitle": "Richard Frothingham, The Command in the Battle of Bunker Hill (1850)"
+ },
+ "american-revolution/quebec/0": {
+  "verified": true,
+  "ref": "https://archive.org/details/journalofisaacse00sentuoft?q=%22poor%20dog%20hitherto%20lived%22",
+  "refTitle": "The Journal of Isaac Senter (1846)"
+ },
+ "american-revolution/quebec/1": {
+  "source": "Letter to his sister Hannah Arnold; an extract was printed in the Maryland Gazette, February 1, 1776",
+  "verified": true,
+  "ref": "https://archive.org/details/mg02011766?q=%22proud+town%22",
+  "refTitle": "Maryland Gazette, February 1, 1776"
+ },
+ "american-revolution/dorchester-heights/0": {
+  "quote": "I went to bed about 12 and rose again a little after one. I could no more sleep than if I had been in the ingagement. The ratling of the windows, the jar of the house and the continual roar of 24 pounders, the Bursting of shells give us such Ideas, and realize a scene to us of which we could scarcly form any conception.",
+  "verified": true,
+  "ref": "https://www.masshist.org/digitaladams/archive/doc?id=L17760302aa",
+  "refTitle": "Adams Family Papers, Massachusetts Historical Society"
+ },
+ "american-revolution/dorchester-heights/1": {
+  "quote": "The rebels have done more in one night, than my whole army would have done in months.",
+  "source": "As reported in William Gordon's history of the war (1788), the earliest printed version; later books changed \"months\" to \"a month\"",
+  "verified": true,
+  "ref": "https://archive.org/details/historyofrisepro02gord_0?q=%22The%20rebels%20have%20done%22",
+  "refTitle": "William Gordon, The History of the Rise, Progress, and Establishment of the Independence of the United States (1788)"
+ },
+ "american-revolution/long-island/0": {
+  "verified": true,
+  "ref": "https://en.wikisource.org/wiki/The_Adventures_Of_A_Revolutionary_Soldier/Chapter_II.",
+  "refTitle": "Joseph Plumb Martin, A Narrative of Some of the Adventures, Dangers and Sufferings of a Revolutionary Soldier (Wikisource transcription)"
+ },
+ "american-revolution/long-island/1": {
+  "verified": true,
+  "ref": "https://archive.org/details/lifeofgeneralwas00nort?q=%22Good%20God%20What%20brave%22",
+  "refTitle": "Life of General Washington"
+ },
+ "american-revolution/long-island/2": {
+  "verified": true,
+  "ref": "https://archive.org/details/memoirofcolonelb027409mbp?q=%22very%20dense%20fog%20began%22",
+  "refTitle": "Memoir of Colonel Benjamin Tallmadge"
+ },
+ "american-revolution/trenton/0": {
+  "quote": "These are the times that try men's souls. The summer soldier and the sunshine patriot will, in this crisis, shrink from the service of their country; but he that stands it now, deserves the love and thanks of man and woman.",
+  "verified": true,
+  "ref": "https://en.wikisource.org/wiki/The_American_Crisis/The_Crisis_No._I",
+  "refTitle": "Thomas Paine, The American Crisis, No. 1 (Wikisource transcription)"
+ },
+ "american-revolution/trenton/1": {
+  "verified": true,
+  "ref": "https://archive.org/details/writingsgeorgew44washgoog?q=%22If%20every%20nerve%20is%22",
+  "refTitle": "The Writings of George Washington (19th-century edition)"
+ },
+ "american-revolution/trenton/2": {
+  "quote": "The difficulty of passing the river in a very severe night, and their march through a violent storm of snow and hail, did not in the least abate their ardor; but, when they came to the charge, each seemed to vie with the other in pressing forward.",
+  "verified": true,
+  "ref": "https://archive.org/details/writingsgeorgew44washgoog?q=%22The%20difficulty%20of%20passing%22",
+  "refTitle": "The Writings of George Washington, ed. Worthington C. Ford (1889)"
+ },
+ "american-revolution/princeton/0": {
+  "quote": "My brave fellows, you have done all I asked you to do, and more than could be reasonably expected; but your country is at stake, your wives, your houses, and all that you hold dear … If you will consent to stay only one month longer, you will render that service to the cause of liberty, and to your country, which you probably never can do under any other circumstances.",
+  "source": "As recorded by a sergeant who was present; published 1832 and reprinted in the Pennsylvania Magazine of History and Biography (1896)",
+  "verified": true,
+  "ref": "https://archive.org/details/sim_pennsylvania-magazine-of-history-and-biography_1896_20_4?q=%22My%20brave%20fellows%20you%22",
+  "refTitle": "The Pennsylvania Magazine of History and Biography, vol. 20 (1896)"
+ },
+ "american-revolution/princeton/1": {
+  "verified": true,
+  "ref": "https://archive.org/details/princetonbattl00prin?q=%22Parade%20with%20us%20my%22",
+  "refTitle": "The Princeton Battle Monument (1922)"
+ },
+ "american-revolution/bennington/0": {
+  "quote": "There are the redcoats, and they are ours, or this night Molly Stark sleeps a widow!",
+  "verified": true,
+  "ref": "https://archive.org/details/battleofbenningt00brit?q=%22There%20are%20the%20redcoats%22",
+  "refTitle": "The Battle of Bennington (1908)"
+ },
+ "american-revolution/bennington/1": {
+  "quote": "The Hampshire Grants, in particular, a country unpeopled, and almost unknown the last war, now abounds in the most active and most rebellious race of the continent, and hangs like a gathering storm upon my left.",
+  "source": "Letter to Lord George Germain, printed in Burgoyne's A State of the Expedition from Canada (1780)",
+  "verified": true,
+  "ref": "https://archive.org/details/bim_eighteenth-century_a-state-of-the-expeditio_burgoyne-john_1780?q=%22The%20Hampshire%20Grants%20in%22",
+  "refTitle": "John Burgoyne, A State of the Expedition from Canada (1780)"
+ },
+ "american-revolution/brandywine/0": {
+  "verified": true,
+  "ref": "https://archive.org/details/writingsgeorgew00spargoog?q=%22am%20sorry%20to%20inform%22",
+  "refTitle": "The Writings of George Washington, ed. Jared Sparks (1834)"
+ },
+ "american-revolution/brandywine/1": {
+  "verified": true,
+  "ref": "https://www.masshist.org/digitaladams/archive/doc?id=D28",
+  "refTitle": "Diary of John Adams, Massachusetts Historical Society"
+ },
+ "american-revolution/saratoga/0": {
+  "source": "Letters and Journals Relating to the War of the American Revolution (translated by William L. Stone, 1867)",
+  "verified": true,
+  "ref": "https://archive.org/details/lettersjournalsr00ried?q=%22Eleven%20cannon%20balls%20went%22",
+  "refTitle": "Letters and Journals Relating to the War of the American Revolution, trans. William L. Stone (1867)"
+ },
+ "american-revolution/saratoga/1": {
+  "quote": "We marched out, according to treaty, with drums beating & the honours of war, but the drums seemed to have lost their former inspiriting sounds, and though we beat the Grenadiers march, which not long before was so animating, yet then it seemed by its last feeble effort, as if almost ashamed to be heard on such an occasion.",
+  "verified": true,
+  "ref": "https://archive.org/details/britishinvasionf0000digb?q=%22We%20marched%20out%20according%22",
+  "refTitle": "The British Invasion from the North: The Journal of Lieut. William Digby (1887)"
+ },
+ "american-revolution/saratoga/2": {
+  "verified": true,
+  "ref": "https://archive.org/details/gentlemanjohnnyb00hudl?q=%22The%20voice%20of%20fame%22",
+  "refTitle": "F. J. Hudleston, Gentleman Johnny Burgoyne (1927), quoting the letter"
+ },
+ "american-revolution/valley-forge/0": {
+  "source": "Diary of Albigence Waldo, printed in the Pennsylvania Magazine of History and Biography (1897)",
+  "verified": true,
+  "ref": "https://archive.org/details/sim_pennsylvania-magazine-of-history-and-biography_1897_21_3?q=%22out%20of%20humour%20Poor%22",
+  "refTitle": "The Pennsylvania Magazine of History and Biography, vol. 21 (1897)"
+ },
+ "american-revolution/valley-forge/1": {
+  "verified": true,
+  "ref": "https://archive.org/details/writingsgeorgew08washgoog?q=%22Unless%20some%20great%20and%22",
+  "refTitle": "The Writings of George Washington (19th-century edition)"
+ },
+ "american-revolution/valley-forge/2": {
+  "quote": "Our country, ever mindful of its suffering army, opened her sympathizing heart so wide, upon this occasion, as to give us something to make the world stare. And what do you think it was, reader?—Guess.—You cannot guess, be you as much of a Yankee as you will. I will tell you: it gave each and every man half a gill of rice, and a table spoon full of vinegar!!",
+  "verified": true,
+  "ref": "https://en.wikisource.org/wiki/The_Adventures_Of_A_Revolutionary_Soldier/Chapter_III.",
+  "refTitle": "Joseph Plumb Martin, A Narrative of Some of the Adventures, Dangers and Sufferings of a Revolutionary Soldier (Wikisource transcription)"
+ },
+ "american-revolution/valley-forge/3": {
+  "quote": "The genius of this nation is not in the least to be compared with that of the Prussians, Austrians, or French. You say to your soldier, \"Do this, and he doeth it;\" but I am obliged to say, \"This is the reason why you ought to do that,\" and then he does it.",
+  "source": "Letter to a Prussian officer, in Friedrich Kapp, The Life of Frederick William von Steuben (1859)",
+  "verified": true,
+  "ref": "https://archive.org/details/lifeoffrederickw00kappuoft?q=%22The%20genius%20of%20this%22",
+  "refTitle": "Friedrich Kapp, The Life of Frederick William von Steuben (1859)"
+ },
+ "american-revolution/monmouth/0": {
+  "verified": true,
+  "ref": "https://en.wikisource.org/wiki/The_Adventures_Of_A_Revolutionary_Soldier/Chapter_IV.",
+  "refTitle": "Joseph Plumb Martin, A Narrative of Some of the Adventures, Dangers and Sufferings of a Revolutionary Soldier (Wikisource transcription)"
+ },
+ "american-revolution/monmouth/1": {
+  "quote": "I thought then, as now … that never had I beheld so superb a man.",
+  "source": "As told to Washington's step-grandson, G. W. P. Custis, Recollections and Private Memoirs of Washington (1859)",
+  "verified": true,
+  "ref": "https://archive.org/details/recollectionspri00cust?q=%22thought%20then%20as%20now%22",
+  "refTitle": "G. W. P. Custis, Recollections and Private Memoirs of Washington (1859)"
+ },
+ "american-revolution/charleston/0": {
+  "verified": true,
+  "ref": "https://archive.org/details/memoirsamerican00moulgoog?q=%22It%20appeared%20as%20if%22",
+  "refTitle": "William Moultrie, Memoirs of the American Revolution (1802)"
+ },
+ "american-revolution/camden/0": {
+  "verified": true,
+  "ref": "https://archive.org/details/lifenathanael00simmrich?q=%22The%20impetuosity%20with%20which%22",
+  "refTitle": "William Gilmore Simms, The Life of Nathanael Greene (1861), quoting the narrative"
+ },
+ "american-revolution/camden/1": {
+  "verified": true,
+  "ref": "https://archive.org/details/worksalexanderh35hamigoog?q=%22Was%20there%20ever%20an%22",
+  "refTitle": "The Works of Alexander Hamilton (1850)"
+ },
+ "american-revolution/kings-mountain/0": {
+  "verified": true,
+  "ref": "https://archive.org/details/musgrovemillhist01unse?q=%22The%20first%20link%20in%22",
+  "refTitle": "Musgrove Mill Historic Resource Study (National Park Service), quoting Clinton"
+ },
+ "american-revolution/kings-mountain/1": {
+  "quote": "It [the victory at Kings Mountain] was the joyful annunciation of that turn of the tide of success which terminated the revolutionary war with the seal of our independence.",
+  "verified": true,
+  "ref": "https://archive.org/details/writingsthomasj05washgoog?q=%22It%20was%20the%20joyful%22",
+  "refTitle": "The Writings of Thomas Jefferson, ed. H. A. Washington (1854)"
+ },
+ "american-revolution/cowpens/0": {
+  "source": "Memoir of Major Thomas Young, printed in The Orion magazine (October 1843)",
+  "verified": true,
+  "ref": "https://archive.org/details/sim_orion-a-monthly-magazine-of-literature-and-art_1843-10_3_2?q=%22He%20went%20among%20the%22",
+  "refTitle": "The Orion magazine, October 1843"
+ },
+ "american-revolution/cowpens/1": {
+  "quote": "I have given him a devil of a whipping—a more complete victory never was.",
+  "source": "Letter to William Snickers, as first printed in William Dunlap, A History of New York, for Schools (1837)",
+  "verified": true,
+  "ref": "https://archive.org/details/ahistorynewyork00dunlgoog?q=%22more%20complete%20victory%20never%22",
+  "refTitle": "William Dunlap, A History of New York, for Schools (1837)"
+ },
+ "american-revolution/guilford-courthouse/0": {
+  "verified": true,
+  "ref": "https://archive.org/details/nathanaelgreenes010777mbp?q=%22We%20fight%20get%20beat%22",
+  "refTitle": "Theodore Thayer, Nathanael Greene: Strategist of the American Revolution (1960), quoting the letter"
+ },
+ "american-revolution/guilford-courthouse/1": {
+  "verified": true,
+  "ref": "https://archive.org/details/correspondencec03rossgoog?q=%22am%20quite%20tired%20of%22",
+  "refTitle": "Correspondence of Charles, First Marquis Cornwallis (1859)"
+ },
+ "american-revolution/guilford-courthouse/2": {
+  "verified": true,
+  "ref": "https://archive.org/details/jessupfamilycont00jess?q=%22Another%20such%20victory%20would%22",
+  "refTitle": "The Jessup Family (1908), quoting the speech"
+ },
+ "american-revolution/yorktown/0": {
+  "verified": true,
+  "ref": "https://en.wikisource.org/wiki/History_of_the_Rise%2C_Progress%2C_and_Termination_of_the_American_Revolution/Chapter_XXI",
+  "refTitle": "Mercy Otis Warren, History of the Rise, Progress, and Termination of the American Revolution (1805) (Wikisource transcription)"
+ },
+ "american-revolution/yorktown/1": {
+  "verified": true,
+  "ref": "https://archive.org/details/militaryjournal00thac?q=%22It%20was%20in%20the%22",
+  "refTitle": "James Thacher, A Military Journal during the American Revolutionary War (1823)"
+ },
+ "american-revolution/yorktown/2": {
+  "verified": true,
+  "ref": "https://archive.org/details/historicalmemoi00wraxgoog?q=%22Oh%20God%20It%20is%22",
+  "refTitle": "Nathaniel Wraxall, Historical Memoirs of My Own Time (1815)"
+ },
+ "civil-war/fort-sumter/0": {
+  "verified": true,
+  "ref": "https://docsouth.unc.edu/southlit/chesnut/maryches.html",
+  "refTitle": "A Diary from Dixie, Documenting the American South"
+ },
+ "civil-war/fort-sumter/1": {
+  "verified": true,
+  "ref": "https://archive.org/details/warofrebellionco0050vari?q=%22Having%20defended%20Fort%20Sumter%22",
+  "refTitle": "The War of the Rebellion: Official Records of the Union and Confederate Armies"
+ },
+ "civil-war/first-bull-run/0": {
+  "verified": true,
+  "ref": "https://en.wikisource.org/wiki/Letter_from_Captain_Sullivan_Ballou_to_His_Wife_Sarah",
+  "refTitle": "Letter from Captain Sullivan Ballou to His Wife Sarah (Wikisource transcription)"
+ },
+ "civil-war/first-bull-run/1": {
+  "verified": true,
+  "ref": "https://archive.org/details/inaugurationofja01virg?q=%22There%20is%20Jackson%20standing%22",
+  "refTitle": "Inauguration of the Jackson Statue, Richmond (1875)"
+ },
+ "civil-war/fort-donelson/0": {
+  "verified": true,
+  "ref": "https://en.wikisource.org/wiki/Personal_Memoirs_of_U._S._Grant/Chapter_XXII",
+  "refTitle": "Personal Memoirs of U. S. Grant (1885)"
+ },
+ "civil-war/fort-donelson/1": {
+  "verified": true,
+  "ref": "https://archive.org/details/warofrebellion07unit?q=%22The%20distribution%20of%20the%22",
+  "refTitle": "The War of the Rebellion: Official Records of the Union and Confederate Armies"
+ },
+ "civil-war/shiloh/0": {
+  "quote": "I had heard and read of battlefields, seen pictures of battlefields, of horses and men, of cannon and wagons, all jumbled together, while the ground was strewn with dead and dying and wounded, but I must confess that I never realized the \"pomp and circumstance\" of the thing called glorious war until I saw this.",
+  "verified": true,
+  "ref": "https://archive.org/details/bub_gb_ssIdAQAAMAAJ?q=%22had%20heard%20and%20read%22",
+  "refTitle": "Sam R. Watkins, \"Co. Aytch\" (1882)"
+ },
+ "civil-war/shiloh/1": {
+  "verified": true,
+  "ref": "https://en.wikisource.org/wiki/Personal_Memoirs_of_U._S._Grant/Chapter_XXV",
+  "refTitle": "Personal Memoirs of U. S. Grant (1885)"
+ },
+ "civil-war/shiloh/2": {
+  "verified": true,
+  "ref": "https://en.wikisource.org/wiki/Personal_Memoirs_of_U._S._Grant/Chapter_XXV",
+  "refTitle": "Personal Memoirs of U. S. Grant (1885)"
+ },
+ "civil-war/seven-days/0": {
+  "verified": true,
+  "ref": "https://archive.org/details/bwb_Y0-BNJ-154?q=%22It%20was%20not%20war%E2%80%94it%22",
+  "refTitle": "Battles and Leaders of the Civil War (1884–1888)"
+ },
+ "civil-war/seven-days/1": {
+  "verified": true,
+  "ref": "https://en.wikisource.org/wiki/History_of_the_Civil_War%2C_1861-1865/Chapter_3",
+  "refTitle": "James Ford Rhodes, History of the Civil War, 1861–1865, quoting the telegram (Wikisource transcription)"
+ },
+ "civil-war/second-bull-run/0": {
+  "verified": true,
+  "ref": "https://en.wikisource.org/wiki/The_Reminiscences_of_Carl_Schurz/Volume_Two/7_War",
+  "refTitle": "The Reminiscences of Carl Schurz, quoting the address (Wikisource transcription)"
+ },
+ "civil-war/second-bull-run/1": {
+  "source": "Dispatch to President Jefferson Davis, as printed in the Asheville News, September 4, 1862",
+  "verified": true,
+  "ref": "https://archive.org/details/per_asheville-news_asheville-news_1862-09-04_14_111?q=%22on%20the%20plains%20of%22",
+  "refTitle": "Asheville News, September 4, 1862"
+ },
+ "civil-war/antietam/0": {
+  "verified": true,
+  "ref": "https://archive.org/details/warrebellionaco32offigoog?q=%22am%20writing%20every%20stalk%22",
+  "refTitle": "The War of the Rebellion: Official Records of the Union and Confederate Armies"
+ },
+ "civil-war/antietam/1": {
+  "verified": true,
+  "ref": "https://archive.org/details/bwb_Y0-BNJ-154?q=%22The%20mental%20strain%20was%22",
+  "refTitle": "Battles and Leaders of the Civil War, vol. 2"
+ },
+ "civil-war/antietam/2": {
+  "verified": true,
+  "ref": "https://archive.org/details/ERIC_ED370593?q=%22Mr%20Brady%20has%20done%22",
+  "refTitle": "Civil War Photography and Its Impact (1993), quoting the review"
+ },
+ "civil-war/fredericksburg/0": {
+  "quote": "It is well this is so terrible; we would grow too fond of it!",
+  "source": "As recorded by John Esten Cooke, a Confederate staff officer, in Hammer and Rapier (1870). Later writers reworded it as \"It is well that war is so terrible.\"",
+  "verified": true,
+  "ref": "https://archive.org/details/hammerrapier00cook?q=%22It%20is%20well%20this%22",
+  "refTitle": "John Esten Cooke, Hammer and Rapier (1870)"
+ },
+ "civil-war/fredericksburg/1": {
+  "verified": true,
+  "ref": "https://archive.org/details/bwb_Y0-BNJ-150_3?q=%22As%20they%20charged%20the%22",
+  "refTitle": "Battles and Leaders of the Civil War (1884–1888)"
+ },
+ "civil-war/stones-river/0": {
+  "verified": true,
+  "ref": "https://archive.org/details/warofrebellion522unit?q=%22The%20enemy%20has%20yielded%22",
+  "refTitle": "The War of the Rebellion: Official Records of the Union and Confederate Armies"
+ },
+ "civil-war/stones-river/1": {
+  "verified": true,
+  "ref": "https://archive.org/details/completeworksab06fishgoog?q=%22can%20never%20forget%20whilst%22",
+  "refTitle": "Complete Works of Abraham Lincoln (1905)"
+ },
+ "civil-war/chancellorsville/0": {
+  "verified": true,
+  "ref": "https://archive.org/details/warofrebellionco0025unit?q=%22should%20have%20chosen%20for%22",
+  "refTitle": "The War of the Rebellion: Official Records of the Union and Confederate Armies"
+ },
+ "civil-war/chancellorsville/1": {
+  "verified": true,
+  "ref": "https://archive.org/details/09098560.4267.emory.edu?q=%22rest+under+the+shade+of+the+trees%22",
+  "refTitle": "The Life of Lieut. Gen. T. J. Jackson (1863)"
+ },
+ "civil-war/chancellorsville/2": {
+  "source": "Remark to Abner Doubleday, as reported in John Bigelow, The Campaign of Chancellorsville (1910)",
+  "verified": true,
+  "ref": "https://archive.org/details/campaignofchanc00bige?q=%22lost%20confidence%20in%20Hooker%22",
+  "refTitle": "John Bigelow, The Campaign of Chancellorsville (1910)"
+ },
+ "civil-war/vicksburg/0": {
+  "verified": true,
+  "ref": "https://archive.org/details/mycavelifeinvic00louggoog?q=%22Terror%20stricken%20we%20remained%22",
+  "refTitle": "Mary Ann Loughborough, My Cave Life in Vicksburg (1864)"
+ },
+ "civil-war/vicksburg/1": {
+  "verified": true,
+  "ref": "https://archive.org/details/personalmemoirso0001ulys_j6y1?q=%22The%20fate%20of%20the%22",
+  "refTitle": "Personal Memoirs of U. S. Grant (1885)"
+ },
+ "civil-war/vicksburg/2": {
+  "verified": true,
+  "ref": "https://archive.org/details/completeworks00lincgoog?q=%22The%20Father%20of%20Waters%22",
+  "refTitle": "Complete Works of Abraham Lincoln (1894)"
+ },
+ "civil-war/gettysburg/0": {
+  "source": "Official report of the 20th Maine Infantry",
+  "date": "July 6, 1863",
+  "verified": true,
+  "ref": "https://archive.org/details/strongvincentan00nortgoog?q=%22ordered%20the%20bayonet%20The%22",
+  "refTitle": "Oliver W. Norton, Strong Vincent and His Brigade at Gettysburg (1909), reprinting the report"
+ },
+ "civil-war/gettysburg/1": {
+  "verified": true,
+  "ref": "https://docsouth.unc.edu/imls/fremantle/fremantle.html",
+  "refTitle": "Three Months in the Southern States, Documenting the American South"
+ },
+ "civil-war/gettysburg/2": {},
+ "civil-war/gettysburg/3": {
+  "verified": true,
+  "ref": "https://en.wikisource.org/wiki/Gettysburg_Address_%28Lincoln_Memorial%29",
+  "refTitle": "Gettysburg Address (Lincoln Memorial) (Wikisource transcription)"
+ },
+ "civil-war/fort-wagner/0": {
+  "source": "Letter to Amelia Loguen, printed in The Journal of Negro History (January 1926)",
+  "verified": true,
+  "ref": "https://archive.org/details/sim_journal-of-african-american-history_1926-01_11_1?q=%22man%20flinched%20though%20it%22",
+  "refTitle": "The Journal of Negro History, January 1926"
+ },
+ "civil-war/chickamauga/0": {
+  "verified": true,
+  "ref": "https://archive.org/details/warofrebellion0030geor?q=%22We%20have%20met%20with%22",
+  "refTitle": "The War of the Rebellion: Official Records of the Union and Confederate Armies"
+ },
+ "civil-war/chickamauga/1": {
+  "verified": true,
+  "ref": "https://archive.org/details/bwb_Y0-BNJ-150_3?q=%22It%20seems%20to%20me%22",
+  "refTitle": "Battles and Leaders of the Civil War, vol. 3"
+ },
+ "civil-war/chattanooga/0": {
+  "quote": "\"Thomas, who ordered those men up the ridge?\" … \"I don't know; I did not.\"",
+  "verified": true,
+  "ref": "https://archive.org/details/battlesleadersof03cent?q=%22Thomas%20who%20ordered%20those%22",
+  "refTitle": "Battles and Leaders of the Civil War, vol. 3"
+ },
+ "civil-war/chattanooga/1": {
+  "quote": "No satisfactory excuse can possibly be given for the shameful conduct of our troops on the left in allowing their line to be penetrated. The position was one which ought to have been held by a line of skirmishers against any assaulting column.",
+  "source": "Official report of the battle, Official Records",
+  "date": "November 1863",
+  "verified": true,
+  "ref": "https://archive.org/details/warofrebellion312unit?q=%22No%20satisfactory%20excuse%20can%22",
+  "refTitle": "The War of the Rebellion: Official Records of the Union and Confederate Armies"
+ },
+ "civil-war/wilderness/0": {
+  "verified": true,
+  "ref": "https://archive.org/details/personalmemoirsop102granuoft?q=%22More%20desperate%20fighting%20has%22",
+  "refTitle": "Personal Memoirs of U. S. Grant (1885)"
+ },
+ "civil-war/wilderness/1": {
+  "verified": true,
+  "ref": "https://archive.org/details/campaigningwith00unkngoog?q=%22Forest%20fires%20raged%20ammunition%22",
+  "refTitle": "Horace Porter, Campaigning with Grant (1897)"
+ },
+ "civil-war/spotsylvania/0": {
+  "verified": true,
+  "ref": "https://archive.org/details/warofrebellion371unit?q=%22propose%20to%20fight%20it%22",
+  "refTitle": "The War of the Rebellion: Official Records of the Union and Confederate Armies"
+ },
+ "civil-war/spotsylvania/1": {
+  "verified": true,
+  "ref": "https://archive.org/details/bwb_S0-ECN-710?q=%22Rank%20after%20rank%20was%22",
+  "refTitle": "Horace Porter, Campaigning with Grant (1897)"
+ },
+ "civil-war/cold-harbor/0": {
+  "quote": "I noticed that many of the soldiers had taken off their coats, and seemed to be engaged in sewing up rents in them … the men were calmly writing their names and home addresses on slips of paper, and pinning them on the backs of their coats, so that their dead bodies might be recognized upon the field, and their fate made known to their families at home.",
+  "verified": true,
+  "ref": "https://archive.org/details/cu31924030927002?q=%22noticed%20that%20many%20of%22",
+  "refTitle": "Horace Porter, Campaigning with Grant (1897)"
+ },
+ "civil-war/cold-harbor/1": {
+  "verified": true,
+  "ref": "https://en.wikisource.org/wiki/Personal_Memoirs_of_U._S._Grant/Chapter_LV",
+  "refTitle": "Personal Memoirs of U. S. Grant (1885)"
+ },
+ "civil-war/atlanta/0": {
+  "verified": true,
+  "ref": "https://archive.org/details/warofrebellion521unit?q=%22Atlanta%20is%20ours%20and%22",
+  "refTitle": "The War of the Rebellion: Official Records of the Union and Confederate Armies"
+ },
+ "civil-war/atlanta/1": {
+  "verified": true,
+  "ref": "https://en.wikisource.org/wiki/Letter_to_James_M._Calhoun%2C_et_al.%2C_September_12%2C_1864",
+  "refTitle": "Letter to James M. Calhoun, et al., September 12, 1864 (Wikisource transcription)"
+ },
+ "civil-war/franklin/0": {
+  "verified": true,
+  "ref": "https://archive.org/details/1861vs1882coaytc00watk?q=%22cannot%20describe%20it%20It%22",
+  "refTitle": "Sam R. Watkins, \"Co. Aytch\" (1882)"
+ },
+ "civil-war/franklin/1": {
+  "quote": "Our loss of officers was excessively large in proportion to the loss of men.",
+  "source": "Dispatch to Richmond, as printed in William P. Snow, Southern Generals (1865)",
+  "verified": true,
+  "ref": "https://archive.org/details/southgenerals00snowrich?q=%22Our%20loss%20of%20officers%22",
+  "refTitle": "William P. Snow, Southern Generals (1865)"
+ },
+ "civil-war/nashville/0": {
+  "verified": true,
+  "ref": "https://archive.org/details/advanceretreatpe00hood?q=%22beheld%20for%20the%20first%22",
+  "refTitle": "John Bell Hood, Advance and Retreat (1880)"
+ },
+ "civil-war/nashville/1": {
+  "verified": true,
+  "ref": "https://archive.org/details/warofrebellion452unit?q=%22Attack%20Hood%20at%20once%22",
+  "refTitle": "The War of the Rebellion: Official Records of the Union and Confederate Armies"
+ },
+ "civil-war/savannah/0": {
+  "verified": true,
+  "ref": "https://archive.org/details/memoirsgeneralw00shergoog?q=%22Behind%20us%20lay%20Atlanta%22",
+  "refTitle": "Memoirs of General William T. Sherman (1875)"
+ },
+ "civil-war/savannah/1": {
+  "verified": true,
+  "ref": "https://archive.org/details/freedomtriumpha01coffgoog?q=%22beg%20to%20present%20you%22",
+  "refTitle": "Charles C. Coffin, Freedom Triumphant (1890), quoting the telegram"
+ },
+ "civil-war/petersburg/0": {
+  "verified": true,
+  "ref": "https://archive.org/details/cu31924030909844?q=%22It%20was%20the%20saddest%22",
+  "refTitle": "The Story of a Regiment (1895), quoting the telegram"
+ },
+ "civil-war/petersburg/1": {
+  "verified": true,
+  "ref": "https://archive.org/details/warofrebellion463unit?q=%22see%20no%20prospect%20of%22",
+  "refTitle": "The War of the Rebellion: Official Records of the Union and Confederate Armies"
+ },
+ "civil-war/appomattox/0": {
+  "verified": true,
+  "ref": "https://en.wikisource.org/wiki/Personal_Memoirs_of_U._S._Grant/Chapter_LXVII",
+  "refTitle": "Personal Memoirs of U. S. Grant (1885)"
+ },
+ "civil-war/appomattox/1": {
+  "quote": "After four years of arduous service marked by unsurpassed courage and fortitude, the Army of Northern Virginia has been compelled to yield to overwhelming numbers and resources … I bid you all an affectionate farewell.",
+  "source": "General Order No. 9, Official Records",
+  "verified": true,
+  "ref": "https://archive.org/details/warofrebellion461unit?q=%22After%20four%20years%20of%22",
+  "refTitle": "The War of the Rebellion: Official Records of the Union and Confederate Armies"
+ },
+ "civil-war/appomattox/2": {
+  "verified": true,
+  "ref": "https://archive.org/details/bwb_S0-BGJ-081?q=%22On%20our%20part%20not%22",
+  "refTitle": "Joshua L. Chamberlain, The Passing of the Armies (1915)"
+ },
+ "civil-war/wilsons-creek/0": {
+  "quote": "Rather than concede to the State of Missouri for one single instant the right to dictate to my Government in any matter however unimportant, I would … see you, and you, and you, and you, and you, and every man, woman, and child in the State, dead and buried … This means war.",
+  "verified": true,
+  "ref": "https://archive.org/details/fightformissouri00snea?q=%22Rather%20than%20concede%20to%22",
+  "refTitle": "Thomas L. Snead, The Fight for Missouri (1886)"
+ },
+ "civil-war/wilsons-creek/1": {},
+ "civil-war/balls-bluff/0": {
+  "verified": true,
+  "ref": "https://archive.org/details/in.ernet.dli.2015.75551?q=%22flat+on+my+back%22",
+  "refTitle": "Touched with Fire: Civil War Letters and Diary of Oliver Wendell Holmes, Jr. (1946)"
+ },
+ "civil-war/pea-ridge/0": {
+  "quote": "I must have St. Louis—then Huzza!",
+  "verified": true,
+  "ref": "https://archive.org/details/sim_civil-war-history_1958-12_4_4?q=%22I%20must%20have%20St%22",
+  "refTitle": "Civil War History, December 1958, quoting the letter"
+ },
+ "civil-war/pea-ridge/1": {
+  "quote": "The vulture and the wolf have now communion, and the dead, friends and foes, sleep in the same lonely grave.",
+  "source": "Letter to his brother, quoted in Jay Monaghan, Civil War on the Western Border (1955)",
+  "verified": true,
+  "ref": "https://archive.org/details/civilwaronwester00mona?q=%22The%20vulture%20and%20the%22",
+  "refTitle": "Jay Monaghan, Civil War on the Western Border (1955), quoting the letter"
+ },
+ "civil-war/hampton-roads/0": {
+  "quote": "Gun after gun was fired by the Monitor, which was returned with whole broadsides by the rebels with no more effect apparently than so many pebble-stones thrown by a child.",
+  "verified": true,
+  "ref": "https://archive.org/details/miscellaneouspa00unkngoog?q=%22Gun%20after%20gun%20was%22",
+  "refTitle": "Miscellaneous Papers, 1672–1865, Now First Printed from the Manuscript (1887)"
+ },
+ "civil-war/new-orleans/0": {
+  "verified": true,
+  "ref": "https://archive.org/details/officialrecordso0018unse?q=%22having%20heard%20all%20the%22",
+  "refTitle": "The War of the Rebellion: Official Records of the Union and Confederate Armies"
+ },
+ "civil-war/new-orleans/1": {
+  "verified": true,
+  "ref": "https://archive.org/details/correspondencebe00newo?q=%22The%20city%20is%20yours%22",
+  "refTitle": "Correspondence between the Mayor and Federal Authorities Relative to the Occupation of New Orleans (1862)"
+ },
+ "civil-war/south-mountain/0": {
+  "verified": true,
+  "ref": "https://archive.org/details/warofrebellion192unit?q=%22have%20the%20whole%20rebel%22",
+  "refTitle": "The War of the Rebellion: Official Records of the Union and Confederate Armies"
+ },
+ "civil-war/south-mountain/1": {
+  "verified": true,
+  "ref": "https://archive.org/details/warofrebellion512unit_0?q=%22The%20day%20has%20gone%22",
+  "refTitle": "The War of the Rebellion: Official Records of the Union and Confederate Armies"
+ },
+ "civil-war/perryville/0": {
+  "quote": "I was in every battle, skirmish and march that was made by the First Tennessee Regiment during the war, and I do not remember of a harder contest and more evenly fought battle than that of Perryville. If it had been two men wrestling, it would have been called a \"dog fall.\" Both sides claim the victory—both whipped.",
+  "verified": true,
+  "ref": "https://archive.org/details/bub_gb_ssIdAQAAMAAJ?q=%22was%20in%20every%20battle%22",
+  "refTitle": "Sam R. Watkins, \"Co. Aytch\" (1882)"
+ },
+ "civil-war/perryville/1": {
+  "verified": true,
+  "ref": "https://archive.org/details/warofrebellion161unit?q=%22For%20the%20time%20engaged%22",
+  "refTitle": "The War of the Rebellion: Official Records of the Union and Confederate Armies"
+ },
+ "civil-war/brandy-station/0": {
+  "verified": true,
+  "ref": "https://archive.org/details/lifecampaignsofm00mccl?q=%22It%20made%20the%20Federal%22",
+  "refTitle": "H. B. McClellan, The Life and Campaigns of Major-General J. E. B. Stuart (1885)"
+ },
+ "civil-war/brandy-station/1": {
+  "quote": "This much puffed cavalry of Northern Virginia has been twice, if not three times, surprised since the battles of December, and such repeated accidents can be regarded as nothing but the necessary consequences of negligence and bad management.",
+  "verified": true,
+  "ref": "https://archive.org/details/sabresandspursf00denigoog?q=%22This%20much%20puffed%20cavalry%22",
+  "refTitle": "Frederic Denison, Sabres and Spurs (1876), quoting the editorial"
+ },
+ "civil-war/champion-hill/0": {
+  "verified": true,
+  "ref": "https://archive.org/details/warofrebellion242unit?q=%22cannot%20think%20of%20this%22",
+  "refTitle": "The War of the Rebellion: Official Records of the Union and Confederate Armies"
+ },
+ "civil-war/port-hudson/0": {
+  "verified": true,
+  "ref": "https://archive.org/details/cu31924079575225?q=%22The%20position%20occupied%20by%22",
+  "refTitle": "The War of the Rebellion: Official Records of the Union and Confederate Armies"
+ },
+ "civil-war/fort-pillow/0": {
+  "verified": true,
+  "ref": "https://en.wikisource.org/wiki/Personal_Memoirs_of_U._S._Grant/Chapter_XLVII",
+  "refTitle": "Personal Memoirs of U. S. Grant, chapter 47, quoting the dispatch (Wikisource transcription)"
+ },
+ "civil-war/fort-pillow/1": {
+  "verified": true,
+  "ref": "https://archive.org/details/completeworksvo00lincgoog?q=%22If%20there%20has%20been%22",
+  "refTitle": "Complete Works of Abraham Lincoln, vol. 10 (1894)"
+ },
+ "civil-war/kennesaw-mountain/0": {
+  "quote": "I perceived that the enemy and our own officers had settled down into a conviction that I would not assault fortified lines. All looked to me to \"outflank.\" An army to be efficient must not settle down to one single mode of offence, but must be prepared to execute any plan which promises success.",
+  "source": "Official report of the Atlanta Campaign",
+  "date": "September 1864",
+  "verified": true,
+  "ref": "https://archive.org/details/generalshermans00shergoog?q=%22perceived%20that%20the%20enemy%22",
+  "refTitle": "General Sherman's Official Account of His Great March (1865)"
+ },
+ "civil-war/kennesaw-mountain/1": {
+  "quote": "I will ever think that the reason they did not capture our works was the impossibility of their living men passing over the bodies of their dead.",
+  "verified": true,
+  "ref": "https://archive.org/details/maurygrays00watkrich?q=%22will%20ever%20think%20that%22",
+  "refTitle": "Sam R. Watkins, \"Co. Aytch\" (1900 edition)"
+ },
+ "civil-war/monocacy/0": {
+  "verified": true,
+  "ref": "https://archive.org/details/autobiography0002leww?q=%22These%20men%20died%20to%22",
+  "refTitle": "Lew Wallace: An Autobiography (1906)"
+ },
+ "civil-war/monocacy/1": {
+  "verified": true,
+  "ref": "https://archive.org/details/personalmemoirso02granuoft?q=%22If%20Early%20had%20been%22",
+  "refTitle": "Personal Memoirs of U. S. Grant (1885)"
+ },
+ "civil-war/mobile-bay/0": {},
+ "civil-war/mobile-bay/1": {
+  "verified": true,
+  "ref": "https://archive.org/details/lifeofdavidglasg01farr?q=%22The%20Almighty%20has%20smiled%22",
+  "refTitle": "Loyall Farragut, The Life of David Glasgow Farragut (1879)"
+ },
+ "civil-war/cedar-creek/0": {
+  "verified": true,
+  "ref": "https://archive.org/details/personalrecolle00coangoog?q=%22Turning%20what%20bid%20fair%22",
+  "refTitle": "Personal Recollections of the War of the Rebellion (1891), quoting the telegram"
+ },
+ "civil-war/cedar-creek/1": {
+  "source": "As recorded by Jedediah Hotchkiss, Early's mapmaker, in his journal for October 19, 1864, Official Records",
+  "verified": true,
+  "ref": "https://archive.org/details/warofrebellion431unit_0?q=%22The%20Yankees%20got%20whipped%22",
+  "refTitle": "The War of the Rebellion: Official Records of the Union and Confederate Armies"
+ },
+ "civil-war/bentonville/0": {
+  "verified": true,
+  "ref": "https://archive.org/details/warofrebellionco0047majg_a5h2?q=%22course%20cannot%20be%20hindered%22",
+  "refTitle": "The War of the Rebellion: Official Records of the Union and Confederate Armies"
+ },
+ "civil-war/bentonville/1": {
+  "verified": true,
+  "ref": "https://archive.org/details/memoirsgeneralw01shergoog?q=%22mistake%20there%20and%20should%22",
+  "refTitle": "Memoirs of General William T. Sherman (1875)"
+ },
+ "civil-war/sailors-creek/0": {
+  "quote": "My God! has the army dissolved?",
+  "source": "As recorded by Maj. Gen. William Mahone, who was beside him; quoted in Morris Schaff, The Sunset of the Confederacy (1912)",
+  "verified": true,
+  "ref": "https://archive.org/details/sunsetofconfeder00scha?q=%22My%20God%20has%20the%22",
+  "refTitle": "Morris Schaff, The Sunset of the Confederacy (1912), quoting Mahone"
+ },
+ "civil-war/sailors-creek/1": {
+  "verified": true,
+  "ref": "https://archive.org/details/warofrebellion463unit?q=%22If%20the%20thing%20is%22",
+  "refTitle": "The War of the Rebellion: Official Records of the Union and Confederate Armies"
+ }
+}
