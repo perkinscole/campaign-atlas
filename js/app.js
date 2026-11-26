@@ -34,17 +34,50 @@ Atlas.load('atlas', function (P) {
 
   // ---- Map -------------------------------------------------------------
   const HOME_BOUNDS = L.latLngBounds(M.bounds);
-  const map = L.map('map', { zoomControl: false, minZoom: 3, maxZoom: 13, zoomSnap: 0.25 });
+  const map = L.map('map', { zoomControl: false, minZoom: 3, maxZoom: 16, zoomSnap: 0.25 });
   map.fitBounds(HOME_BOUNDS, { padding: [6, 6] });
   L.control.zoom({ position: 'topleft' }).addTo(map);
   map.attributionControl.setPrefix('<a href="https://leafletjs.com" target="_blank" rel="noopener">Leaflet</a>');
   map.createPane('overlayLabels'); map.getPane('overlayLabels').style.zIndex = 250; map.getPane('overlayLabels').style.pointerEvents = 'none';
-  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer/tile/{z}/{y}/{x}', {
-    attribution: 'Tiles &copy; Esri', maxZoom: 13
-  }).addTo(map);
-  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}', {
-    attribution: 'Boundaries &copy; Esri', maxZoom: 13, opacity: .6, pane: 'overlayLabels'
-  }).addTo(map);
+
+  // Base maps. Each is a stack of tile layers; the choice is remembered on this device.
+  const ESRI = 'https://server.arcgisonline.com/ArcGIS/rest/services/';
+  const HILLSHADE = 'https://services.arcgisonline.com/arcgis/rest/services/Elevation/World_Hillshade/MapServer/tile/{z}/{y}/{x}';
+  const BASES = {
+    topo: { name: 'Topographic', hint: 'terrain, rivers, and place names',
+      layers: () => [
+        L.tileLayer(ESRI + 'World_Topo_Map/MapServer/tile/{z}/{y}/{x}', { maxNativeZoom: 18, maxZoom: 19, attribution: 'Topographic map &copy; Esri and its data providers' }),
+        L.tileLayer(HILLSHADE, { maxNativeZoom: 15, maxZoom: 19, opacity: .5, className: 'blend-multiply', attribution: 'Hillshade &copy; Esri' })
+      ] },
+    contour: { name: 'Contour lines', hint: 'elevation colors; best zoomed in on a battlefield',
+      layers: () => [L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', { subdomains: 'abc', maxNativeZoom: 17, maxZoom: 19,
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, SRTM; style &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (CC-BY-SA)' })] },
+    atlas: { name: 'Atlas', hint: 'classroom-atlas style',
+      layers: () => [L.tileLayer(ESRI + 'NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', { maxNativeZoom: 12, maxZoom: 19, attribution: 'National Geographic, Esri and its data providers' })] },
+    relief: { name: 'Relief only', hint: 'no modern roads',
+      layers: () => [
+        L.tileLayer(ESRI + 'World_Shaded_Relief/MapServer/tile/{z}/{y}/{x}', { maxNativeZoom: 13, maxZoom: 19, attribution: 'Tiles &copy; Esri' }),
+        L.tileLayer(ESRI + 'Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}', { maxNativeZoom: 13, maxZoom: 19, opacity: .6, pane: 'overlayLabels', attribution: 'Boundaries &copy; Esri' })
+      ] }
+  };
+  let baseId = null, baseLayers = [];
+  function setBase(id, remember) {
+    if (!BASES[id]) id = 'topo';
+    if (id === baseId) return;
+    baseLayers.forEach(l => map.removeLayer(l));
+    baseLayers = BASES[id].layers(); baseLayers.forEach(l => l.addTo(map));
+    Object.keys(BASES).forEach(k => map.getContainer().classList.toggle('base-' + k, k === id));
+    baseId = id;
+    const r = document.querySelector(`input[name="base"][value="${id}"]`); if (r) r.checked = true;
+    if (remember) { try { localStorage.setItem('atlas-base', id); } catch (e) { /* storage unavailable */ } }
+  }
+  const baseMenu = $('baseMenu');
+  if (baseMenu) {
+    baseMenu.innerHTML = Object.entries(BASES).map(([k, b]) => `<label><input type="radio" name="base" value="${k}"> <span><strong>${b.name}</strong> <small>${b.hint}</small></span></label>`).join('');
+    baseMenu.addEventListener('change', e => { if (e.target.name === 'base') setBase(e.target.value, true); });
+  }
+  let savedBase = null; try { savedBase = localStorage.getItem('atlas-base'); } catch (e) { /* storage unavailable */ }
+  setBase(savedBase || 'topo', false);
   const routeLayer = L.layerGroup().addTo(map);
   const headLayer = L.layerGroup().addTo(map);
   const battleLayer = L.layerGroup().addTo(map);

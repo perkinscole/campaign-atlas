@@ -1151,7 +1151,7 @@
       bounds: [[29.5, -22.0], [61.0, 46.0]],
       sides: [
         { id: 'allied', name: 'Allied', color: '#2b5797' },
-        { id: 'axis', name: 'Axis', color: '#3f3f46' }
+        { id: 'axis', name: 'Axis', color: '#a32a2a' }
       ],
       theaters: ['Western Europe', 'Eastern Front', 'Mediterranean and North Africa', 'Atlantic'],
       intro: 'Army routes draw themselves as the armies advanced and retreated, and a marker appears for each battle as it begins.'
