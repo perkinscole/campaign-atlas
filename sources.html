@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sources — The Civil War Atlas</title>
+  <meta name="description" content="Primary sources, image credits, and notes on how the Civil War Atlas was built.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">The Civil War Atlas<small>Armies, battles, and the words of those who were there · 1861–1865</small></a>
+    <nav aria-label="Site">
+      <a href="index.html">Map</a>
+      <a href="battles.html">Battles</a>
+      <a href="sources.html" class="active">Sources</a>
+    </nav>
+  </header>
+  <main class="page">
+    <div class="page-inner">
+      <h1>Sources and Notes</h1>
+      <p class="lede">Where the words, numbers, and pictures on this site come from.</p>
+
+      <h2>About the quotations</h2>
+      <p>Every journal entry on the map is drawn from a primary source: a diary or letter written during the war, a memoir written afterward by a participant, or an official dispatch or report. Entries are labeled with the author, their role at the time, the date, and the work the words come from. Where a remark was recorded by someone else (for example, Barnard Bee's "stone wall" or Lee's "It is well that war is so terrible"), the entry says who reported it. Ellipses mark places where a passage was shortened. Spelling has been left as the authors wrote it.</p>
+
+      <h2>About the numbers</h2>
+      <p>Casualty figures combine killed, wounded, captured, and missing. Civil War returns were incomplete and Confederate records especially so; the figures here are the commonly cited estimates from the National Park Service and standard references, rounded. Army strengths are approximate.</p>
+
+      <h2>About the map</h2>
+      <p>Army routes are simplified lines through the principal towns, fords, and battlefields each army passed, with the date it was there. Real columns spread over many roads and many miles; the line shows where the main body was, not every division. Battle markers are placed at the center of each battlefield and sized by total casualties.</p>
+
+      <h2>Primary sources</h2>
+      <ul class="source-list" id="sources"></ul>
+
+      <h2>Image credits</h2>
+      <p>All images are in the public domain. Most are chromolithographs published by Kurz &amp; Allison of Chicago in the late 1880s and 1890s, or prints by L. Prang &amp; Co. after paintings by Thure de Thulstrup; these are romanticized views made decades after the events. The photographs by Alexander Gardner, Timothy O'Sullivan, and Thomas Roche were taken on the battlefields within days of the fighting. Click an image on the map to open its Wikimedia Commons page.</p>
+      <ul class="credits" id="credits"></ul>
+
+      <h2>Built with</h2>
+      <p><a href="https://leafletjs.com/">Leaflet</a> for the map, base tiles by <a href="https://carto.com/attributions">CARTO</a> from <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> data, and type from Google Fonts (Playfair Display and Lora). The site is plain HTML, CSS, and JavaScript with no build step, so it can be opened from a folder or hosted on any static web server.</p>
+    </div>
+  </main>
+  <footer class="site-footer">An educational project. Quotations are from public-domain memoirs, diaries, letters, and official reports; images are public-domain works via Wikimedia Commons and the Library of Congress.</footer>
+  <script src="js/data.js"></script>
+  <script src="js/sources.js"></script>
+</body>
+</html>
