@@ -9,8 +9,10 @@
     <section class="hero">
       <h1>${esc(SITE.name)}</h1>
       <p class="lede">${esc(SITE.tagline)}. Press play and watch the armies move. Open any battle to read what the people who were there wrote about it.</p>
+      <div class="hero-actions"><a class="btn primary" href="#atlases">Explore the atlases</a><a class="btn ghost" href="#teachers">For teachers</a></div>
+      <ul class="hero-points"><li>Free for classrooms</li><li>No accounts or student data</li><li>Works on a projector, laptop, or phone</li></ul>
     </section>
-    <div class="cards wars">
+    <div class="cards wars" id="atlases">
       ${live.map(w => `<a class="card war" href="atlas.html?war=${w.id}">
         <img src="${thumb(img(w.cover), 800)}" alt="" loading="lazy">
         <div class="body">
@@ -25,7 +27,9 @@
 
     <h2 id="teachers">For teachers</h2>
     <div class="features">
-      <div><h3>Animated maps</h3><p>Army routes draw themselves day by day on a terrain map, so students see why rivers, mountains, and railroads decided where battles were fought.</p></div>
+      <div><h3>Animated maps</h3><p>Army routes draw themselves day by day on a topographic map, so students see why rivers, mountains, and railroads decided where battles were fought.</p></div>
+      <div><h3>Battlefield animations</h3><p>Step through Cowpens, Gettysburg, and D-Day on a topographic map and see how the ground shaped each move.</p></div>
+      <div><h3>Objects in 3D</h3><p>Turn and zoom museum scans of soldiers' gear, weapons, and things civilians left behind, each with questions for close looking.</p></div>
       <div><h3>Primary sources</h3><p>Every battle carries the words of soldiers, commanders, and civilians, labeled with who wrote them, when, and where the text comes from.</p></div>
       <div><h3>Guided tours</h3><p>Ready-made sequences of stops with discussion questions. Share one link and the whole class starts at the same place. Works on a projector or on student devices.</p></div>
       <div><h3>Printable worksheets</h3><p>A source-analysis worksheet for every battle and a student handout for every tour, each with a teacher key.</p></div>
