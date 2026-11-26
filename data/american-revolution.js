@@ -103,6 +103,82 @@
       place: 'Charlestown, Massachusetts',
       theater: 'New England',
       result: 'british',
+      tactical: {
+        base: "topo",
+        bounds: [[42.3668, -71.078], [42.3872, -71.0475]],
+        note: "This is a schematic. Charlestown was a narrow peninsula in 1775; most of the shore on today's map is land filled in later, so some troops appear to cross dry ground that was then open water. The redoubt is placed at the Bunker Hill Monument; other positions are approximate.",
+        places: [
+          { name: "Breed's Hill", ll: [42.3755, -71.0622] },
+          { name: "Bunker Hill", ll: [42.3806, -71.066] },
+          { name: "Charlestown", ll: [42.3722, -71.0628] },
+          { name: "Moulton's Point", ll: [42.3768, -71.05] },
+          { name: "Charlestown Neck", ll: [42.385, -71.0752] },
+          { name: "Mystic River", ll: [42.3838, -71.057] },
+          { name: "Boston (Copp's Hill)", ll: [42.3672, -71.056] }
+        ],
+        units: {
+          pres: { side: "american", name: "Prescott's redoubt and breastwork", short: "Prescott" },
+          rail: { side: "american", name: "Rail fence (Knowlton, Stark, Reed)", short: "Stark and Knowlton" },
+          put: { side: "american", name: "Putnam and the reserves", short: "Putnam" },
+          howe: { side: "british", name: "Howe's right wing: grenadiers and light infantry", short: "Howe" },
+          pig: { side: "british", name: "Pigot's left wing", short: "Pigot" }
+        },
+        phases: [
+          {
+            time: "June 16 to 17, 1775, overnight",
+            title: "A fort built in a night",
+            text: "About a thousand New England militiamen march onto the Charlestown peninsula after dark. Their orders name Bunker Hill. Their officers choose the lower hill closer to Boston, Breed's Hill, and by dawn the men have dug an earth fort on top of it. A British warship in the harbor sees it at first light and opens fire.",
+            units: { pres: [[42.3768, -71.0613], [42.376, -71.0603]], put: [[42.3808, -71.0662], [42.38, -71.065]] }
+          },
+          {
+            time: "June 17, 1 to 3 p.m.",
+            title: "The British land",
+            text: "General Gage could cut the Americans off by landing behind them at the Neck. He lets General Howe attack from the front instead. Barges row some 2,200 soldiers across to Moulton's Point. While Howe waits for the last of them, the Americans see that their left is wide open and extend it: Connecticut and New Hampshire men line a rail fence stuffed with hay, all the way down to the beach on the Mystic River.",
+            units: { howe: [[42.3776, -71.0524], [42.3758, -71.0522]], pig: [[42.3752, -71.0536], [42.374, -71.0546]], rail: [[42.3778, -71.0596], [42.3797, -71.0566]] },
+            arrows: [
+              { side: "british", pts: [[42.369, -71.052], [42.3752, -71.0508]] }
+            ]
+          },
+          {
+            time: "About 3:30 p.m.",
+            title: "The first assault",
+            text: "Howe sends his fastest troops along the beach to get around the fence. Stark's New Hampshire men, behind a wall of stones they have just piled up, wait until the column is fifty yards away and then fire. The front ranks go down in heaps. The lines advancing on the fence and the fort are shot apart the same way.",
+            units: { howe: [[42.3795, -71.0557], [42.3775, -71.0587]], pig: [[42.3759, -71.059], [42.3749, -71.06]] }
+          },
+          {
+            time: "About 4 p.m.",
+            title: "Thrown back a second time",
+            text: "The British re-form at the bottom of the hill and come on again, stepping over their own dead. Again the Americans hold their fire until the last moment, and again the line breaks and falls back. Behind the British, Charlestown is burning, set alight by cannon fire from the ships. Inside the fort, the powder is almost gone.",
+            units: { howe: [[42.3786, -71.0538], [42.3768, -71.0562]], pig: [[42.3755, -71.0568], [42.3743, -71.058]] }
+          },
+          {
+            time: "About 4:30 p.m.",
+            title: "The third assault",
+            text: "Howe gets 400 fresh men, tells his soldiers to drop their packs, and aims everything at the fort. The defenders fire their last rounds. The British come over the wall with bayonets, and the Americans, who have almost none, fight with musket butts and stones. Dr. Joseph Warren is killed as the fort empties.",
+            units: { howe: [[42.3776, -71.0603], [42.3769, -71.0597]], pig: [[42.3765, -71.0608], [42.3758, -71.0599]], pres: [[42.3797, -71.0652], [42.379, -71.0642]] },
+            arrows: [
+              { side: "british", pts: [[42.3752, -71.0575], [42.3762, -71.0603]] }
+            ]
+          },
+          {
+            time: "About 5 p.m.",
+            title: "Retreat over the Neck",
+            text: "The men at the rail fence hold long enough for the others to get away, then pull back in good order. The British take the peninsula, but it has cost them 1,054 men, more than four in ten of those who fought, and a large share of their officers. They will not try another attack like it.",
+            units: {
+              pres: [[42.3856, -71.076], [42.3848, -71.0748]],
+              rail: [[42.3838, -71.0728], [42.383, -71.0712]],
+              put: [[42.3862, -71.0772], [42.3856, -71.0764]],
+              howe: [[42.3806, -71.0662], [42.3796, -71.0648]],
+              pig: [[42.3768, -71.0613], [42.376, -71.0603]]
+            }
+          }
+        ],
+        ask: [
+          "Find the Neck. What might have happened if the British had landed there instead of attacking from the front?",
+          "The British won the hill. Why did both sides come to see the battle as an American success?",
+          "Why did the American officers order their men to hold their fire until the British were very close?"
+        ]
+      },
       commanders: { american: 'Col. William Prescott, Brig. Gen. Israel Putnam, Dr. Joseph Warren (killed)', british: 'Maj. Gen. William Howe, Lt. Gen. Thomas Gage' },
       forces: { american: 'about 2,400', british: 'about 2,400' },
       casualties: { american: 450, british: 1054, note: 'The British lost more than 40 percent of the men engaged, including 92 officers. It was their costliest battle of the war.' },
@@ -365,6 +441,121 @@
       theater: 'Northern',
       result: 'american',
       campaign: 'burgoyne',
+      tactical: {
+        base: "contour",
+        bounds: [[42.975, -73.672], [43.022, -73.585]],
+        note: "Positions are simplified from standard maps of the two battles and tied to the monuments on the field at Freeman's Farm, the Breymann Redoubt, and Bemis Heights. Line lengths are approximate.",
+        lines: [
+          {
+            kind: "stream",
+            name: "Hudson River",
+            pts: [[43.01063, -73.59552], [43.00858, -73.5966], [43.00709, -73.59793], [43.00351, -73.60328], [43.00167, -73.60517], [43.00022, -73.60618], [42.99429, -73.60771], [42.98351, -73.60844], [42.98242, -73.60891], [42.98134, -73.61008], [42.97564, -73.62187]]
+          },
+          {
+            kind: "stream",
+            name: "Kroma Kill",
+            pts: [[43.01556, -73.62375], [43.01545, -73.62395], [43.01485, -73.6233], [43.01445, -73.62374], [43.01428, -73.62324], [43.01388, -73.62306], [43.01376, -73.62325], [43.01358, -73.62303], [43.01328, -73.62336], [43.01307, -73.62253], [43.0125, -73.62313], [43.01215, -73.62233], [43.01137, -73.62142], [43.00939, -73.622], [43.00931, -73.62092], [43.0082, -73.62073], [43.00782, -73.62034], [43.00754, -73.61952], [43.00665, -73.61941], [43.00655, -73.61851], [43.00593, -73.61767], [43.00521, -73.61561], [43.00488, -73.61535], [43.004, -73.61551], [43.00347, -73.61412], [43.00271, -73.61295], [43.00224, -73.61291], [43.00139, -73.61224], [43.00147, -73.61173], [43.00119, -73.6116], [43.00035, -73.6102], [42.99969, -73.60991], [42.99896, -73.6103], [42.99858, -73.61009], [42.99773, -73.60694]]
+          },
+          {
+            kind: "stream",
+            name: "Mill Creek",
+            pts: [[42.99651, -73.64966], [42.99789, -73.64749], [42.99772, -73.64555], [42.99738, -73.64483], [42.99768, -73.64346], [42.99766, -73.64258], [42.99801, -73.64142], [42.99848, -73.64097], [42.9987, -73.63987], [42.99781, -73.63931], [42.99748, -73.6388], [42.99725, -73.63678], [42.99747, -73.63585], [42.99748, -73.63426], [42.999, -73.63321], [42.99943, -73.63272], [42.99968, -73.63176], [42.99968, -73.63127], [42.99896, -73.63006], [42.99873, -73.62913], [42.99876, -73.62784], [42.99849, -73.62766], [42.99794, -73.62781], [42.99664, -73.62701], [42.9965, -73.62601], [42.99619, -73.62546], [42.9948, -73.62606], [42.99427, -73.62548], [42.99337, -73.62518], [42.99331, -73.62461], [42.99291, -73.6246], [42.99196, -73.62323], [42.99097, -73.62278], [42.99075, -73.62355], [42.99034, -73.62396], [42.99036, -73.62481], [42.98999, -73.62564], [42.98968, -73.62583], [42.98887, -73.62541], [42.98788, -73.62615], [42.98727, -73.62353], [42.98684, -73.62352], [42.98663, -73.62402], [42.98515, -73.62426], [42.98428, -73.6235], [42.98393, -73.62172]]
+          },
+          {
+            kind: "stream",
+            name: "Mill Creek",
+            pts: [[42.97931, -73.62217], [42.97864, -73.62259], [42.97846, -73.62223], [42.97875, -73.62185], [42.97869, -73.62165], [42.97835, -73.6216], [42.97782, -73.62217], [42.97737, -73.62177], [42.97714, -73.62267], [42.97644, -73.62335], [42.97564, -73.62187]]
+          }
+        ],
+        places: [
+          { name: "Bemis Heights", ll: [42.9848, -73.64] },
+          { name: "Freeman's Farm", ll: [43.0051, -73.6369] },
+          { name: "Breymann Redoubt", ll: [43.0096, -73.6394] },
+          { name: "Barber's wheatfield", ll: [43.0006, -73.6469] },
+          { name: "Great Redoubt", ll: [43.0058, -73.611] },
+          { name: "Hudson River", ll: [42.996, -73.602] }
+        ],
+        units: {
+          gates: { side: "american", name: "American fortified camp (Gates)", short: "Gates" },
+          mo: { side: "american", name: "Morgan's riflemen and Dearborn's light infantry", short: "Morgan" },
+          ar: { side: "american", name: "Arnold's wing (Poor, Learned)", short: "Arnold" },
+          bc: { side: "british", name: "British center (Burgoyne, Hamilton)", short: "Burgoyne" },
+          bf: { side: "british", name: "British right (Fraser, Breymann)", short: "Fraser" },
+          gr: { side: "british", name: "German troops (Riedesel)", short: "Riedesel" },
+          probe: { side: "british", name: "British probe of October 7", short: "Probe" }
+        },
+        phases: [
+          {
+            time: "September 12 to 18, 1777",
+            title: "The road south is blocked",
+            text: "Burgoyne must get down the Hudson to Albany before winter. At Bemis Heights the bluffs crowd the only road against the river, and there the American army digs in, on ground chosen by a Polish engineer, Thaddeus Kosciuszko. Cannon cover the river road. To get past, Burgoyne will have to go through the woods and ravines on the high ground to the west.",
+            units: { gates: [[42.9895, -73.6135], [42.988, -73.625], [42.986, -73.6415], [42.99, -73.644]], bc: [[43.0195, -73.63], [43.0195, -73.62]], bf: [[43.02, -73.648], [43.0195, -73.64]], gr: [[43.019, -73.602], [43.015, -73.599]] }
+          },
+          {
+            time: "September 19, about 1 p.m.",
+            title: "Freeman's Farm",
+            text: "Burgoyne advances in three columns. Benedict Arnold persuades Gates to meet them in the woods rather than wait behind the walls. Morgan's riflemen run into the British center in a clearing called Freeman's Farm. Hidden among the trees, they pick off officers and the men serving the cannon.",
+            units: {
+              bc: [[43.0066, -73.64], [43.0062, -73.6345]],
+              bf: [[43.0085, -73.65], [43.0055, -73.6482]],
+              gr: [[43.005, -73.609], [43.001, -73.61]],
+              mo: [[43.0036, -73.6405], [43.0036, -73.635]],
+              ar: [[42.999, -73.644], [42.9985, -73.638]]
+            },
+            arrows: [
+              { side: "british", pts: [[43.0185, -73.63], [43.0075, -73.6375]] },
+              { side: "american", pts: [[42.9915, -73.644], [43.0025, -73.6385]] }
+            ]
+          },
+          {
+            time: "September 19, late afternoon",
+            title: "The Germans save the center",
+            text: "For three hours the clearing changes hands again and again. Arnold feeds in fresh regiments and the British center is close to breaking. Then Riedesel marches his Germans up from the river road and hits the American right. At dusk the Americans go back to their camp. Burgoyne holds the field, but he has lost about 600 men, twice the American loss, and he cannot replace them.",
+            units: { ar: [[43.003, -73.644], [43.0028, -73.636]], gr: [[43.0045, -73.6312], [43.0022, -73.6304]] },
+            arrows: [
+              { side: "british", pts: [[43.003, -73.611], [43.0034, -73.6295]] }
+            ]
+          },
+          {
+            time: "September 20 to October 6",
+            title: "Burgoyne digs in and waits",
+            text: "Burgoyne fortifies where he stands and waits for a British army to come up the river from New York. It never comes. His men go on half rations while militia pour into the American camp from all over New England and New York, until Gates has more than twice Burgoyne's numbers.",
+            units: { bf: [[43.0092, -73.6398], [43.0076, -73.639]], bc: [[43.0062, -73.6372], [43.004, -73.6366]], gr: [[43.005, -73.6125], [43.0022, -73.6105]], mo: null, ar: null }
+          },
+          {
+            time: "October 7, mid-afternoon",
+            title: "Barber's wheatfield",
+            text: "Burgoyne sends about 1,500 men and ten cannon forward to test the American left. They halt in a wheatfield. The Americans strike both ends of the line at once, Poor on one side and Morgan through the woods on the other. General Simon Fraser, rallying his men, is shot by one of Morgan's riflemen, and within an hour the British are running for their forts.",
+            units: { probe: [[43.0018, -73.65], [43.0012, -73.644]], mo: [[43.0034, -73.6545], [43.0002, -73.6535]], ar: [[42.9992, -73.649], [42.9988, -73.6425]] },
+            arrows: [
+              { side: "american", pts: [[42.9925, -73.645], [42.9982, -73.6458]] }
+            ]
+          },
+          {
+            time: "October 7, dusk",
+            title: "The redoubts",
+            text: "Arnold, who has quarreled with Gates and has no command, gallops onto the field anyway. He leads a charge on the fort at Freeman's Farm, which fails, then rides through the fire of both armies and storms the Breymann Redoubt through its open rear. He is shot in the leg as it falls. With that fort gone, the whole British camp lies open.",
+            units: { probe: null, mo: [[43.0092, -73.6426], [43.0076, -73.642]], ar: [[43.0046, -73.6396], [43.003, -73.6388]], bf: null },
+            arrows: [
+              { side: "american", pts: [[43.004, -73.644], [43.0082, -73.6412]] }
+            ]
+          },
+          {
+            time: "October 8 to 17",
+            title: "Retreat and surrender",
+            text: "Burgoyne retreats north in the rain to the village of Saratoga, eight miles upriver. The Americans, now some 17,000 strong, close in on every side. On October 17 he surrenders his whole army, about 5,900 men. When the news reaches Paris, France agrees to join the war as America's ally.",
+            units: { bc: [[43.02, -73.604], [43.018, -73.602]], gr: null, mo: [[43.015, -73.612], [43.013, -73.61]], ar: null, gates: [[43.01, -73.608], [43.006, -73.609], [43.002, -73.611]] },
+            arrows: [
+              { side: "british", pts: [[43.005, -73.611], [43.0195, -73.603]] }
+            ]
+          }
+        ],
+        ask: [
+          "Find the river road and the American camp. Why could Burgoyne not simply march down the road to Albany?",
+          "Burgoyne \"won\" the first battle because he held the field. Why did it leave him worse off than before?",
+          "Riflemen at Saratoga aimed at officers and gun crews. How might that change a battle in thick woods?"
+        ]
+      },
       commanders: { american: 'Maj. Gen. Horatio Gates, Maj. Gen. Benedict Arnold, Col. Daniel Morgan', british: 'Lt. Gen. John Burgoyne, Maj. Gen. Friedrich von Riedesel' },
       forces: { american: 'about 9,000, growing to 17,000', british: 'about 7,200 British and German troops' },
       casualties: { american: 330, british: 7000, note: 'About 1,100 of Burgoyne\'s men were killed or wounded in the two battles; the remaining 5,900 surrendered.' },
@@ -668,6 +859,113 @@
       theater: 'Southern',
       result: 'american',
       campaign: 'washington-rochambeau',
+      tactical: {
+        base: "topo",
+        bounds: [[37.203, -76.535], [37.268, -76.478]],
+        note: "Positions are simplified and tied to the earthworks the National Park Service preserves: the British inner line, Redoubts 9 and 10, the Grand French Battery, and the second siege line.",
+        lines: [
+          { kind: "road", name: "Hampton Road", pts: [[37.22875, -76.50609], [37.22276, -76.5067], [37.22123, -76.50648], [37.2032, -76.4957]] },
+          {
+            kind: "road",
+            name: "Williamsburg Road",
+            pts: [[37.23289, -76.53195], [37.23256, -76.53187], [37.23087, -76.52999], [37.22938, -76.5268], [37.22733, -76.52363], [37.22549, -76.52172], [37.22456, -76.51965], [37.22369, -76.5143], [37.22359, -76.51192], [37.2239, -76.50897], [37.22475, -76.50769], [37.22507, -76.50644]]
+          },
+          {
+            kind: "stream",
+            name: "Baptist Run",
+            pts: [[37.21445, -76.53495], [37.21434, -76.53315], [37.21449, -76.53144], [37.21363, -76.52752], [37.21361, -76.52534], [37.21256, -76.52273], [37.21241, -76.52144], [37.21177, -76.52013], [37.21178, -76.51971], [37.21146, -76.51904], [37.21023, -76.51767]]
+          },
+          {
+            kind: "stream",
+            name: "Beaverdam Creek",
+            pts: [[37.21023, -76.51767], [37.20948, -76.51747], [37.20889, -76.51779], [37.20874, -76.5181], [37.20746, -76.51788], [37.20694, -76.51838], [37.2059, -76.51831], [37.20306, -76.52005]]
+          },
+          {
+            kind: "stream",
+            name: "Great Run",
+            pts: [[37.22192, -76.52236], [37.2215, -76.52171], [37.22137, -76.52077], [37.22024, -76.52038], [37.21925, -76.51966], [37.21878, -76.51813], [37.21832, -76.51833], [37.21737, -76.51811], [37.21563, -76.51822], [37.21492, -76.51792], [37.21462, -76.51751], [37.21405, -76.51761], [37.21314, -76.51724], [37.21195, -76.51749], [37.21148, -76.51726], [37.2102, -76.51744], [37.21023, -76.51767]]
+          }
+        ],
+        places: [
+          { name: "Yorktown", ll: [37.236, -76.5078] },
+          { name: "Gloucester Point", ll: [37.248, -76.501] },
+          { name: "York River", ll: [37.242, -76.492] },
+          { name: "Redoubts 9 and 10", ll: [37.229, -76.4955] },
+          { name: "Grand French Battery", ll: [37.2222, -76.5047] },
+          { name: "Surrender Field", ll: [37.2086, -76.5054] }
+        ],
+        units: {
+          fr: { side: "american", name: "French army (Rochambeau)", short: "French" },
+          am: { side: "american", name: "American army (Washington)", short: "Americans" },
+          gla: { side: "american", name: "French and Virginia militia at Gloucester (Choisy)", short: "Choisy" },
+          br: { side: "british", name: "British army (Cornwallis)", short: "Cornwallis" },
+          out: { side: "british", name: "British outer works", short: "Outer works" },
+          red: { side: "british", name: "Redoubts 9 and 10", short: "Redoubts" },
+          glb: { side: "british", name: "British at Gloucester (Tarleton)", short: "Tarleton" }
+        },
+        phases: [
+          {
+            time: "September 28 to 30, 1781",
+            title: "The allies close in",
+            text: "Washington and Rochambeau march from Williamsburg and form a half circle around Yorktown, the French on the left and the Americans on the right. Out in Chesapeake Bay a French fleet blocks any rescue by sea. Cornwallis expects help from New York within days, so he gives up his outer forts without a fight and pulls his men back to the works around the town.",
+            units: {
+              fr: [[37.233, -76.529], [37.22, -76.523], [37.214, -76.513]],
+              am: [[37.212, -76.508], [37.213, -76.495], [37.219, -76.485]],
+              gla: [[37.2645, -76.5015], [37.2645, -76.4915]],
+              br: [[37.24, -76.514], [37.235, -76.5125], [37.2305, -76.509], [37.2292, -76.5058], [37.2302, -76.5022], [37.2318, -76.5002]],
+              out: [[37.2262, -76.514], [37.2231, -76.5134], [37.2215, -76.508]],
+              red: [[37.2276, -76.4992], [37.2292, -76.4974]],
+              glb: [[37.2535, -76.504], [37.2535, -76.4955]]
+            }
+          },
+          {
+            time: "October 6 to 9",
+            title: "The first trench",
+            text: "On a dark, rainy night, thousands of men with picks and shovels dig a trench more than a mile long, about 600 yards from the British line, without being noticed until morning. Cannon are dragged into it. On October 9 the French guns open fire, and Washington himself touches off the first American gun.",
+            units: { out: null, fr: [[37.2242, -76.5105], [37.223, -76.5047]], am: [[37.2232, -76.5035], [37.2236, -76.499], [37.2262, -76.493]] }
+          },
+          {
+            time: "October 11",
+            title: "The second trench",
+            text: "After two days of bombardment the British guns are nearly silent. The allies dig a second trench only 300 to 400 yards out, close enough to batter the walls down. But it cannot reach the river: two small British forts, Redoubts 9 and 10, stand in the way.",
+            units: { fr: [[37.2262, -76.5105], [37.2263, -76.5054]], am: [[37.2262, -76.5045], [37.2262, -76.5005]] }
+          },
+          {
+            time: "October 14, after dark",
+            title: "Redoubts 9 and 10",
+            text: "Four hundred French soldiers storm Redoubt 9. Four hundred Americans led by Lt. Col. Alexander Hamilton take Redoubt 10, going in with unloaded muskets and bayonets so that no shot will give them away. Both forts fall in minutes. By morning they are part of the allied trench.",
+            units: { red: null, am: [[37.2262, -76.5045], [37.2268, -76.5008], [37.2276, -76.4992], [37.2292, -76.4974]] },
+            arrows: [
+              { side: "american", pts: [[37.2248, -76.5004], [37.2273, -76.4994]] },
+              { side: "american", pts: [[37.2262, -76.4958], [37.2288, -76.4972]] }
+            ]
+          },
+          {
+            time: "October 16",
+            title: "Two last tries",
+            text: "Before dawn 350 British soldiers rush the new trench and disable a few cannon, which are firing again within hours. That night Cornwallis tries to ferry his army across the river to Gloucester and break out to the north. A sudden storm scatters the boats.",
+            units: {  },
+            arrows: [
+              { side: "british", pts: [[37.2292, -76.5056], [37.2266, -76.505]] },
+              { side: "british", pts: [[37.2392, -76.507], [37.247, -76.502]] }
+            ]
+          },
+          {
+            time: "October 17 to 19",
+            title: "Surrender",
+            text: "On the morning of October 17, a drummer climbs onto the British wall and beats for a parley. Two days later more than 7,000 British and German soldiers march out between a line of French troops and a line of Americans and lay down their arms in an open field. It is the last major battle of the war.",
+            units: { br: [[37.2105, -76.506], [37.2085, -76.5048]], fr: [[37.221, -76.5078], [37.2115, -76.5072]], am: [[37.221, -76.5046], [37.2118, -76.5034]] },
+            arrows: [
+              { side: "british", pts: [[37.2285, -76.506], [37.2118, -76.5054]] }
+            ]
+          }
+        ],
+        ask: [
+          "Yorktown has a wide river on one side. Why did that make it a good place for Cornwallis to wait, and then a trap?",
+          "Why did the allies dig their trenches at night, and why did each new trench have to be closer than the last?",
+          "The second trench could not be finished until Redoubts 9 and 10 fell. Find them on the map and explain why."
+        ]
+      },
       commanders: { american: 'Gen. George Washington, Lt. Gen. the comte de Rochambeau, Adm. the comte de Grasse', british: 'Lt. Gen. Charles Cornwallis' },
       forces: { american: 'about 8,800 Americans and 7,800 French, plus the French fleet', british: 'about 8,300' },
       casualties: { american: 389, british: 8000, note: 'About 500 British and German soldiers were killed or wounded; more than 7,000 surrendered. The American figure includes French losses.' },

@@ -111,14 +111,15 @@ tactical: {
   phases: [{
     time: 'July 2, 3:30 p.m.', title: 'The fishhook', text: '...',
     units: { ii: [[39.8186, -77.2340], [39.8092, -77.2355]] },   // a line of points; null removes the unit
-    arrows: [{ side: 'confederate', pts: [[39.8140, -77.2500], [39.8128, -77.2375]] }]
+    arrows: [{ side: 'confederate', pts: [[39.8140, -77.2500], [39.8128, -77.2375]] }],
+    bounds: [[39.80, -77.26], [39.83, -77.22]]                    // optional: zoom in for this phase
   }],
   ask: ['Discussion question'],
   note: 'How exact the positions are.'
 }
 ```
 
-A unit keeps its last position until a later phase moves or removes it, so each phase lists only what changed. The engine interpolates between phases. Positions in the three animations so far (Cowpens, Gettysburg, D-Day) are simplified from standard maps; Cowpens is pinned to the line markers recorded in OpenStreetMap for the national battlefield.
+A unit keeps its last position until a later phase moves or removes it, so each phase lists only what changed. The engine interpolates between phases. Ten battles have animations so far: Bunker Hill, Saratoga, Cowpens, and Yorktown; Antietam, Vicksburg, and Gettysburg; Stalingrad, D-Day, and the Bulge. Positions are simplified from standard maps. The small battlefields (Cowpens, Antietam, Saratoga, Yorktown, Bunker Hill) are tied to monuments, tour stops, and earthworks recorded in OpenStreetMap; the large ones are drawn at the level of corps and armies.
 
 ## 3D objects
 

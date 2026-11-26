@@ -37,6 +37,19 @@ for (const w of window.ATLAS_SITE.wars.filter(w => w.status === 'live')) {
       console.log('  period map:', per.features.length, 'border shapes,', per.places.length, 'places');
     }
   }
+  for (const b of P.BATTLES.filter(b => b.tactical)) {
+    const T = b.tactical, [[s0, w0], [n0, e0]] = T.bounds, padLat = (n0 - s0) * .25, padLng = (e0 - w0) * .25;
+    const inside = ([la, ln]) => la >= s0 - padLat && la <= n0 + padLat && ln >= w0 - padLng && ln <= e0 + padLng;
+    for (const [id, u] of Object.entries(T.units)) if (!sides.includes(u.side) || !u.name) err('tactical unit ' + b.id + ' ' + id);
+    const used = new Set();
+    T.phases.forEach((ph, k) => {
+      if (!ph.time || !ph.title || !ph.text) err('tactical phase text ' + b.id + ' ' + (k + 1));
+      for (const [id, pts] of Object.entries(ph.units || {})) { used.add(id); if (!T.units[id]) err('tactical unknown unit ' + b.id + ' ' + id); else if (pts && (pts.length < 2 || !pts.every(inside))) err('tactical position off the map ' + b.id + ' step ' + (k + 1) + ' ' + id); }
+      for (const a of ph.arrows || []) if (!sides.includes(a.side) || !a.pts.every(inside)) err('tactical arrow ' + b.id + ' step ' + (k + 1));
+    });
+    for (const id of Object.keys(T.units)) if (!used.has(id)) err('tactical unit never placed ' + b.id + ' ' + id);
+    for (const pl of T.places || []) if (!inside(pl.ll)) err('tactical place off the map ' + b.id + ' ' + pl.name);
+  }
   for (const b of P.BATTLES) for (const l of (b.tactical && b.tactical.lines) || []) if (!['road', 'stream', 'rail'].includes(l.kind) || !l.name || l.pts.length < 2) err('tactical line ' + b.id + ' ' + l.name);
   for (const o of P.OBJECTS) {
     for (const k of ['id', 'group', 'kind', 'title', 'date', 'holder', 'src', 'ref', 'license', 'text']) if (!o[k]) err('object ' + (o.id || '?') + ' missing ' + k);

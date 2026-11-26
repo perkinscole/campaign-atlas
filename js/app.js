@@ -565,6 +565,9 @@ Atlas.load('atlas', function (P) {
     if (tac.raf) cancelAnimationFrame(tac.raf);
     tac.arrows.forEach(l => tacLayer.removeLayer(l)); tac.arrows = [];
     renderTactical();
+    // A phase may zoom in on part of the field with its own bounds.
+    const frame = JSON.stringify(b.tactical.phases[i].bounds || b.tactical.bounds);
+    if (frame !== tac.frame) { tac.frame = frame; if (animate) map.flyToBounds(JSON.parse(frame), { padding: [10, 10], duration: 1.2 }); else map.fitBounds(JSON.parse(frame), { padding: [10, 10] }); }
     history.replaceState(null, '', base() + `#battlefield=${b.id}:${i + 1}`);
     const done = () => { tac.cur = to; tacDraw(to); tacArrows(); };
     if (!animate) { done(); return; }
@@ -601,8 +604,7 @@ Atlas.load('atlas', function (P) {
       tacLines.clearLayers();
       (b.tactical.lines || []).forEach(l => L.polyline(l.pts, Object.assign({ className: 'tac-line' }, TAC_LINE[l.kind] || TAC_LINE.road)).bindTooltip(l.name, { sticky: true }).addTo(tacLines));
       (b.tactical.places || []).forEach(pl => L.marker(pl.ll, { interactive: false, keyboard: false, icon: L.divIcon({ className: 'army-head-wrap', iconSize: [0, 0], html: `<div class="place-label">${esc(pl.name)}</div>` }) }).addTo(tacLayer));
-      map.invalidateSize();
-      map.fitBounds(b.tactical.bounds, { padding: [10, 10] });
+      map.invalidateSize(); tac.frame = null;
     }
     tac.b = b; tac.cur = {}; cta.hidden = true;
     applyBase();
@@ -619,7 +621,7 @@ Atlas.load('atlas', function (P) {
     tac.shapes = {}; tac.labels = {}; tac.arrows = []; tac.cur = {};
     [routeLayer, headLayer, battleLayer].forEach(l => l.addTo(map));
     document.querySelector('.atlas').classList.remove('tactical-on');
-    const b = tac.b; tac.b = null; view.override = null;
+    const b = tac.b; tac.b = null; tac.frame = null; view.override = null;
     applyBase();
     map.invalidateSize();
     if (!silent) { state.view = 'battle'; selectBattle(b.id, { jump: false }); map.setView([b.lat, b.lng], 7); }

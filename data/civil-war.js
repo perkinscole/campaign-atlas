@@ -233,6 +233,172 @@
       theater: 'Eastern',
       result: 'inconclusive',
       campaign: 'maryland',
+      tactical: {
+        base: "contour",
+        bounds: [[39.428, -77.782], [39.498, -77.705]],
+        note: "Unit positions are simplified from standard maps of the battle and tied to the landmarks the National Park Service marks on the field. Each bar is a corps or a division.",
+        lines: [
+          { kind: "road", name: "Lower Bridge Road", pts: [[39.4554, -77.73936], [39.45509, -77.74076], [39.45514, -77.74165], [39.45659, -77.7448]] },
+          { kind: "road", name: "Hagerstown Pike", pts: [[39.47177, -77.74634], [39.47239, -77.74558], [39.473, -77.74571], [39.48802, -77.75095]] },
+          {
+            kind: "road",
+            name: "Harpers Ferry Road",
+            pts: [[39.4281, -77.7443], [39.43202, -77.74363], [39.43313, -77.74481], [39.43418, -77.74532], [39.43588, -77.74494], [39.4375, -77.74505], [39.4407, -77.74624], [39.44433, -77.74692], [39.44518, -77.74688], [39.44726, -77.74612], [39.44902, -77.7466], [39.45572, -77.74765]]
+          },
+          {
+            kind: "road",
+            name: "Keedysville Road",
+            pts: [[39.48132, -77.7058], [39.48164, -77.7063], [39.4824, -77.7065], [39.48295, -77.70894], [39.4843, -77.71092], [39.48542, -77.71441], [39.48763, -77.7135], [39.48808, -77.71415], [39.48981, -77.71394], [39.4922, -77.71547], [39.49484, -77.71604], [39.49619, -77.71735], [39.49689, -77.71913], [39.49782, -77.72]]
+          },
+          { kind: "road", name: "Mumma's Lane", pts: [[39.47859, -77.74381], [39.47768, -77.74183], [39.4762, -77.74149], [39.47359, -77.74281], [39.47141, -77.74345], [39.47115, -77.74335]] },
+          { kind: "road", name: "Lower Bridge Road", pts: [[39.45496, -77.73843], [39.45396, -77.73643], [39.4532, -77.73405], [39.45152, -77.73313]] },
+          { kind: "road", name: "Roulette's Lane", pts: [[39.47116, -77.73955], [39.47427, -77.73666], [39.47482, -77.73733], [39.47522, -77.73725], [39.47572, -77.73799]] },
+          { kind: "road", name: "Hagerstown Pike", pts: [[39.46102, -77.74639], [39.4632, -77.74547], [39.46891, -77.74513], [39.47024, -77.74528], [39.47177, -77.74634]] },
+          {
+            kind: "road",
+            name: "Boonsboro Pike",
+            pts: [[39.45998, -77.74266], [39.46198, -77.73747], [39.46432, -77.72716], [39.46492, -77.72599], [39.46622, -77.72425], [39.46671, -77.72312], [39.46698, -77.72162], [39.46706, -77.71932], [39.46764, -77.71763], [39.47103, -77.71365], [39.47815, -77.70714], [39.47999, -77.70612], [39.48346, -77.70512]]
+          },
+          { kind: "road", name: "Road to Shepherdstown", pts: [[39.44069, -77.78192], [39.44186, -77.77977], [39.44425, -77.77678], [39.45044, -77.76992], [39.45331, -77.76627], [39.45586, -77.75751]] },
+          { kind: "road", name: "Smoketown Road", pts: [[39.47582, -77.74665], [39.48093, -77.74149], [39.48383, -77.74194], [39.48872, -77.74086], [39.49212, -77.74096], [39.49605, -77.73651], [39.49732, -77.73616]] },
+          {
+            kind: "stream",
+            name: "Antietam Creek",
+            pts: [[39.49791, -77.70922], [39.49669, -77.70956], [39.49487, -77.71133], [39.49363, -77.71323], [39.4923, -77.71438], [39.49144, -77.71438], [39.48966, -77.71293], [39.48886, -77.71279], [39.48623, -77.71541], [39.48305, -77.71784], [39.48177, -77.7198], [39.4813, -77.72014], [39.48035, -77.72009], [39.47975, -77.71952], [39.47936, -77.71852], [39.47906, -77.71663], [39.47867, -77.71583], [39.47826, -77.71569], [39.47738, -77.71621], [39.47691, -77.7171], [39.47693, -77.71969], [39.4779, -77.72254], [39.47805, -77.72376], [39.47784, -77.72445], [39.47676, -77.72521], [39.476, -77.72544], [39.47532, -77.72522], [39.47414, -77.72445], [39.47329, -77.72337], [39.47241, -77.72279], [39.47187, -77.72276], [39.47021, -77.72395], [39.46881, -77.72631], [39.46786, -77.72728], [39.46701, -77.72695], [39.46505, -77.72531], [39.46391, -77.72555], [39.45941, -77.72787], [39.45535, -77.73178], [39.45337, -77.73312], [39.45228, -77.73308], [39.4504, -77.73178], [39.44978, -77.73056], [39.44909, -77.72839], [39.44861, -77.72787], [39.44813, -77.7279], [39.44788, -77.72818], [39.448, -77.73032], [39.44768, -77.73092], [39.44732, -77.731], [39.44582, -77.72975], [39.4446, -77.72938], [39.44233, -77.72796], [39.44168, -77.728], [39.44138, -77.72842], [39.44129, -77.72974], [39.44025, -77.73351], [39.43983, -77.73666], [39.43842, -77.7408], [39.43807, -77.74127], [39.43729, -77.74126], [39.43632, -77.74035], [39.43589, -77.73961], [39.43561, -77.7381], [39.43592, -77.73605], [39.43735, -77.73422], [39.43805, -77.73271], [39.43808, -77.732], [39.43747, -77.73077], [39.43694, -77.73054], [39.43639, -77.73064], [39.43325, -77.73332], [39.42849, -77.734]]
+          },
+          {
+            kind: "stream",
+            name: "Potomac River",
+            pts: [[39.49783, -77.7673], [39.49602, -77.76532], [39.49456, -77.76473], [39.49302, -77.76499], [39.49117, -77.7663], [39.48997, -77.7684], [39.48884, -77.77116], [39.48638, -77.78162]]
+          },
+          {
+            kind: "stream",
+            name: "Potomac River",
+            pts: [[39.46558, -77.78104], [39.46487, -77.77905], [39.46415, -77.77784], [39.46324, -77.77717], [39.46211, -77.77692], [39.46074, -77.77742], [39.45995, -77.77856], [39.45949, -77.77974], [39.45935, -77.78137]]
+          },
+          { kind: "stream", name: "Potomac River", pts: [[39.4301, -77.78184], [39.42873, -77.77353], [39.42911, -77.76472], [39.42884, -77.7622], [39.42813, -77.75935]] },
+          { kind: "road", name: "Sunken Road", pts: [[39.47135, -77.74115], [39.47093, -77.73947], [39.46997, -77.73709]] }
+        ],
+        places: [
+          { name: "Sharpsburg", ll: [39.4582, -77.7487] },
+          { name: "Dunker Church", ll: [39.4754, -77.7468] },
+          { name: "The Cornfield", ll: [39.483, -77.747] },
+          { name: "East Woods", ll: [39.4813, -77.7405] },
+          { name: "West Woods", ll: [39.4785, -77.7515] },
+          { name: "North Woods", ll: [39.4898, -77.7475] },
+          { name: "Sunken Road", ll: [39.4698, -77.7385] },
+          { name: "Burnside Bridge", ll: [39.4501, -77.7327] },
+          { name: "Antietam Creek", ll: [39.467, -77.7225] },
+          { name: "Boteler's Ford", ll: [39.4308, -77.7782] }
+        ],
+        units: {
+          i: { side: "union", name: "I Corps (Hooker)", short: "I Corps" },
+          xii: { side: "union", name: "XII Corps (Mansfield)", short: "XII Corps" },
+          sedg: { side: "union", name: "II Corps: Sedgwick's division", short: "Sedgwick" },
+          fr: { side: "union", name: "II Corps: French's and Richardson's divisions", short: "French and Richardson" },
+          ix: { side: "union", name: "IX Corps (Burnside)", short: "IX Corps" },
+          res: { side: "union", name: "V Corps, held in reserve (Porter)", short: "Reserve" },
+          jack: { side: "confederate", name: "Jackson's command", short: "Jackson" },
+          hood: { side: "confederate", name: "Hood's division", short: "Hood" },
+          dhh: { side: "confederate", name: "D.H. Hill's division", short: "D.H. Hill" },
+          mcl: { side: "confederate", name: "McLaws's and Walker's divisions", short: "McLaws and Walker" },
+          jones: { side: "confederate", name: "D.R. Jones's division", short: "D.R. Jones" },
+          toombs: { side: "confederate", name: "Toombs's Georgians", short: "Toombs" },
+          aph: { side: "confederate", name: "A.P. Hill's division", short: "A.P. Hill" }
+        },
+        phases: [
+          {
+            time: "September 17, 1862, dawn",
+            title: "Hooker attacks from the north",
+            text: "Lee's army stands on the ridge in front of Sharpsburg with the Potomac River at its back and one ford to escape by. McClellan has nearly twice as many men. At first light Hooker's corps comes down the Hagerstown Pike toward a small white church, the Dunker Church, on the high ground behind Jackson's line.",
+            units: {
+              i: [[39.4885, -77.751], [39.4885, -77.743]],
+              xii: [[39.4915, -77.7395], [39.49, -77.735]],
+              sedg: [[39.4775, -77.717], [39.475, -77.7165]],
+              fr: [[39.474, -77.716], [39.4715, -77.716]],
+              res: [[39.466, -77.7215], [39.461, -77.7235]],
+              ix: [[39.452, -77.729], [39.448, -77.7295]],
+              jack: [[39.4795, -77.751], [39.479, -77.744]],
+              hood: [[39.475, -77.749], [39.4748, -77.7455]],
+              dhh: [[39.47135, -77.74115], [39.47093, -77.73947], [39.46997, -77.73709]],
+              jones: [[39.46, -77.742], [39.453, -77.741]],
+              toombs: [[39.451, -77.7338], [39.4492, -77.7336]]
+            },
+            arrows: [
+              { side: "union", pts: [[39.4875, -77.7475], [39.4812, -77.7472]] }
+            ]
+          },
+          {
+            time: "6 to 7:30 a.m.",
+            title: "The Cornfield",
+            text: "The two lines meet in a thirty-acre field of ripe corn. Hooker's men drive Jackson back through it. Then Hood's division, called from its breakfast, charges and throws them out again. The field changes hands again and again, and by the end the corn is cut as close as if by a knife.",
+            units: { i: [[39.4838, -77.75], [39.4836, -77.744]], hood: [[39.4812, -77.75], [39.481, -77.7445]], jack: [[39.48, -77.7528], [39.4762, -77.7522]] },
+            arrows: [
+              { side: "confederate", pts: [[39.476, -77.7472], [39.4805, -77.7472]] }
+            ]
+          },
+          {
+            time: "7:30 to 9 a.m.",
+            title: "The East Woods",
+            text: "A second Union corps comes in through the East Woods. Its commander, Mansfield, is shot from his horse within minutes, but his men push Hood back and one division gets as far as the Dunker Church. Hooker is wounded and his worn-out corps falls back to where it started.",
+            units: { xii: [[39.4818, -77.7448], [39.477, -77.7448]], i: [[39.4882, -77.7505], [39.488, -77.744]], hood: [[39.4756, -77.7512], [39.4736, -77.7498]] },
+            arrows: [
+              { side: "union", pts: [[39.486, -77.7385], [39.48, -77.744]] }
+            ]
+          },
+          {
+            time: "About 9 a.m.",
+            title: "Disaster in the West Woods",
+            text: "Sedgwick's division, 5,400 men in three long lines, crosses the creek and marches straight into the West Woods with no one guarding its side. Fresh Confederate divisions hit its left flank. In about twenty minutes more than 2,200 Union soldiers are shot, and the rest run for the North Woods.",
+            units: { sedg: [[39.4802, -77.7524], [39.4768, -77.752]], mcl: [[39.4765, -77.7552], [39.4748, -77.7505]], jack: [[39.4832, -77.7552], [39.4806, -77.7552]] },
+            arrows: [
+              { side: "union", pts: [[39.4775, -77.73], [39.4788, -77.75]] },
+              { side: "confederate", pts: [[39.4722, -77.7528], [39.4764, -77.7524]] }
+            ]
+          },
+          {
+            time: "9:30 a.m. to 1 p.m.",
+            title: "The Sunken Road",
+            text: "The fight shifts to the center. D.H. Hill's men lie in an old farm road worn below the level of the fields, a ready-made trench. For three hours they shoot down two Union divisions coming over the rise in front. Then a mistaken order pulls one regiment back, Union troops reach a spot where they can fire down the length of the road, and it becomes Bloody Lane. Lee's center is broken. McClellan, sure that Lee has hidden reserves, sends no one through the gap.",
+            units: { sedg: [[39.4872, -77.748], [39.4862, -77.744]], fr: [[39.4716, -77.7412], [39.4712, -77.7394], [39.4702, -77.737]], dhh: [[39.4675, -77.7432], [39.4664, -77.7402]] },
+            arrows: [
+              { side: "union", pts: [[39.4745, -77.725], [39.4722, -77.7385]] }
+            ]
+          },
+          {
+            time: "10 a.m. to 1 p.m.",
+            title: "Burnside's Bridge",
+            text: "Downstream, Burnside's corps is ordered across the creek. About 500 Georgians on the bluff above a narrow stone bridge hold off 12,000 men for three hours. At one o'clock two regiments charge across the bridge while others wade the creek downstream, and the Georgians, out of ammunition, fall back.",
+            units: { ix: [[39.4528, -77.7348], [39.449, -77.7352]], toombs: null },
+            arrows: [
+              { side: "union", pts: [[39.4498, -77.7302], [39.4504, -77.7342]] }
+            ]
+          },
+          {
+            time: "3 to 5 p.m.",
+            title: "A.P. Hill arrives",
+            text: "Burnside's men climb toward Sharpsburg and the road to the ford, the only way out for Lee's army. They are in the edge of the town when A.P. Hill's division, at the end of a seventeen-mile march from Harpers Ferry, comes onto the field and strikes them in the flank. The Union line falls back toward the bridge.",
+            units: { ix: [[39.459, -77.744], [39.454, -77.744], [39.45, -77.743]], jones: [[39.4602, -77.7472], [39.4556, -77.7476]], aph: [[39.4502, -77.7478], [39.4468, -77.7442]] },
+            arrows: [
+              { side: "confederate", pts: [[39.4385, -77.761], [39.448, -77.747]] }
+            ]
+          },
+          {
+            time: "Evening, and the two days after",
+            title: "The bloodiest day",
+            text: "Night ends it. Nearly 23,000 men have been killed, wounded, or are missing, more than on any other single day in American history, and neither army has gained ground. Lee waits a day, then crosses the Potomac back into Virginia. McClellan lets him go. Five days after the battle, Lincoln uses the victory to announce the Emancipation Proclamation.",
+            units: { ix: [[39.4545, -77.7378], [39.4492, -77.7382]], aph: [[39.452, -77.744], [39.448, -77.742]] },
+            arrows: [
+              { side: "confederate", pts: [[39.456, -77.752], [39.4318, -77.777]] }
+            ]
+          }
+        ],
+        ask: [
+          "McClellan had almost twice as many men, yet his attacks came one after another: north, then center, then south. How did that help Lee?",
+          "Find the Reserve bar. It never moved. What might have happened if those men had gone through the gap at the Sunken Road?",
+          "Look at where Lee's army stood and where the river and the ford are. What risk was Lee taking by fighting here?"
+        ]
+      },
       commanders: { union: 'Maj. Gen. George B. McClellan', confederate: 'Gen. Robert E. Lee' },
       forces: { union: 'about 87,000 (56,000 engaged)', confederate: 'about 38,000' },
       casualties: { union: 12400, confederate: 10300, note: 'About 3,650 killed. The bloodiest single day in American history.' },
@@ -439,12 +605,14 @@
           {
             time: "May 19 to 22",
             title: "Two assaults fail",
+          bounds: [[32.285, -90.945], [32.415, -90.795]],
             text: "Grant hopes to take the city before its defenders recover. On May 19 and again on May 22 his men charge the forts and are thrown back with more than 4,000 casualties. He decides to dig.",
             units: { she: [[32.388, -90.882], [32.382, -90.842]], mcp: [[32.376, -90.832], [32.352, -90.828]], mcc: [[32.346, -90.832], [32.318, -90.862]] }
           },
           {
             time: "May 23 to July 4",
             title: "Siege and surrender",
+          bounds: [[32.285, -90.945], [32.415, -90.795]],
             text: "For six weeks the Union lines creep closer while gunboats shell the city from the river. Reinforcements raise Grant's army to more than 70,000. Johnston gathers a relief force to the east but never attacks. Soldiers and civilians inside are reduced to eating mules. On July 4, Pemberton surrenders about 29,500 men.",
             units: { she: [[32.384, -90.884], [32.378, -90.846]], mcp: [[32.373, -90.837], [32.352, -90.834]], mcc: [[32.345, -90.837], [32.316, -90.87]] }
           }
