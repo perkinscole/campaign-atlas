@@ -363,6 +363,98 @@
       theater: 'Western',
       result: 'union',
       campaign: 'vicksburg',
+      tactical: {
+        base: "topo",
+        bounds: [[31.86, -91.32], [32.58, -90.05]],
+        note: "This view covers the whole campaign that ended in the siege. Positions are simplified from standard maps; each bar is an army corps or a Confederate force, drawn roughly where it stood.",
+        places: [
+          { name: "Vicksburg", ll: [32.352, -90.878] },
+          { name: "Grand Gulf", ll: [32.03, -91.05] },
+          { name: "Bruinsburg", ll: [31.94, -91.16] },
+          { name: "Port Gibson", ll: [31.961, -90.984] },
+          { name: "Raymond", ll: [32.259, -90.423] },
+          { name: "Jackson", ll: [32.299, -90.185] },
+          { name: "Champion Hill", ll: [32.33, -90.53] },
+          { name: "Big Black River", ll: [32.345, -90.7] },
+          { name: "Yazoo bluffs", ll: [32.49, -90.8] }
+        ],
+        units: {
+          mcc: { side: "union", name: "XIII Corps (McClernand)", short: "McClernand" },
+          mcp: { side: "union", name: "XVII Corps (McPherson)", short: "McPherson" },
+          she: { side: "union", name: "XV Corps (Sherman)", short: "Sherman" },
+          bow: { side: "confederate", name: "Bowen's division", short: "Bowen" },
+          pem: { side: "confederate", name: "Pemberton's field army", short: "Pemberton" },
+          joh: { side: "confederate", name: "Confederates at Jackson (Gregg, then Johnston)", short: "Johnston" },
+          gar: { side: "confederate", name: "Vicksburg defenses", short: "Vicksburg defenses" }
+        },
+        phases: [
+          {
+            time: "April 30, 1863",
+            title: "Across the Mississippi",
+            text: "Vicksburg's guns, on bluffs 200 feet above the river, cannot be attacked from the water, and the swamps to the north have beaten every approach. So Grant marches down the Louisiana side, the gunboats and transports run past the guns at night, and on April 30 they ferry his army across at Bruinsburg, far below the city. Upriver, Sherman makes a noisy false attack on the Yazoo bluffs to hold the defenders' attention.",
+            units: {
+              mcc: [[31.96, -91.14], [31.93, -91.12]],
+              mcp: [[32.02, -91.2], [31.98, -91.19]],
+              she: [[32.5, -90.86], [32.47, -90.84]],
+              bow: [[32.04, -91.03], [31.97, -91.0]],
+              gar: [[32.376, -90.886], [32.372, -90.845], [32.345, -90.843], [32.312, -90.893]]
+            },
+            arrows: [
+              { side: "union", pts: [[31.99, -91.22], [31.945, -91.15]] }
+            ]
+          },
+          {
+            time: "May 1",
+            title: "Port Gibson",
+            text: "Grant pushes inland at once and beats Bowen's outnumbered division in the ravines west of Port Gibson. The Confederates abandon Grand Gulf, which becomes Grant's landing place, and fall back behind the Big Black River. Sherman's corps starts south to join the army.",
+            units: { mcc: [[32.0, -90.97], [31.94, -90.96]], mcp: [[32.03, -90.93], [31.98, -90.92]], bow: [[32.2, -90.85], [32.15, -90.8]], she: [[32.05, -91.14], [32.02, -91.12]] }
+          },
+          {
+            time: "May 12",
+            title: "Turning inland: Raymond",
+            text: "Everyone expects Grant to march north on Vicksburg. He heads northeast instead, to get between Pemberton and the Confederate force gathering at Jackson. His men carry ammunition in wagons and take their food from the farms they pass. At Raymond, McPherson's corps drives off a Confederate brigade.",
+            units: { mcp: [[32.27, -90.44], [32.23, -90.43]], mcc: [[32.25, -90.68], [32.18, -90.62]], she: [[32.22, -90.55], [32.17, -90.52]], bow: null, pem: [[32.36, -90.62], [32.3, -90.6]], joh: [[32.31, -90.22], [32.27, -90.21]] },
+            arrows: [
+              { side: "union", pts: [[32.05, -90.9], [32.23, -90.47]] }
+            ]
+          },
+          {
+            time: "May 14",
+            title: "Jackson",
+            text: "Two Union corps take the state capital in a rainstorm. General Joseph E. Johnston, who arrived the night before to take command, retreats to the north. Sherman's men wreck the railroads and factories so that Jackson cannot supply or reinforce Vicksburg.",
+            units: { mcp: [[32.33, -90.22], [32.31, -90.2]], she: [[32.29, -90.21], [32.27, -90.19]], mcc: [[32.3, -90.48], [32.24, -90.45]], joh: [[32.5, -90.13], [32.47, -90.1]], pem: [[32.33, -90.58], [32.27, -90.57]] }
+          },
+          {
+            time: "May 16",
+            title: "Champion Hill",
+            text: "Grant turns west. Pemberton, ordered by Johnston to join him and by President Davis to hold Vicksburg, is caught on the march at Champion Hill. The hill changes hands three times before the Confederate line breaks. It is the battle that decides the campaign.",
+            units: { mcp: [[32.345, -90.52], [32.335, -90.5]], mcc: [[32.31, -90.5], [32.28, -90.49]], she: [[32.31, -90.31], [32.3, -90.28]], pem: [[32.34, -90.55], [32.29, -90.56]] }
+          },
+          {
+            time: "May 17 to 18",
+            title: "The Big Black River and the bluffs",
+            text: "Pemberton's rear guard is routed at the Big Black River bridge and his army retreats into the Vicksburg defenses. Sherman swings north and takes the bluffs on the Yazoo River. Steamboats can now bring Grant food and ammunition straight from the north, and his army no longer has to live off the country.",
+            units: { mcc: [[32.36, -90.74], [32.33, -90.73]], mcp: [[32.38, -90.72], [32.36, -90.7]], she: [[32.44, -90.8], [32.42, -90.78]], pem: null }
+          },
+          {
+            time: "May 19 to 22",
+            title: "Two assaults fail",
+            text: "Grant hopes to take the city before its defenders recover. On May 19 and again on May 22 his men charge the forts and are thrown back with more than 4,000 casualties. He decides to dig.",
+            units: { she: [[32.388, -90.882], [32.382, -90.842]], mcp: [[32.376, -90.832], [32.352, -90.828]], mcc: [[32.346, -90.832], [32.318, -90.862]] }
+          },
+          {
+            time: "May 23 to July 4",
+            title: "Siege and surrender",
+            text: "For six weeks the Union lines creep closer while gunboats shell the city from the river. Reinforcements raise Grant's army to more than 70,000. Johnston gathers a relief force to the east but never attacks. Soldiers and civilians inside are reduced to eating mules. On July 4, Pemberton surrenders about 29,500 men.",
+            units: { she: [[32.384, -90.884], [32.378, -90.846]], mcp: [[32.373, -90.837], [32.352, -90.834]], mcc: [[32.345, -90.837], [32.316, -90.87]] }
+          }
+        ],
+        ask: [
+          "Grant marched away from Vicksburg, toward Jackson, before turning back. What did taking Jackson first do for him?",
+          "Follow the Big Black River. Why was it Pemberton's last chance to stop Grant in open country?",
+          "Why did Sherman care so much about reaching the bluffs on the Yazoo River, north of the city?"
+        ]
+      },
       commanders: { union: 'Maj. Gen. Ulysses S. Grant', confederate: 'Lt. Gen. John C. Pemberton' },
       forces: { union: 'about 77,000', confederate: 'about 33,000' },
       casualties: { union: 4835, confederate: 32697, note: 'Confederate figure includes about 29,500 men surrendered on July 4.' },

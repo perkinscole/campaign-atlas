@@ -9,7 +9,7 @@ Atlas.load('atlas', function (P) {
   document.title = `${M.title} — ${Atlas.SITE.name}`;
 
   // ---- State -----------------------------------------------------------
-  const state = { day: 0, playing: false, speed: 1, a: true, b: true, all: true, auto: true, view: 'home', sel: null, tour: null, stop: 0, tourReturn: null };
+  const state = { day: 0, playing: false, speed: 1, a: true, b: true, all: false, auto: true, view: 'home', sel: null, tour: null, stop: 0, tourReturn: null };
   const sideOn = id => id === SA.id ? state.a : state.b;
 
   // ---- DOM -------------------------------------------------------------
@@ -295,15 +295,17 @@ Atlas.load('atlas', function (P) {
     dateLabel.textContent = fmt(dateOfDay(day));
     if (Number(slider.value) !== Math.round(day)) slider.value = Math.round(day);
     const selB = selectedBattle(), selC = selectedCampaign();
+    // Before the timeline starts the whole war is laid out. Once it is running, battles and routes appear as they happen.
+    const ahead = state.all || (day === 0 && !state.playing && state.view === 'home');
 
     P.BATTLES.forEach(b => {
       const m = markers[b.id];
-      const visible = state.all || day >= b.d0;
+      const visible = ahead || day >= b.d0;
       if (visible && !battleLayer.hasLayer(m)) battleLayer.addLayer(m);
       if (!visible && battleLayer.hasLayer(m)) battleLayer.removeLayer(m);
       if (!visible) return;
       const active = day >= b.d0 && day <= b.d1 + 1;
-      const future = state.all && day < b.d0;
+      const future = day < b.d0;
       const el = m.getElement();
       if (el) {
         el.classList.toggle('is-active', active);
@@ -316,7 +318,7 @@ Atlas.load('atlas', function (P) {
     P.CAMPAIGNS.forEach(c => {
       const r = routes[c.id];
       const on = sideOn(c.side);
-      const ghost = on && state.all && day < c.d1;
+      const ghost = on && ahead && day < c.d1;
       if (ghost && !routeLayer.hasLayer(r.ghost)) { routeLayer.addLayer(r.ghost); r.ghost.bringToBack(); }
       if (!ghost && routeLayer.hasLayer(r.ghost)) routeLayer.removeLayer(r.ghost);
       const rs = on ? routeState(c, day) : { pts: [], head: null, status: 'future', reached: 0 };
@@ -344,12 +346,12 @@ Atlas.load('atlas', function (P) {
     });
 
     periodSync();
-    const lk = P.BATTLES.filter(b => day >= b.d0).length + ':' + state.all + ':' + (selB || '');
+    const lk = P.BATTLES.filter(b => day >= b.d0).length + ':' + ahead + ':' + (selB || '');
     if (lk !== labelKey) { labelKey = lk; layoutLabels(); }
     cta.hidden = !(state.view === 'home' && day === 0 && !state.playing && !tac.b);
 
     if (state.view === 'home') {
-      const key = P.BATTLES.filter(b => day >= b.d0).length + ':' + P.EVENTS.filter(e => day >= e.d0).length + ':' + P.CAMPAIGNS.filter(c => day >= c.d0 && day < c.d1).map(c => c.id).join(',');
+      const key = (day === 0) + ':' + P.BATTLES.filter(b => day >= b.d0).length + ':' + P.EVENTS.filter(e => day >= e.d0).length + ':' + P.CAMPAIGNS.filter(c => day >= c.d0 && day < c.d1).map(c => c.id).join(',');
       if (key !== lastHomeKey) { lastHomeKey = key; renderHome(); }
     } else if (state.view === 'campaign') {
       const c = campaignById[state.sel];
@@ -382,7 +384,7 @@ Atlas.load('atlas', function (P) {
       <div class="panel-inner">
         <div class="intro">
           <h2>${esc(M.title)}</h2>
-          <p>Every battle is a circle on the map and every army route is a dotted line. Press <strong>play</strong> or drag the timeline: the routes draw themselves as the armies march, and each circle fills with the winner's color when its battle is fought. Click any circle or route to open the full story, with period images and the words of people who were there.</p>
+          <p>${day === 0 ? 'The map starts with the whole war laid out: every battle is a circle and every army route is a dotted line. ' : ''}Press <strong>play</strong> or drag the timeline, and the map follows the war as it happened: routes draw themselves as the armies march, and each battle appears in the winner's color when it is fought. Click any circle or route to open the full story, with period images and the words of people who were there.</p>
         </div>
         ${tacBattles.length ? `<h3>Watch a battle up close</h3><p class="tac-intro">Step-by-step troop movements on the battlefield itself.</p><ul class="tac-list">${tacBattles.map(b => `<li><button data-battlefield="${b.id}"><span class="tac-play" aria-hidden="true">▶</span><span><strong>${esc(b.name)}</strong><small>${fmtRange(b.start, b.end)} · ${b.tactical.phases.length} steps</small></span></button></li>`).join('')}</ul>` : ''}
         ${upcoming ? `<p class="empty">Next: <button class="btn" data-jump="${upcoming.id}">${esc(upcoming.name)} · ${fmtISO(upcoming.start)}</button></p>` : ''}
