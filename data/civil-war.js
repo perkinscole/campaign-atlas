@@ -1,18 +1,14 @@
 /* ------------------------------------------------------------------
-   Civil War Atlas — data
-   All quotations are from public-domain primary sources (memoirs,
-   diaries, letters, official reports). Images are public-domain works
-   hosted on Wikimedia Commons / Library of Congress.
+   Campaign Atlas — data pack: The American Civil War, 1861–1865
+   Quotations are from public-domain primary sources (memoirs, diaries,
+   letters, official reports). Images are public-domain works hosted on
+   Wikimedia Commons / Library of Congress.
+   A journal entry gains `verified: true` once its wording has been
+   checked against the printed source.
    ------------------------------------------------------------------ */
 
 (function () {
-  const img = (file, caption, credit) => ({
-    file,
-    url: 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(file) + '?width=1100',
-    page: 'https://commons.wikimedia.org/wiki/File:' + encodeURIComponent(file.replace(/ /g, '_')),
-    caption,
-    credit
-  });
+  const img = Atlas.img;
 
   // Portraits used for journal entries
   const PORTRAITS = {
@@ -1463,7 +1459,7 @@
     {
       id: 'overland', name: 'Overland Campaign (Grant)', side: 'union',
       army: 'Army of the Potomac', commander: 'Ulysses S. Grant and George G. Meade',
-      start: '1864-05-04', end: '1864-06-18',
+      start: '1864-05-03', end: '1864-06-15',
       description: 'Grant crossed the Rapidan and fought Lee nearly every day for six weeks, sliding south after each battle until he crossed the James and pinned Lee at Petersburg. Union losses topped 55,000.',
       path: [
         [38.473, -78.000, '1864-05-03', 'Culpeper'],
@@ -1480,7 +1476,7 @@
     {
       id: 'overland-lee', name: 'Overland Campaign (Lee)', side: 'confederate',
       army: 'Army of Northern Virginia', commander: 'Robert E. Lee',
-      start: '1864-05-04', end: '1864-06-18',
+      start: '1864-05-03', end: '1864-06-18',
       description: 'Lee parried each of Grant\'s moves, always reaching the next crossroads first, but could never again break free of the Union army.',
       path: [
         [38.246, -78.111, '1864-05-03', 'Orange Court House'],
@@ -1710,6 +1706,132 @@
     { title: 'Touched with Fire: Civil War Letters and Diary of Oliver Wendell Holmes, Jr.', author: 'Mark DeWolfe Howe, ed.', year: 1946, url: 'https://archive.org/details/touchedwithfirec0000holm' }
   ];
 
-  window.CW_DATA = { BATTLES, CAMPAIGNS, EVENTS, SOURCES, PORTRAITS,
-    RANGE: { start: '1861-04-01', end: '1865-05-01' } };
+  const TOURS = [
+    {
+      id: 'turning-points', title: 'Turning Points of the Civil War', grades: '5–8', minutes: 25,
+      question: 'When did the Union start winning the war, and how can you tell from the map?',
+      summary: 'Seven stops from Fort Sumter to Appomattox. Students watch the war open as a stalemate in the East, tip in the summer of 1863, and end with one army cornered.',
+      stops: [
+        { title: 'The first shot', battle: 'fort-sumter', entry: 0,
+          text: 'Seven states have already left the Union. When Confederate guns open on a federal fort in Charleston Harbor, a political crisis becomes a war.',
+          ask: ['Mary Chesnut was a civilian in Charleston. What does her diary tell you that a general\'s report would not?', 'No one was killed in the bombardment. Why did it still start a war?'] },
+        { title: 'Not a short war', battle: 'first-bull-run', entry: 0,
+          text: 'Both sides expected one battle to settle everything. Spectators rode out from Washington with picnic baskets. By evening the Union army was running.',
+          ask: ['Sullivan Ballou wrote this letter a week before he was killed. What does he think he is fighting for?', 'How might this battle have changed what people in the North and the South expected?'] },
+        { title: 'The bloodiest day', battle: 'antietam', entry: 1,
+          text: 'Lee carries the war north into Maryland. The battle is a draw, but Lee retreats, and five days later Lincoln announces the Emancipation Proclamation.',
+          ask: ['The map shows this battle as "inconclusive." Why do historians still call it a turning point?', 'How did a battle in Maryland change what the war was about?'] },
+        { title: 'High-water mark', battle: 'gettysburg', entry: 1,
+          text: 'Lee invades the North a second time. Follow the two armies\' routes north on the map: they collide at a Pennsylvania crossroads town for three days.',
+          ask: ['Trace Lee\'s route. Why would a Confederate army march into Pennsylvania?', 'What does Lee\'s reaction after Pickett\'s Charge tell you about how he saw the defeat?'] },
+        { title: 'The river is cut', battle: 'vicksburg', entry: 1,
+          text: 'One day after Gettysburg, Vicksburg surrenders. Zoom out: with the Mississippi in Union hands, the Confederacy is split in two.',
+          ask: ['Look at the map. What did the Confederacy lose when it lost the Mississippi River?', 'Two major Union victories came in one week. Which mattered more, and why?'] },
+        { title: 'The election', battle: 'atlanta', entry: 0,
+          text: 'By summer 1864 the North is tired of war and Lincoln expects to lose re-election. Then Sherman takes Atlanta.',
+          ask: ['How could a battle in Georgia affect an election in the North?', 'Sherman wrote that "war is cruelty." What did he mean, and do you agree?'] },
+        { title: 'Surrender', battle: 'appomattox', entry: 0,
+          text: 'Lee\'s army abandons Richmond and marches west, looking for food and a way out. Grant\'s army gets ahead of it.',
+          ask: ['Compare Grant\'s words with Lee\'s farewell order. How does each explain why the war ended?', 'Grant let Lee\'s men keep their horses and go home. Why might that have mattered for the country afterward?'] }
+      ]
+    },
+    {
+      id: 'voices', title: 'Voices from the Ranks', grades: '8–12', minutes: 30,
+      question: 'How did the people who lived through the war describe it, and how far can we trust what they wrote?',
+      summary: 'Six primary sources from a major, a private, a civilian reviewer, a Black sergeant, a staff officer, and a general. Students practice sourcing: who wrote it, when, and why.',
+      stops: [
+        { title: 'A letter home', battle: 'first-bull-run', entry: 0,
+          text: 'Major Sullivan Ballou wrote to his wife from camp a week before the battle that killed him. The letter was never mailed; it was found in his trunk.',
+          ask: ['Who was the intended audience? How does that shape the letter\'s tone?', 'This letter was written before the battle. What can it tell us, and what can it not tell us?'] },
+        { title: 'A private remembers', battle: 'shiloh', entry: 0,
+          text: 'Sam Watkins published his memoir twenty years after the war, writing, as he said, from memory.',
+          ask: ['Watkins wrote in 1882 about 1862. What are the strengths and weaknesses of a memoir as evidence?', 'What does he mean by putting "pomp and circumstance" in quotation marks?'] },
+        { title: 'The camera arrives', battle: 'antietam', entry: 2,
+          text: 'Photographs of the Antietam dead went on display in New York a month after the battle. Scroll down in the full entry to see one.',
+          ask: ['Why did photographs affect people differently than newspaper reports or paintings?', 'Compare the photograph with the color print above it, made 26 years later. What does each leave out?'] },
+        { title: 'A sergeant of the 54th', battle: 'fort-wagner', entry: 0,
+          text: 'Lewis Douglass, son of Frederick Douglass, wrote this two days after the assault on Fort Wagner.',
+          ask: ['What is Douglass trying to prove to the reader, and to whom is he proving it?', 'The attack failed. Why did it still matter?'] },
+        { title: 'The night before', battle: 'cold-harbor', entry: 0,
+          text: 'An officer on Grant\'s staff walks through the camps on the evening before a frontal assault.',
+          ask: ['What did the soldiers understand about what was coming?', 'Porter wrote this in 1897. Does that make the detail more or less believable? Why?'] },
+        { title: 'Honor answering honor', battle: 'appomattox', entry: 2,
+          text: 'Joshua Chamberlain commanded the Union troops who received the formal surrender. He described it fifty years later.',
+          ask: ['What tone does Chamberlain take toward the defeated army? Why might he write this way in 1915?', 'What other sources would you want in order to check his account?'] }
+      ]
+    },
+    {
+      id: 'rivers-and-rails', title: 'Rivers, Rails, and Strategy', grades: '6–10', minutes: 25,
+      question: 'How did rivers, railroads, and coastline shape the way the war was fought?',
+      summary: 'A geography tour of the Western theater. Students use the terrain map and army routes to explain why armies went where they did.',
+      stops: [
+        { title: 'Two rivers into Tennessee', campaign: 'henry-donelson', day: '1862-02-16',
+          text: 'The Tennessee and Cumberland Rivers run deep into the Confederacy. Grant\'s army and the Navy\'s gunboats follow them.',
+          ask: ['Why were rivers better invasion routes than roads in 1862?', 'What did the Confederacy lose when these two forts fell?'] },
+        { title: 'The mouth of the Mississippi', battle: 'new-orleans', entry: 0,
+          text: 'The Union Navy attacks the Confederacy\'s largest city from the sea.',
+          ask: ['Find New Orleans on the map. Why was it the most valuable port in the South?', 'How does a navy change what an army can do?'] },
+        { title: 'Closing the river', campaign: 'vicksburg', day: '1863-05-18',
+          text: 'Follow Grant\'s route: down the west bank, across the river below the city, inland to Jackson, then back west to trap Vicksburg.',
+          ask: ['Why didn\'t Grant attack Vicksburg directly from the north?', 'Grant left his supply line behind. What risk was he taking?'] },
+        { title: 'Gateway to Georgia', battle: 'chattanooga', entry: 0,
+          text: 'Chattanooga sits where railroads from four directions meet in a gap through the mountains.',
+          ask: ['Look at the terrain. Why would both armies fight so hard for this one town?', 'What does it open the way to?'] },
+        { title: 'Following the railroad', campaign: 'atlanta', day: '1864-09-02',
+          text: 'Sherman\'s route to Atlanta follows a single railroad line that carried all his food and ammunition.',
+          ask: ['Why does the route bend back and forth instead of running straight?', 'What made Atlanta worth four months of fighting?'] },
+        { title: 'Cutting loose', campaign: 'march-to-the-sea', day: '1864-12-21',
+          text: 'Leaving Atlanta, Sherman abandons his railroad and marches to the coast, where the Navy can supply him.',
+          ask: ['Why was Savannah the goal?', 'Sherman\'s army destroyed railroads and farms. Was that a legitimate way to end the war sooner? Use evidence.'] },
+        { title: 'The last Gulf port', battle: 'mobile-bay', entry: 0,
+          text: 'By 1864 the Union blockade has closed almost every Southern port.',
+          ask: ['How does closing ports weaken an army that is hundreds of miles inland?', 'Put the stops of this tour together: what was the Union\'s overall plan?'] }
+      ]
+    }
+  ];
+
+  const VOCAB = [
+    { term: 'Union', def: 'The United States and the states that stayed loyal to it; also called the North or the Federals.' },
+    { term: 'Confederacy', def: 'The Confederate States of America, formed by eleven slaveholding states that declared they had left the Union.' },
+    { term: 'Secession', def: 'A state\'s formal withdrawal from the United States. The Union held that secession was illegal.' },
+    { term: 'Theater', def: 'A large region where a war is fought. The Eastern theater lay between the Atlantic and the Appalachians; the Western theater ran from the mountains to the Mississippi.' },
+    { term: 'Campaign', def: 'A connected series of marches and battles with one goal, such as capturing a city.' },
+    { term: 'Casualties', def: 'Soldiers lost to an army: killed, wounded, captured, or missing. It does not mean only deaths.' },
+    { term: 'Siege', def: 'Surrounding a town or fort and cutting off its supplies until it surrenders.' },
+    { term: 'Flank', def: 'The side of an army\'s line. To "turn a flank" is to get around the end and attack from the side or rear.' },
+    { term: 'Emancipation', def: 'Freeing people from slavery. The Emancipation Proclamation took effect January 1, 1863.' },
+    { term: 'Ironclad', def: 'A warship protected by iron armor plates.' },
+    { term: 'Primary source', def: 'Evidence created by someone who took part in or witnessed an event, such as a letter, diary, report, or photograph.' },
+    { term: 'Memoir', def: 'A person\'s own account of their life, usually written years afterward from memory.' }
+  ];
+
+  const ADVISORY = [
+    'The entries for Antietam, Gettysburg, and Petersburg include battlefield photographs of dead soldiers. These are historically important images; preview them before showing younger students.',
+    'The Fort Pillow entry describes the massacre of surrendering soldiers, most of them Black, and quotes a Confederate general\'s report in the racial language of the time.',
+    'Quotations keep their original wording, including period terms for race and descriptions of wounds and death.',
+    'The color battle prints were made 25 to 30 years after the war and show an idealized view. Comparing them with photographs is a useful source-analysis exercise.'
+  ];
+
+  const NOTES = {
+    quotes: 'Some of the best-known lines of the war were recorded by others, such as Barnard Bee\'s "stone wall" and Lee\'s "It is well that war is so terrible." Those entries name the person who reported them.',
+    numbers: 'Casualty figures combine killed, wounded, captured, and missing. Civil War returns were incomplete and Confederate records especially so; the figures here are the commonly cited estimates from the National Park Service and standard references, rounded. Army strengths are approximate.',
+    images: 'Most are chromolithographs published by Kurz & Allison of Chicago in the late 1880s and 1890s, or prints by L. Prang & Co. after paintings by Thure de Thulstrup; these are romanticized views made decades after the events. The photographs by Alexander Gardner, Timothy O\'Sullivan, and Thomas Roche were taken on the battlefields within days of the fighting.'
+  };
+
+  Atlas.register({
+    meta: {
+      id: 'civil-war',
+      title: 'The American Civil War',
+      years: '1861–1865',
+      range: { start: '1861-04-01', end: '1865-05-01' },
+      bounds: [[30.8, -91.5], [41.2, -75.0]],
+      sides: [
+        { id: 'union', name: 'Union', color: '#2b5797' },
+        { id: 'confederate', name: 'Confederate', color: '#9b3030' }
+      ],
+      theaters: ['Eastern', 'Western', 'Trans-Mississippi'],
+      intro: 'Army routes draw themselves as the armies marched, and a marker appears for each battle as it begins.'
+    },
+    PORTRAITS, BATTLES, CAMPAIGNS, EVENTS, SOURCES, TOURS, VOCAB, ADVISORY, NOTES
+  });
 })();
