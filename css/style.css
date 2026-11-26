@@ -834,6 +834,8 @@ kbd { border-radius: 5px; font-size: .9em; }
 .map-cta[hidden] { display: none; }
 .map-cta .btn { border-radius: 999px; display: inline-flex; align-items: center; gap: 6px; }
 .map-cta span { font-size: .82rem; color: var(--muted); }
+.narrow .map-cta { top: 56px; padding: 4px; }
+.narrow .map-cta span { display: none; }
 
 .legend { max-width: 240px; max-height: calc(100vh - 250px); overflow-y: auto; }
 .legend summary { font: 700 .8rem var(--sans); cursor: pointer; }

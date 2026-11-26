@@ -159,6 +159,7 @@ Atlas.load('atlas', function (P) {
   let ready = false;
   function layoutLabels() {
     if (!ready) return;
+    map.getContainer().classList.toggle('narrow', map.getSize().x < 700);
     labelLayer.clearLayers();
     if (tac.b) return;
     const z = map.getZoom(), size = map.getSize(), hz = map.getBoundsZoom(HOME_BOUNDS), boxes = [], placed = [];
