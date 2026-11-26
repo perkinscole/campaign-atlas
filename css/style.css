@@ -596,3 +596,38 @@ a.btn { text-decoration: none; display: inline-block; }
   .sheet { border: none; box-shadow: none; margin: 0; padding: 0; max-width: none; }
   .sheet blockquote, .answer { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
+
+/* ---------- Battlefield view ---------- */
+.atlas.tactical-on .timeline { display: none; }
+.atlas.tactical-on .legend { display: none; }
+.atlas.tactical-on { grid-template-rows: minmax(0, 1fr); }
+.atlas.tactical-on #panel { grid-row: 1; }
+.unit-line { cursor: default; filter: drop-shadow(0 0 2px rgba(255,255,255,.9)) drop-shadow(0 1px 2px rgba(0,0,0,.45)); }
+.unit-label {
+  position: absolute; transform: translate(-50%, -150%); white-space: nowrap;
+  font: 600 10.5px/1 var(--serif); letter-spacing: .02em; color: #fff;
+  padding: 3px 6px; border-radius: 3px; box-shadow: 0 1px 3px rgba(0,0,0,.45);
+  background: var(--draw); pointer-events: none;
+}
+.unit-label.side-a { background: var(--side-a); }
+.unit-label.side-b { background: var(--side-b); }
+.place-label {
+  position: absolute; transform: translate(-50%, -50%); white-space: nowrap;
+  font: italic 600 11.5px/1 var(--serif); color: #2a2118;
+  text-shadow: 0 0 3px #fff, 0 0 3px #fff, 0 0 5px #fff, 0 0 5px #fff; pointer-events: none;
+}
+.btn.watch { width: 100%; padding: 9px 12px; font-size: .92rem; }
+.unit-key { margin: 16px 0 0; }
+.unit-key dt { font-style: normal; color: var(--ink); font-weight: 600; white-space: nowrap; }
+.unit-key .swatch { margin-right: 6px; vertical-align: middle; height: 6px; }
+.phase-list { list-style: none; padding: 0; margin: 0; counter-reset: ph; }
+.phase-list li { border-bottom: 1px dotted var(--line); }
+.phase-list button { width: 100%; background: none; border: none; text-align: left; font: inherit; color: var(--ink); cursor: pointer; padding: 6px 4px; display: grid; grid-template-columns: 118px 1fr; gap: 10px; font-size: .88rem; }
+.phase-list time { color: var(--muted); font-size: .8rem; }
+.phase-list li.now button { font-weight: 600; background: var(--paper-2); }
+.phase-list button:hover { color: var(--accent); }
+.tactical .prevnext { margin-top: 14px; }
+@media (max-width: 760px) {
+  .atlas.tactical-on { grid-template-rows: 58vh auto; }
+  .atlas.tactical-on #panel { grid-row: 2; }
+}

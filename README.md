@@ -78,6 +78,28 @@ A pack calls `Atlas.register({...})` with:
 
 Images are referenced by their exact Wikimedia Commons filename via `Atlas.img(...)`.
 
+## Battlefield animations
+
+A battle can carry a `tactical` object, which adds a "Watch the battle unfold on the ground" button and a step-by-step view on a topographic base map (`#battlefield=<id>:<step>`).
+
+```js
+tactical: {
+  bounds: [[south, west], [north, east]],
+  base: 'contour',                       // optional: topo | contour | atlas | relief
+  places: [{ name: 'Cemetery Hill', ll: [39.8203, -77.2292] }],
+  units: { ii: { side: 'union', name: 'II Corps (Hancock)', short: 'II Corps' } },
+  phases: [{
+    time: 'July 2, 3:30 p.m.', title: 'The fishhook', text: '...',
+    units: { ii: [[39.8186, -77.2340], [39.8092, -77.2355]] },   // a line of points; null removes the unit
+    arrows: [{ side: 'confederate', pts: [[39.8140, -77.2500], [39.8128, -77.2375]] }]
+  }],
+  ask: ['Discussion question'],
+  note: 'How exact the positions are.'
+}
+```
+
+A unit keeps its last position until a later phase moves or removes it, so each phase lists only what changed. The engine interpolates between phases. Positions in the three animations so far (Cowpens, Gettysburg, D-Day) are simplified from standard maps; Cowpens is pinned to the line markers recorded in OpenStreetMap for the national battlefield.
+
 ## Verifying quotations
 
 Journal entries carry `verified: true`, a `ref` link, and a `refTitle` once their wording
@@ -101,6 +123,6 @@ Battle entries may also set `sideLabels` (per-battle names for the two sides) an
 
 ## Credits
 
-Map rendering by [Leaflet](https://leafletjs.com/); terrain and boundary tiles by Esri.
+Map rendering by [Leaflet](https://leafletjs.com/); topographic, hillshade, and boundary tiles by Esri; contour-line tiles by [OpenTopoMap](https://opentopomap.org/) (CC-BY-SA; map data © OpenStreetMap contributors, SRTM).
 Quotations are from public-domain memoirs, diaries, letters, and official records.
 Images are public-domain works from Wikimedia Commons and the Library of Congress.

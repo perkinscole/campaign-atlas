@@ -273,6 +273,7 @@ Atlas.load('atlas', function (P) {
         <p class="dates">${fmtRange(b.start, b.end)} · ${esc(b.place)}</p>
         ${hero ? figure(hero) : ''}
         <p class="summary">${esc(b.summary)}</p>
+        ${b.tactical ? `<p><button class="btn primary watch" data-battlefield="${b.id}">▶ Watch the battle unfold on the ground</button></p>` : ''}
         <p class="significance"><strong>Why it matters.</strong> ${esc(b.significance)}</p>
         <dl class="facts">
           ${M.sides.map(s => `<dt>${esc(P.sideLabel(b, s.id))}</dt><dd>${esc(b.commanders[s.id])}<br><small>${esc(b.forces[s.id])}</small></dd>`).join('')}
@@ -353,10 +354,160 @@ Atlas.load('atlas', function (P) {
     panel.scrollTop = 0;
   }
 
+
+  // ---- Battlefield view: unit positions animated phase by phase ---------
+  const TAC_N = 12; // points per unit line, so any two shapes can be blended
+  const tacLayer = L.layerGroup();
+  const tac = { b: null, i: 0, shapes: {}, labels: {}, arrows: [], raf: null, auto: null, prevBase: null, cur: {} };
+  const lerp = (a, b, f) => a + (b - a) * f;
+  function resample(pts, n) {
+    if (pts.length === 1) return Array.from({ length: n }, () => pts[0].slice());
+    const seg = []; let total = 0;
+    for (let k = 1; k < pts.length; k++) { const d = Math.hypot(pts[k][0] - pts[k - 1][0], (pts[k][1] - pts[k - 1][1]) * .77); seg.push(d); total += d; }
+    const out = [];
+    for (let j = 0; j < n; j++) {
+      let want = total * j / (n - 1), k = 0;
+      while (k < seg.length - 1 && want > seg[k]) { want -= seg[k]; k++; }
+      const f = seg[k] ? Math.min(1, want / seg[k]) : 0;
+      out.push([lerp(pts[k][0], pts[k + 1][0], f), lerp(pts[k][1], pts[k + 1][1], f)]);
+    }
+    return out;
+  }
+  // Positions carry forward from earlier phases until a phase changes or removes them.
+  function tacState(b, i) {
+    const pos = {};
+    for (let k = 0; k <= i; k++) Object.entries(b.tactical.phases[k].units || {}).forEach(([id, pts]) => { if (pts) pos[id] = resample(pts, TAC_N); else delete pos[id]; });
+    return pos;
+  }
+  const mid = pts => pts[Math.floor(pts.length / 2)];
+  function tacDraw(pos, alpha) {
+    const T = tac.b.tactical;
+    Object.keys(T.units).forEach(id => {
+      const u = T.units[id], pts = pos[id], a = alpha && alpha[id] != null ? alpha[id] : 1;
+      if (!pts || a <= 0.02) { ['shapes', 'labels'].forEach(k => { if (tac[k][id]) { tacLayer.removeLayer(tac[k][id]); delete tac[k][id]; } }); return; }
+      if (!tac.shapes[id]) {
+        tac.shapes[id] = L.polyline(pts, { color: P.color(u.side), weight: 8, opacity: .95, lineCap: 'round', className: 'unit-line' }).bindTooltip(u.name, { sticky: true }).addTo(tacLayer);
+        tac.labels[id] = L.marker(mid(pts), { interactive: false, keyboard: false, icon: L.divIcon({ className: 'army-head-wrap', iconSize: [0, 0], html: `<div class="unit-label ${P.sideClass(u.side)}">${esc(u.short || u.name)}</div>` }) }).addTo(tacLayer);
+      }
+      tac.shapes[id].setLatLngs(pts).setStyle({ opacity: .95 * a });
+      tac.labels[id].setLatLng(mid(pts)).setOpacity(a);
+    });
+  }
+  function tacArrows() {
+    tac.arrows.forEach(l => tacLayer.removeLayer(l)); tac.arrows = [];
+    if (!tac.b) return;
+    (tac.b.tactical.phases[tac.i].arrows || []).forEach(ar => {
+      const col = P.color(ar.side), pts = ar.pts;
+      const shaft = L.polyline(pts, { color: col, weight: 3.5, opacity: .9, dashArray: '2 7', lineCap: 'round', interactive: false }).addTo(tacLayer);
+      const tip = map.latLngToLayerPoint(pts[pts.length - 1]), back = map.latLngToLayerPoint(pts[pts.length - 2]);
+      const ang = Math.atan2(tip.y - back.y, tip.x - back.x), len = 15;
+      const wing = d => map.layerPointToLatLng(L.point(tip.x - len * Math.cos(ang + d), tip.y - len * Math.sin(ang + d)));
+      const head = L.polygon([pts[pts.length - 1], wing(.45), wing(-.45)], { color: col, fillColor: col, fillOpacity: .95, weight: 1, interactive: false }).addTo(tacLayer);
+      tac.arrows.push(shaft, head);
+    });
+  }
+  map.on('zoomend', () => { if (tac.b) tacArrows(); });
+  function tacGo(i, animate) {
+    const b = tac.b, n = b.tactical.phases.length;
+    i = Math.max(0, Math.min(n - 1, i));
+    const from = tac.cur, to = tacState(b, i);
+    tac.i = i;
+    if (tac.raf) cancelAnimationFrame(tac.raf);
+    tac.arrows.forEach(l => tacLayer.removeLayer(l)); tac.arrows = [];
+    renderTactical();
+    history.replaceState(null, '', base() + `#battlefield=${b.id}:${i + 1}`);
+    const done = () => { tac.cur = to; tacDraw(to); tacArrows(); };
+    if (!animate) { done(); return; }
+    const t0 = performance.now(), dur = 1900;
+    const step = now => {
+      let f = Math.min(1, (now - t0) / dur); f = f < .5 ? 2 * f * f : 1 - Math.pow(-2 * f + 2, 2) / 2;
+      const pos = {}, alpha = {};
+      Object.keys(b.tactical.units).forEach(id => {
+        const a = from[id], z = to[id];
+        if (a && z) pos[id] = a.map((p, k) => [lerp(p[0], z[k][0], f), lerp(p[1], z[k][1], f)]);
+        else if (z) { pos[id] = z; alpha[id] = f; }
+        else if (a) { pos[id] = a; alpha[id] = 1 - f; }
+      });
+      tacDraw(pos, alpha); tac.cur = pos;
+      if (f < 1) tac.raf = requestAnimationFrame(step); else done();
+    };
+    tac.raf = requestAnimationFrame(step);
+  }
+  function tacAuto(on) {
+    if (tac.auto) { clearInterval(tac.auto); tac.auto = null; }
+    if (on) {
+      if (tac.i >= tac.b.tactical.phases.length - 1) tacGo(0, false);
+      tac.auto = setInterval(() => { if (tac.i >= tac.b.tactical.phases.length - 1) { tacAuto(false); renderTactical(); } else tacGo(tac.i + 1, true); }, 6500);
+    }
+  }
+  function enterTactical(id, i) {
+    const b = battleById[id]; if (!b || !b.tactical) return false;
+    pause();
+    if (tac.b && tac.b !== b) exitTactical(true);
+    if (!tac.b) {
+      [routeLayer, headLayer, battleLayer].forEach(l => map.removeLayer(l));
+      tacLayer.addTo(map);
+      document.querySelector('.atlas').classList.add('tactical-on');
+      tac.prevBase = baseId;
+      if (b.tactical.base) setBase(b.tactical.base, false);
+      (b.tactical.places || []).forEach(pl => L.marker(pl.ll, { interactive: false, keyboard: false, icon: L.divIcon({ className: 'army-head-wrap', iconSize: [0, 0], html: `<div class="place-label">${esc(pl.name)}</div>` }) }).addTo(tacLayer));
+      map.invalidateSize();
+      map.fitBounds(b.tactical.bounds, { padding: [10, 10] });
+    }
+    tac.b = b; tac.cur = {};
+    state.view = 'tactical'; state.sel = id;
+    if (state.day < b.d0) setDay(b.d0);
+    dateLabel.textContent = fmtRange(b.start, b.end);
+    tacGo(i || 0, false);
+    return true;
+  }
+  function exitTactical(silent) {
+    if (!tac.b) return;
+    tacAuto(false); if (tac.raf) cancelAnimationFrame(tac.raf);
+    tacLayer.clearLayers(); map.removeLayer(tacLayer);
+    tac.shapes = {}; tac.labels = {}; tac.arrows = []; tac.cur = {};
+    [routeLayer, headLayer, battleLayer].forEach(l => l.addTo(map));
+    document.querySelector('.atlas').classList.remove('tactical-on');
+    if (tac.prevBase) setBase(tac.prevBase, false);
+    const b = tac.b; tac.b = null;
+    map.invalidateSize();
+    if (!silent) { state.view = 'battle'; selectBattle(b.id, { jump: false }); map.setView([b.lat, b.lng], 7); }
+  }
+  function renderTactical() {
+    const b = tac.b, T = b.tactical, i = tac.i, ph = T.phases[i], present = tacState(b, i);
+    const key = side => Object.entries(T.units).filter(([id, u]) => u.side === side && present[id]).map(([, u]) => esc(u.name)).join(', ');
+    panel.innerHTML = `
+      <div class="panel-inner tour tactical">
+        <div class="panel-top">
+          <button class="btn" data-tac-exit>← ${esc(b.name)}</button>
+          <span class="badge tour-badge">Step ${i + 1} of ${T.phases.length}</span>
+        </div>
+        <p class="tour-name">On the battlefield · ${esc(b.name)}</p>
+        <div class="tour-progress" aria-hidden="true">${T.phases.map((_, k) => `<i class="${k < i ? 'done' : k === i ? 'now' : ''}"></i>`).join('')}</div>
+        <h2>${esc(ph.title)}</h2>
+        <p class="dates">${esc(ph.time)}</p>
+        <p class="summary">${esc(ph.text)}</p>
+        <nav class="prevnext" aria-label="Battle steps">
+          ${i > 0 ? `<button class="btn" data-tac-go="${i - 1}">← Back</button>` : '<span></span>'}
+          <button class="btn" data-tac-auto>${tac.auto ? '❚❚ Pause' : '▶ Play all'}</button>
+          ${i < T.phases.length - 1 ? `<button class="btn primary" data-tac-go="${i + 1}">Next →</button>` : `<button class="btn primary" data-tac-exit>Done</button>`}
+        </nav>
+        <dl class="facts unit-key">
+          ${M.sides.map(s => key(s.id) ? `<dt><span class="swatch ${P.sideClass(s.id)}"></span>${esc(P.sideLabel(b, s.id))}</dt><dd>${key(s.id)}</dd>` : '').join('')}
+        </dl>
+        <h3>The battle step by step</h3>
+        <ol class="phase-list">${T.phases.map((p, k) => `<li class="${k === i ? 'now' : ''}"><button data-tac-go="${k}"><time>${esc(p.time)}</time>${esc(p.title)}</button></li>`).join('')}</ol>
+        ${T.ask ? `<div class="discuss"><h3>Discuss</h3><ol>${T.ask.map(q => `<li>${esc(q)}</li>`).join('')}</ol></div>` : ''}
+        <p class="kbd">${esc(T.note || 'Unit positions are simplified from standard battle maps. Each bar is a body of troops; the bar shows roughly where its line stood.')} Use <kbd>←</kbd> <kbd>→</kbd> to step and the Layers menu to change the base map.</p>
+      </div>`;
+    panel.scrollTop = 0;
+  }
+
   // ---- Selection -------------------------------------------------------
   const base = () => location.pathname + location.search;
   function selectBattle(id, opts = {}) {
     const b = battleById[id]; if (!b) return;
+    if (tac.b) exitTactical(true);
     if (opts.jump !== false && state.day < b.d0) setDay(b.d0);
     if (opts.jump === 'always') setDay(b.d0);
     state.view = 'battle'; state.sel = id;
@@ -450,6 +601,11 @@ Atlas.load('atlas', function (P) {
   panel.addEventListener('click', e => {
     const t = e.target.closest('button'); if (!t) return;
     const d = t.dataset;
+    if (d.tacExit !== undefined) { exitTactical(); return; }
+    if (d.tacGo !== undefined) { tacAuto(false); tacGo(Number(d.tacGo), true); return; }
+    if (d.tacAuto !== undefined) { tacAuto(!tac.auto); renderTactical(); return; }
+    if (d.battlefield) { enterTactical(d.battlefield, 0); return; }
+    if (tac.b) exitTactical(true);
     if (d.home !== undefined) { pause(); goHome(); }
     else if (d.tour) goTour(d.tour, Number(d.stop || 0));
     else if (d.stopGo !== undefined) goTour(state.tour.id, Number(d.stopGo));
@@ -464,6 +620,13 @@ Atlas.load('atlas', function (P) {
 
   document.addEventListener('keydown', e => {
     if (e.target.matches('input, select, textarea')) return;
+    if (tac.b) {
+      if (e.key === 'ArrowRight') { e.preventDefault(); tacAuto(false); tacGo(tac.i + 1, true); }
+      else if (e.key === 'ArrowLeft') { e.preventDefault(); tacAuto(false); tacGo(tac.i - 1, true); }
+      else if (e.code === 'Space') { e.preventDefault(); tacAuto(!tac.auto); renderTactical(); }
+      else if (e.key === 'Escape') exitTactical();
+      return;
+    }
     if (e.code === 'Space') { e.preventDefault(); if (state.playing) pause(); else { state.speed = Number($('speed').value); play(); } }
     else if (e.key === 'ArrowRight') { e.preventDefault(); if (state.view === 'tour' && !e.shiftKey && state.stop < state.tour.stops.length - 1) goTour(state.tour.id, state.stop + 1); else { setDay(state.day + (e.shiftKey ? 7 : 1)); render(); } }
     else if (e.key === 'ArrowLeft') { e.preventDefault(); if (state.view === 'tour' && !e.shiftKey && state.stop > 0) goTour(state.tour.id, state.stop - 1); else { setDay(state.day - (e.shiftKey ? 7 : 1)); render(); } }
@@ -472,8 +635,10 @@ Atlas.load('atlas', function (P) {
 
   // ---- Deep links ------------------------------------------------------
   function fromHash() {
-    const m = location.hash.match(/^#(battle|campaign|day|tour)=([\w:-]+)/);
+    const m = location.hash.match(/^#(battle|campaign|day|tour|battlefield)=([\w:-]+)/);
     if (!m) return false;
+    if (m[1] === 'battlefield') { const [id, n] = m[2].split(':'); const k = (Number(n) || 1) - 1; if (tac.b && tac.b.id === id) { if (k !== tac.i && tac.b.tactical.phases[k]) tacGo(k, true); return true; } return enterTactical(id, k); }
+    if (tac.b) exitTactical(true);
     if (m[1] === 'battle' && battleById[m[2]]) { selectBattle(m[2], { jump: 'always', fly: true }); return true; }
     if (m[1] === 'campaign' && campaignById[m[2]]) { selectCampaign(m[2]); return true; }
     if (m[1] === 'day' && /^\d{4}-\d{2}-\d{2}$/.test(m[2])) { setDay(dayOf(m[2])); render(); return true; }

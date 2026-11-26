@@ -47,6 +47,17 @@ Atlas.load('teach', function (P) {
         </details>
       </section>`).join('')}
 
+    ${P.BATTLES.some(b => b.tactical) ? `<h2>Battlefield animations</h2>
+    <p>Step-by-step views of how a single battle unfolded on the ground, on a topographic map. Project one and click through it with the class, or press <em>Play all</em>. Each ends with discussion questions about how the ground shaped the fighting. Positions are simplified.</p>
+    ${P.BATTLES.filter(b => b.tactical).map(b => `
+      <section class="tour-card">
+        <div class="tour-card-head">
+          <div><h3>${esc(b.name)}</h3><p class="meta">${b.tactical.phases.length} steps · ${esc(Atlas.fmtRange(b.start, b.end))}</p></div>
+          <div class="tour-actions"><a class="btn primary" href="${Atlas.url('atlas', 'battlefield=' + b.id)}">Watch</a></div>
+        </div>
+        <ol class="stops">${b.tactical.phases.map((ph, i) => `<li><strong>${esc(ph.title)}</strong> <span class="meta">· ${esc(ph.time)}</span> <a class="stop-link" href="${Atlas.url('atlas', `battlefield=${b.id}:${i + 1}`)}">open</a></li>`).join('')}</ol>
+      </section>`).join('')}` : ''}
+
     <h2>Primary-source worksheets</h2>
     <p>One worksheet per battle: background, each source with sourcing, close-reading, and perspective questions, an image analysis, and an exit question. The teacher key adds who wrote each source, when, and what to listen for.</p>
     <table class="ws-table">
