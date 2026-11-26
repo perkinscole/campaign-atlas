@@ -1502,6 +1502,42 @@
     }
   ];
 
+  // MEDIA:BEGIN (written by tools/media/write_media.py; edit there, not here)
+  // Newspaper clippings are from the Library of Congress, Chronicling America. Newsreels are Universal Newsreels held by the U.S. National Archives.
+  const MEDIA = {
+    papers: {
+      "lexington-concord": [
+        { paper: "The New-Hampshire Gazette and Historical Chronicle", place: "Portsmouth, N.H.", date: "1775-04-28", page: 2, label: "American newspaper", clip: "https://tile.loc.gov/image-services/iiif/service:ndnp:nhd:batch_nhd_bondcliff_ver01:data:sn83025582:00517015088:1775042801:0443/pct:8.16,59.23,34.00,27.53/520,/0/default.jpg", url: "https://www.loc.gov/resource/sn83025582/1775-04-28/ed-1/?sp=2&q=lexington" }
+      ],
+      "fort-ticonderoga": [
+        { paper: "The New-Hampshire Gazette and Historical Chronicle", place: "Portsmouth, N.H.", date: "1775-05-26", page: 3, label: "American newspaper", clip: "https://tile.loc.gov/image-services/iiif/service:ndnp:nhd:batch_nhd_bondcliff_ver01:data:sn83025582:00517015088:1775052601:0460/pct:2.51,28.17,34.00,27.23/520,/0/default.jpg", url: "https://www.loc.gov/resource/sn83025582/1775-05-26/ed-1/?sp=3&q=ticonderoga" }
+      ],
+      "bunker-hill": [
+        { paper: "The Virginia Gazette", place: "Williamsburg, Va.", date: "1775-07-07", page: 2, label: "American newspaper", clip: "https://tile.loc.gov/image-services/iiif/service:ndnp:vi:batch_vi_jaeger_ver01:data:sn84024742:print:1775070701:0146/pct:35.96,13.84,34.00,25.42/520,/0/default.jpg", url: "https://www.loc.gov/resource/sn84024742/1775-07-07/ed-1/?sp=2&q=bunker" }
+      ],
+      "dorchester-heights": [
+        { paper: "The Pennsylvania Evening Post", place: "Philadelphia, Pa.", date: "1776-04-16", page: 1, label: "American newspaper", clip: "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_bowden_ver04:data:sn83025894:print:1776041601:0001/pct:48.94,64.39,34.00,35.61/520,/0/default.jpg", url: "https://www.loc.gov/resource/sn83025894/1776-04-16/ed-1/?sp=1&q=boston" }
+      ],
+      brandywine: [
+        { paper: "The Connecticut Courant and Hartford Weekly Intelligencer", place: "Hartford, Conn.", date: "1777-09-22", page: 2, label: "American newspaper", clip: "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_annegreen_ver02:data:sn82016139:print:1777092201:0002/pct:2.58,15.45,34.00,25.61/520,/0/default.jpg", url: "https://www.loc.gov/resource/sn82016139/1777-09-22/ed-1/?sp=2&q=brandywine" },
+        { paper: "The New-York Gazette, and the Weekly Mercury", place: "New-York, N.Y.", date: "1777-11-10", page: 1, label: "Printed in a British-held city", clip: "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_annegreen_ver02:data:sn83030493:print:1777111001:0001/pct:43.58,37.33,34.00,27.06/520,/0/default.jpg", url: "https://www.loc.gov/resource/sn83030493/1777-11-10/ed-1/?sp=1&q=brandywine" }
+      ],
+      saratoga: [
+        { paper: "The Pennsylvania Packet", place: "Philadelphia, Pa.", date: "1777-12-17", page: 1, label: "American newspaper", clip: "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_annegreen_ver02:data:sn83021127:print:1777121701:0001/pct:66.00,40.07,34.00,27.70/520,/0/default.jpg", url: "https://www.loc.gov/resource/sn83021127/1777-12-17/ed-1/?sp=1&q=burgoyne" },
+        { paper: "The New-York Gazette, and the Weekly Mercury", place: "New-York, N.Y.", date: "1777-11-10", page: 2, label: "Printed in a British-held city", clip: "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_annegreen_ver02:data:sn83030493:print:1777111001:0002/pct:66.00,53.46,34.00,26.45/520,/0/default.jpg", url: "https://www.loc.gov/resource/sn83030493/1777-11-10/ed-1/?sp=2&q=burgoyne" }
+      ],
+      monmouth: [
+        { paper: "New-Hampshire Gazette", place: "Portsmouth, N.H.", date: "1778-07-28", page: 2, label: "American newspaper", clip: "https://tile.loc.gov/image-services/iiif/service:ndnp:nhd:batch_nhd_bondcliff_ver01:data:sn83025584:00517015106:1778072801:0026/pct:4.82,4.16,34.00,27.64/520,/0/default.jpg", url: "https://www.loc.gov/resource/sn83025584/1778-07-28/ed-1/?sp=2&q=monmouth" }
+      ],
+      yorktown: [
+        { paper: "The Pennsylvania Packet", place: "Philadelphia, Pa.", date: "1781-10-27", page: 1, label: "American newspaper", clip: "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_bowden_ver04:data:sn83021127:print:1781102701:0001/pct:66.00,44.66,34.00,26.97/520,/0/default.jpg", url: "https://www.loc.gov/resource/sn83021127/1781-10-27/ed-1/?sp=1&q=york" },
+        { paper: "The Royal Gazette", place: "Charleston, S.C.", date: "1781-12-19", page: 1, label: "Printed in a British-held city", clip: "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_bowden_ver04:data:sn83025789:print:1781121901:0001/pct:60.38,22.47,34.00,26.63/520,/0/default.jpg", url: "https://www.loc.gov/resource/sn83025789/1781-12-19/ed-1/?sp=1&q=york" }
+      ]
+    },
+    reels: {  }
+  };
+  // MEDIA:END
+
   Atlas.register({
     meta: {
       id: 'american-revolution',
@@ -1516,6 +1552,6 @@
       theaters: ['New England', 'Northern', 'Middle States', 'Southern'],
       intro: 'Army routes draw themselves as the armies marched, by land and by sea, and a marker appears for each battle as it begins.'
     },
-    PORTRAITS, BATTLES, CAMPAIGNS, EVENTS, SOURCES, TOURS, VOCAB, ADVISORY, NOTES, OBJECTS
+    PORTRAITS, BATTLES, CAMPAIGNS, EVENTS, SOURCES, TOURS, VOCAB, ADVISORY, NOTES, OBJECTS, MEDIA
   });
 })();

@@ -1620,6 +1620,102 @@
     }
   ];
 
+  // MEDIA:BEGIN (written by tools/media/write_media.py; edit there, not here)
+  // Newspaper clippings are from the Library of Congress, Chronicling America. Newsreels are Universal Newsreels held by the U.S. National Archives.
+  const MEDIA = {
+    papers: {
+      dunkirk: [
+        { paper: "Evening Star", place: "Washington, D.C.", date: "1940-06-02", page: 1, clip: "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_1picasso_ver01:data:sn83045462:00280602267:1940060201:0107/pct:0.00,0.00,100.00,42.00/640,/0/default.jpg", wide: true, url: "https://www.loc.gov/resource/sn83045462/1940-06-02/ed-1/?sp=1&q=dunkerque" },
+        { paper: "The Daily Alaska Empire", place: "Juneau, Alaska", date: "1940-06-04", page: 1, clip: "https://tile.loc.gov/image-services/iiif/service:ndnp:ak:batch_ak_herring_ver01:data:sn83045499:00393342213:1940060401:0239/pct:66.00,40.72,34.00,33.28/520,/0/default.jpg", url: "https://www.loc.gov/resource/sn83045499/1940-06-04/ed-1/?sp=1&q=dunkerque" }
+      ],
+      "battle-of-britain": [
+        { paper: "The Nome Nugget", place: "Nome, Alaska", date: "1940-09-16", page: 1, clip: "https://tile.loc.gov/image-services/iiif/service:ndnp:ak:batch_ak_belugawhale_ver01:data:sn84020662:00414185563:1940091601:1298/pct:0.00,28.06,34.00,28.37/520,/0/default.jpg", url: "https://www.loc.gov/resource/sn84020662/1940-09-16/ed-1/?sp=1&q=raf" }
+      ],
+      leningrad: [
+        { paper: "Evening Star", place: "Washington, D.C.", date: "1944-01-27", page: 1, clip: "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_1zox_ver01:data:sn83045462:00280604008:1944012701:0362/pct:0.00,0.00,100.00,42.00/640,/0/default.jpg", wide: true, url: "https://www.loc.gov/resource/sn83045462/1944-01-27/ed-1/?sp=1&q=leningrad" },
+        { paper: "The Daily Alaska Empire", place: "Juneau, Alaska", date: "1944-01-27", page: 1, clip: "https://tile.loc.gov/image-services/iiif/service:ndnp:ak:batch_ak_ixoreus_ver01:data:sn83045499:00393342304:1944012701:0145/pct:50.66,58.35,34.00,33.46/520,/0/default.jpg", url: "https://www.loc.gov/resource/sn83045499/1944-01-27/ed-1/?sp=1&q=leningrad" }
+      ],
+      stalingrad: [
+        { paper: "Evening Star", place: "Washington, D.C.", date: "1943-02-02", page: 2, clip: "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_1xul_ver01:data:sn83045462:0028060334A:1943020201:0165/pct:0.00,0.00,100.00,42.00/640,/0/default.jpg", wide: true, url: "https://www.loc.gov/resource/sn83045462/1943-02-02/ed-1/?sp=2&q=stalingrad" },
+        { paper: "The Daily Alaska Empire", place: "Juneau, Alaska", date: "1943-02-03", page: 1, clip: "https://tile.loc.gov/image-services/iiif/service:ndnp:ak:batch_ak_ixoreus_ver01:data:sn83045499:00393342286:1943020301:0175/pct:0.00,0.00,100.00,42.00/640,/0/default.jpg", wide: true, url: "https://www.loc.gov/resource/sn83045499/1943-02-03/ed-1/?sp=1&q=stalingrad" }
+      ],
+      poland: [
+        { paper: "Evening Star", place: "Washington, D.C.", date: "1939-09-02", page: 1, clip: "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_1oldenburg_ver01:data:sn83045462:00280602486:1939090201:0531/pct:0.00,0.00,100.00,42.00/640,/0/default.jpg", wide: true, url: "https://www.loc.gov/resource/sn83045462/1939-09-02/ed-1/?sp=1&q=warsaw" },
+        { paper: "The Daily Alaska Empire", place: "Juneau, Alaska", date: "1939-09-01", page: 1, clip: "https://tile.loc.gov/image-services/iiif/service:ndnp:ak:batch_ak_herring_ver01:data:sn83045499:00393342390:1939090101:0007/pct:0.00,0.00,100.00,42.00/640,/0/default.jpg", wide: true, url: "https://www.loc.gov/resource/sn83045499/1939-09-01/ed-1/?sp=1&q=warsaw" }
+      ],
+      moscow: [
+        { paper: "Evening Star", place: "Washington, D.C.", date: "1941-06-22", page: 1, clip: "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_1stella_ver01:data:sn83045462:00280602887:1941062201:0252/pct:0.00,0.00,100.00,42.00/640,/0/default.jpg", wide: true, url: "https://www.loc.gov/resource/sn83045462/1941-06-22/ed-1/?sp=1&q=soviet" },
+        { paper: "The Daily Alaska Empire", place: "Juneau, Alaska", date: "1941-06-23", page: 1, clip: "https://tile.loc.gov/image-services/iiif/service:ndnp:ak:batch_ak_ixoreus_ver01:data:sn83045499:00393342249:1941062301:0367/pct:66.00,66.32,34.00,33.68/520,/0/default.jpg", url: "https://www.loc.gov/resource/sn83045499/1941-06-23/ed-1/?sp=1&q=russia" }
+      ],
+      "el-alamein": [
+        { paper: "Evening Star", place: "Washington, D.C.", date: "1942-11-05", page: 1, clip: "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_1warhol_ver01:data:sn83045462:00280603272:1942110501:0281/pct:0.00,0.00,100.00,42.00/640,/0/default.jpg", wide: true, url: "https://www.loc.gov/resource/sn83045462/1942-11-05/ed-1/?sp=1&q=egypt" },
+        { paper: "The Daily Alaska Empire", place: "Juneau, Alaska", date: "1942-11-05", page: 1, clip: "https://tile.loc.gov/image-services/iiif/service:ndnp:ak:batch_ak_ixoreus_ver01:data:sn83045499:00393342274:1942110501:0649/pct:0.00,0.00,100.00,42.00/640,/0/default.jpg", wide: true, url: "https://www.loc.gov/resource/sn83045499/1942-11-05/ed-1/?sp=1&q=rommel" }
+      ],
+      tunisia: [
+        { paper: "Evening Star", place: "Washington, D.C.", date: "1943-05-07", page: 1, clip: "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_1young_ver01:data:sn83045462:00280603417:1943050701:0598/pct:0.00,0.00,100.00,42.00/640,/0/default.jpg", wide: true, url: "https://www.loc.gov/resource/sn83045462/1943-05-07/ed-1/?sp=1&q=tunis" },
+        { paper: "The Daily Alaska Empire", place: "Juneau, Alaska", date: "1943-05-08", page: 1, clip: "https://tile.loc.gov/image-services/iiif/service:ndnp:ak:batch_ak_ixoreus_ver01:data:sn83045499:00393342286:1943050801:0661/pct:0.00,0.00,100.00,42.00/640,/0/default.jpg", wide: true, url: "https://www.loc.gov/resource/sn83045499/1943-05-08/ed-1/?sp=1&q=tunis" }
+      ],
+      kursk: [
+        { paper: "The Daily Alaska Empire", place: "Juneau, Alaska", date: "1943-07-08", page: 1, clip: "https://tile.loc.gov/image-services/iiif/service:ndnp:ak:batch_ak_ixoreus_ver01:data:sn83045499:00393342298:1943070801:0037/pct:0.00,39.38,34.00,33.38/520,/0/default.jpg", url: "https://www.loc.gov/resource/sn83045499/1943-07-08/ed-1/?sp=1&q=kursk" }
+      ],
+      sicily: [
+        { paper: "Evening Star", place: "Washington, D.C.", date: "1943-07-11", page: 1, clip: "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_1young_ver01:data:sn83045462:00280604070:1943071101:0438/pct:0.00,0.00,100.00,42.00/640,/0/default.jpg", wide: true, url: "https://www.loc.gov/resource/sn83045462/1943-07-11/ed-1/?sp=1&q=sicily" },
+        { paper: "The Daily Alaska Empire", place: "Juneau, Alaska", date: "1943-07-10", page: 1, clip: "https://tile.loc.gov/image-services/iiif/service:ndnp:ak:batch_ak_ixoreus_ver01:data:sn83045499:00393342298:1943071001:0049/pct:0.00,0.00,100.00,42.00/640,/0/default.jpg", wide: true, url: "https://www.loc.gov/resource/sn83045499/1943-07-10/ed-1/?sp=1&q=sicily" }
+      ],
+      "cassino-anzio": [
+        { paper: "Evening Star", place: "Washington, D.C.", date: "1944-06-05", page: 1, clip: "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_1quidor_ver01:data:sn83045462:00280603697:1944060501:0432/pct:3.07,18.69,34.00,30.34/520,/0/default.jpg", url: "https://www.loc.gov/resource/sn83045462/1944-06-05/ed-1/?sp=1&q=rome" },
+        { paper: "The Daily Alaska Empire", place: "Juneau, Alaska", date: "1944-06-05", page: 1, clip: "https://tile.loc.gov/image-services/iiif/service:ndnp:ak:batch_ak_ixoreus_ver01:data:sn83045499:00393342304:1944060501:0811/pct:22.05,46.82,34.00,33.33/520,/0/default.jpg", url: "https://www.loc.gov/resource/sn83045499/1944-06-05/ed-1/?sp=1&q=rome" }
+      ],
+      normandy: [
+        { paper: "Evening Star", place: "Washington, D.C.", date: "1944-06-06", page: 1, clip: "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_1quidor_ver01:data:sn83045462:00280603697:1944060601:0465/pct:0.00,0.00,100.00,42.00/640,/0/default.jpg", wide: true, url: "https://www.loc.gov/resource/sn83045462/1944-06-06/ed-1/?sp=1&q=invasion" },
+        { paper: "The Daily Alaska Empire", place: "Juneau, Alaska", date: "1944-06-07", page: 1, clip: "https://tile.loc.gov/image-services/iiif/service:ndnp:ak:batch_ak_ixoreus_ver01:data:sn83045499:00393342304:1944060701:0823/pct:0.00,0.00,100.00,42.00/640,/0/default.jpg", wide: true, url: "https://www.loc.gov/resource/sn83045499/1944-06-07/ed-1/?sp=1&q=france" }
+      ],
+      bagration: [
+        { paper: "Evening Star", place: "Washington, D.C.", date: "1944-07-04", page: 1, clip: "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_1quidor_ver01:data:sn83045462:00280603727:1944070401:0118/pct:0.00,0.00,100.00,42.00/640,/0/default.jpg", wide: true, url: "https://www.loc.gov/resource/sn83045462/1944-07-04/ed-1/?sp=1&q=minsk" },
+        { paper: "The Daily Alaska Empire", place: "Juneau, Alaska", date: "1944-07-03", page: 1, clip: "https://tile.loc.gov/image-services/iiif/service:ndnp:ak:batch_ak_ixoreus_ver01:data:sn83045499:00393342134:1944070301:0013/pct:0.00,28.38,34.00,33.66/520,/0/default.jpg", url: "https://www.loc.gov/resource/sn83045499/1944-07-03/ed-1/?sp=1&q=minsk" }
+      ],
+      "warsaw-uprising": [
+        { paper: "Evening Star", place: "Washington, D.C.", date: "1944-08-04", page: 1, clip: "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_1quidor_ver01:data:sn83045462:00280603739:1944080401:0516/pct:26.07,24.06,34.00,30.35/520,/0/default.jpg", url: "https://www.loc.gov/resource/sn83045462/1944-08-04/ed-1/?sp=1&q=warsaw" },
+        { paper: "The Daily Alaska Empire", place: "Juneau, Alaska", date: "1944-08-02", page: 1, clip: "https://tile.loc.gov/image-services/iiif/service:ndnp:ak:batch_ak_ixoreus_ver01:data:sn83045499:00393342134:1944080201:0163/pct:8.18,54.17,34.00,33.26/520,/0/default.jpg", url: "https://www.loc.gov/resource/sn83045499/1944-08-02/ed-1/?sp=1&q=warsaw" }
+      ]
+    },
+    reels: {
+      poland: [
+        { id: "1939-09-04_Special_Release_Europe_At_War", title: "Special Release: Europe at War!", date: "1939-09-04", minutes: 9, silent: true, text: "Rushed into theaters three days after the invasion: German troops enter Poland, Britain and France declare war, London's children are sent to the countryside, and French soldiers leave for the front. This copy has no sound." }
+      ],
+      "battle-of-britain": [
+        { id: "1940-12-31_Roosevelt_Warns_Of_Danger_If_Nazis_Win_War", title: "Roosevelt Warns of Danger to U.S. if Nazis Win War", date: "1940-12-31", minutes: 4, text: "Three months after the height of the Battle of Britain, President Roosevelt tells Americans by radio that the United States must arm Britain. A second story shows a German attack on a British convoy in the North Sea." }
+      ],
+      moscow: [
+        { id: "1941-06-23_Nazis_War_On_Russia", title: "Nazis War on Russia", date: "1941-06-23", minutes: 4, text: "Released the day after Germany invaded the Soviet Union. No film of the fighting had arrived, so the newsreel uses older pictures of the Red Army, then shows the Soviet ambassador and American officials reacting in Washington. An unrelated Canadian story ends the reel." }
+      ],
+      atlantic: [
+        { id: "1942-10-19_Big_Convoy_To_Russia", title: "Big Convoy to Russia Beats Off Nazis", date: "1942-10-19", minutes: 6, text: "German bombers attack an Allied convoy carrying supplies to the Soviet Union around the north of Norway. Shorter stories follow: a tax bill in Washington, an army mascot in Australia, and tanks for the British Eighth Army." }
+      ],
+      kursk: [
+        { id: "1943-09-02_Reds_Rout_Nazis", title: "Reds Rout Nazis", date: "1943-09-02", minutes: 2, text: "Soviet film of the Red Army advancing in the summer of 1943, after the German defeat at Kursk: artillery, tanks, cavalry, and a plane shot down. It shows wounded and dead soldiers." }
+      ],
+      "cassino-anzio": [
+        { id: "1944-06-15_First_Pictures_Of_Romes_Capture", title: "First Pictures of Rome's Capture", date: "1944-06-15", minutes: 4, text: "Captured German film shows American and British prisoners from Anzio paraded past the Colosseum. Then the Allies enter Rome, and crowds cheer General Mark Clark." }
+      ],
+      normandy: [
+        { id: "1944-06-12_First_Pictures_Invasion_of_France", title: "First Pictures: Invasion of France", date: "1944-06-12", minutes: 8, text: "The first film of D-Day to reach American theaters, six days after the landings: bombers, paratroopers boarding their planes, the invasion fleet, assault boats heading for shore, prisoners, and the wounded returning to England." },
+        { id: "1944-06-06_Eve_of_Battle", title: "Eve of Battle", date: "1944-06-06", minutes: 19, text: "Released on D-Day itself, before any film of the landings existed. Made with the War Department, it shows the months of preparation in Britain." }
+      ],
+      "market-garden": [
+        { id: "1944-09-28_Battle_Rages_Along_Nazi_Wall", title: "Battle Rages Along Nazi Wall", date: "1944-09-28", minutes: 6, text: "American, British, and Polish paratroopers and glider troops land in Holland, and British tanks reach them at Eindhoven. The reel shows only the early success: it came out three days after the survivors were pulled back from Arnhem. Later stories show American troops entering Germany and French towns being freed." }
+      ],
+      bulge: [
+        { id: "1945-01-11_German_Drive_Rolled_Back_By_Allies", title: "German Drive Rolled Back by Allies", date: "1945-01-11", minutes: 4, text: "American troops lay mines and set up roadblocks, the weather clears and Allied bombers return, supplies are parachuted into Bastogne, and Patton's tanks break through to the ruined town." },
+        { id: "1944-12-20_Allies_Fight_Fierce_Nazi_Counter-Blow", title: "Allies Fight Fierce Nazi Counter-Blow", date: "1944-12-20", minutes: 7, text: "Released four days into the battle, before any film had come back from the Ardennes. It uses captured German newsreels to show how Germany prepared the attack. Unrelated stories follow." }
+      ],
+      berlin: [
+        { id: "1945-05-08_Germany_Gives_Up", title: "Germany Gives Up", date: "1945-05-08", minutes: 7, text: "President Truman announces Germany's surrender on V-E Day. The rest of the reel looks back over the rise and fall of Nazi Germany, from 1933 to 1945. Parts of this copy are silent." }
+      ]
+    }
+  };
+  // MEDIA:END
+
   Atlas.register({
     meta: {
       id: 'world-war-2-europe',
@@ -1634,6 +1730,6 @@
       theaters: ['Western Europe', 'Eastern Front', 'Mediterranean and North Africa', 'Atlantic'],
       intro: 'Army routes draw themselves as the armies advanced and retreated, and a marker appears for each battle as it begins.'
     },
-    PORTRAITS, BATTLES, CAMPAIGNS, EVENTS, SOURCES, TOURS, VOCAB, ADVISORY, NOTES, OBJECTS
+    PORTRAITS, BATTLES, CAMPAIGNS, EVENTS, SOURCES, TOURS, VOCAB, ADVISORY, NOTES, OBJECTS, MEDIA
   });
 })();

@@ -369,6 +369,30 @@ Atlas.load('atlas', function (P) {
       <div class="src">Source: ${esc(j.source)}${j.verified ? (j.ref ? ` <a class="verified" href="${esc(j.ref)}" target="_blank" rel="noopener" title="Wording checked against this printed text${j.refTitle ? ': ' + esc(j.refTitle) : ''}">✓ verified</a>` : ' <span class="verified" title="Wording checked against the printed source">✓ verified</span>') : ''}</div>
     </article>`;
 
+  // Newspaper clippings (Library of Congress) and newsreels (Internet Archive). A newsreel loads nothing from outside until it is played.
+  const DAY = 86400000;
+  function printed(b, p) {
+    const d = Atlas.parse(p.date).getTime(), after = Math.round((d - Atlas.parse(b.end).getTime()) / DAY), since = Math.round((d - Atlas.parse(b.start).getTime()) / DAY);
+    if (after > 0) return `Printed ${after === 1 ? 'the day' : Atlas.spell(after) + ' days'} after the ${b.d1 - b.d0 > 20 ? 'fighting' : 'battle'} ended.`;
+    if (since > 0) return since === 1 ? 'Printed on the second day of the fighting.' : `Printed on day ${since + 1} of the fighting.`;
+    return since === 0 ? 'Printed the day the fighting began.' : '';
+  }
+  const paperHTML = (b, p) => `
+    <figure class="paper${p.wide ? ' wide' : ''}">
+      <a href="${esc(p.url)}" target="_blank" rel="noopener" title="Read the whole page at the Library of Congress"><img src="${esc(p.clip)}" alt="Clipping from ${esc(p.paper)}, ${fmtISO(p.date)}" loading="lazy" onerror="this.closest('figure').style.display='none'"></a>
+      <figcaption><strong>${esc(p.paper)}</strong> · ${esc(p.place)} · ${fmtISO(p.date)}, page ${p.page}${p.label ? ` <span class="paper-tag">${esc(p.label)}</span>` : ''}
+        <span class="credit">${printed(b, p)} Library of Congress, Chronicling America. <a href="${esc(p.url)}" target="_blank" rel="noopener">Read the whole page</a></span></figcaption>
+    </figure>`;
+  const reelHTML = r => `
+    <div class="reel">
+      <button class="reel-play" data-reel-play="${esc(r.id)}" aria-label="Play newsreel: ${esc(r.title)}"><img src="https://archive.org/services/img/${esc(r.id)}" alt="" loading="lazy"><span class="tac-play" aria-hidden="true">▶</span></button>
+      <div class="reel-text"><strong>${esc(r.title)}</strong><small>Universal Newsreel · ${fmtISO(r.date)} · ${r.minutes} min${r.silent ? ' · silent' : ''}</small><p>${esc(r.text)}</p>
+        <span class="credit">Universal Newsreel, U.S. National Archives. Public domain. <a href="https://archive.org/details/${esc(r.id)}" target="_blank" rel="noopener">Open at the Internet Archive</a></span></div>
+    </div>`;
+  const mediaHTML = b => `
+    ${b.papers.length ? `<h3>In the newspapers</h3><p class="media-note">The page as readers saw it, in the language of the time, which can include slurs. First reports were rushed and often wrong, so compare them with what you know now.</p>${b.papers.map(p => paperHTML(b, p)).join('')}` : ''}
+    ${b.reels.length ? `<h3>Newsreels</h3><p class="media-note">Shown in movie theaters before the feature film. Newsreels were made to keep up morale: they use the language of the time, and some show combat and the dead. Preview before showing to a class.</p>${b.reels.map(reelHTML).join('')}` : ''}`;
+
   // ---- Panel: home -----------------------------------------------------
   function renderHome() {
     const day = state.day;
@@ -436,6 +460,7 @@ Atlas.load('atlas', function (P) {
         </div>
         <h3>From the journals, letters, and reports</h3>
         ${b.journal.map(entryHTML).join('')}
+        ${mediaHTML(b)}
         ${rest.length ? `<h3>Images</h3><div class="gallery">${rest.map(figure).join('')}</div>` : ''}
         <p class="classroom"><a class="btn" href="worksheet.html?war=${M.id}&battle=${b.id}" target="_blank" rel="noopener">Printable source worksheet</a></p>
         <nav class="prevnext" aria-label="Previous and next">
@@ -754,6 +779,7 @@ Atlas.load('atlas', function (P) {
   panel.addEventListener('click', e => {
     const t = e.target.closest('button'); if (!t) return;
     const d = t.dataset;
+    if (d.reelPlay) { t.outerHTML = `<iframe class="reel-frame" src="https://archive.org/embed/${encodeURIComponent(d.reelPlay)}?autoplay=1" title="Newsreel" allow="autoplay; fullscreen" allowfullscreen></iframe>`; return; }
     if (d.tacExit !== undefined) { exitTactical(); return; }
     if (d.tacGo !== undefined) { tacAuto(false); tacGo(Number(d.tacGo), true); return; }
     if (d.tacAuto !== undefined) { tacAuto(!tac.auto); renderTactical(); return; }

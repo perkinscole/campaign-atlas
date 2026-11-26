@@ -140,6 +140,20 @@ Rules for adding one:
 - Artist-made models are allowed where no museum scan exists, but they must be `kind: 'model'` so the page labels them as modern reconstructions.
 - Write the caption from the museum's own catalog record, not from memory.
 
+## Newspapers and newsreels
+
+A battle's panel can show newspaper clippings and newsreels. They live in a `MEDIA` block near the end of each pack, which is written by script:
+
+```
+python3 -I tools/media/find_papers.py <battles.json> <cache-dir> tools/media/papers.json [atlas-id]   # finds pages at the Library of Congress
+python3 -I tools/media/write_media.py tools/media/papers.json tools/media/skip.json                 # writes MEDIA into the packs
+```
+
+`tools/media/papers.json` holds what has been found so far and `tools/media/skip.json` the clippings that were looked at and rejected. The finder skips battles already in `papers.json`, so it can be run again to fill gaps. Keep it to one run at a time and expect it to be slow: the Library limits how fast its catalog can be queried and answers HTTP 429 when that is exceeded.
+
+- **Newspapers** come from [Chronicling America](https://www.loc.gov/collections/chronicling-america/) (public domain). For the Civil War and World War II the finder goes straight to known papers on the days after a battle (a Northern and a Southern paper for the Civil War). For the Revolution it searches, since issue dates are irregular. It reads each page's word positions to find where the battle is named in the largest type and records a cropped image of that spot, so the panel shows the real print. Look at every clipping before publishing; rejected ones go in `skip.json`.
+- **Newsreels** are Universal Newsreels from the U.S. National Archives, public domain, played from the Internet Archive. They are listed by hand in `write_media.py`, with captions written from the archive's catalog notes. Nothing loads from the Internet Archive until a viewer presses play.
+
 ## Verifying quotations
 
 Journal entries carry `verified: true`, a `ref` link, and a `refTitle` once their wording
@@ -163,6 +177,6 @@ Battle entries may also set `sideLabels` (per-battle names for the two sides) an
 
 ## Credits
 
-Map rendering by [Leaflet](https://leafletjs.com/); relief, topographic, hillshade, and boundary tiles by Esri; period state lines made from [Natural Earth](https://www.naturalearthdata.com/) (public domain); 1938 European borders from [historical-basemaps](https://github.com/aourednik/historical-basemaps) by André Ourednik (GPL-3.0); battlefield roads and streams © OpenStreetMap contributors (ODbL); contour-line tiles by [OpenTopoMap](https://opentopomap.org/) (CC-BY-SA; map data © OpenStreetMap contributors, SRTM). 3D scans from the Smithsonian Institution (CC0) and from museums and makers on Sketchfab, credited beside each object; Smithsonian scans are displayed with Google's [model-viewer](https://modelviewer.dev/).
+Map rendering by [Leaflet](https://leafletjs.com/); relief, topographic, hillshade, and boundary tiles by Esri; period state lines made from [Natural Earth](https://www.naturalearthdata.com/) (public domain); 1938 European borders from [historical-basemaps](https://github.com/aourednik/historical-basemaps) by André Ourednik (GPL-3.0); battlefield roads and streams © OpenStreetMap contributors (ODbL); newspaper pages from the Library of Congress (Chronicling America); Universal Newsreels from the U.S. National Archives via the Internet Archive; contour-line tiles by [OpenTopoMap](https://opentopomap.org/) (CC-BY-SA; map data © OpenStreetMap contributors, SRTM). 3D scans from the Smithsonian Institution (CC0) and from museums and makers on Sketchfab, credited beside each object; Smithsonian scans are displayed with Google's [model-viewer](https://modelviewer.dev/).
 Quotations are from public-domain memoirs, diaries, letters, and official records.
 Images are public-domain works from Wikimedia Commons and the Library of Congress.

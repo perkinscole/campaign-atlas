@@ -37,6 +37,8 @@ for (const w of window.ATLAS_SITE.wars.filter(w => w.status === 'live')) {
       console.log('  period map:', per.features.length, 'border shapes,', per.places.length, 'places');
     }
   }
+  for (const [id, list] of Object.entries((P.MEDIA || {}).papers || {})) { if (!P.battleById[id]) err('media paper battle ' + id); for (const p of list) if (!p.paper || !p.place || !/^\d{4}-\d\d-\d\d$/.test(p.date) || !/^https:\/\/tile\.loc\.gov\//.test(p.clip) || !/^https:\/\/www\.loc\.gov\/resource\//.test(p.url)) err('media paper ' + id + ' ' + p.paper); }
+  for (const [id, list] of Object.entries((P.MEDIA || {}).reels || {})) { if (!P.battleById[id]) err('media reel battle ' + id); for (const r of list) if (!r.id || !r.title || !r.text || !r.minutes || !/^\d{4}-\d\d-\d\d$/.test(r.date)) err('media reel ' + id + ' ' + r.id); }
   for (const b of P.BATTLES.filter(b => b.tactical)) {
     const T = b.tactical, [[s0, w0], [n0, e0]] = T.bounds, padLat = (n0 - s0) * .25, padLng = (e0 - w0) * .25;
     const inside = ([la, ln]) => la >= s0 - padLat && la <= n0 + padLat && ln >= w0 - padLng && ln <= e0 + padLng;

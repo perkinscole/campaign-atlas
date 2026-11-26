@@ -1,0 +1,511 @@
+{
+ "world-war-2-europe/dunkirk": [
+  {
+   "paper": "Evening Star",
+   "place": "Washington, D.C.",
+   "date": "1940-06-02",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_1picasso_ver01:data:sn83045462:00280602267:1940060201:0107/pct:0.00,0.00,100.00,42.00/640,/0/default.jpg",
+   "wide": true,
+   "url": "https://www.loc.gov/resource/sn83045462/1940-06-02/ed-1/?sp=1&q=dunkerque"
+  },
+  {
+   "paper": "The Daily Alaska Empire",
+   "place": "Juneau, Alaska",
+   "date": "1940-06-04",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:ak:batch_ak_herring_ver01:data:sn83045499:00393342213:1940060401:0239/pct:66.00,40.72,34.00,33.28/520,/0/default.jpg",
+   "wide": false,
+   "url": "https://www.loc.gov/resource/sn83045499/1940-06-04/ed-1/?sp=1&q=dunkerque"
+  }
+ ],
+ "world-war-2-europe/battle-of-britain": [
+  {
+   "paper": "The Nome Nugget",
+   "place": "Nome, Alaska",
+   "date": "1940-09-16",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:ak:batch_ak_belugawhale_ver01:data:sn84020662:00414185563:1940091601:1298/pct:0.00,28.06,34.00,28.37/520,/0/default.jpg",
+   "wide": false,
+   "url": "https://www.loc.gov/resource/sn84020662/1940-09-16/ed-1/?sp=1&q=raf"
+  }
+ ],
+ "world-war-2-europe/leningrad": [
+  {
+   "paper": "Evening Star",
+   "place": "Washington, D.C.",
+   "date": "1944-01-27",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_1zox_ver01:data:sn83045462:00280604008:1944012701:0362/pct:0.00,0.00,100.00,42.00/640,/0/default.jpg",
+   "wide": true,
+   "url": "https://www.loc.gov/resource/sn83045462/1944-01-27/ed-1/?sp=1&q=leningrad"
+  },
+  {
+   "paper": "The Daily Alaska Empire",
+   "place": "Juneau, Alaska",
+   "date": "1944-01-27",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:ak:batch_ak_ixoreus_ver01:data:sn83045499:00393342304:1944012701:0145/pct:50.66,58.35,34.00,33.46/520,/0/default.jpg",
+   "wide": false,
+   "url": "https://www.loc.gov/resource/sn83045499/1944-01-27/ed-1/?sp=1&q=leningrad"
+  }
+ ],
+ "world-war-2-europe/stalingrad": [
+  {
+   "paper": "Evening Star",
+   "place": "Washington, D.C.",
+   "date": "1943-02-02",
+   "page": 2,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_1xul_ver01:data:sn83045462:0028060334A:1943020201:0165/pct:0.00,0.00,100.00,42.00/640,/0/default.jpg",
+   "wide": true,
+   "url": "https://www.loc.gov/resource/sn83045462/1943-02-02/ed-1/?sp=2&q=stalingrad"
+  },
+  {
+   "paper": "The Daily Alaska Empire",
+   "place": "Juneau, Alaska",
+   "date": "1943-02-03",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:ak:batch_ak_ixoreus_ver01:data:sn83045499:00393342286:1943020301:0175/pct:0.00,0.00,100.00,42.00/640,/0/default.jpg",
+   "wide": true,
+   "url": "https://www.loc.gov/resource/sn83045499/1943-02-03/ed-1/?sp=1&q=stalingrad"
+  }
+ ],
+ "world-war-2-europe/poland": [
+  {
+   "paper": "Evening Star",
+   "place": "Washington, D.C.",
+   "date": "1939-09-02",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_1oldenburg_ver01:data:sn83045462:00280602486:1939090201:0531/pct:0.00,0.00,100.00,42.00/640,/0/default.jpg",
+   "wide": true,
+   "url": "https://www.loc.gov/resource/sn83045462/1939-09-02/ed-1/?sp=1&q=warsaw"
+  },
+  {
+   "paper": "The Daily Alaska Empire",
+   "place": "Juneau, Alaska",
+   "date": "1939-09-01",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:ak:batch_ak_herring_ver01:data:sn83045499:00393342390:1939090101:0007/pct:0.00,0.00,100.00,42.00/640,/0/default.jpg",
+   "wide": true,
+   "url": "https://www.loc.gov/resource/sn83045499/1939-09-01/ed-1/?sp=1&q=warsaw"
+  }
+ ],
+ "world-war-2-europe/moscow": [
+  {
+   "paper": "Evening Star",
+   "place": "Washington, D.C.",
+   "date": "1941-06-22",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_1stella_ver01:data:sn83045462:00280602887:1941062201:0252/pct:0.00,0.00,100.00,42.00/640,/0/default.jpg",
+   "wide": true,
+   "url": "https://www.loc.gov/resource/sn83045462/1941-06-22/ed-1/?sp=1&q=soviet"
+  },
+  {
+   "paper": "The Daily Alaska Empire",
+   "place": "Juneau, Alaska",
+   "date": "1941-06-23",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:ak:batch_ak_ixoreus_ver01:data:sn83045499:00393342249:1941062301:0367/pct:66.00,66.32,34.00,33.68/520,/0/default.jpg",
+   "wide": false,
+   "url": "https://www.loc.gov/resource/sn83045499/1941-06-23/ed-1/?sp=1&q=russia"
+  }
+ ],
+ "world-war-2-europe/el-alamein": [
+  {
+   "paper": "Evening Star",
+   "place": "Washington, D.C.",
+   "date": "1942-11-05",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_1warhol_ver01:data:sn83045462:00280603272:1942110501:0281/pct:0.00,0.00,100.00,42.00/640,/0/default.jpg",
+   "wide": true,
+   "url": "https://www.loc.gov/resource/sn83045462/1942-11-05/ed-1/?sp=1&q=egypt"
+  },
+  {
+   "paper": "The Daily Alaska Empire",
+   "place": "Juneau, Alaska",
+   "date": "1942-11-05",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:ak:batch_ak_ixoreus_ver01:data:sn83045499:00393342274:1942110501:0649/pct:0.00,0.00,100.00,42.00/640,/0/default.jpg",
+   "wide": true,
+   "url": "https://www.loc.gov/resource/sn83045499/1942-11-05/ed-1/?sp=1&q=rommel"
+  }
+ ],
+ "world-war-2-europe/tunisia": [
+  {
+   "paper": "Evening Star",
+   "place": "Washington, D.C.",
+   "date": "1943-05-07",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_1young_ver01:data:sn83045462:00280603417:1943050701:0598/pct:0.00,0.00,100.00,42.00/640,/0/default.jpg",
+   "wide": true,
+   "url": "https://www.loc.gov/resource/sn83045462/1943-05-07/ed-1/?sp=1&q=tunis"
+  },
+  {
+   "paper": "The Daily Alaska Empire",
+   "place": "Juneau, Alaska",
+   "date": "1943-05-08",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:ak:batch_ak_ixoreus_ver01:data:sn83045499:00393342286:1943050801:0661/pct:0.00,0.00,100.00,42.00/640,/0/default.jpg",
+   "wide": true,
+   "url": "https://www.loc.gov/resource/sn83045499/1943-05-08/ed-1/?sp=1&q=tunis"
+  }
+ ],
+ "world-war-2-europe/atlantic": [],
+ "world-war-2-europe/warsaw-ghetto": [],
+ "world-war-2-europe/kursk": [
+  {
+   "paper": "Evening Star",
+   "place": "Washington, D.C.",
+   "date": "1943-07-07",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_1young_ver01:data:sn83045462:00280604070:1943070701:0282/pct:0.00,0.00,100.00,42.00/640,/0/default.jpg",
+   "wide": true,
+   "url": "https://www.loc.gov/resource/sn83045462/1943-07-07/ed-1/?sp=1&q=kursk"
+  },
+  {
+   "paper": "The Daily Alaska Empire",
+   "place": "Juneau, Alaska",
+   "date": "1943-07-08",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:ak:batch_ak_ixoreus_ver01:data:sn83045499:00393342298:1943070801:0037/pct:0.00,39.38,34.00,33.38/520,/0/default.jpg",
+   "wide": false,
+   "url": "https://www.loc.gov/resource/sn83045499/1943-07-08/ed-1/?sp=1&q=kursk"
+  }
+ ],
+ "world-war-2-europe/sicily": [
+  {
+   "paper": "Evening Star",
+   "place": "Washington, D.C.",
+   "date": "1943-07-11",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_1young_ver01:data:sn83045462:00280604070:1943071101:0438/pct:0.00,0.00,100.00,42.00/640,/0/default.jpg",
+   "wide": true,
+   "url": "https://www.loc.gov/resource/sn83045462/1943-07-11/ed-1/?sp=1&q=sicily"
+  },
+  {
+   "paper": "The Daily Alaska Empire",
+   "place": "Juneau, Alaska",
+   "date": "1943-07-10",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:ak:batch_ak_ixoreus_ver01:data:sn83045499:00393342298:1943071001:0049/pct:0.00,0.00,100.00,42.00/640,/0/default.jpg",
+   "wide": true,
+   "url": "https://www.loc.gov/resource/sn83045499/1943-07-10/ed-1/?sp=1&q=sicily"
+  }
+ ],
+ "world-war-2-europe/cassino-anzio": [
+  {
+   "paper": "Evening Star",
+   "place": "Washington, D.C.",
+   "date": "1944-06-05",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_1quidor_ver01:data:sn83045462:00280603697:1944060501:0432/pct:3.07,18.69,34.00,30.34/520,/0/default.jpg",
+   "wide": false,
+   "url": "https://www.loc.gov/resource/sn83045462/1944-06-05/ed-1/?sp=1&q=rome"
+  },
+  {
+   "paper": "The Daily Alaska Empire",
+   "place": "Juneau, Alaska",
+   "date": "1944-06-05",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:ak:batch_ak_ixoreus_ver01:data:sn83045499:00393342304:1944060501:0811/pct:22.05,46.82,34.00,33.33/520,/0/default.jpg",
+   "wide": false,
+   "url": "https://www.loc.gov/resource/sn83045499/1944-06-05/ed-1/?sp=1&q=rome"
+  }
+ ],
+ "world-war-2-europe/normandy": [
+  {
+   "paper": "Evening Star",
+   "place": "Washington, D.C.",
+   "date": "1944-06-06",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_1quidor_ver01:data:sn83045462:00280603697:1944060601:0465/pct:0.00,0.00,100.00,42.00/640,/0/default.jpg",
+   "wide": true,
+   "url": "https://www.loc.gov/resource/sn83045462/1944-06-06/ed-1/?sp=1&q=invasion"
+  },
+  {
+   "paper": "The Daily Alaska Empire",
+   "place": "Juneau, Alaska",
+   "date": "1944-06-07",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:ak:batch_ak_ixoreus_ver01:data:sn83045499:00393342304:1944060701:0823/pct:0.00,0.00,100.00,42.00/640,/0/default.jpg",
+   "wide": true,
+   "url": "https://www.loc.gov/resource/sn83045499/1944-06-07/ed-1/?sp=1&q=france"
+  }
+ ],
+ "world-war-2-europe/bagration": [
+  {
+   "paper": "Evening Star",
+   "place": "Washington, D.C.",
+   "date": "1944-07-04",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_1quidor_ver01:data:sn83045462:00280603727:1944070401:0118/pct:0.00,0.00,100.00,42.00/640,/0/default.jpg",
+   "wide": true,
+   "url": "https://www.loc.gov/resource/sn83045462/1944-07-04/ed-1/?sp=1&q=minsk"
+  },
+  {
+   "paper": "The Daily Alaska Empire",
+   "place": "Juneau, Alaska",
+   "date": "1944-07-03",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:ak:batch_ak_ixoreus_ver01:data:sn83045499:00393342134:1944070301:0013/pct:0.00,28.38,34.00,33.66/520,/0/default.jpg",
+   "wide": false,
+   "url": "https://www.loc.gov/resource/sn83045499/1944-07-03/ed-1/?sp=1&q=minsk"
+  }
+ ],
+ "world-war-2-europe/warsaw-uprising": [
+  {
+   "paper": "Evening Star",
+   "place": "Washington, D.C.",
+   "date": "1944-08-04",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_1quidor_ver01:data:sn83045462:00280603739:1944080401:0516/pct:26.07,24.06,34.00,30.35/520,/0/default.jpg",
+   "wide": false,
+   "url": "https://www.loc.gov/resource/sn83045462/1944-08-04/ed-1/?sp=1&q=warsaw"
+  },
+  {
+   "paper": "The Daily Alaska Empire",
+   "place": "Juneau, Alaska",
+   "date": "1944-08-02",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:ak:batch_ak_ixoreus_ver01:data:sn83045499:00393342134:1944080201:0163/pct:8.18,54.17,34.00,33.26/520,/0/default.jpg",
+   "wide": false,
+   "url": "https://www.loc.gov/resource/sn83045499/1944-08-02/ed-1/?sp=1&q=warsaw"
+  }
+ ],
+ "civil-war/fort-sumter": [
+  {
+   "paper": "The New York Herald",
+   "place": "New York, N.Y.",
+   "date": "1861-04-14",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_laceflower_ver01:data:sn83030313:00271743373:1861041401:0920/pct:0.00,14.68,34.00,29.41/520,/0/default.jpg",
+   "wide": false,
+   "url": "https://www.loc.gov/resource/sn83030313/1861-04-14/ed-1/?sp=1&q=sumter",
+   "label": "Northern newspaper"
+  },
+  {
+   "paper": "The Daily Dispatch",
+   "place": "Richmond, Va.",
+   "date": "1861-04-17",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:vi:batch_vi_johnhenry_ver01:data:sn84024738:00280777973:1861041701:0368/pct:7.14,29.02,34.00,30.74/520,/0/default.jpg",
+   "wide": false,
+   "url": "https://www.loc.gov/resource/sn84024738/1861-04-17/ed-1/?sp=1&q=sumter",
+   "label": "Southern newspaper"
+  }
+ ],
+ "civil-war/first-bull-run": [
+  {
+   "paper": "The New York Herald",
+   "place": "New York, N.Y.",
+   "date": "1861-07-22",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_marcus_ver01:data:sn83030313:00271743385:1861072201:0423/pct:0.00,12.65,34.00,29.73/520,/0/default.jpg",
+   "wide": false,
+   "url": "https://www.loc.gov/resource/sn83030313/1861-07-22/ed-1/?sp=1&q=bull",
+   "label": "Northern newspaper"
+  },
+  {
+   "paper": "Memphis Daily Appeal",
+   "place": "Memphis, Tenn.",
+   "date": "1861-07-28",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:tu:batch_tu_bonnielou_ver01:data:sn83045160:00200290033:1861072801:0079/pct:25.49,30.90,34.00,31.96/520,/0/default.jpg",
+   "wide": false,
+   "url": "https://www.loc.gov/resource/sn83045160/1861-07-28/ed-1/?sp=1&q=manassas",
+   "label": "Southern newspaper"
+  }
+ ],
+ "civil-war/wilsons-creek": [
+  {
+   "paper": "The New York Herald",
+   "place": "New York, N.Y.",
+   "date": "1861-08-14",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_marcus_ver01:data:sn83030313:00271743385:1861081401:0591/pct:0.00,0.00,100.00,42.00/640,/0/default.jpg",
+   "wide": true,
+   "url": "https://www.loc.gov/resource/sn83030313/1861-08-14/ed-1/?sp=1&q=lyon",
+   "label": "Northern newspaper"
+  },
+  {
+   "paper": "Memphis Daily Appeal",
+   "place": "Memphis, Tenn.",
+   "date": "1861-08-15",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:tu:batch_tu_bonnielou_ver01:data:sn83045160:00200290033:1861081501:0133/pct:22.35,21.43,34.00,31.77/520,/0/default.jpg",
+   "wide": false,
+   "url": "https://www.loc.gov/resource/sn83045160/1861-08-15/ed-1/?sp=1&q=lyon",
+   "label": "Southern newspaper"
+  }
+ ],
+ "american-revolution/lexington-concord": [
+  {
+   "paper": "The New-Hampshire Gazette and Historical Chronicle",
+   "place": "Portsmouth, N.H.",
+   "date": "1775-04-28",
+   "page": 2,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:nhd:batch_nhd_bondcliff_ver01:data:sn83025582:00517015088:1775042801:0443/pct:8.16,59.23,34.00,27.53/520,/0/default.jpg",
+   "wide": false,
+   "url": "https://www.loc.gov/resource/sn83025582/1775-04-28/ed-1/?sp=2&q=lexington",
+   "label": "American newspaper"
+  }
+ ],
+ "american-revolution/fort-ticonderoga": [
+  {
+   "paper": "The New-Hampshire Gazette and Historical Chronicle",
+   "place": "Portsmouth, N.H.",
+   "date": "1775-05-26",
+   "page": 3,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:nhd:batch_nhd_bondcliff_ver01:data:sn83025582:00517015088:1775052601:0460/pct:2.51,28.17,34.00,27.23/520,/0/default.jpg",
+   "wide": false,
+   "url": "https://www.loc.gov/resource/sn83025582/1775-05-26/ed-1/?sp=3&q=ticonderoga",
+   "label": "American newspaper"
+  }
+ ],
+ "american-revolution/bunker-hill": [
+  {
+   "paper": "The Virginia Gazette",
+   "place": "Williamsburg, Va.",
+   "date": "1775-07-07",
+   "page": 2,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:vi:batch_vi_jaeger_ver01:data:sn84024742:print:1775070701:0146/pct:35.96,13.84,34.00,25.42/520,/0/default.jpg",
+   "wide": false,
+   "url": "https://www.loc.gov/resource/sn84024742/1775-07-07/ed-1/?sp=2&q=bunker",
+   "label": "American newspaper"
+  }
+ ],
+ "american-revolution/quebec": [
+  {
+   "paper": "The Pennsylvania Evening Post",
+   "place": "Philadelphia, Pa.",
+   "date": "1776-01-23",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_bowden_ver04:data:sn83025894:print:1776012301:0001/pct:39.16,64.51,34.00,35.49/520,/0/default.jpg",
+   "wide": false,
+   "url": "https://www.loc.gov/resource/sn83025894/1776-01-23/ed-1/?sp=1&q=quebec",
+   "label": "American newspaper"
+  }
+ ],
+ "american-revolution/dorchester-heights": [
+  {
+   "paper": "The Pennsylvania Evening Post",
+   "place": "Philadelphia, Pa.",
+   "date": "1776-04-16",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_bowden_ver04:data:sn83025894:print:1776041601:0001/pct:48.94,64.39,34.00,35.61/520,/0/default.jpg",
+   "wide": false,
+   "url": "https://www.loc.gov/resource/sn83025894/1776-04-16/ed-1/?sp=1&q=boston",
+   "label": "American newspaper"
+  }
+ ],
+ "american-revolution/long-island": [
+  {
+   "paper": "The Virginia Gazette",
+   "place": "Williamsburg, Va.",
+   "date": "1776-10-25",
+   "page": 2,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:vi:batch_vi_jaeger_ver01:data:sn84024742:print:1776102501:0225/pct:1.43,48.12,34.00,25.91/520,/0/default.jpg",
+   "wide": false,
+   "url": "https://www.loc.gov/resource/sn84024742/1776-10-25/ed-1/?sp=2&q=island",
+   "label": "American newspaper"
+  }
+ ],
+ "american-revolution/trenton": [
+  {
+   "paper": "The Freeman's Journal",
+   "place": "Portsmouth, N.H.",
+   "date": "1776-12-31",
+   "page": 4,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:nhd:batch_nhd_bondcliff_ver01:data:sn83025583:0051701509A:1776123101:0122/pct:11.91,11.08,34.00,25.97/520,/0/default.jpg",
+   "wide": false,
+   "url": "https://www.loc.gov/resource/sn83025583/1776-12-31/ed-1/?sp=4&q=trenton",
+   "label": "American newspaper"
+  }
+ ],
+ "american-revolution/princeton": [],
+ "american-revolution/bennington": [],
+ "american-revolution/brandywine": [
+  {
+   "paper": "The Connecticut Courant and Hartford Weekly Intelligencer",
+   "place": "Hartford, Conn.",
+   "date": "1777-09-22",
+   "page": 2,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_annegreen_ver02:data:sn82016139:print:1777092201:0002/pct:2.58,15.45,34.00,25.61/520,/0/default.jpg",
+   "wide": false,
+   "url": "https://www.loc.gov/resource/sn82016139/1777-09-22/ed-1/?sp=2&q=brandywine",
+   "label": "American newspaper"
+  },
+  {
+   "paper": "The New-York Gazette, and the Weekly Mercury",
+   "place": "New-York, N.Y.",
+   "date": "1777-11-10",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_annegreen_ver02:data:sn83030493:print:1777111001:0001/pct:43.58,37.33,34.00,27.06/520,/0/default.jpg",
+   "wide": false,
+   "url": "https://www.loc.gov/resource/sn83030493/1777-11-10/ed-1/?sp=1&q=brandywine",
+   "label": "Printed in a British-held city"
+  }
+ ],
+ "american-revolution/saratoga": [
+  {
+   "paper": "The Pennsylvania Packet",
+   "place": "Philadelphia, Pa.",
+   "date": "1777-12-17",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_annegreen_ver02:data:sn83021127:print:1777121701:0001/pct:66.00,40.07,34.00,27.70/520,/0/default.jpg",
+   "wide": false,
+   "url": "https://www.loc.gov/resource/sn83021127/1777-12-17/ed-1/?sp=1&q=burgoyne",
+   "label": "American newspaper"
+  },
+  {
+   "paper": "The New-York Gazette, and the Weekly Mercury",
+   "place": "New-York, N.Y.",
+   "date": "1777-11-10",
+   "page": 2,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_annegreen_ver02:data:sn83030493:print:1777111001:0002/pct:66.00,53.46,34.00,26.45/520,/0/default.jpg",
+   "wide": false,
+   "url": "https://www.loc.gov/resource/sn83030493/1777-11-10/ed-1/?sp=2&q=burgoyne",
+   "label": "Printed in a British-held city"
+  }
+ ],
+ "american-revolution/valley-forge": [],
+ "american-revolution/monmouth": [
+  {
+   "paper": "New-Hampshire Gazette",
+   "place": "Portsmouth, N.H.",
+   "date": "1778-07-28",
+   "page": 2,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:nhd:batch_nhd_bondcliff_ver01:data:sn83025584:00517015106:1778072801:0026/pct:4.82,4.16,34.00,27.64/520,/0/default.jpg",
+   "wide": false,
+   "url": "https://www.loc.gov/resource/sn83025584/1778-07-28/ed-1/?sp=2&q=monmouth",
+   "label": "American newspaper"
+  }
+ ],
+ "american-revolution/charleston": [],
+ "american-revolution/camden": [],
+ "american-revolution/kings-mountain": [],
+ "american-revolution/cowpens": [],
+ "american-revolution/guilford-courthouse": [],
+ "american-revolution/yorktown": [
+  {
+   "paper": "The Pennsylvania Packet",
+   "place": "Philadelphia, Pa.",
+   "date": "1781-10-27",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_bowden_ver04:data:sn83021127:print:1781102701:0001/pct:66.00,44.66,34.00,26.97/520,/0/default.jpg",
+   "wide": false,
+   "url": "https://www.loc.gov/resource/sn83021127/1781-10-27/ed-1/?sp=1&q=york",
+   "label": "American newspaper"
+  },
+  {
+   "paper": "The Royal Gazette",
+   "place": "Charleston, S.C.",
+   "date": "1781-12-19",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_bowden_ver04:data:sn83025789:print:1781121901:0001/pct:60.38,22.47,34.00,26.63/520,/0/default.jpg",
+   "wide": false,
+   "url": "https://www.loc.gov/resource/sn83025789/1781-12-19/ed-1/?sp=1&q=york",
+   "label": "Printed in a British-held city"
+  }
+ ]
+}

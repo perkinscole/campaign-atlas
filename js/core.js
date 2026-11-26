@@ -65,6 +65,9 @@ window.Atlas = (function () {
     pack.campaignById = Object.fromEntries(pack.CAMPAIGNS.map(c => [c.id, c]));
     pack.EVENTS.forEach(e => { e.d0 = pack.dayOf(e.date); });
     pack.TOURS = pack.TOURS || []; pack.VOCAB = pack.VOCAB || []; pack.ADVISORY = pack.ADVISORY || []; pack.OBJECTS = pack.OBJECTS || [];
+    // Newspaper clippings and newsreels are kept apart from the battle entries (pack.MEDIA) because they are gathered by script.
+    pack.MEDIA = pack.MEDIA || {};
+    pack.BATTLES.forEach(b => { b.papers = (pack.MEDIA.papers || {})[b.id] || []; b.reels = (pack.MEDIA.reels || {})[b.id] || []; });
     pack.tourById = Object.fromEntries(pack.TOURS.map(t => [t.id, t]));
     pack.entries = pack.BATTLES.flatMap(b => b.journal.map(j => ({ b, j })));
     return pack;

@@ -2411,6 +2411,26 @@
     }
   ];
 
+  // MEDIA:BEGIN (written by tools/media/write_media.py; edit there, not here)
+  // Newspaper clippings are from the Library of Congress, Chronicling America. Newsreels are Universal Newsreels held by the U.S. National Archives.
+  const MEDIA = {
+    papers: {
+      "fort-sumter": [
+        { paper: "The New York Herald", place: "New York, N.Y.", date: "1861-04-14", page: 1, label: "Northern newspaper", clip: "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_laceflower_ver01:data:sn83030313:00271743373:1861041401:0920/pct:0.00,14.68,34.00,29.41/520,/0/default.jpg", url: "https://www.loc.gov/resource/sn83030313/1861-04-14/ed-1/?sp=1&q=sumter" },
+        { paper: "The Daily Dispatch", place: "Richmond, Va.", date: "1861-04-17", page: 1, label: "Southern newspaper", clip: "https://tile.loc.gov/image-services/iiif/service:ndnp:vi:batch_vi_johnhenry_ver01:data:sn84024738:00280777973:1861041701:0368/pct:7.14,29.02,34.00,30.74/520,/0/default.jpg", url: "https://www.loc.gov/resource/sn84024738/1861-04-17/ed-1/?sp=1&q=sumter" }
+      ],
+      "first-bull-run": [
+        { paper: "The New York Herald", place: "New York, N.Y.", date: "1861-07-22", page: 1, label: "Northern newspaper", clip: "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_marcus_ver01:data:sn83030313:00271743385:1861072201:0423/pct:0.00,12.65,34.00,29.73/520,/0/default.jpg", url: "https://www.loc.gov/resource/sn83030313/1861-07-22/ed-1/?sp=1&q=bull" },
+        { paper: "Memphis Daily Appeal", place: "Memphis, Tenn.", date: "1861-07-28", page: 1, label: "Southern newspaper", clip: "https://tile.loc.gov/image-services/iiif/service:ndnp:tu:batch_tu_bonnielou_ver01:data:sn83045160:00200290033:1861072801:0079/pct:25.49,30.90,34.00,31.96/520,/0/default.jpg", url: "https://www.loc.gov/resource/sn83045160/1861-07-28/ed-1/?sp=1&q=manassas" }
+      ],
+      "wilsons-creek": [
+        { paper: "The New York Herald", place: "New York, N.Y.", date: "1861-08-14", page: 1, label: "Northern newspaper", clip: "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_marcus_ver01:data:sn83030313:00271743385:1861081401:0591/pct:0.00,0.00,100.00,42.00/640,/0/default.jpg", wide: true, url: "https://www.loc.gov/resource/sn83030313/1861-08-14/ed-1/?sp=1&q=lyon" }
+      ]
+    },
+    reels: {  }
+  };
+  // MEDIA:END
+
   Atlas.register({
     meta: {
       id: 'civil-war',
@@ -2425,6 +2445,6 @@
       theaters: ['Eastern', 'Western', 'Trans-Mississippi'],
       intro: 'Army routes draw themselves as the armies marched, and a marker appears for each battle as it begins.'
     },
-    PORTRAITS, BATTLES, CAMPAIGNS, EVENTS, SOURCES, TOURS, VOCAB, ADVISORY, NOTES, OBJECTS
+    PORTRAITS, BATTLES, CAMPAIGNS, EVENTS, SOURCES, TOURS, VOCAB, ADVISORY, NOTES, OBJECTS, MEDIA
   });
 })();
