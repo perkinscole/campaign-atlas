@@ -183,9 +183,9 @@ Atlas.load('atlas', function (P) {
     const shownBattles = P.BATTLES.filter(b => battleLayer.hasLayer(markers[b.id]));
     shownBattles.forEach(b => { const p = map.latLngToContainerPoint([b.lat, b.lng]), r = markers[b.id].getRadius() + 1; boxes.push([p.x - r, p.y - r, p.x + r, p.y + r]); });
     const sel = selectedBattle();
-    [...shownBattles].sort((a, b) => (b.id === sel) - (a.id === sel) || b.total - a.total).forEach(b => {
-      const m = put([b.lat, b.lng], b.name, 'battle', state.day < b.d0 ? 'battle future' : 'battle', markers[b.id].getRadius() + 3, AROUND, { interactive: true });
-      if (m) m.on('click', () => { state.tourReturn = null; selectBattle(b.id, { fly: false }); });
+    [...shownBattles].sort((a, b) => (b.id === sel) - (a.id === sel) || !!b.tactical - !!a.tactical || b.total - a.total).forEach(b => {
+      const m = put([b.lat, b.lng], (b.tactical ? '▶ ' : '') + b.name, 'battle', (state.day < b.d0 ? 'battle future' : 'battle') + (b.tactical ? ' has-tac' : ''), markers[b.id].getRadius() + 3, AROUND, { interactive: true, title: b.tactical ? 'Watch the troop movements in this battle' : '' });
+      if (m) m.on('click', () => { state.tourReturn = null; if (b.tactical) enterTactical(b.id, 0); else selectBattle(b.id, { fly: false }); });
     });
     if (baseId !== 'period' || !PERIOD) return;
     const places = PERIOD.places.filter(pl => pl[3] === 1 || (pl[3] === 2 ? z >= hz - .3 : z >= hz + 1));
@@ -376,6 +376,7 @@ Atlas.load('atlas', function (P) {
       ...P.EVENTS.filter(e => day >= e.d0).map(e => ({ d: e.d0, kind: 'event', e }))
     ].sort((a, b) => b.d - a.d);
     const upcoming = byDate.find(b => b.d0 > day);
+    const tacBattles = byDate.filter(b => b.tactical);
 
     panel.innerHTML = `
       <div class="panel-inner">
@@ -383,8 +384,9 @@ Atlas.load('atlas', function (P) {
           <h2>${esc(M.title)}</h2>
           <p>Every battle is a circle on the map and every army route is a dotted line. Press <strong>play</strong> or drag the timeline: the routes draw themselves as the armies march, and each circle fills with the winner's color when its battle is fought. Click any circle or route to open the full story, with period images and the words of people who were there.</p>
         </div>
+        ${tacBattles.length ? `<h3>Watch a battle up close</h3><p class="tac-intro">Step-by-step troop movements on the battlefield itself.</p><ul class="tac-list">${tacBattles.map(b => `<li><button data-battlefield="${b.id}"><span class="tac-play" aria-hidden="true">▶</span><span><strong>${esc(b.name)}</strong><small>${fmtRange(b.start, b.end)} · ${b.tactical.phases.length} steps</small></span></button></li>`).join('')}</ul>` : ''}
         ${upcoming ? `<p class="empty">Next: <button class="btn" data-jump="${upcoming.id}">${esc(upcoming.name)} · ${fmtISO(upcoming.start)}</button></p>` : ''}
-        <details class="all-list"><summary>All ${byDate.length} battles</summary><ul class="dispatch-list">${byDate.map(b => `<li><time>${fmtISO(b.start)}</time><button data-jump="${b.id}"><span class="dot ${day >= b.d0 ? P.sideClass(b.result) : 'side-future'}"></span>${esc(b.name)}</button></li>`).join('')}</ul></details>
+        <details class="all-list"><summary>All ${byDate.length} battles</summary><ul class="dispatch-list">${byDate.map(b => `<li><time>${fmtISO(b.start)}</time><button data-jump="${b.id}"><span class="dot ${day >= b.d0 ? P.sideClass(b.result) : 'side-future'}"></span>${esc(b.name)}${b.tactical ? ' <span class="tac-tag">▶ troop movements</span>' : ''}</button></li>`).join('')}</ul></details>
         <details class="all-list"><summary>All ${P.CAMPAIGNS.length} army movements</summary><ul class="campaign-list">${[...P.CAMPAIGNS].sort((a, b) => a.d0 - b.d0).map(c => `<li><button data-campaign="${c.id}"><span class="swatch ${P.sideClass(c.side)}"></span><span><strong>${esc(c.short)}</strong> — ${esc(c.name)}<br><small style="color:var(--muted)">${fmtRange(c.pts[0].date, c.pts[c.pts.length - 1].date)}</small></span></button></li>`).join('')}</ul></details>
         ${P.TOURS.length ? `<h3>Guided tours</h3><ul class="tour-list">${P.TOURS.map(t => `<li><button data-tour="${t.id}"><strong>${esc(t.title)}</strong><span>${esc(t.question)}</span><small>${t.stops.length} stops · about ${t.minutes} minutes · grades ${esc(t.grades)}</small></button></li>`).join('')}</ul>` : ''}
         <h3>Armies on the march</h3>

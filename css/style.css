@@ -858,3 +858,15 @@ kbd { border-radius: 5px; font-size: .9em; }
   .map-cta { padding: 4px; top: 56px; }
   .mode-switch button { padding: 5px 9px; font-size: .72rem; }
 }
+
+/* Battlefield animations: shortcuts from the map and the opening panel */
+.map-label.battle.has-tac, .map-label.battle.has-tac.future { background: var(--accent); border-color: var(--accent-dark); color: #fff; font-weight: 700; }
+.map-label.battle.has-tac:hover { background: var(--accent-dark); color: #fff; }
+.tac-intro { margin: 0 0 8px; font-size: .88rem; color: var(--muted); }
+.tac-list { list-style: none; margin: 0 0 14px; padding: 0; display: grid; gap: 8px; }
+.tac-list button { width: 100%; display: flex; align-items: center; gap: 12px; text-align: left; padding: 10px 12px; background: var(--accent-soft); border: 1px solid transparent; border-radius: var(--r); cursor: pointer; font: inherit; color: var(--ink); }
+.tac-list button:hover { border-color: var(--accent); }
+.tac-list strong { display: block; }
+.tac-list small { color: var(--ink-2); font-size: .8rem; }
+.tac-play { flex: none; width: 34px; height: 34px; border-radius: 50%; background: var(--accent); color: #fff; display: grid; place-items: center; font-size: .8rem; padding-left: 2px; }
+.tac-tag { margin-left: 6px; font-size: .7rem; font-weight: 700; color: var(--accent-dark); background: var(--accent-soft); border-radius: 999px; padding: 1px 7px; white-space: nowrap; }
