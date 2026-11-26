@@ -30,13 +30,14 @@ Netlify, or any static host.
 | `index.html` | Home: catalog of conflicts and the teacher overview |
 | `atlas.html?war=<id>` | The interactive map, timeline, and detail panel |
 | `battles.html?war=<id>` | Gallery of battles with filters |
+| `objects.html?war=<id>` | 3D objects: museum scans and labeled modern models; `#<object id>` opens one |
 | `teach.html?war=<id>` | Teacher guide: tours, worksheets, vocabulary, standards |
 | `worksheet.html?war=<id>&battle=<id>` | Printable source-analysis worksheet; add `&key=1` for the teacher key |
 | `worksheet.html?war=<id>&tour=<id>` | Printable student sheet for a guided tour |
 | `sources.html?war=<id>` | Primary sources, image credits, verification status |
 
 Deep links on the map: `#battle=<id>`, `#campaign=<id>`, `#day=YYYY-MM-DD`,
-`#tour=<id>` or `#tour=<id>:<stop number>`.
+`#tour=<id>` or `#tour=<id>:<stop number>`, `#battlefield=<id>` or `#battlefield=<id>:<step>`.
 
 ## How it is organized
 
@@ -100,6 +101,25 @@ tactical: {
 
 A unit keeps its last position until a later phase moves or removes it, so each phase lists only what changed. The engine interpolates between phases. Positions in the three animations so far (Cowpens, Gettysburg, D-Day) are simplified from standard maps; Cowpens is pinned to the line markers recorded in OpenStreetMap for the national battlefield.
 
+## 3D objects
+
+`objects.html?war=<id>` shows the pack's `OBJECTS` list: things students can turn and zoom. A catalog entry in `data/index.js` needs `objects: true` for the nav link to appear.
+
+```js
+{ id: 'minie-ball', group: 'weapons',            // soldiers | weapons | civilians | leaders
+  kind: 'artifact',                              // 'artifact' = scan of a real object, 'model' = modern reconstruction
+  title: 'Minié ball, .58 caliber', date: '1861–1865', holder: 'Florida Public Archaeology Network',
+  src: 'sketchfab', ref: '<model uid>', by: '<uploader>', license: 'CC BY 4.0',   // or src: 'si', ref: '3d_package:<uuid>', glb, glbHi, license: 'CC0'
+  thumb: '<image url>', link: '<source page>', text: '...', look: ['question'], battle: 'optional battle id' }
+```
+
+Rules for adding one:
+
+- Prefer scans of real objects from museums. Smithsonian models are found with `https://3d-api.si.edu/api/v1.0/content/file/search?q=...&file_type=glb`; check that the catalog record says CC0 before using its files. They are drawn on the page with `<model-viewer>`, straight from the Smithsonian's server.
+- Sketchfab models are embedded with Sketchfab's own viewer. Use only CC0 or CC BY models (`https://api.sketchfab.com/v3/search?type=models&license=cc0|by&q=...`), and keep the uploader's name in `by`: CC BY requires the credit.
+- Artist-made models are allowed where no museum scan exists, but they must be `kind: 'model'` so the page labels them as modern reconstructions.
+- Write the caption from the museum's own catalog record, not from memory.
+
 ## Verifying quotations
 
 Journal entries carry `verified: true`, a `ref` link, and a `refTitle` once their wording
@@ -123,6 +143,6 @@ Battle entries may also set `sideLabels` (per-battle names for the two sides) an
 
 ## Credits
 
-Map rendering by [Leaflet](https://leafletjs.com/); topographic, hillshade, and boundary tiles by Esri; contour-line tiles by [OpenTopoMap](https://opentopomap.org/) (CC-BY-SA; map data © OpenStreetMap contributors, SRTM).
+Map rendering by [Leaflet](https://leafletjs.com/); topographic, hillshade, and boundary tiles by Esri; contour-line tiles by [OpenTopoMap](https://opentopomap.org/) (CC-BY-SA; map data © OpenStreetMap contributors, SRTM). 3D scans from the Smithsonian Institution (CC0) and from museums and makers on Sketchfab, credited beside each object; Smithsonian scans are displayed with Google's [model-viewer](https://modelviewer.dev/).
 Quotations are from public-domain memoirs, diaries, letters, and official records.
 Images are public-domain works from Wikimedia Commons and the Library of Congress.

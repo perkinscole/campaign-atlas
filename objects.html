@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%2714%27 fill=%27%232b5797%27/%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%276%27 fill=%27%23f4ecd8%27/%3E%3C/svg%3E">
+  <title>3D Objects — Campaign Atlas</title>
+  <meta name="description" content="Museum objects you can turn and examine in 3D: soldiers' gear, weapons, and things civilians left behind.">
+</head>
+<body>
+  <header class="site-header no-print" id="siteHeader"></header>
+  <main class="page">
+    <div class="page-inner">
+      <h1>Objects in 3D</h1>
+      <p class="lede" id="lede"></p>
+      <div class="filters" id="filters" role="group" aria-label="Filter objects"></div>
+      <div class="cards objects" id="cards"></div>
+      <p class="obj-note" id="objNote"></p>
+    </div>
+    <footer class="site-footer no-print">A free classroom resource. 3D scans come from the Smithsonian Institution and from museums on Sketchfab, and load only when you open an object. Each object lists its museum, maker, and license.</footer>
+    <dialog class="obj-dialog" id="objDialog" aria-labelledby="objTitle"></dialog>
+  </main>
+  <script src="data/index.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/objects.js"></script>
+</body>
+</html>

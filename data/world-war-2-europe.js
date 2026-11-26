@@ -1194,6 +1194,190 @@
     images: 'All are official photographs taken by military photographers of the United States, Britain, the Soviet Union, or Germany, now in the public domain and held by the U.S. National Archives, the Imperial War Museums, or the Library of Congress. Wartime official photographs were often taken, chosen, and captioned to support the war effort, which is itself worth discussing with students.'
   };
 
+  // 3D objects: museum scans and a few labeled modern models. See README, "3D objects".
+  const OBJECTS = [
+    {
+      "src": "sketchfab",
+      "ref": "ef1c28c8cb874a3085a489d0a88bc7c5",
+      "thumb": "https://media.sketchfab.com/models/ef1c28c8cb874a3085a489d0a88bc7c5/thumbnails/d56d5338ca5c42bd89dd5798038ebc3f/180ce91a0f874720a729a108593dc5d7.jpeg",
+      "link": "https://sketchfab.com/3d-models/us-soldier-ww2-3d-printable-free-ef1c28c8cb874a3085a489d0a88bc7c5",
+      "license": "CC BY 4.0",
+      "by": "Andy Woodhead",
+      "id": "american-infantryman",
+      "group": "soldiers",
+      "kind": "model",
+      "title": "American infantryman",
+      "date": "Modern model",
+      "holder": "Digital sculpture by Andy Woodhead",
+      "text": "A digital sculpture of a U.S. soldier of the Second World War with his helmet, rifle, and field gear. This is a modern artist's reconstruction, not a museum object. Treat it the way you would an illustration in a textbook.",
+      "look": [
+        "List everything he carries. A rifleman's load could weigh sixty pounds or more. What would you leave behind?",
+        "Compare him with the photographs of real soldiers in this atlas. What looks right? What is missing?"
+      ]
+    },
+    {
+      "src": "sketchfab",
+      "ref": "397e6dd2d78b418db89dd28a2a335d65",
+      "thumb": "https://media.sketchfab.com/models/397e6dd2d78b418db89dd28a2a335d65/thumbnails/fe1bd0f5f9704113870e6cedf0100853/720x405.jpeg",
+      "license": "CC0",
+      "by": "Virtual Museums of Małopolska",
+      "id": "warsaw-dog-tag",
+      "group": "soldiers",
+      "kind": "artifact",
+      "title": "Identity tag from the Warsaw Uprising",
+      "date": "1944",
+      "holder": "Museum of the Home Army, Kraków. Scanned by Virtual Museums of Małopolska",
+      "text": "A soldier's identity tag from the Warsaw Uprising of 1944, when the Polish Home Army rose against the German occupation of the capital. The museum records its owner as K. Piotrowski.",
+      "look": [
+        "Why does an army give each soldier a tag like this?",
+        "The Home Army was an underground force, not a regular army. What does it mean that it issued identity tags at all?"
+      ],
+      "battle": "warsaw-uprising",
+      "record": "https://muzea.malopolska.pl/en/objects-list/610",
+      "link": "https://sketchfab.com/3d-models/k-piotrowskis-dog-tag-from-the-warsaw-uprising-397e6dd2d78b418db89dd28a2a335d65"
+    },
+    {
+      "src": "sketchfab",
+      "ref": "1be4bb0f8c05423abdccb50b779de6e6",
+      "thumb": "https://media.sketchfab.com/models/1be4bb0f8c05423abdccb50b779de6e6/thumbnails/9c739b20e7da404e86c5a8a0c915c269/a29ce9a49213404da855036208fc1596.jpeg",
+      "link": "https://sketchfab.com/3d-models/m1-garand-us-rifle-caliber-30-m1-1be4bb0f8c05423abdccb50b779de6e6",
+      "license": "CC BY 4.0",
+      "by": "Sky_Hunter",
+      "id": "m1-rifle",
+      "group": "weapons",
+      "kind": "model",
+      "title": "M1 rifle (the Garand)",
+      "date": "Modern model",
+      "holder": "Digital model by Sky_Hunter",
+      "text": "A digital model of the standard American rifle of the war. It was semi-automatic: eight shots as fast as the soldier could pull the trigger, at a time when most other armies' riflemen still worked a bolt by hand between shots. This is a modern artist's reconstruction, not a museum object. Treat it the way you would an illustration in a textbook.",
+      "look": [
+        "What advantage does a semi-automatic rifle give a squad in the first seconds of a fight?",
+        "A better rifle did not decide the war. Looking at the map, what did?"
+      ]
+    },
+    {
+      "src": "sketchfab",
+      "ref": "b6fae5960d4d41dd8b05320539468a16",
+      "thumb": "https://media.sketchfab.com/models/b6fae5960d4d41dd8b05320539468a16/thumbnails/ac4ef19faac5467db58484654961d931/8130ecacae814e06baf53022d9b9cefd.jpeg",
+      "link": "https://sketchfab.com/3d-models/sherman-tank-ww2-idaho-military-history-museum-b6fae5960d4d41dd8b05320539468a16",
+      "license": "CC BY 4.0",
+      "by": "Anticipateants",
+      "id": "sherman-tank",
+      "group": "weapons",
+      "kind": "artifact",
+      "title": "M4 Sherman tank",
+      "date": "1942–1945",
+      "holder": "Idaho Military History Museum. Photo scan by Anticipateants",
+      "text": "A photo scan of a real Sherman, the main American tank of the war, on display outside the Idaho Military History Museum. American factories built about 50,000 of them. The heaviest German tanks had thicker armor and bigger guns, but there were never enough of them.",
+      "look": [
+        "Walk around the tank. Where would the five crewmen sit, and what could each one see?",
+        "Germany built better heavy tanks and still lost. Use the numbers to explain why."
+      ]
+    },
+    {
+      "src": "sketchfab",
+      "ref": "e2edab27282d415db2351a47d164744b",
+      "thumb": "https://media.sketchfab.com/models/e2edab27282d415db2351a47d164744b/thumbnails/8d511e11265e4931ad7dda09fedf6396/9501582a20164ee99c4fd25db4774b14.jpeg",
+      "link": "https://sketchfab.com/3d-models/lcvp-higgins-boat-e2edab27282d415db2351a47d164744b",
+      "license": "CC BY 4.0",
+      "by": "Thomas Visonà",
+      "id": "higgins-boat",
+      "group": "weapons",
+      "kind": "model",
+      "title": "Landing craft (LCVP, the \"Higgins boat\")",
+      "date": "Modern model",
+      "holder": "Digital model by Thomas Visonà",
+      "text": "A digital model of the flat-bottomed boat that carried about thirty-six soldiers at a time from ship to beach and dropped its bow ramp in the surf. Thousands were built in New Orleans, largely of plywood. This is a modern artist's reconstruction, not a museum object. Treat it the way you would an illustration in a textbook.",
+      "look": [
+        "When the ramp drops, which way are the soldiers facing, and what is in front of them?",
+        "Why did the Allies need a boat like this before they could invade France at all?"
+      ],
+      "battle": "normandy"
+    },
+    {
+      "src": "sketchfab",
+      "ref": "14289ea5b4104fefb74c8f65c9e350cc",
+      "thumb": "https://media.sketchfab.com/models/14289ea5b4104fefb74c8f65c9e350cc/thumbnails/c97d5189d81540f4884fd2db49a4730b/640x360.jpeg",
+      "license": "CC0",
+      "by": "Virtual Museums of Małopolska",
+      "id": "airdrop-capsule",
+      "group": "weapons",
+      "kind": "artifact",
+      "title": "Airdrop container for the Polish resistance",
+      "date": "1941–1944",
+      "holder": "Museum of the Home Army, Kraków. Scanned by Virtual Museums of Małopolska",
+      "text": "A metal drum of the kind dropped by parachute from Allied aircraft to supply the Home Army, the underground army in occupied Poland. The museum calls it a \"little cell.\"",
+      "look": [
+        "What would you pack in a drum this size for people fighting an occupation?",
+        "Look at the map. How far did an aircraft have to fly from Britain or Italy to reach Warsaw, and over whose territory?"
+      ],
+      "battle": "warsaw-uprising",
+      "record": "https://muzea.malopolska.pl/en/objects-list/591",
+      "link": "https://sketchfab.com/3d-models/drum-like-airdrop-capsule-little-cell-14289ea5b4104fefb74c8f65c9e350cc"
+    },
+    {
+      "src": "si",
+      "ref": "3d_package:0a0dc543-3c9b-421d-95fe-5f60f23addab",
+      "orientation": "-88.62deg -0.32deg -90.83deg",
+      "glb": "https://3d-api.si.edu/content/document/3d_package:0a0dc543-3c9b-421d-95fe-5f60f23addab/Camilla_Gottliebs_Suitcase-150k-2048-medium.glb",
+      "glbHi": "https://3d-api.si.edu/content/document/3d_package:0a0dc543-3c9b-421d-95fe-5f60f23addab/Camilla_Gottliebs_Suitcase-150k-4096-high.glb",
+      "thumb": "https://3d-api.si.edu/content/document/3d_package:0a0dc543-3c9b-421d-95fe-5f60f23addab/Camilla_Gottliebs_Suitcase-image-low.jpg",
+      "kind": "artifact",
+      "license": "CC0",
+      "id": "gottlieb-suitcase",
+      "group": "civilians",
+      "title": "Camilla Gottlieb's suitcase",
+      "date": "1930s–1940s",
+      "holder": "National Museum of American History",
+      "link": "https://n2t.net/ark:/65665/ng49ca746ad-9266-704b-e053-15f76fa0b4fa",
+      "text": "A plain brown canvas suitcase that belonged to Camilla Gottlieb, a Jewish woman whose ordinary life in Vienna was put in danger when Germany annexed Austria in 1938. The Smithsonian's own viewer, linked below, tells her family's story in chapters, from before the war through survival and reunion.",
+      "look": [
+        "If you had to leave home with one suitcase, what would you put in it?",
+        "Open the Smithsonian's viewer and read the chapters. How does one family's story change the way you read the numbers in this atlas?"
+      ]
+    },
+    {
+      "src": "sketchfab",
+      "ref": "96ddd0a0db704dceb8b15ff1b5fdb4ea",
+      "thumb": "https://media.sketchfab.com/models/96ddd0a0db704dceb8b15ff1b5fdb4ea/thumbnails/7a2c0ca9f93049ab9b0de619f282c220/17be824f37c643cc9fc793555a3889b5.jpeg",
+      "license": "CC0",
+      "by": "Virtual Museums of Małopolska",
+      "id": "tischlerstrasse-sign",
+      "group": "civilians",
+      "kind": "artifact",
+      "title": "German street sign from Oświęcim",
+      "date": "1939",
+      "holder": "Auschwitz Jewish Centre. Scanned by Virtual Museums of Małopolska",
+      "text": "When Germany annexed the Polish town of Oświęcim in 1939, it renamed the town Auschwitz and replaced the Polish street names with German ones. Stolarska Street became Tischlerstraße. This sign was found in 2004 during the excavation of the site of the town's Great Synagogue.",
+      "look": [
+        "Why would an occupying power bother to change the street signs?",
+        "Before the war this was an ordinary town where Jews and Catholics lived side by side. How does knowing that change what the name Auschwitz means to you?"
+      ],
+      "record": "https://muzea.malopolska.pl/en/objects-list/2064",
+      "link": "https://sketchfab.com/3d-models/street-sign-for-tischlerstrae-96ddd0a0db704dceb8b15ff1b5fdb4ea"
+    },
+    {
+      "src": "sketchfab",
+      "ref": "057658eddc6a4729af79b02ca1e68513",
+      "thumb": "https://media.sketchfab.com/models/057658eddc6a4729af79b02ca1e68513/thumbnails/9a9ccefb11be4421b0ea2e3b1da30703/63283dd19da84f0ba73fbbdee7646e4a.jpeg",
+      "license": "CC BY 4.0",
+      "by": "Virtual Museums of Małopolska",
+      "id": "liebermann-watch",
+      "group": "civilians",
+      "kind": "artifact",
+      "title": "Joachim Liebermann's pocket watch",
+      "date": "Early 1900s",
+      "holder": "Auschwitz Jewish Centre. Scanned by Virtual Museums of Małopolska",
+      "text": "Before the war the Liebermann family were part owners of a roofing-paper factory in Brzezinka, the village the Germans would rename Birkenau. In 1939 the family fled east ahead of the invasion. This watch is one of the things that remains.",
+      "look": [
+        "Why do museums keep ordinary things like a watch?",
+        "What questions about the Liebermann family does this object leave unanswered? Where would you look for answers?"
+      ],
+      "record": "https://muzea.malopolska.pl/en/objects-list/2059",
+      "link": "https://sketchfab.com/3d-models/joachim-liebermanns-pocket-watch-057658eddc6a4729af79b02ca1e68513"
+    }
+  ];
+
   Atlas.register({
     meta: {
       id: 'world-war-2-europe',
@@ -1208,6 +1392,6 @@
       theaters: ['Western Europe', 'Eastern Front', 'Mediterranean and North Africa', 'Atlantic'],
       intro: 'Army routes draw themselves as the armies advanced and retreated, and a marker appears for each battle as it begins.'
     },
-    PORTRAITS, BATTLES, CAMPAIGNS, EVENTS, SOURCES, TOURS, VOCAB, ADVISORY, NOTES
+    PORTRAITS, BATTLES, CAMPAIGNS, EVENTS, SOURCES, TOURS, VOCAB, ADVISORY, NOTES, OBJECTS
   });
 })();

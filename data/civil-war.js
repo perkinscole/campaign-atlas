@@ -1895,6 +1895,232 @@
     images: 'Most are chromolithographs published by Kurz & Allison of Chicago in the late 1880s and 1890s, or prints by L. Prang & Co. after paintings by Thure de Thulstrup; these are romanticized views made decades after the events. The photographs by Alexander Gardner, Timothy O\'Sullivan, and Thomas Roche were taken on the battlefields within days of the fighting.'
   };
 
+  // 3D objects: museum scans and a few labeled modern models. See README, "3D objects".
+  const OBJECTS = [
+    {
+      "src": "si",
+      "ref": "3d_package:a09bb967-a8b8-46a2-9322-37b25a452b46",
+      "glb": "https://3d-api.si.edu/content/document/3d_package:a09bb967-a8b8-46a2-9322-37b25a452b46/The_Wounded_Scout__a_Friend_in_the_Swamp-150k-2048-medium.glb",
+      "glbHi": "https://3d-api.si.edu/content/document/3d_package:a09bb967-a8b8-46a2-9322-37b25a452b46/The_Wounded_Scout__a_Friend_in_the_Swamp-150k-4096-high.glb",
+      "thumb": "https://3d-api.si.edu/content/document/3d_package:a09bb967-a8b8-46a2-9322-37b25a452b46/The_Wounded_Scout__a_Friend_in_the_Swamp-image-low.jpg",
+      "kind": "artifact",
+      "license": "CC0",
+      "id": "wounded-scout",
+      "group": "soldiers",
+      "title": "The Wounded Scout, a Friend in the Swamp",
+      "date": "1864",
+      "holder": "Smithsonian American Art Museum",
+      "maker": "John Rogers, sculptor",
+      "link": "https://americanart.si.edu/collections/search/artwork/?id=21164",
+      "text": "A plaster statuette patented in 1864, while the war was still being fought. A Black man escaping slavery through a Southern swamp stops to help a Union soldier wounded behind Confederate lines. Northern families bought affordable casts like this one to display at home.",
+      "look": [
+        "Who is holding whom up? What did the sculptor want a Northern buyer to feel?",
+        "Look at each man's feet and clothing. What do the details tell you about him?",
+        "The museum points out that works like this celebrated emancipation but still showed the Black man in a serving role. Do you see that here?"
+      ]
+    },
+    {
+      "src": "sketchfab",
+      "ref": "1da8c308f32f4ed3bf1eed8e84c72f59",
+      "thumb": "https://media.sketchfab.com/models/1da8c308f32f4ed3bf1eed8e84c72f59/thumbnails/89a0e1f1b9334f36b2abb4c8da1c9463/19cce9f70e71482fa3f5528499c462f8.jpeg",
+      "link": "https://sketchfab.com/3d-models/american-union-army-infantry-free-1da8c308f32f4ed3bf1eed8e84c72f59",
+      "license": "CC BY 4.0",
+      "by": "Andy Woodhead",
+      "id": "union-infantryman",
+      "group": "soldiers",
+      "kind": "model",
+      "title": "Union infantryman",
+      "date": "Modern model",
+      "holder": "Digital sculpture by Andy Woodhead",
+      "text": "A digital sculpture of a Union infantry soldier with his rifle musket and equipment. This is a modern artist's reconstruction, not a museum object. Treat it the way you would an illustration in a textbook.",
+      "look": [
+        "List everything he carries. What was each item for?",
+        "Compare him with the photographs of real soldiers elsewhere in this atlas. What looks right? What looks too clean?"
+      ]
+    },
+    {
+      "src": "sketchfab",
+      "ref": "0133f58391654782a6446c243ab0a0b4",
+      "thumb": "https://media.sketchfab.com/models/0133f58391654782a6446c243ab0a0b4/thumbnails/00918a92754e40e2a6b41bd3eefcbdee/c4c0c01f472440a89e35e8e2f9b9ccd7.jpeg",
+      "link": "https://sketchfab.com/3d-models/bullseye-canteen-0133f58391654782a6446c243ab0a0b4",
+      "license": "CC BY 4.0",
+      "by": "Old Cahawba Archaeological Park",
+      "id": "bullseye-canteen",
+      "group": "soldiers",
+      "kind": "artifact",
+      "title": "Bullseye canteen",
+      "date": "1861–1865",
+      "holder": "Confederate Memorial Park, Alabama. Scanned by Old Cahawba Archaeological Park",
+      "text": "A tin canteen from the Civil War. Soldiers called this pattern a bullseye canteen for the rings pressed into each side, which stiffened the thin metal. It held about three pints.",
+      "look": [
+        "On a twenty-mile march in July, how far would three pints of water go?",
+        "Look for dents, rust, and repairs. What has happened to this canteen since the war?"
+      ]
+    },
+    {
+      "src": "sketchfab",
+      "ref": "b7ab476135f04854b0e9cb5bedde3b63",
+      "thumb": "https://media.sketchfab.com/models/b7ab476135f04854b0e9cb5bedde3b63/thumbnails/7a5f39a7fb7a46de9f83daada865c374/64524962dc22405295c1139baee33666.jpeg",
+      "link": "https://sketchfab.com/3d-models/remington-model-revolver-b7ab476135f04854b0e9cb5bedde3b63",
+      "license": "CC BY 4.0",
+      "by": "Wyoming State Museum",
+      "id": "remington-revolver",
+      "group": "weapons",
+      "kind": "artifact",
+      "title": "Remington revolver",
+      "date": "About 1861",
+      "holder": "Wyoming State Museum",
+      "text": "A .44 caliber cap-and-ball revolver. According to the Wyoming State Museum, this was the second most purchased revolver model of the Civil War, after the Colt Model 1860 Army. This one stayed in use afterward: it was picked up in 1908 on the site of an 1874 fight in Wyoming between U.S. cavalry with Shoshone allies and a camp of Cheyenne, Lakota, and Arapaho.",
+      "look": [
+        "Each of the six chambers was loaded separately with loose powder, a ball, and a cap. What does that tell you about fighting with it?",
+        "It lay on the ground for more than thirty years. What evidence of that can you find?"
+      ]
+    },
+    {
+      "src": "sketchfab",
+      "ref": "67d85b30c06d487190892f6083f36757",
+      "thumb": "https://media.sketchfab.com/models/67d85b30c06d487190892f6083f36757/thumbnails/599f06fd272f4c9b9d247f9c6018283a/8835078a227b486993b4895ddc353caf.jpeg",
+      "link": "https://sketchfab.com/3d-models/minie-ball-67d85b30c06d487190892f6083f36757",
+      "license": "CC BY 4.0",
+      "by": "Florida Public Archaeology Network",
+      "id": "minie-ball",
+      "group": "weapons",
+      "kind": "artifact",
+      "title": "Minié ball, .58 caliber",
+      "date": "1861–1865",
+      "holder": "Florida Public Archaeology Network. Model by Emma Dietrich",
+      "text": "The standard rifle bullet of the war: soft lead, a little over half an inch across, with a hollow base that spread on firing to grip the grooves inside the barrel. It made the rifle musket accurate at several times the range of the old smoothbore, while armies still attacked in close lines.",
+      "look": [
+        "Find the hollow base and the rings around the bullet. What was each for?",
+        "Soft lead flattens when it hits. Connect that to what you have read about Civil War field hospitals."
+      ]
+    },
+    {
+      "src": "sketchfab",
+      "ref": "ae7264cbc4d4412185eaa3e65dc926fe",
+      "thumb": "https://media.sketchfab.com/models/ae7264cbc4d4412185eaa3e65dc926fe/thumbnails/290c1d557d574803a1a6016b1ca7198f/c80e9b65646f4e548ce759410d9575a9.jpeg",
+      "link": "https://sketchfab.com/3d-models/12-pounder-napoleon-cannon-ae7264cbc4d4412185eaa3e65dc926fe",
+      "license": "CC BY 4.0",
+      "by": "raymondrdorollo",
+      "id": "napoleon-gun",
+      "group": "weapons",
+      "kind": "model",
+      "title": "12-pounder \"Napoleon\" field gun",
+      "date": "Modern model",
+      "holder": "Digital model by raymondrdorollo",
+      "text": "A digital model of the Model 1857 12-pounder, the most common field gun on both sides. It fired a twelve-pound solid shot about a mile, and at close range it fired canister, a tin of iron balls that turned the gun into a giant shotgun. This is a modern artist's reconstruction, not a museum object. Treat it the way you would an illustration in a textbook.",
+      "look": [
+        "A crew of men served each gun and a team of six horses pulled it. Why did artillery need so many people and animals?",
+        "Why would this gun be most deadly to infantry in the last 300 yards of a charge?"
+      ]
+    },
+    {
+      "src": "si",
+      "ref": "3d_package:28663e98-595d-4994-bede-bd623252c82f",
+      "glb": "https://3d-api.si.edu/content/document/3d_package:28663e98-595d-4994-bede-bd623252c82f/-I-The_Fugitives_Story--I-150k-2048-medium.glb",
+      "glbHi": "https://3d-api.si.edu/content/document/3d_package:28663e98-595d-4994-bede-bd623252c82f/-I-The_Fugitives_Story--I-150k-4096-high.glb",
+      "thumb": "https://3d-api.si.edu/content/document/3d_package:28663e98-595d-4994-bede-bd623252c82f/-I-The_Fugitives_Story--I-image-low.jpg",
+      "kind": "artifact",
+      "license": "CC0",
+      "id": "fugitives-story",
+      "group": "civilians",
+      "title": "The Fugitive's Story",
+      "date": "1869",
+      "holder": "National Museum of African American History and Culture",
+      "maker": "John Rogers, sculptor",
+      "link": "https://nmaahc.si.edu/object/nmaahc_2011.155.290",
+      "text": "A plaster group made four years after the war. A woman who has escaped slavery, holding her baby, tells her story to three leading abolitionists: William Lloyd Garrison, seated at the desk, Henry Ward Beecher, and John Greenleaf Whittier. Their names are carved on the base. Hers is not. The museum lists her as unidentified.",
+      "look": [
+        "The three men are named on the base and the woman is not. What does that tell you about who the sculpture was made for?",
+        "Find the bundle at her feet. Why did the sculptor include it?"
+      ]
+    },
+    {
+      "src": "si",
+      "ref": "3d_package:5879321a-d9ef-4791-a036-8413b640289d",
+      "glb": "https://3d-api.si.edu/content/document/3d_package:5879321a-d9ef-4791-a036-8413b640289d/2013_57_001_WEB3-150k-2048-medium.glb",
+      "glbHi": "https://3d-api.si.edu/content/document/3d_package:5879321a-d9ef-4791-a036-8413b640289d/2013_57_001_WEB3-150k-4096-high.glb",
+      "thumb": "",
+      "kind": "artifact",
+      "license": "CC0",
+      "id": "point-of-pines-cabin",
+      "group": "civilians",
+      "title": "Cabin from Point of Pines Plantation",
+      "date": "1853",
+      "holder": "National Museum of African American History and Culture",
+      "link": "https://nmaahc.si.edu/object/nmaahc_2013.57",
+      "text": "A cabin built in 1853 on a plantation on Edisto Island, South Carolina, one of about ten identical dwellings for enslaved families. It had two rooms and a loft reached by a ladder, one door, and three windows. The museum notes that it was most likely put together by enslaved carpenters.",
+      "look": [
+        "Compare the size of the cabin with your classroom. A whole family lived here.",
+        "A back door and an extra room were added after emancipation. Why might freedom have changed the house?"
+      ]
+    },
+    {
+      "src": "si",
+      "ref": "3d_package:5561cc72-c1b5-4452-9fe5-7d54d5a8c975",
+      "glb": "https://3d-api.si.edu/content/document/3d_package:5561cc72-c1b5-4452-9fe5-7d54d5a8c975/2018_35_2_1ab_001_WEB-150k-2048-medium.glb",
+      "glbHi": "https://3d-api.si.edu/content/document/3d_package:5561cc72-c1b5-4452-9fe5-7d54d5a8c975/2018_35_2_1ab_001_WEB-150k-4096-high.glb",
+      "thumb": "https://3d-api.si.edu/content/document/3d_package:5561cc72-c1b5-4452-9fe5-7d54d5a8c975/scene-image-low.jpg",
+      "kind": "artifact",
+      "license": "CC0",
+      "id": "keckly-slippers",
+      "group": "civilians",
+      "title": "Stars and stripes slippers attributed to Elizabeth Keckly",
+      "date": "About 1865",
+      "holder": "National Museum of African American History and Culture",
+      "link": "https://nmaahc.si.edu/object/nmaahc_2018.35.2.1ab",
+      "text": "Crocheted slippers in red and white stripes with a band of white stars on blue, attributed to Elizabeth Keckly. Born into slavery, Keckly bought her freedom and became a dressmaker in Washington and a confidante of Mary Lincoln. The museum believes the slippers were probably ordered by the wife of Gideon Welles, Lincoln's Secretary of the Navy, as a gift for him.",
+      "look": [
+        "Why might someone in Washington want slippers in the pattern of the flag in 1865?",
+        "The museum says \"attributed to.\" What is the difference between that and \"made by\"?"
+      ]
+    },
+    {
+      "src": "si",
+      "ref": "3d_package:2b4a081a-9ea1-4b0c-b1c3-6f5389da3244",
+      "orientation": "9.59deg 77.52deg 8.11deg",
+      "glb": "https://3d-api.si.edu/content/document/3d_package:2b4a081a-9ea1-4b0c-b1c3-6f5389da3244/p0-Part-100k-1024.glb",
+      "glbHi": "https://3d-api.si.edu/content/document/3d_package:2b4a081a-9ea1-4b0c-b1c3-6f5389da3244/p0-Part-100k-4096.glb",
+      "thumb": "https://3d-api.si.edu/content/document/3d_package:2b4a081a-9ea1-4b0c-b1c3-6f5389da3244/scene-image-low.jpg",
+      "kind": "artifact",
+      "license": "CC0",
+      "id": "lincoln-1860",
+      "group": "leaders",
+      "title": "Abraham Lincoln, life mask",
+      "date": "1860",
+      "holder": "National Portrait Gallery",
+      "maker": "Leonard Wells Volk, sculptor (this cast 1917)",
+      "link": "https://npg.si.edu/object/npg_NPG.71.24",
+      "text": "A cast of Lincoln's face made from life by the sculptor Leonard Volk in 1860, before Lincoln ran for president. Wet plaster was spread over his face and left to harden, so this is not an artist's impression. It is the shape of his actual face.",
+      "look": [
+        "What can a life mask tell you that a photograph cannot? What can it not tell you?",
+        "Now open the 1865 mask and compare."
+      ]
+    },
+    {
+      "src": "si",
+      "ref": "3d_package:c02c239d-5ebf-4a7a-a368-e2288bbf4b31",
+      "orientation": "-169.94deg 37.50deg -152.31deg",
+      "glb": "https://3d-api.si.edu/content/document/3d_package:c02c239d-5ebf-4a7a-a368-e2288bbf4b31/abraham-lincoln-mills-life-mask-150k-2048-medium.glb",
+      "glbHi": "https://3d-api.si.edu/content/document/3d_package:c02c239d-5ebf-4a7a-a368-e2288bbf4b31/abraham-lincoln-mills-life-mask-150k-4096-high.glb",
+      "thumb": "https://3d-api.si.edu/content/document/3d_package:c02c239d-5ebf-4a7a-a368-e2288bbf4b31/scene-image-low.jpg",
+      "kind": "artifact",
+      "license": "CC0",
+      "id": "lincoln-1865",
+      "group": "leaders",
+      "title": "Abraham Lincoln, life mask",
+      "date": "February 11, 1865",
+      "holder": "National Portrait Gallery",
+      "maker": "Clark Mills, sculptor (this cast about 1917)",
+      "link": "https://npg.si.edu/object/npg_NPG.71.26",
+      "text": "A second cast of Lincoln's face, taken from life by Clark Mills on February 11, 1865, two months before the assassination. The face is so gaunt that people often take it for a death mask.",
+      "look": [
+        "Set this beside the 1860 mask. What did four years of war do to his face?",
+        "A friend said this mask showed \"one on whom sorrow and care had done their worst.\" What do you see that supports that?"
+      ]
+    }
+  ];
+
   Atlas.register({
     meta: {
       id: 'civil-war',
@@ -1909,6 +2135,6 @@
       theaters: ['Eastern', 'Western', 'Trans-Mississippi'],
       intro: 'Army routes draw themselves as the armies marched, and a marker appears for each battle as it begins.'
     },
-    PORTRAITS, BATTLES, CAMPAIGNS, EVENTS, SOURCES, TOURS, VOCAB, ADVISORY, NOTES
+    PORTRAITS, BATTLES, CAMPAIGNS, EVENTS, SOURCES, TOURS, VOCAB, ADVISORY, NOTES, OBJECTS
   });
 })();

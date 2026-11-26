@@ -64,7 +64,7 @@ window.Atlas = (function () {
     });
     pack.campaignById = Object.fromEntries(pack.CAMPAIGNS.map(c => [c.id, c]));
     pack.EVENTS.forEach(e => { e.d0 = pack.dayOf(e.date); });
-    pack.TOURS = pack.TOURS || []; pack.VOCAB = pack.VOCAB || []; pack.ADVISORY = pack.ADVISORY || [];
+    pack.TOURS = pack.TOURS || []; pack.VOCAB = pack.VOCAB || []; pack.ADVISORY = pack.ADVISORY || []; pack.OBJECTS = pack.OBJECTS || [];
     pack.tourById = Object.fromEntries(pack.TOURS.map(t => [t.id, t]));
     pack.entries = pack.BATTLES.flatMap(b => b.journal.map(j => ({ b, j })));
     return pack;
@@ -78,7 +78,7 @@ window.Atlas = (function () {
     const link = (page, label) => `<a href="${page}.html?war=${entry.id}"${active === page ? ' class="active" aria-current="page"' : ''}>${label}</a>`;
     h.innerHTML = entry
       ? `<a class="brand" href="index.html">${esc(SITE.name)}<small>${esc(entry.title)} · ${esc(entry.years)}</small></a>
-         <nav aria-label="Site">${link('atlas', 'Map')}${link('battles', 'Battles')}${link('teach', 'For Teachers')}${link('sources', 'Sources')}<a class="all" href="index.html">All conflicts</a></nav>`
+         <nav aria-label="Site">${link('atlas', 'Map')}${link('battles', 'Battles')}${entry.objects ? link('objects', '3D Objects') : ''}${link('teach', 'For Teachers')}${link('sources', 'Sources')}<a class="all" href="index.html">All conflicts</a></nav>`
       : `<a class="brand" href="index.html">${esc(SITE.name)}<small>${esc(SITE.tagline)}</small></a>
          <nav aria-label="Site"><a href="index.html" class="active">Conflicts</a><a href="index.html#teachers">For Teachers</a></nav>`;
   }

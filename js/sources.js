@@ -32,5 +32,5 @@ Atlas.load('sources', function (P) {
     <ul class="credits">${items.map(({ im, ctx }) => `<li><a href="${im.page}" target="_blank" rel="noopener">${esc(im.caption)}</a> — ${esc(im.credit)} <span style="color:var(--muted)">(${esc(ctx)})</span></li>`).join('')}</ul>
 
     <h2>Built with</h2>
-    <p><a href="https://leafletjs.com/">Leaflet</a> for the map, topographic, hillshade, and boundary tiles by Esri, contour-line tiles by <a href="https://opentopomap.org/">OpenTopoMap</a> (CC-BY-SA, map data © OpenStreetMap contributors, SRTM), and type from Google Fonts (Playfair Display and Lora). The site is plain HTML, CSS, and JavaScript with no build step.</p>`;
+    <p><a href="https://leafletjs.com/">Leaflet</a> for the map, topographic, hillshade, and boundary tiles by Esri, contour-line tiles by <a href="https://opentopomap.org/">OpenTopoMap</a> (CC-BY-SA, map data © OpenStreetMap contributors, SRTM), 3D scans from the Smithsonian Institution (CC0) and from museums and makers on Sketchfab (credited beside each object), shown with Google's model-viewer component, and type from Google Fonts (Playfair Display and Lora). The site is plain HTML, CSS, and JavaScript with no build step.</p>`;
 });

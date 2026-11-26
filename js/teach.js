@@ -58,6 +58,11 @@ Atlas.load('teach', function (P) {
         <ol class="stops">${b.tactical.phases.map((ph, i) => `<li><strong>${esc(ph.title)}</strong> <span class="meta">· ${esc(ph.time)}</span> <a class="stop-link" href="${Atlas.url('atlas', `battlefield=${b.id}:${i + 1}`)}">open</a></li>`).join('')}</ol>
       </section>`).join('')}` : ''}
 
+    ${P.OBJECTS.length ? `<h2>Objects in 3D</h2>
+    <p>${P.OBJECTS.length} objects students can turn and zoom: ${P.OBJECTS.filter(o => o.kind === 'artifact').length} scans of real things held by museums, and ${P.OBJECTS.filter(o => o.kind !== 'artifact').length} modern digital models, each labeled as such. Every object comes with "look closely" questions. Use one as a bell-ringer: put it on the projector, turn it slowly, and ask what students notice before telling them what it is.</p>
+    <p><a class="btn primary" href="${Atlas.url('objects')}">Open the 3D objects</a></p>
+    <ul class="obj-list">${P.OBJECTS.map(o => `<li><a href="${Atlas.url('objects', o.id)}">${esc(o.title)}</a> <span class="meta">· ${esc(o.date)} · ${o.kind === 'artifact' ? 'real object' : 'modern model'}</span></li>`).join('')}</ul>` : ''}
+
     <h2>Primary-source worksheets</h2>
     <p>One worksheet per battle: background, each source with sourcing, close-reading, and perspective questions, an image analysis, and an exit question. The teacher key adds who wrote each source, when, and what to listen for.</p>
     <table class="ws-table">

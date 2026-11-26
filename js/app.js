@@ -274,6 +274,7 @@ Atlas.load('atlas', function (P) {
         ${hero ? figure(hero) : ''}
         <p class="summary">${esc(b.summary)}</p>
         ${b.tactical ? `<p><button class="btn primary watch" data-battlefield="${b.id}">▶ Watch the battle unfold on the ground</button></p>` : ''}
+        ${(P.OBJECTS || []).some(o => o.battle === b.id) ? `<p class="obj-links">In 3D: ${P.OBJECTS.filter(o => o.battle === b.id).map(o => `<a href="${Atlas.url('objects', o.id)}">${esc(o.title)}</a>`).join(' · ')}</p>` : ''}
         <p class="significance"><strong>Why it matters.</strong> ${esc(b.significance)}</p>
         <dl class="facts">
           ${M.sides.map(s => `<dt>${esc(P.sideLabel(b, s.id))}</dt><dd>${esc(b.commanders[s.id])}<br><small>${esc(b.forces[s.id])}</small></dd>`).join('')}

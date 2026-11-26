@@ -1117,6 +1117,91 @@
     images: 'No photographs of the war exist. John Trumbull served as an officer early in the war and painted his history series from 1786 onward, sketching many participants from life. Amos Doolittle\'s engravings of Lexington and Concord were made in 1775 after he visited the sites and questioned witnesses. Works by Leutze, Chappel, Pyle, and others were painted 70 to 130 years later.'
   };
 
+  // 3D objects: museum scans and a few labeled modern models. See README, "3D objects".
+  const OBJECTS = [
+    {
+      "src": "sketchfab",
+      "ref": "d0e294bbd8d44bbbb77f1cd0d444b370",
+      "thumb": "https://media.sketchfab.com/models/d0e294bbd8d44bbbb77f1cd0d444b370/thumbnails/04cb94a170244f7d900807ff086564ae/ecb90631f4ad48c6a74839e19fdc1e7a.jpeg",
+      "link": "https://sketchfab.com/3d-models/powder-horn-1775-d0e294bbd8d44bbbb77f1cd0d444b370",
+      "license": "CC BY 4.0",
+      "by": "Boston College Digital Scholarship",
+      "id": "powder-horn",
+      "group": "soldiers",
+      "kind": "artifact",
+      "title": "Powder horn of Ephraim Moors",
+      "date": "1775",
+      "holder": "Massachusetts Historical Society. Scanned by Boston College Digital Scholarship",
+      "maker": "Attributed to Jacob Gay, carver",
+      "text": "A carved ox or cow horn that kept a soldier's gunpowder dry, made in Boston in 1775, the first year of the war. It belonged to a man named Ephraim Moors, and the carving is attributed to Jacob Gay. Soldiers often had their horns engraved with their names, pictures, and verses.",
+      "look": [
+        "Turn the horn and read what is carved on it. What did its owner want remembered?",
+        "Why would a soldier pay to have a piece of everyday equipment decorated?"
+      ]
+    },
+    {
+      "src": "sketchfab",
+      "ref": "534ede346b2d46c18804260e0799631a",
+      "thumb": "https://media.sketchfab.com/models/534ede346b2d46c18804260e0799631a/thumbnails/765471641adf488a9051b83b4b2c77fc/32248486907c4198bf94dfe5db8c96b0.jpeg",
+      "link": "https://sketchfab.com/3d-models/flintlock-musket-no-hands-534ede346b2d46c18804260e0799631a",
+      "license": "CC BY 4.0",
+      "by": "Andy Woodhead",
+      "id": "flintlock-musket",
+      "group": "weapons",
+      "kind": "model",
+      "title": "Flintlock musket",
+      "date": "Modern model",
+      "holder": "Digital sculpture by Andy Woodhead",
+      "text": "A digital model of a flintlock musket of the kind infantry on both sides carried. A trained soldier could fire about three shots a minute, and the smooth barrel was accurate only to about eighty yards. That is why armies stood in close lines and fired together, and why the bayonet decided so many fights. This is a modern artist's reconstruction, not a museum object. Treat it the way you would an illustration in a textbook.",
+      "look": [
+        "Find the flint, the pan, and the ramrod. Work out the steps needed to load and fire one shot.",
+        "How does this weapon explain the way Morgan placed his men at Cowpens?"
+      ],
+      "battle": "cowpens"
+    },
+    {
+      "src": "sketchfab",
+      "ref": "2662865f331146c59129cd7901fa8db1",
+      "thumb": "https://media.sketchfab.com/models/2662865f331146c59129cd7901fa8db1/thumbnails/fdeac39d501b489aa8ba3e8e291aac6b/f01a313bc8cb45f29910a7a38ee10969.jpeg",
+      "link": "https://sketchfab.com/3d-models/12-pound-cannon-2662865f331146c59129cd7901fa8db1",
+      "license": "CC BY 4.0",
+      "by": "iedalton",
+      "id": "field-gun",
+      "group": "weapons",
+      "kind": "model",
+      "title": "Field gun on its carriage",
+      "date": "Modern model",
+      "holder": "Digital model by iedalton",
+      "text": "A digital model of a smoothbore field gun of the Revolutionary era on its wooden carriage. Guns like this fired solid iron shot, or grapeshot at close range, and had to be dragged over bad roads by horses or oxen. This is a modern artist's reconstruction, not a museum object. Treat it the way you would an illustration in a textbook.",
+      "look": [
+        "Henry Knox hauled about sixty guns 300 miles from Fort Ticonderoga to Boston in the winter of 1775–76. Looking at this model, what made that so hard?",
+        "Why would an army with cannon want to hold the high ground?"
+      ]
+    },
+    {
+      "src": "si",
+      "ref": "3d_package:ff28cb3a-ad00-43b3-a928-fa61ab0a288f",
+      "orientation": "-26.60deg 49.98deg 133.95deg",
+      "glb": "https://3d-api.si.edu/content/document/3d_package:ff28cb3a-ad00-43b3-a928-fa61ab0a288f/npg-npg_78_1-HiRes_Unwrapped-150k-2048-medium.glb",
+      "glbHi": "https://3d-api.si.edu/content/document/3d_package:ff28cb3a-ad00-43b3-a928-fa61ab0a288f/npg-npg_78_1-HiRes_Unwrapped-150k-4096-high.glb",
+      "thumb": "https://3d-api.si.edu/content/document/3d_package:ff28cb3a-ad00-43b3-a928-fa61ab0a288f/scene-image-low.jpg",
+      "kind": "artifact",
+      "license": "CC0",
+      "id": "washington-houdon",
+      "group": "leaders",
+      "title": "George Washington",
+      "date": "About 1786",
+      "holder": "National Portrait Gallery",
+      "maker": "Jean-Antoine Houdon, sculptor",
+      "link": "https://npg.si.edu/object/npg_NPG.78.1",
+      "text": "In 1785 the French sculptor Jean-Antoine Houdon crossed the Atlantic, spent two weeks at Mount Vernon, and made a mask of Washington's face from life. This bust is based on that mask, which makes it one of the most reliable records of what Washington actually looked like, two years after the war ended.",
+      "look": [
+        "Compare this face with the portrait on a dollar bill. Which do you trust more, and why?",
+        "Houdon showed Washington without a uniform or a wig. What does that choice say about how he was to be remembered?"
+      ]
+    }
+  ];
+
   Atlas.register({
     meta: {
       id: 'american-revolution',
@@ -1131,6 +1216,6 @@
       theaters: ['New England', 'Northern', 'Middle States', 'Southern'],
       intro: 'Army routes draw themselves as the armies marched, by land and by sea, and a marker appears for each battle as it begins.'
     },
-    PORTRAITS, BATTLES, CAMPAIGNS, EVENTS, SOURCES, TOURS, VOCAB, ADVISORY, NOTES
+    PORTRAITS, BATTLES, CAMPAIGNS, EVENTS, SOURCES, TOURS, VOCAB, ADVISORY, NOTES, OBJECTS
   });
 })();
