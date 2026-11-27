@@ -22,7 +22,7 @@ def get(url, kind):
         try: return json.load(open(path))
         except Exception: pass
     for attempt in range(5):
-        wait = (4.0 if kind == 'www' else 0.8) - (time.time() - last[kind])
+        wait = {'www': 5.0, 'item': 3.0}.get(kind, 0.8) - (time.time() - last[kind])     # the catalog allows far fewer requests than the image server
         if wait > 0: time.sleep(wait)
         r = subprocess.run(['curl', '-s', '-m', '150' if kind == 'www' else '60', '-A', UA, '-w', '\n%{http_code}', url], capture_output=True, text=True)
         last[kind] = time.time()
