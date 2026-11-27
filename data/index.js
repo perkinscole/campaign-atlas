@@ -23,6 +23,13 @@ window.ATLAS_SITE = {
       grades: '5–12'
     },
     {
+      id: 'world-war-1', status: 'live', period: true,
+      title: 'World War I', years: '1914–1918',
+      blurb: 'From the invasion of Belgium to the armistice: the Marne, Verdun, the Somme, Gallipoli, the war at sea, and the American army in France, told through letters, diaries, orders, and reports printed at the time.',
+      cover: 'Cheshire Regiment trench Somme 1916.jpg',
+      grades: '6–12'
+    },
+    {
       id: 'world-war-2-europe', status: 'live', objects: true, period: true,
       title: 'World War II in Europe and North Africa', years: '1939–1945',
       blurb: 'From the invasion of Poland to V-E Day: the fall of France, the Eastern Front, North Africa, Italy, D-Day, and the liberation of the camps, told through official records and Nuremberg testimony.',
@@ -31,7 +38,6 @@ window.ATLAS_SITE = {
     },
     { id: 'war-of-1812', status: 'planned', title: 'The War of 1812', years: '1812–1815' },
     { id: 'mexican-american-war', status: 'planned', title: 'The Mexican-American War', years: '1846–1848' },
-    { id: 'world-war-1', status: 'planned', title: 'World War I', years: '1914–1918' },
     { id: 'world-war-2-pacific', status: 'planned', title: 'World War II: The Pacific', years: '1941–1945' },
     { id: 'korean-war', status: 'planned', title: 'The Korean War', years: '1950–1953' },
     { id: 'vietnam-war', status: 'planned', title: 'The Vietnam War', years: '1955–1975' }
