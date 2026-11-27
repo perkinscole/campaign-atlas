@@ -95,7 +95,7 @@ BATTLES = [
         ref=IA('fatalistatwar00bind', 'I am not pleased with the idea of poisoning men'), refTitle=BINDING),
    dict(quote="In Flanders fields the poppies blow\nBetween the crosses, row on row,\nThat mark our place; and in the sky\nThe larks, still bravely singing, fly\nScarce heard amid the guns below.",
         who='Maj. John McCrae', role='Canadian army doctor, written at his dressing station the day after burying a friend', side='allied', date='May 3, 1915', source='“In Flanders Fields,” first published in Punch, December 8, 1915', portrait='mccrae',
-        ref=('URL', 'https://en.wikisource.org/wiki/In_Flanders_Fields'), refTitle='In Flanders Fields (Wikisource transcription)')]),
+        ref=IA('keepfaith00unse', 'In Flanders fields the poppies blow'), refTitle='Keep the Faith (1916), an anthology printing the poem')]),
  dict(id='gallipoli', name='Gallipoli', start='1915-04-25', end='1916-01-09', lat=40.24, lng=26.28, place='Gallipoli Peninsula, Ottoman Empire (now Turkey)', theater='Ottoman Front', result='central', campaign='gallipoli',
   sideLabels=dict(allied='Britain, France, Australia, and New Zealand', central='Ottoman Empire'),
   commanders=dict(allied='Gen. Sir Ian Hamilton, Lt. Gen. Sir William Birdwood', central='Gen. Otto Liman von Sanders, Esat Pasha, Lt. Col. Mustafa Kemal'),

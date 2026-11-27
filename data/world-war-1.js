@@ -228,7 +228,7 @@
           quote: 'In Flanders fields the poppies blow\nBetween the crosses, row on row,\nThat mark our place; and in the sky\nThe larks, still bravely singing, fly\nScarce heard amid the guns below.',
           who: 'Maj. John McCrae', role: 'Canadian army doctor, written at his dressing station the day after burying a friend', side: 'allied',
           date: 'May 3, 1915', source: '“In Flanders Fields,” first published in Punch, December 8, 1915', portrait: 'mccrae',
-          verified: true, ref: 'https://en.wikisource.org/wiki/In_Flanders_Fields', refTitle: 'In Flanders Fields (Wikisource transcription)'
+          verified: true, ref: IA('keepfaith00unse', 'In Flanders fields the poppies blow'), refTitle: 'Keep the Faith (1916), an anthology printing the poem'
         }
       ]
     },
