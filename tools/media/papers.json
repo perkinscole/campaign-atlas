@@ -507,5 +507,176 @@
    "url": "https://www.loc.gov/resource/sn83025789/1781-12-19/ed-1/?sp=1&q=york",
    "label": "Printed in a British-held city"
   }
+ ],
+ "world-war-2-europe/market-garden": [
+  {
+   "paper": "Evening Star",
+   "place": "Washington, D.C.",
+   "date": "1944-09-21",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_1quidor_ver01:data:sn83045462:00280603752:1944092101:0780/pct:0.00,28.48,34.00,30.78/520,/0/default.jpg",
+   "wide": false,
+   "url": "https://www.loc.gov/resource/sn83045462/1944-09-21/ed-1/?sp=1&q=arnhem"
+  },
+  {
+   "paper": "The Daily Alaska Empire",
+   "place": "Juneau, Alaska",
+   "date": "1944-09-20",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:ak:batch_ak_ixoreus_ver01:data:sn83045499:00393342134:1944092001:0421/pct:66.00,40.70,34.00,33.65/520,/0/default.jpg",
+   "wide": false,
+   "url": "https://www.loc.gov/resource/sn83045499/1944-09-20/ed-1/?sp=1&q=arnhem"
+  }
+ ],
+ "world-war-2-europe/huertgen-forest": [],
+ "world-war-2-europe/bulge": [],
+ "world-war-2-europe/liberation-of-the-camps": [],
+ "world-war-2-europe/berlin": [
+  {
+   "paper": "Evening Star",
+   "place": "Washington, D.C.",
+   "date": "1945-05-08",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_1vuillard_ver01:data:sn83045462:00280604525:1945050801:0046/pct:65.61,69.70,34.00,30.30/520,/0/default.jpg",
+   "wide": false,
+   "url": "https://www.loc.gov/resource/sn83045462/1945-05-08/ed-1/?sp=1&q=surrender"
+  },
+  {
+   "paper": "The Daily Alaska Empire",
+   "place": "Juneau, Alaska",
+   "date": "1945-05-08",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:ak:batch_ak_ixoreus_ver01:data:sn83045499:00393342146:1945050801:0835/pct:29.40,43.07,34.00,33.29/520,/0/default.jpg",
+   "wide": false,
+   "url": "https://www.loc.gov/resource/sn83045499/1945-05-08/ed-1/?sp=1&q=surrender"
+  }
+ ],
+ "civil-war/balls-bluff": [],
+ "civil-war/fort-donelson": [
+  {
+   "paper": "The Daily Dispatch",
+   "place": "Richmond, Va.",
+   "date": "1862-02-22",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:vi:batch_vi_kelso_ver01:data:sn84024738:00280777985:1862022201:0183/pct:5.56,68.49,34.00,30.47/520,/0/default.jpg",
+   "wide": false,
+   "url": "https://www.loc.gov/resource/sn84024738/1862-02-22/ed-1/?sp=1&q=donelson",
+   "label": "Southern newspaper"
+  }
+ ],
+ "civil-war/pea-ridge": [],
+ "civil-war/hampton-roads": [
+  {
+   "paper": "New-York Daily Tribune",
+   "place": "New York, N.Y.",
+   "date": "1862-03-12",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_basic_ver02:data:sn83030213:00206530704:1862031201:0487/pct:7.40,50.74,34.00,29.85/520,/0/default.jpg",
+   "wide": false,
+   "url": "https://www.loc.gov/resource/sn83030213/1862-03-12/ed-1/?sp=1&q=merrimac",
+   "label": "Northern newspaper"
+  },
+  {
+   "paper": "The Daily Dispatch",
+   "place": "Richmond, Va.",
+   "date": "1862-03-14",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:vi:batch_vi_kelso_ver01:data:sn84024738:00280777985:1862031401:0247/pct:45.75,22.18,34.00,30.91/520,/0/default.jpg",
+   "wide": false,
+   "url": "https://www.loc.gov/resource/sn84024738/1862-03-14/ed-1/?sp=1&q=merrimac",
+   "label": "Southern newspaper"
+  }
+ ],
+ "civil-war/shiloh": [
+  {
+   "paper": "New-York Daily Tribune",
+   "place": "New York, N.Y.",
+   "date": "1862-04-11",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_basic_ver02:data:sn83030213:00206530704:1862041101:0693/pct:47.60,7.77,34.00,30.22/520,/0/default.jpg",
+   "wide": false,
+   "url": "https://www.loc.gov/resource/sn83030213/1862-04-11/ed-1/?sp=1&q=pittsburg",
+   "label": "Northern newspaper"
+  }
+ ],
+ "civil-war/new-orleans": [
+  {
+   "paper": "New-York Daily Tribune",
+   "place": "New York, N.Y.",
+   "date": "1862-04-29",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_basic_ver02:data:sn83030213:00206530704:1862042901:0833/pct:8.74,48.89,34.00,30.01/520,/0/default.jpg",
+   "wide": false,
+   "url": "https://www.loc.gov/resource/sn83030213/1862-04-29/ed-1/?sp=1&q=orleans",
+   "label": "Northern newspaper"
+  }
+ ],
+ "civil-war/seven-days": [
+  {
+   "paper": "New-York Daily Tribune",
+   "place": "New York, N.Y.",
+   "date": "1862-07-04",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_basic_ver02:data:sn83030213:00206530716:1862070401:0499/pct:23.94,15.61,34.00,29.90/520,/0/default.jpg",
+   "wide": false,
+   "url": "https://www.loc.gov/resource/sn83030213/1862-07-04/ed-1/?sp=1&q=chickahominy",
+   "label": "Northern newspaper"
+  },
+  {
+   "paper": "The Daily Dispatch",
+   "place": "Richmond, Va.",
+   "date": "1862-07-07",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:vi:batch_vi_kelso_ver01:data:sn84024738:00280778060:1862070701:0015/pct:24.22,5.64,34.00,30.96/520,/0/default.jpg",
+   "wide": false,
+   "url": "https://www.loc.gov/resource/sn84024738/1862-07-07/ed-1/?sp=1&q=richmond",
+   "label": "Southern newspaper"
+  }
+ ],
+ "civil-war/second-bull-run": [
+  {
+   "paper": "New-York Daily Tribune",
+   "place": "New York, N.Y.",
+   "date": "1862-09-01",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_basic_ver02:data:sn83030213:00206530728:1862090101:0007/pct:0.00,6.03,34.00,30.32/520,/0/default.jpg",
+   "wide": false,
+   "url": "https://www.loc.gov/resource/sn83030213/1862-09-01/ed-1/?sp=1&q=bull",
+   "label": "Northern newspaper"
+  },
+  {
+   "paper": "The Daily Dispatch",
+   "place": "Richmond, Va.",
+   "date": "1862-09-03",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:vi:batch_vi_kelso_ver01:data:sn84024738:00280778060:1862090301:0125/pct:0.00,27.86,34.00,30.98/520,/0/default.jpg",
+   "wide": false,
+   "url": "https://www.loc.gov/resource/sn84024738/1862-09-03/ed-1/?sp=1&q=manassas",
+   "label": "Southern newspaper"
+  }
+ ],
+ "civil-war/south-mountain": [
+  {
+   "paper": "New-York Daily Tribune",
+   "place": "New York, N.Y.",
+   "date": "1862-09-16",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_basic_ver02:data:sn83030213:00206530728:1862091601:0115/pct:0.89,2.09,34.00,30.40/520,/0/default.jpg",
+   "wide": false,
+   "url": "https://www.loc.gov/resource/sn83030213/1862-09-16/ed-1/?sp=1&q=mountain",
+   "label": "Northern newspaper"
+  }
+ ],
+ "civil-war/antietam": [
+  {
+   "paper": "New-York Daily Tribune",
+   "place": "New York, N.Y.",
+   "date": "1862-09-20",
+   "page": 1,
+   "clip": "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_basic_ver02:data:sn83030213:00206530728:1862092001:0147/pct:46.10,8.05,34.00,30.16/520,/0/default.jpg",
+   "wide": false,
+   "url": "https://www.loc.gov/resource/sn83030213/1862-09-20/ed-1/?sp=1&q=sharpsburg",
+   "label": "Northern newspaper"
+  }
  ]
 }

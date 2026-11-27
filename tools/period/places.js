@@ -50,5 +50,22 @@ module.exports = {
     ['Ankara', 39.93, 32.86, 3, 'capital'], ['Naples', 40.85, 14.27, 3], ['Odessa', 46.48, 30.73, 3], ['Smolensk', 54.78, 32.05, 3], ['Lwów', 49.84, 24.03, 3], ['Wilno', 54.69, 25.28, 3],
     ['Atlantic Ocean', 46.0, -15.0, 1, 'water'], ['North Sea', 56.2, 3.2, 1, 'water'], ['Baltic Sea', 56.6, 18.8, 2, 'water'], ['Mediterranean Sea', 34.6, 18.5, 1, 'water'],
     ['Black Sea', 43.3, 34.5, 1, 'water'], ['English Channel', 50.15, -1.6, 3, 'water']
+  ],
+  'world-war-1': [
+    ['London', 51.51, -0.13, 1, 'capital'], ['Paris', 48.86, 2.35, 1, 'capital'], ['Berlin', 52.52, 13.40, 1, 'capital'], ['Vienna', 48.21, 16.37, 1, 'capital'],
+    ['Petrograd', 59.94, 30.31, 1, 'capital'], ['Constantinople', 41.01, 28.98, 1, 'capital'], ['Rome', 41.90, 12.50, 1, 'capital'], ['Sarajevo', 43.86, 18.41, 1],
+    ['Brussels', 50.85, 4.35, 2, 'capital'], ['Belgrade', 44.80, 20.47, 2, 'capital'], ['Warsaw', 52.23, 21.01, 2], ['Moscow', 55.75, 37.62, 2], ['Kiev', 50.45, 30.52, 2],
+    ['Budapest', 47.50, 19.04, 2], ['Sofia', 42.70, 23.32, 2, 'capital'], ['Bucharest', 44.43, 26.10, 2, 'capital'], ['Athens', 37.98, 23.73, 2, 'capital'], ['Salonika', 40.64, 22.94, 2],
+    ['Madrid', 40.42, -3.70, 2, 'capital'], ['Lisbon', 38.72, -9.14, 2, 'capital'], ['Bern', 46.95, 7.45, 2, 'capital'], ['The Hague', 52.08, 4.31, 2, 'capital'],
+    ['Copenhagen', 55.68, 12.57, 2, 'capital'], ['Stockholm', 59.33, 18.07, 2, 'capital'], ['Dublin', 53.35, -6.26, 2], ['Königsberg', 54.71, 20.51, 2], ['Riga', 56.95, 24.11, 2],
+    ['Lemberg', 49.84, 24.03, 2], ['Trieste', 45.65, 13.78, 2], ['Venice', 45.44, 12.33, 2], ['Odessa', 46.48, 30.73, 2], ['Smyrna', 38.42, 27.14, 2], ['Kiel', 54.32, 10.14, 2],
+    ['Antwerp', 51.22, 4.40, 3], ['Calais', 50.95, 1.86, 3], ['Reims', 49.26, 4.03, 3], ['Metz', 49.12, 6.18, 3], ['Strassburg', 48.58, 7.75, 3], ['Cologne', 50.94, 6.96, 3],
+    ['Munich', 48.14, 11.58, 3], ['Hamburg', 53.55, 9.99, 3], ['Prague', 50.08, 14.44, 3], ['Danzig', 54.35, 18.65, 3], ['Brest-Litovsk', 52.10, 23.70, 3], ['Milan', 45.46, 9.19, 3],
+    ['Scapa Flow', 58.90, -3.05, 3], ['Queenstown', 51.85, -8.29, 3], ['Liverpool', 53.41, -2.98, 3], ['Angora', 39.93, 32.86, 3], ['Aleppo', 36.20, 37.16, 3], ['Trebizond', 41.00, 39.72, 3],
+    ['Sevastopol', 44.62, 33.53, 3], ['Cracow', 50.06, 19.94, 3],
+    ['Atlantic Ocean', 46.5, -9.5, 1, 'water'], ['North Sea', 56.0, 3.0, 1, 'water'], ['Baltic Sea', 56.6, 18.8, 2, 'water'], ['Mediterranean Sea', 36.8, 16.5, 1, 'water'],
+    ['Black Sea', 43.3, 34.5, 1, 'water'], ['English Channel', 50.15, -1.6, 3, 'water'], ['Adriatic Sea', 43.2, 15.2, 3, 'water'],
+    ['Poland (Russia)', 51.6, 20.3, 2, 'region'], ['Alsace-Lorraine (Germany)', 48.75, 6.9, 3, 'region'], ['Galicia', 49.6, 23.0, 3, 'region'], ['East Prussia', 54.1, 21.2, 3, 'region'],
+    ['Bosnia', 44.3, 17.8, 3, 'region'], ['Armenia', 39.3, 40.2, 2, 'region'], ['Flanders', 50.95, 3.2, 3, 'region']
   ]
 };

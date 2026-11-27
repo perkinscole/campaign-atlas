@@ -1,19 +1,19 @@
 #!/usr/bin/env node
 /* Campaign Atlas — builds the period border files in data/period/.
 
-   Usage: node tools/period/build.js <ne_50m_admin_1_states_provinces.geojson> <world_1938.geojson>
+   Usage: node tools/period/build.js <ne_50m_admin_1_states_provinces.geojson> <world_1938.geojson> <world_1914.geojson>
 
    Inputs (not kept in the repository):
    - Natural Earth 1:50m admin-1 states and provinces (public domain), from
      https://github.com/nvkelso/natural-earth-vector/tree/master/geojson
-   - world_1938.geojson from https://github.com/aourednik/historical-basemaps (GPL-3.0)
+   - world_1938.geojson and world_1914.geojson from https://github.com/aourednik/historical-basemaps (GPL-3.0)
 
    Period state lines are made by merging and cutting modern state shapes, which is
    exact wherever a boundary has not moved since. Place lists are in places.js. */
 'use strict';
 const fs = require('fs'), path = require('path');
-const [neFile, w38File] = process.argv.slice(2);
-if (!neFile || !w38File) { console.error('usage: build.js <natural-earth admin-1 geojson> <world_1938 geojson>'); process.exit(1); }
+const [neFile, w38File, w14File] = process.argv.slice(2);
+if (!neFile || !w38File || !w14File) { console.error('usage: build.js <natural-earth admin-1 geojson> <world_1938 geojson> <world_1914 geojson>'); process.exit(1); }
 const PLACES = require('./places.js');
 const OUT = path.join(__dirname, '..', '..', 'data', 'period');
 const R = 1000, rnd = n => Math.round(n * R) / R;
@@ -171,5 +171,50 @@ const NE_CREDIT = 'State lines made from Natural Earth (public domain).';
     credit: 'Borders from historical-basemaps by A. Ourednik (GPL-3.0), https://github.com/aourednik/historical-basemaps',
     caption: 'Borders as they stood in the summer of 1938, after Germany annexed Austria and before it broke up Czechoslovakia. Wartime occupations and the borders redrawn in 1945 are not shown.',
     groups: {}, features: F, places: PLACES['world-war-2-europe']
+  });
+})();
+
+// ---- Europe in 1914, from historical-basemaps. Colors follow each country into (and out of) the war. ----
+(function europe1914() {
+  const A = 'allied', C = 'central', N = 'neutral';
+  const keep = {
+    'German Empire': { name: 'German Empire', groups: [['1914-01-01', N], ['1914-08-01', C]], label: [51.3, 10.4] },
+    'Austro-Hungarian Empire': { name: 'Austria-Hungary', groups: [['1914-01-01', N], ['1914-07-28', C]], label: [47.6, 17.5] },
+    'Ottoman Empire': { name: 'Ottoman Empire', groups: [['1914-01-01', N], ['1914-10-29', C]], label: [38.9, 33.5] },
+    'Bulgaria': { groups: [['1914-01-01', N], ['1915-10-14', C]] },
+    'Serbia': { groups: [['1914-01-01', N], ['1914-07-28', A]] },
+    'Montenegro': { groups: [['1914-01-01', N], ['1914-08-06', A]] },
+    'Russian Empire': { groups: [['1914-01-01', N], ['1914-08-01', A], ['1918-03-03', N]], label: [54.5, 33.0] },
+    'Grand Duchy of Finland': { name: 'Finland (Russia)', groups: [['1914-01-01', N], ['1914-08-01', A], ['1917-12-06', N]] },
+    'France': { groups: [['1914-01-01', N], ['1914-08-03', A]], label: [46.8, 2.5] },
+    'Belgium': { groups: [['1914-01-01', N], ['1914-08-04', A]] },
+    'United Kingdom of Great Britain and Ireland': { name: 'United Kingdom', groups: [['1914-01-01', N], ['1914-08-04', A]], label: [53.0, -1.6] },
+    'Kingdom of Italy': { name: 'Italy', groups: [['1914-01-01', N], ['1915-05-23', A]], label: [42.9, 12.6] },
+    'Portugal': { groups: [['1914-01-01', N], ['1916-03-09', A]] },
+    'Romania': { groups: [['1914-01-01', N], ['1916-08-27', A], ['1918-05-07', N]] },
+    'Greece': { groups: [['1914-01-01', N], ['1917-07-02', A]], label: [39.4, 22.0] },
+    'Algeria': { name: 'Algeria (France)', groups: [['1914-01-01', N], ['1914-08-03', A]] }, 'Tunisia': { name: 'Tunisia (France)', groups: [['1914-01-01', N], ['1914-08-03', A]] },
+    'Malta': { name: 'Malta (Britain)', groups: [['1914-01-01', N], ['1914-08-04', A]] },
+    'Spain': { group: N, label: [40.2, -3.6] }, 'Switzerland': { group: N }, 'Netherlands': { group: N }, 'Luxembourg': { group: N }, 'Denmark': { group: N, label: [56.1, 9.3] },
+    'Norway': { group: N, label: [59.0, 8.5] }, 'Sweden': { group: N, label: [58.3, 15.0] }, 'Albania': { group: N }, 'Morocco': { name: 'Morocco (France)', group: N }, 'Spanish Morocco': { group: N }
+  };
+  const world = JSON.parse(fs.readFileSync(w14File, 'utf8')).features.filter(f => f.geometry && f.properties.NAME in keep);
+  const byName = {};
+  world.forEach(f => {
+    const k = f.properties.NAME;
+    let polys = clip(clip(clip(clip(polysOf(f.geometry), 0, '>', -14), 0, '<', 43), 1, '>', 33.5), 1, '<', 62);
+    polys = polys.filter(p => Math.abs(area(p[0])) > 0.004);
+    if (polys.length) (byName[k] = byName[k] || []).push(...polys);
+  });
+  const F = Object.entries(byName).map(([k, polys]) => { const c = keep[k], extra = {}; ['group', 'groups', 'label'].forEach(p => { if (c[p]) extra[p] = c[p]; }); return feature(c.name || k, polys, extra); });
+  write('world-war-1', {
+    credit: 'Borders from historical-basemaps by A. Ourednik (GPL-3.0), https://github.com/aourednik/historical-basemaps',
+    caption: 'Borders as they stood when the war began in 1914. Countries take a color on the day they entered the war and lose it if they left. Poland, Czechoslovakia, Yugoslavia, and the Baltic states did not exist yet, and all of Ireland was part of the United Kingdom.',
+    groups: {
+      allied: { name: 'Allies', color: '#2b5797' },
+      central: { name: 'Central Powers', color: '#a32a2a' },
+      neutral: { name: 'Neutral, or not yet in the war', color: '#9aa1ab', opacity: .12 }
+    },
+    features: F, places: PLACES['world-war-1']
   });
 })();
